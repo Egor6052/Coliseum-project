@@ -20,15 +20,39 @@ The distributed data collection system (hereinafter "the System") is designed fo
 - **Database**: SQL database for storing and managing collected data.
 - **Operating Systems**: Compatible with Linux and Windows.
 
-## Compilation
+## Compilation from folder src
 
 To compile the project:
 ```
-g++ -o Start ./*.cpp
+g++ -o ../build/Start ./*.cpp  
+//TODO this comand will not be work (watch structure folders)
 ```
 
 Run the program:
 ```
-./Start
+../build/Start
 ```
-##New comit test from DENIS on new branch "denis"
+
+## For develoders
+
+1) Structure folders "src/":
+-dao:(folder for data and using this data)
+--entity (data object ,which will be save on db)
+--repository (methods, which modification data in db, example, saveSensorData,getSensorData,... )
+-dto(object data without not need property. Example e have User({email:fsdf,passord:31433}) and we convert to UserDTO({email:fsdf}))
+-mapper(methods , which convert data from User to UserDTO . name: UserMapper.cpp)
+-config(init CONST data)
+-service(in this folder ill be save abstract classes or interfaces. name: ISendData.cpp, where I=interface ):
+--impl(classes ith realization abstract class . name: DefaultSendData.cpp)
+
+Folder "build": there will saved run exe file
+
+Folder "temp": files need distribution 
+
+2) find //TODO for find what to do 
+
+## Ho to push 
+1) git checkout -b NEW_BRANCH_NAME
+2) git add .
+3) git commit -m "COMMENT FOR COMMIT"
+4) git push origin NEW_BRANCH_NAME

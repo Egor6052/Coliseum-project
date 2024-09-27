@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include <string>
-
 class DatabaseConnection {
 private:
     std::string dbName;       // Ім'я бази даних

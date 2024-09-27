@@ -1,0 +1,4 @@
+#VS code config files
+.vscode/*
+#File to run
+build/*
