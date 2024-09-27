@@ -24,8 +24,7 @@ The distributed data collection system (hereinafter "the System") is designed fo
 
 To compile the project:
 ```
-g++ -o ../build/Start ./*.cpp  
-//TODO this comand will not be work (watch structure folders)
+g++ -o ./src/build/Start ./src/main.cpp
 ```
 
 Run the program:
@@ -45,7 +44,7 @@ Run the program:
 -service(in this folder ill be save abstract classes or interfaces. name: ISendData.cpp, where I=interface ):
 --impl(classes ith realization abstract class . name: DefaultSendData.cpp)
 
-Folder "build": there will saved run exe file
+Folder "build": there will saved run .exe or .sh file
 
 Folder "temp": files need distribution 
 
@@ -54,5 +53,7 @@ Folder "temp": files need distribution
 ## Ho to push 
 1) git checkout -b NEW_BRANCH_NAME
 2) git add .
-3) git commit -m "COMMENT FOR COMMIT"
-4) git push origin NEW_BRANCH_NAME
+3) git commit -am "COMMENT FOR COMMIT"
+4) git push origin NEW_BRANCH_NAME 
+
+
