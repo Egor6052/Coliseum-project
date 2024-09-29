@@ -56,4 +56,6 @@ Folder "temp": files need distribution
 3) git commit -am "COMMENT FOR COMMIT"
 4) git push origin NEW_BRANCH_NAME 
 
+## Update your project localy
+1) git pull origin NewSite
 
