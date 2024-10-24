@@ -7,9 +7,9 @@
 
 class Client {
 private:
-    int clientID;          // Унікальний ID клієнта
-    std::string name;      // Ім'я клієнта
-    SensorData sensorData; // Показники споживання
+    int clientID;
+    std::string name
+    SensorData sensorData;
 
 public:
     Client(int id, const std::string& name);

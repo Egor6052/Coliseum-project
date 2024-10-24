@@ -6,15 +6,19 @@
 #include <string>
 
 class SensorData {
+private:
+    float current;
+    float voltage;
+    float activePower;
+    float reactivePower;
 public:
-    float current;      // Струм
-    float voltage;      // Напруга
-    float activePower;  // Активна потужність
-    float reactivePower;// Реактивна потужність
-    float frequency;    // Частота
-
     SensorData();
-    void processData(const std::string& rawData);  // Обробка даних з RS485
+
+    // Data processing from RS485
+    void processData(const std::string& rawData);
+
+    // Sending parameters
+    void sendParametrsToRepository(Repository& repository);
 };
 
 #endif
