@@ -31,7 +31,28 @@ Run the program:
 ```
 ../build/Start
 ```
+## Compilation using CMake build system
 
+Configuration:
+```
+cmake 
+```
+Compile the binary:
+```
+cmake build
+```
+Clear build folder:
+```
+rm -r ./build/*
+```
+Run App:
+```
+cd ./build && cmake ..
+```
+Start:
+```
+make
+```
 ## For develoders
 
 1) Structure folders "src/":

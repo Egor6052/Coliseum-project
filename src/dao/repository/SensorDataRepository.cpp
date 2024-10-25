@@ -1,4 +1,4 @@
-#include "SensorDataRepository.h"
+#include "./SensorDataRepository.h"
 
 #include <iostream>
 #include <string>
@@ -44,7 +44,7 @@ void SensorDataRepository::setData(float currentValue, float voltageValue, float
 	}
 }
 
-void setName(std::string nameValue) {
+void SensorDataRepository::setName(std::string nameValue) {
 	if (nameValue != nullptr){
 		this->nameSensor = nameValue;
 	} else {
