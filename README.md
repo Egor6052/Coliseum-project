@@ -86,3 +86,11 @@ Folder "temp": files need distribution
 ## Update your project localy
 1) git pull origin NewSite
 
+
+
+
+## Libraries
+For json:
+```
+sudo apt install nlohmann-json3-dev
+```

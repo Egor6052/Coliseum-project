@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/admin1/Стільниця/Coliseum-project/src/lib/nlohmann
 
 CXX_FLAGS = 
 

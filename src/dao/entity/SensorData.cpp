@@ -1,8 +1,8 @@
  
 #include <iostream>
 #include <string>
-#include "SensorData.h"
-#include "SensorDataRepository.h"
+#include "./headers/SensorData.h"
+#include "../repository/SensorDataRepository.h"
 
 SensorData::SensorData(){
 	current = 0.0f;
