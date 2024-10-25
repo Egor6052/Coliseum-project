@@ -43,15 +43,21 @@ cmake build
 ```
 Clear build folder:
 ```
-rm -r ./build/*
+rm -r ./src/build/*
 ```
 Run App:
 ```
-cd ./build && cmake ..
+cd ./src/build && cmake ..
+```
+```
+cmake --build .
 ```
 Start:
 ```
 make
+```
+```
+./start
 ```
 ## For develoders
 
