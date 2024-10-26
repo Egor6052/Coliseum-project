@@ -2,6 +2,8 @@
 #ifndef SENSORDATA_H
 #define SENSORDATA_H
 
+#include "../../repository/SensorDataRepository.h"
+
 #include <iostream>
 #include <string>
 

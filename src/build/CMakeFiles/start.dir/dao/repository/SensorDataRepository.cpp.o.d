@@ -1,6 +1,8 @@
-CMakeFiles/start.dir/dao/entity/SensorData.cpp.o: \
- /home/admin1/Стільниця/Coliseum-project/src/dao/entity/SensorData.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/12/iostream \
+CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.o: \
+ /home/admin1/Стільниця/Coliseum-project/src/dao/repository/SensorDataRepository.cpp \
+ /usr/include/stdc-predef.h \
+ /home/admin1/Стільниця/Coliseum-project/src/dao/repository/SensorDataRepository.h \
+ /usr/include/c++/12/iostream \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -147,11 +149,8 @@ CMakeFiles/start.dir/dao/entity/SensorData.cpp.o: \
  /usr/include/c++/12/bits/locale_facets.tcc \
  /usr/include/c++/12/bits/basic_ios.tcc \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
- /usr/include/c++/12/bits/istream.tcc \
- /home/admin1/Стільниця/Coliseum-project/src/dao/entity/./headers/SensorData.h \
- /home/admin1/Стільниця/Coliseum-project/src/dao/entity/./headers/../../repository/SensorDataRepository.h \
- /usr/include/nlohmann/json.hpp /usr/include/c++/12/algorithm \
- /usr/include/c++/12/bits/stl_algo.h \
+ /usr/include/c++/12/bits/istream.tcc /usr/include/nlohmann/json.hpp \
+ /usr/include/c++/12/algorithm /usr/include/c++/12/bits/stl_algo.h \
  /usr/include/c++/12/bits/algorithmfwd.h \
  /usr/include/c++/12/bits/stl_heap.h \
  /usr/include/c++/12/bits/stl_tempbuf.h \
@@ -283,4 +282,8 @@ CMakeFiles/start.dir/dao/entity/SensorData.cpp.o: \
  /usr/include/nlohmann/detail/conversions/to_chars.hpp \
  /usr/include/nlohmann/ordered_map.hpp /usr/include/c++/12/any \
  /usr/include/nlohmann/detail/macro_unscope.hpp \
- /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
+ /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+ /usr/include/c++/12/fstream \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
+ /usr/include/c++/12/bits/fstream.tcc

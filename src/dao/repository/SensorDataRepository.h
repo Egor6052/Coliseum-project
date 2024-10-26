@@ -10,6 +10,7 @@ class Repository {
 	private:
 		static int count;
     	int id;
+    	std::string ipAddress;
 
 		float current;
 		float voltage;
@@ -30,7 +31,7 @@ class Repository {
 		// Repository repository;
 		// repository.saveToJsonFile("..../database/sensor_data.json");
 
-		bool saveToJsonFile(const std::string& filePath) const;
+		bool saveToJsonFile() const;
 };
 
 #endif

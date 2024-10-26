@@ -44,6 +44,6 @@ void SensorData::processData(const std::string& rawData) {
 }
 
 
-void SensorData::sendParametersToRepository(SensorDataRepository& repository) const {
+void SensorData::sendParametrsToRepository(Repository& repository) {
     repository.saveData(current, voltage, activePower, reactivePower, nameSensor);
 }

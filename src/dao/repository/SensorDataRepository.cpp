@@ -1,4 +1,4 @@
-#include "./SensorDataRepository.h"
+#include "SensorDataRepository.h"
 
 #include <fstream>
 #include <iostream>
@@ -15,42 +15,44 @@ SensorDataRepository::Repository(){
 
 	current = 0.0f;
 	voltage = 0.0f;
+	ipAddress = "";
 	nameSensor = 'NoName';
 }
 
 void SensorDataRepository::saveData(float currentValue, float voltageValue, float activePowerValue, float reactivePowerValue, std::string& nameValue) {
 	
 	if (currentValue != nullptr && currentValue >= 0){
-		this->current = currentValue;
+		current = currentValue;
 	} else {
  		throw std::invalid_argument("Current value cannot be negative, or value is not found.");
 	}
 
 	if (voltageValuel != nullptr && voltageValuel >= 0){
-		this->voltage = voltageValuel;
+		voltage = voltageValuel;
 	} else {
  		throw std::invalid_argument("Voltage value cannot be negative, or value is not found.");
 	}
 
 	if (activePowerValue != nullptr && activePowerValue >= 0){
-		this->activePower = activePowerValue;
+		activePower = activePowerValue;
 	} else {
 		throw std::invalid_argument("ActivePower value cannot be negative, or value is not found.");
 	}
 	
 	if (reactivePowerValue != nullptr && reactivePowerValue >= 0){
-		this->reactivePower = reactivePowerValue;
+		reactivePower = reactivePowerValue;
 	} else {
 		throw std::invalid_argument("ReactivePower value cannot be negative, or value is not found.");
 	}
 
-	if (nameValue != nullptr){
-		this->nameSensor = nameValue;
+	if (!nameValue.empty()){
+		nameSensor = nameValue;
 	} else {
 		throw std::invalid_argument("Name value is null.");
 	}
 
 }
+
 
 nlohmann::json Repository::toJson() const {
     nlohmann::json jsonData;
@@ -62,12 +64,30 @@ nlohmann::json Repository::toJson() const {
 }
 
 // The method of saving a JSON object in a file
-bool Repository::saveToJsonFile(const std::string& filePath) const {
+ bool saveToJsonFile() const {
     try {
-        nlohmann::json jsonData = toJson(); // Create a JSON object
-        std::ofstream outFile(filePath);    // Open the file for recording
+        // Генерація назви файлу з поточної дати
+        auto t = std::time(nullptr);
+        auto tm = *std::localtime(&t);
+        char buffer[20];
+        strftime(buffer, sizeof(buffer), "%d_%m_%Y", &tm);
+        std::string filePath = "./database/" + std::string(buffer) + ".json";
+
+        // Читання існуючого файлу або створення нового JSON об'єкта
+        nlohmann::json rootJson;
+        std::ifstream inFile(filePath);
+        if (inFile.is_open()) {
+            inFile >> rootJson;
+            inFile.close();
+        }
+
+        // Додавання нового запису в форматі `data chunk { sensor1 {...}, sensor2 {...} }`
+        rootJson["data chunk"][ipAddress] = toJson();
+
+        // Запис JSON у файл
+        std::ofstream outFile(filePath);
         if (outFile.is_open()) {
-            outFile << jsonData.dump(4);    // Write JSON with indents for ease of reading
+            outFile << rootJson.dump(4); // З відступами для зручності читання
             outFile.close();
             std::cout << "Data saved to " << filePath << std::endl;
             return true;
