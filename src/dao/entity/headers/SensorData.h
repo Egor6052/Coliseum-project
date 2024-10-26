@@ -7,6 +7,7 @@
 
 class SensorData {
 private:
+    std::string nameSensor;
     float current;
     float voltage;
     float activePower;

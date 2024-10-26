@@ -5,6 +5,8 @@
 #include "../repository/SensorDataRepository.h"
 
 SensorData::SensorData(){
+    nameSensor = "NoName";
+
 	current = 0.0f;
     voltage = 0.0f;
 
@@ -14,19 +16,25 @@ SensorData::SensorData(){
 
 void SensorData::processData(const std::string& rawData) {
     try {
-        // Розбираємо сирі дані (наприклад, формат "current:2.3,voltage:220,...")
+        // Витягуємо ідентифікатор датчика (номер або IP)
+        size_t idPos = rawData.find("sensor_id:");
+        if (idPos != std::string::npos) {
+            nameSensor = rawData.substr(idPos + 10, rawData.find(",", idPos) - idPos - 10);
+        }
+
         size_t currentPos = rawData.find("current:");
         size_t voltagePos = rawData.find("voltage:");
 
         if (currentPos != std::string::npos && voltagePos != std::string::npos) {
+            // Виділяємо значення струму та напруги
+            current = std::stof(rawData.substr(currentPos + 8, rawData.find(",", currentPos) - currentPos - 8));
+            voltage = std::stof(rawData.substr(voltagePos + 8, rawData.find(",", voltagePos) - voltagePos - 8));
 
-            this->current = std::stof(rawData.substr(currentPos + 8, rawData.find(",", currentPos) - currentPos - 8));
-            this->voltage = std::stof(rawData.substr(voltagePos + 8, rawData.find(",", voltagePos) - voltagePos - 8));
+            // Розрахунок активної потужності
+            activePower = current * voltage;
+            // Розрахунок реактивної потужності з умовою
+            reactivePower = activePower * 0.9;
 
-            this->activePower = this->current * this->voltage;
-
-            // Conditional value
-            this->reactivePower = this->activePower * 0.9;
         } else {
             throw std::invalid_argument("Invalid raw data format");
         }
@@ -35,7 +43,7 @@ void SensorData::processData(const std::string& rawData) {
     }
 }
 
-// Sending parameters to the repository class
-void SensorData::sendParametrsToRepository(Repository& repository) {
-    repository.SensorDataRepository(current, voltage, activePower, reactivePower);
+
+void SensorData::sendParametersToRepository(SensorDataRepository& repository) const {
+    repository.saveData(current, voltage, activePower, reactivePower, nameSensor);
 }

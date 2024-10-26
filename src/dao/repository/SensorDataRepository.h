@@ -21,17 +21,16 @@ class Repository {
 	public:
 		Repository();
 
-		void setData(float currentValue, float voltageValue, float activePower, float reactivePower, std::string& nameValue);
+		void saveData(float currentValue, float voltageValue, float activePower, float reactivePower, std::string& nameValue);
 		
-		void setName(std::string nameValue);
-		//Get parameters
-		float getCurrent();
-		float getVoltage();
-		std::string getNameSensor();
-		int getID();
-
 		//To json
 		nlohmann::json toJson() const;
+
+		// TODO path to load db
+		// Repository repository;
+		// repository.saveToJsonFile("..../database/sensor_data.json");
+
+		bool saveToJsonFile(const std::string& filePath) const;
 };
 
 #endif
