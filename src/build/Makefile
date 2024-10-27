@@ -129,54 +129,6 @@ start/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/build
 .PHONY : start/fast
 
-dao/entity/SensorData.o: dao/entity/SensorData.cpp.o
-.PHONY : dao/entity/SensorData.o
-
-# target to build an object file
-dao/entity/SensorData.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/dao/entity/SensorData.cpp.o
-.PHONY : dao/entity/SensorData.cpp.o
-
-dao/entity/SensorData.i: dao/entity/SensorData.cpp.i
-.PHONY : dao/entity/SensorData.i
-
-# target to preprocess a source file
-dao/entity/SensorData.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/dao/entity/SensorData.cpp.i
-.PHONY : dao/entity/SensorData.cpp.i
-
-dao/entity/SensorData.s: dao/entity/SensorData.cpp.s
-.PHONY : dao/entity/SensorData.s
-
-# target to generate assembly for a file
-dao/entity/SensorData.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/dao/entity/SensorData.cpp.s
-.PHONY : dao/entity/SensorData.cpp.s
-
-dao/repository/SensorDataRepository.o: dao/repository/SensorDataRepository.cpp.o
-.PHONY : dao/repository/SensorDataRepository.o
-
-# target to build an object file
-dao/repository/SensorDataRepository.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.o
-.PHONY : dao/repository/SensorDataRepository.cpp.o
-
-dao/repository/SensorDataRepository.i: dao/repository/SensorDataRepository.cpp.i
-.PHONY : dao/repository/SensorDataRepository.i
-
-# target to preprocess a source file
-dao/repository/SensorDataRepository.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.i
-.PHONY : dao/repository/SensorDataRepository.cpp.i
-
-dao/repository/SensorDataRepository.s: dao/repository/SensorDataRepository.cpp.s
-.PHONY : dao/repository/SensorDataRepository.s
-
-# target to generate assembly for a file
-dao/repository/SensorDataRepository.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.s
-.PHONY : dao/repository/SensorDataRepository.cpp.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -201,53 +153,29 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-service/ISendData.o: service/ISendData.cpp.o
-.PHONY : service/ISendData.o
+server/HTTP_server.o: server/HTTP_server.cpp.o
+.PHONY : server/HTTP_server.o
 
 # target to build an object file
-service/ISendData.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/service/ISendData.cpp.o
-.PHONY : service/ISendData.cpp.o
+server/HTTP_server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/server/HTTP_server.cpp.o
+.PHONY : server/HTTP_server.cpp.o
 
-service/ISendData.i: service/ISendData.cpp.i
-.PHONY : service/ISendData.i
-
-# target to preprocess a source file
-service/ISendData.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/service/ISendData.cpp.i
-.PHONY : service/ISendData.cpp.i
-
-service/ISendData.s: service/ISendData.cpp.s
-.PHONY : service/ISendData.s
-
-# target to generate assembly for a file
-service/ISendData.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/service/ISendData.cpp.s
-.PHONY : service/ISendData.cpp.s
-
-service/implementation/DefaultSendData.o: service/implementation/DefaultSendData.cpp.o
-.PHONY : service/implementation/DefaultSendData.o
-
-# target to build an object file
-service/implementation/DefaultSendData.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.o
-.PHONY : service/implementation/DefaultSendData.cpp.o
-
-service/implementation/DefaultSendData.i: service/implementation/DefaultSendData.cpp.i
-.PHONY : service/implementation/DefaultSendData.i
+server/HTTP_server.i: server/HTTP_server.cpp.i
+.PHONY : server/HTTP_server.i
 
 # target to preprocess a source file
-service/implementation/DefaultSendData.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.i
-.PHONY : service/implementation/DefaultSendData.cpp.i
+server/HTTP_server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/server/HTTP_server.cpp.i
+.PHONY : server/HTTP_server.cpp.i
 
-service/implementation/DefaultSendData.s: service/implementation/DefaultSendData.cpp.s
-.PHONY : service/implementation/DefaultSendData.s
+server/HTTP_server.s: server/HTTP_server.cpp.s
+.PHONY : server/HTTP_server.s
 
 # target to generate assembly for a file
-service/implementation/DefaultSendData.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.s
-.PHONY : service/implementation/DefaultSendData.cpp.s
+server/HTTP_server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/server/HTTP_server.cpp.s
+.PHONY : server/HTTP_server.cpp.s
 
 # Help Target
 help:
@@ -258,21 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... start"
-	@echo "... dao/entity/SensorData.o"
-	@echo "... dao/entity/SensorData.i"
-	@echo "... dao/entity/SensorData.s"
-	@echo "... dao/repository/SensorDataRepository.o"
-	@echo "... dao/repository/SensorDataRepository.i"
-	@echo "... dao/repository/SensorDataRepository.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... service/ISendData.o"
-	@echo "... service/ISendData.i"
-	@echo "... service/ISendData.s"
-	@echo "... service/implementation/DefaultSendData.o"
-	@echo "... service/implementation/DefaultSendData.i"
-	@echo "... service/implementation/DefaultSendData.s"
+	@echo "... server/HTTP_server.o"
+	@echo "... server/HTTP_server.i"
+	@echo "... server/HTTP_server.s"
 .PHONY : help
 
 

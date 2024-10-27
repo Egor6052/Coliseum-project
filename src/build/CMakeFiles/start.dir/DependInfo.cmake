@@ -8,11 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/admin1/Стільниця/Coliseum-project/src/dao/entity/SensorData.cpp" "CMakeFiles/start.dir/dao/entity/SensorData.cpp.o" "gcc" "CMakeFiles/start.dir/dao/entity/SensorData.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/dao/repository/SensorDataRepository.cpp" "CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.o" "gcc" "CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.o.d"
   "/home/admin1/Стільниця/Coliseum-project/src/main.cpp" "CMakeFiles/start.dir/main.cpp.o" "gcc" "CMakeFiles/start.dir/main.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/service/ISendData.cpp" "CMakeFiles/start.dir/service/ISendData.cpp.o" "gcc" "CMakeFiles/start.dir/service/ISendData.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/service/implementation/DefaultSendData.cpp" "CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.o" "gcc" "CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.o.d"
+  "/home/admin1/Стільниця/Coliseum-project/src/server/HTTP_server.cpp" "CMakeFiles/start.dir/server/HTTP_server.cpp.o" "gcc" "CMakeFiles/start.dir/server/HTTP_server.cpp.o.d"
   )
 
 # Targets to which this target links.

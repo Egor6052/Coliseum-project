@@ -1,4 +1,4 @@
-#include "SensorDataRepository.h"
+#include "./SensorDataRepository.h"
 
 #include <fstream>
 #include <iostream>
@@ -6,71 +6,76 @@
 #include <stdexcept>
 #include <nlohmann/json.hpp>
 
-SensorDataRepository::Repository(){
-	count ++;
-	id = count;
+int SensorDataRepository::count = 0;
 
-	activePower = 0.0f;
-	reactivePower = 0.0f;
+SensorDataRepository::SensorDataRepository() {
+    count++;
+    id = count;
 
-	current = 0.0f;
-	voltage = 0.0f;
-	ipAddress = "";
-	nameSensor = 'NoName';
+    activePower = 0.0f;
+    reactivePower = 0.0f;
+
+    current = 0.0f;
+    voltage = 0.0f;
+    ipAddress = "";
+    nameSensor = "NoName";
 }
 
 void SensorDataRepository::saveData(float currentValue, float voltageValue, float activePowerValue, float reactivePowerValue, std::string& nameValue) {
-	
-	if (currentValue != nullptr && currentValue >= 0){
-		current = currentValue;
-	} else {
- 		throw std::invalid_argument("Current value cannot be negative, or value is not found.");
-	}
 
-	if (voltageValuel != nullptr && voltageValuel >= 0){
-		voltage = voltageValuel;
-	} else {
- 		throw std::invalid_argument("Voltage value cannot be negative, or value is not found.");
-	}
+    if (currentValue >= 0) {
+        current = currentValue;
+    } else {
+        throw std::invalid_argument("Current value cannot be negative.");
+    }
 
-	if (activePowerValue != nullptr && activePowerValue >= 0){
-		activePower = activePowerValue;
-	} else {
-		throw std::invalid_argument("ActivePower value cannot be negative, or value is not found.");
-	}
-	
-	if (reactivePowerValue != nullptr && reactivePowerValue >= 0){
-		reactivePower = reactivePowerValue;
-	} else {
-		throw std::invalid_argument("ReactivePower value cannot be negative, or value is not found.");
-	}
+    if (voltageValue >= 0) {
+        voltage = voltageValue;
+    } else {
+        throw std::invalid_argument("Voltage value cannot be negative, or value is not found.");
+    }
 
-	if (!nameValue.empty()){
-		nameSensor = nameValue;
-	} else {
-		throw std::invalid_argument("Name value is null.");
-	}
+    if (activePowerValue >= 0) {
+        activePower = activePowerValue;
+    } else {
+        throw std::invalid_argument("ActivePower value cannot be negative, or value is not found.");
+    }
 
+    if (reactivePowerValue >= 0) {
+        reactivePower = reactivePowerValue;
+    } else {
+        throw std::invalid_argument("ReactivePower value cannot be negative, or value is not found.");
+    }
+
+    if (!nameValue.empty()) {
+        nameSensor = nameValue;
+    } else {
+        throw std::invalid_argument("Name value is null.");
+    }
 }
 
-
-nlohmann::json Repository::toJson() const {
+nlohmann::json SensorDataRepository::toJson() const {
     nlohmann::json jsonData;
     jsonData["nameSensor"] = nameSensor;
     jsonData["current"] = current;
     jsonData["voltage"] = voltage;
-    jsonData["nameSensor"] = nameSensor;
+    jsonData["activePower"] = activePower;
+    jsonData["reactivePower"] = reactivePower;
+    jsonData["ipAddress"] = ipAddress;
     return jsonData;
 }
 
-// The method of saving a JSON object in a file
- bool saveToJsonFile() const {
+// Метод збереження JSON об'єкта у файл
+bool SensorDataRepository::saveToJsonFile() const {
+
     try {
         // Генерація назви файлу з поточної дати
         auto t = std::time(nullptr);
         auto tm = *std::localtime(&t);
         char buffer[20];
         strftime(buffer, sizeof(buffer), "%d_%m_%Y", &tm);
+
+        // TODO
         std::string filePath = "./database/" + std::string(buffer) + ".json";
 
         // Читання існуючого файлу або створення нового JSON об'єкта

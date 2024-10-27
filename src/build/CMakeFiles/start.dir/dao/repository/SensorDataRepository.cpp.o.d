@@ -1,7 +1,7 @@
 CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.o: \
  /home/admin1/Стільниця/Coliseum-project/src/dao/repository/SensorDataRepository.cpp \
  /usr/include/stdc-predef.h \
- /home/admin1/Стільниця/Coliseum-project/src/dao/repository/SensorDataRepository.h \
+ /home/admin1/Стільниця/Coliseum-project/src/dao/repository/./SensorDataRepository.h \
  /usr/include/c++/12/iostream \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \

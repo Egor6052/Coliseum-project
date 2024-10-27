@@ -230,3 +230,38 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /home/admin1/Стільниця/Coliseum-project/src/build/CMakeFiles/CMakeScratch/TryCompile-oG7cDH
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a6cd0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a6cd0.dir/build.make CMakeFiles/cmTC_a6cd0.dir/build
+gmake[1]: входимо до каталогу «/home/admin1/Стільниця/Coliseum-project/src/build/CMakeFiles/CMakeScratch/TryCompile-oG7cDH»
+Building CXX object CMakeFiles/cmTC_a6cd0.dir/src.cxx.o
+/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_a6cd0.dir/src.cxx.o -c /home/admin1/Стільниця/Coliseum-project/src/build/CMakeFiles/CMakeScratch/TryCompile-oG7cDH/src.cxx
+Linking CXX executable cmTC_a6cd0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6cd0.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_a6cd0.dir/src.cxx.o -o cmTC_a6cd0 
+gmake[1]: Залишаю каталог "/home/admin1/Стільниця/Coliseum-project/src/build/CMakeFiles/CMakeScratch/TryCompile-oG7cDH"
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+

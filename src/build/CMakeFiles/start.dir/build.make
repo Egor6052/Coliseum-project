@@ -83,81 +83,36 @@ CMakeFiles/start.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/start.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/main.cpp -o CMakeFiles/start.dir/main.cpp.s
 
-CMakeFiles/start.dir/dao/entity/SensorData.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/dao/entity/SensorData.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/dao/entity/SensorData.cpp
-CMakeFiles/start.dir/dao/entity/SensorData.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/start.dir/dao/entity/SensorData.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/dao/entity/SensorData.cpp.o -MF CMakeFiles/start.dir/dao/entity/SensorData.cpp.o.d -o CMakeFiles/start.dir/dao/entity/SensorData.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/dao/entity/SensorData.cpp
+CMakeFiles/start.dir/server/HTTP_server.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/server/HTTP_server.cpp
+CMakeFiles/start.dir/server/HTTP_server.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/start.dir/server/HTTP_server.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/server/HTTP_server.cpp.o -MF CMakeFiles/start.dir/server/HTTP_server.cpp.o.d -o CMakeFiles/start.dir/server/HTTP_server.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/server/HTTP_server.cpp
 
-CMakeFiles/start.dir/dao/entity/SensorData.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/start.dir/dao/entity/SensorData.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/dao/entity/SensorData.cpp > CMakeFiles/start.dir/dao/entity/SensorData.cpp.i
+CMakeFiles/start.dir/server/HTTP_server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/start.dir/server/HTTP_server.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/server/HTTP_server.cpp > CMakeFiles/start.dir/server/HTTP_server.cpp.i
 
-CMakeFiles/start.dir/dao/entity/SensorData.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/start.dir/dao/entity/SensorData.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/dao/entity/SensorData.cpp -o CMakeFiles/start.dir/dao/entity/SensorData.cpp.s
-
-CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/dao/repository/SensorDataRepository.cpp
-CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.o -MF CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.o.d -o CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/dao/repository/SensorDataRepository.cpp
-
-CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/dao/repository/SensorDataRepository.cpp > CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.i
-
-CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/dao/repository/SensorDataRepository.cpp -o CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.s
-
-CMakeFiles/start.dir/service/ISendData.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/service/ISendData.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/service/ISendData.cpp
-CMakeFiles/start.dir/service/ISendData.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/start.dir/service/ISendData.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/service/ISendData.cpp.o -MF CMakeFiles/start.dir/service/ISendData.cpp.o.d -o CMakeFiles/start.dir/service/ISendData.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/service/ISendData.cpp
-
-CMakeFiles/start.dir/service/ISendData.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/start.dir/service/ISendData.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/service/ISendData.cpp > CMakeFiles/start.dir/service/ISendData.cpp.i
-
-CMakeFiles/start.dir/service/ISendData.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/start.dir/service/ISendData.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/service/ISendData.cpp -o CMakeFiles/start.dir/service/ISendData.cpp.s
-
-CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/service/implementation/DefaultSendData.cpp
-CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.o -MF CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.o.d -o CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/service/implementation/DefaultSendData.cpp
-
-CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/service/implementation/DefaultSendData.cpp > CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.i
-
-CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/service/implementation/DefaultSendData.cpp -o CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.s
+CMakeFiles/start.dir/server/HTTP_server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/start.dir/server/HTTP_server.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/server/HTTP_server.cpp -o CMakeFiles/start.dir/server/HTTP_server.cpp.s
 
 # Object files for target start
 start_OBJECTS = \
 "CMakeFiles/start.dir/main.cpp.o" \
-"CMakeFiles/start.dir/dao/entity/SensorData.cpp.o" \
-"CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.o" \
-"CMakeFiles/start.dir/service/ISendData.cpp.o" \
-"CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.o"
+"CMakeFiles/start.dir/server/HTTP_server.cpp.o"
 
 # External object files for target start
 start_EXTERNAL_OBJECTS =
 
 start: CMakeFiles/start.dir/main.cpp.o
-start: CMakeFiles/start.dir/dao/entity/SensorData.cpp.o
-start: CMakeFiles/start.dir/dao/repository/SensorDataRepository.cpp.o
-start: CMakeFiles/start.dir/service/ISendData.cpp.o
-start: CMakeFiles/start.dir/service/implementation/DefaultSendData.cpp.o
+start: CMakeFiles/start.dir/server/HTTP_server.cpp.o
 start: CMakeFiles/start.dir/build.make
+start: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0
+start: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.74.0
+start: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.74.0
 start: CMakeFiles/start.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/admin1/Стільниця/Coliseum-project/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable start"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/admin1/Стільниця/Coliseum-project/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable start"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/start.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

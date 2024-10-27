@@ -20,6 +20,11 @@ The distributed data collection system (hereinafter "the System") is designed fo
 - **Database**: SQL database for storing and managing collected data.
 - **Operating Systems**: Compatible with Linux and Windows.
 
+
+## API
+```
+http://localhost:8080/api/data
+```
 ## Compilation from folder src
 
 To compile the project:
