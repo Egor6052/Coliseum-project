@@ -19,6 +19,7 @@ SensorDataRepository::SensorDataRepository() {
     voltage = 0.0f;
     ipAddress = "";
     nameSensor = "NoName";
+    timestamp = "";
 }
 
 void SensorDataRepository::saveData(float currentValue, float voltageValue, float activePowerValue, float reactivePowerValue, std::string& nameValue) {
@@ -54,8 +55,19 @@ void SensorDataRepository::saveData(float currentValue, float voltageValue, floa
     }
 }
 
+// Метод для отримання поточного часу у форматі ISO 8601
+std::string SensorDataRepository::getCurrentTime() {
+    auto now = std::chrono::system_clock::now();
+    auto in_time_t = std::chrono::system_clock::to_time_t(now);
+
+    std::stringstream ss;
+    ss << std::put_time(std::localtime(&in_time_t), "%Y-%m-%dT%H:%M:%SZ");
+    return ss.str();
+}
+
 nlohmann::json SensorDataRepository::toJson() const {
     nlohmann::json jsonData;
+    jsonData["timestamp"] = timestamp;
     jsonData["nameSensor"] = nameSensor;
     jsonData["current"] = current;
     jsonData["voltage"] = voltage;

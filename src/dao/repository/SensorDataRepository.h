@@ -11,6 +11,7 @@ class Repository {
 		static int count;
     	int id;
     	std::string ipAddress;
+    	std::string timestamp;
 
 		float current;
 		float voltage;
@@ -31,6 +32,7 @@ class Repository {
 		// Repository repository;
 		// repository.saveToJsonFile("..../database/sensor_data.json");
 
+		std::string getCurrentTime();
 		bool saveToJsonFile() const;
 };
 
