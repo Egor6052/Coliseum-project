@@ -35,12 +35,12 @@ void HTTP::handleClient(tcp::socket socket) {
             throw boost::system::system_error(error);
         }
 
-        // Обробка HTTP-запиту
+        // HTTP request processing
         std::string request(buffer);
         std::string response_body;
 
         if (request.find("GET /api/data") != std::string::npos) {
-            // Читаємо JSON-файл
+            // Read the JSON file
             std::string jsonData = readJsonFile(pathToJson);
 
             if (jsonData.empty()) {
@@ -79,7 +79,7 @@ void HTTP::start() {
         boost::asio::io_context io_context;
         tcp::acceptor acceptor(io_context, tcp::endpoint(tcp::v4(), port));
 
-        std::cout << "HTTP сервер запущено на порту " << port << "..." << std::endl;
+        std::cout << "The HTTP server is running on the port " << port << "..." << std::endl;
 
         while (true) {
             tcp::socket socket(io_context);
@@ -87,6 +87,6 @@ void HTTP::start() {
             std::thread(&HTTP::handleClient, this, std::move(socket)).detach();
         }
     } catch (std::exception& e) {
-        std::cerr << "Помилка сервера: " << e.what() << std::endl;
+        std::cerr << "Server error: " << e.what() << std::endl;
     }
 }
