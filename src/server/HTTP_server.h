@@ -18,7 +18,11 @@ private:
 public:
     HTTP();
     std::string readJsonFile(const std::string& path);
+    
     void handleClient(tcp::socket socket);
+
+    std::string getSensorByName(const std::string& name);
+    std::string getSensorById(const std::string& id);
     void start();
 };
 

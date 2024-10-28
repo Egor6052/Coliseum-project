@@ -4,24 +4,58 @@
 #include <fstream>
 #include <string>
 #include <thread>
+#include <nlohmann/json.hpp>
 
 using boost::asio::ip::tcp;
+using json = nlohmann::json;
 
-HTTP::HTTP(){
+HTTP::HTTP() {
     port = 8080;
     pathToJson = "../database/data.json";
 }
 
+// Getting all the data
 std::string HTTP::readJsonFile(const std::string& path) {
     std::ifstream file(path);
     if (!file.is_open()) {
         return "";
     }
-
     std::string jsonData((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
     return jsonData;
 }
 
+// Search by ID
+std::string HTTP::getSensorById(const std::string& id) {
+    std::string jsonData = readJsonFile(pathToJson);
+    if (jsonData.empty()) {
+        return "";
+    }
+
+    json sensors = json::parse(jsonData);
+    for (const auto& sensor : sensors) {
+        if (sensor["id"] == id) {
+            return sensor.dump();
+        }
+    }
+    return "";
+}
+
+// Search by name
+std::string HTTP::getSensorByName(const std::string& name) {
+    std::string jsonData = readJsonFile(pathToJson);
+    if (jsonData.empty()) {
+        return "";
+    }
+
+    json sensors = json::parse(jsonData);
+    json matchedSensors = json::array();
+    for (const auto& sensor : sensors) {
+        if (sensor["nameSensor"].get<std::string>().find(name) != std::string::npos) {
+            matchedSensors.push_back(sensor);
+        }
+    }
+    return matchedSensors.dump();
+}
 
 void HTTP::handleClient(tcp::socket socket) {
     try {
@@ -35,39 +69,80 @@ void HTTP::handleClient(tcp::socket socket) {
             throw boost::system::system_error(error);
         }
 
-        // HTTP request processing
         std::string request(buffer);
         std::string response_body;
 
-        if (request.find("GET /api/data") != std::string::npos) {
-            // Read the JSON file
-            std::string jsonData = readJsonFile(pathToJson);
+        if (request.find("GET /api/data ") != std::string::npos) {
+            // Getting all the data
+            response_body = readJsonFile(pathToJson);
 
-            if (jsonData.empty()) {
-                std::string response =
+            if (response_body.empty()) {
+                response_body =
                     "HTTP/1.1 404 Not Found\r\n"
                     "Content-Type: text/plain\r\n"
                     "Content-Length: 16\r\n\r\n"
                     "404 File Not Found";
-                boost::asio::write(socket, boost::asio::buffer(response), error);
-                return;
+            } else {
+                response_body =
+                    "HTTP/1.1 200 OK\r\n"
+                    "Content-Type: application/json\r\n"
+                    "Content-Length: " + std::to_string(response_body.size()) + "\r\n\r\n" +
+                    response_body;
             }
 
-            std::string response =
-                "HTTP/1.1 200 OK\r\n"
-                "Content-Type: application/json\r\n"
-                "Content-Length: " + std::to_string(jsonData.size()) + "\r\n\r\n" +
-                jsonData;
+        } else if (request.find("GET /api/data/") != std::string::npos) {
+            if (request.find("GET /api/data/name/") != std::string::npos) {
+                // Search by name
+                std::string name = request.substr(request.find("/api/data/name/") + 16);
+                name = name.substr(0, name.find(" "));
+                
+                std::string sensorData = getSensorByName(name);
 
-            boost::asio::write(socket, boost::asio::buffer(response), error);
+                if (sensorData.empty()) {
+                    response_body =
+                        "HTTP/1.1 404 Not Found\r\n"
+                        "Content-Type: text/plain\r\n"
+                        "Content-Length: 16\r\n\r\n"
+                        "404 Not Found";
+                } else {
+                    response_body =
+                        "HTTP/1.1 200 OK\r\n"
+                        "Content-Type: application/json\r\n"
+                        "Content-Length: " + std::to_string(sensorData.size()) + "\r\n\r\n" +
+                        sensorData;
+                }
+
+            } else {
+                // Search by ID
+                std::string id = request.substr(request.find("/api/data/id/") + 13);
+                id = id.substr(0, id.find(" "));
+
+                std::string sensorData = getSensorById(id);
+
+                if (sensorData.empty()) {
+                    response_body =
+                        "HTTP/1.1 404 Not Found\r\n"
+                        "Content-Type: text/plain\r\n"
+                        "Content-Length: 16\r\n\r\n"
+                        "404 File Not Found";
+                } else {
+                    response_body =
+                        "HTTP/1.1 200 OK\r\n"
+                        "Content-Type: application/json\r\n"
+                        "Content-Length: " + std::to_string(sensorData.size()) + "\r\n\r\n" +
+                        sensorData;
+                }
+            }
         } else {
-            std::string response =
+            response_body =
                 "HTTP/1.1 404 Not Found\r\n"
                 "Content-Type: text/plain\r\n"
                 "Content-Length: 13\r\n\r\n"
                 "404 Not Found";
-            boost::asio::write(socket, boost::asio::buffer(response), error);
         }
+
+        boost::asio::write(socket, boost::asio::buffer(response_body), error);
+
     } catch (std::exception& e) {
         std::cerr << "Error: " << e.what() << std::endl;
     }

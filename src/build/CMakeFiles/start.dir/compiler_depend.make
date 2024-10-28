@@ -2446,8 +2446,173 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
   /usr/include/c++/12/bits/fstream.tcc \
   /usr/include/c++/12/thread \
-  /usr/include/c++/12/bits/this_thread_sleep.h
+  /usr/include/c++/12/bits/this_thread_sleep.h \
+  /usr/include/nlohmann/json.hpp \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/nlohmann/adl_serializer.hpp \
+  /usr/include/nlohmann/detail/abi_macros.hpp \
+  /usr/include/nlohmann/detail/conversions/from_json.hpp \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/nlohmann/detail/exceptions.hpp \
+  /usr/include/nlohmann/detail/value_t.hpp \
+  /usr/include/nlohmann/detail/macro_scope.hpp \
+  /usr/include/nlohmann/detail/meta/detected.hpp \
+  /usr/include/nlohmann/detail/meta/void_t.hpp \
+  /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
+  /usr/include/nlohmann/detail/string_escape.hpp \
+  /usr/include/nlohmann/detail/input/position_t.hpp \
+  /usr/include/nlohmann/detail/meta/cpp_future.hpp \
+  /usr/include/nlohmann/detail/meta/type_traits.hpp \
+  /usr/include/nlohmann/detail/iterators/iterator_traits.hpp \
+  /usr/include/nlohmann/detail/meta/call_std/begin.hpp \
+  /usr/include/nlohmann/detail/meta/call_std/end.hpp \
+  /usr/include/nlohmann/json_fwd.hpp \
+  /usr/include/nlohmann/detail/string_concat.hpp \
+  /usr/include/nlohmann/detail/meta/identity_tag.hpp \
+  /usr/include/nlohmann/detail/meta/std_fs.hpp \
+  /usr/include/c++/12/filesystem \
+  /usr/include/c++/12/bits/fs_fwd.h \
+  /usr/include/c++/12/bits/fs_path.h \
+  /usr/include/c++/12/locale \
+  /usr/include/c++/12/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12/bits/locale_conv.h \
+  /usr/include/c++/12/iomanip \
+  /usr/include/c++/12/bits/quoted_string.h \
+  /usr/include/c++/12/codecvt \
+  /usr/include/c++/12/bits/fs_dir.h \
+  /usr/include/c++/12/bits/fs_ops.h \
+  /usr/include/nlohmann/detail/conversions/to_json.hpp \
+  /usr/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+  /usr/include/nlohmann/byte_container_with_subtype.hpp \
+  /usr/include/nlohmann/detail/hash.hpp \
+  /usr/include/nlohmann/detail/input/binary_reader.hpp \
+  /usr/include/nlohmann/detail/input/input_adapters.hpp \
+  /usr/include/nlohmann/detail/input/json_sax.hpp \
+  /usr/include/nlohmann/detail/input/lexer.hpp \
+  /usr/include/nlohmann/detail/meta/is_sax.hpp \
+  /usr/include/nlohmann/detail/input/parser.hpp \
+  /usr/include/nlohmann/detail/iterators/internal_iterator.hpp \
+  /usr/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+  /usr/include/nlohmann/detail/iterators/iter_impl.hpp \
+  /usr/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+  /usr/include/nlohmann/detail/json_pointer.hpp \
+  /usr/include/nlohmann/detail/json_ref.hpp \
+  /usr/include/nlohmann/detail/output/binary_writer.hpp \
+  /usr/include/nlohmann/detail/output/output_adapters.hpp \
+  /usr/include/nlohmann/detail/output/serializer.hpp \
+  /usr/include/nlohmann/detail/conversions/to_chars.hpp \
+  /usr/include/nlohmann/ordered_map.hpp \
+  /usr/include/nlohmann/detail/macro_unscope.hpp \
+  /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
 
+
+/usr/include/nlohmann/detail/macro_unscope.hpp:
+
+/usr/include/nlohmann/ordered_map.hpp:
+
+/usr/include/nlohmann/detail/conversions/to_chars.hpp:
+
+/usr/include/nlohmann/detail/output/output_adapters.hpp:
+
+/usr/include/nlohmann/detail/output/binary_writer.hpp:
+
+/usr/include/nlohmann/detail/json_ref.hpp:
+
+/usr/include/nlohmann/detail/iterators/internal_iterator.hpp:
+
+/usr/include/nlohmann/detail/meta/is_sax.hpp:
+
+/usr/include/nlohmann/detail/input/lexer.hpp:
+
+/usr/include/nlohmann/detail/input/json_sax.hpp:
+
+/usr/include/nlohmann/detail/input/input_adapters.hpp:
+
+/usr/include/nlohmann/detail/input/binary_reader.hpp:
+
+/usr/include/nlohmann/detail/hash.hpp:
+
+/usr/include/nlohmann/byte_container_with_subtype.hpp:
+
+/usr/include/nlohmann/detail/conversions/to_json.hpp:
+
+/usr/include/c++/12/bits/fs_ops.h:
+
+/usr/include/c++/12/codecvt:
+
+/usr/include/c++/12/bits/quoted_string.h:
+
+/usr/include/c++/12/iomanip:
+
+/usr/include/c++/12/bits/locale_conv.h:
+
+/usr/include/c++/12/bits/locale_facets_nonio.tcc:
+
+/usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h:
+
+/usr/include/c++/12/locale:
+
+/usr/include/c++/12/bits/fs_fwd.h:
+
+/usr/include/c++/12/filesystem:
+
+/usr/include/nlohmann/detail/meta/identity_tag.hpp:
+
+/usr/include/c++/12/bits/fs_path.h:
+
+/usr/include/nlohmann/detail/meta/call_std/begin.hpp:
+
+/usr/include/nlohmann/detail/iterators/iterator_traits.hpp:
+
+/usr/include/nlohmann/detail/meta/type_traits.hpp:
+
+/usr/include/nlohmann/detail/meta/cpp_future.hpp:
+
+/usr/include/nlohmann/thirdparty/hedley/hedley.hpp:
+
+/usr/include/nlohmann/detail/meta/void_t.hpp:
+
+/usr/include/nlohmann/detail/value_t.hpp:
+
+/usr/include/c++/12/bits/mask_array.h:
+
+/usr/include/c++/12/bits/gslice.h:
+
+/usr/include/c++/12/bits/valarray_after.h:
+
+/usr/include/c++/12/bits/slice_array.h:
+
+/usr/include/c++/12/bits/valarray_before.h:
+
+/usr/include/c++/12/bits/forward_list.h:
+
+/usr/include/nlohmann/adl_serializer.hpp:
+
+/usr/include/c++/12/pstl/glue_numeric_defs.h:
+
+/usr/include/c++/12/bits/stl_numeric.h:
+
+/usr/include/nlohmann/json.hpp:
+
+/usr/include/nlohmann/detail/string_escape.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h:
 
@@ -2482,6 +2647,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 /usr/include/boost/asio/detail/blocking_executor_op.hpp:
 
 /usr/include/boost/asio/impl/thread_pool.hpp:
+
+/usr/include/nlohmann/detail/exceptions.hpp:
 
 /usr/include/boost/asio/thread_pool.hpp:
 
@@ -2639,6 +2806,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 
 /usr/include/boost/asio/detail/signal_blocker.hpp:
 
+/usr/include/c++/12/bits/gslice_array.h:
+
 /usr/include/x86_64-linux-gnu/sys/epoll.h:
 
 /usr/include/boost/asio/is_write_buffered.hpp:
@@ -2672,6 +2841,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 /usr/include/linux/ioctl.h:
 
 /usr/include/x86_64-linux-gnu/asm/ioctls.h:
+
+/usr/include/c++/12/bits/fs_dir.h:
 
 /usr/include/boost/mpl/aux_/arity.hpp:
 
@@ -2707,6 +2878,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 
 /usr/include/x86_64-linux-gnu/bits/sigstksz.h:
 
+/usr/include/c++/12/valarray:
+
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/boost/asio/detail/impl/socket_ops.ipp:
@@ -2737,6 +2910,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 
 /usr/include/asm-generic/int-ll64.h:
 
+/usr/include/nlohmann/detail/input/parser.hpp:
+
 /usr/include/boost/asio/detail/object_pool.hpp:
 
 /usr/include/c++/12/bits/stl_map.h:
@@ -2759,6 +2934,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 
 /usr/include/boost/asio/detail/fenced_block.hpp:
 
+/usr/include/c++/12/numeric:
+
 /usr/include/boost/asio/detail/impl/posix_event.ipp:
 
 /usr/include/boost/preprocessor/control/iif.hpp:
@@ -2769,11 +2946,15 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 
 /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
 
+/usr/include/nlohmann/detail/output/serializer.hpp:
+
 /usr/include/boost/mpl/aux_/value_wknd.hpp:
 
 /usr/include/boost/asio/traits/submit_free.hpp:
 
 /usr/include/boost/asio/execution/bulk_execute.hpp:
+
+/usr/include/nlohmann/json_fwd.hpp:
 
 /usr/include/boost/mpl/aux_/config/compiler.hpp:
 
@@ -2857,6 +3038,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 
 /usr/include/boost/predef/compiler/metaware.h:
 
+/usr/include/c++/12/bits/indirect_array.h:
+
 /usr/include/boost/cerrno.hpp:
 
 /usr/include/boost/asio/handler_invoke_hook.hpp:
@@ -2909,6 +3092,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 
 /usr/include/boost/preprocessor/repeat.hpp:
 
+/usr/include/c++/12/bits/valarray_array.h:
+
 /usr/include/c++/12/unordered_map:
 
 /usr/include/c++/12/tuple:
@@ -2948,6 +3133,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 /usr/include/boost/predef/hardware/simd/ppc.h:
 
 /usr/include/x86_64-linux-gnu/bits/socket.h:
+
+/usr/include/libintl.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
@@ -3042,6 +3229,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 /usr/include/c++/12/bits/stl_multimap.h:
 
 /usr/include/boost/asio/traits/query_member.hpp:
+
+/usr/include/nlohmann/detail/meta/detected.hpp:
 
 /usr/include/boost/asio/traits/start_free.hpp:
 
@@ -3231,6 +3420,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 
 /usr/include/c++/12/bits/char_traits.h:
 
+/usr/include/nlohmann/detail/iterators/json_reverse_iterator.hpp:
+
 /usr/include/boost/asio/detail/pop_options.hpp:
 
 /usr/include/c++/12/pstl/execution_defs.h:
@@ -3264,6 +3455,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 /usr/include/boost/asio/ip/basic_endpoint.hpp:
 
 /usr/include/c++/12/bits/postypes.h:
+
+/usr/include/nlohmann/detail/meta/std_fs.hpp:
 
 /usr/include/boost/asio/detail/non_const_lvalue.hpp:
 
@@ -3509,6 +3702,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 
 /usr/include/boost/asio/detail/scheduler_thread_info.hpp:
 
+/usr/include/c++/12/bits/locale_facets_nonio.h:
+
 /usr/include/boost/asio/query.hpp:
 
 /usr/include/c++/12/tr1/special_function_util.h:
@@ -3573,6 +3768,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
+/usr/include/nlohmann/detail/iterators/iteration_proxy.hpp:
+
 /usr/include/boost/preprocessor/arithmetic/inc.hpp:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
@@ -3592,6 +3789,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h:
 
 /usr/include/c++/12/ext/numeric_traits.h:
+
+/usr/include/c++/12/forward_list:
 
 /usr/include/boost/numeric/conversion/detail/converter.hpp:
 
@@ -3634,6 +3833,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 /usr/include/c++/12/typeinfo:
 
 /usr/include/c++/12/bits/unique_lock.h:
+
+/usr/include/nlohmann/detail/conversions/from_json.hpp:
 
 /usr/include/boost/asio/require.hpp:
 
@@ -3689,6 +3890,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 
 /usr/include/stdlib.h:
 
+/usr/include/nlohmann/detail/macro_scope.hpp:
+
 /usr/include/c++/12/ext/aligned_buffer.h:
 
 /usr/include/c++/12/bits/vector.tcc:
@@ -3708,6 +3911,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 /usr/include/boost/asio/execution/context.hpp:
 
 /usr/include/boost/asio/detail/dependent_type.hpp:
+
+/usr/include/nlohmann/detail/meta/call_std/end.hpp:
 
 /usr/include/c++/12/bits/predefined_ops.h:
 
@@ -3969,6 +4174,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 
 /usr/include/c++/12/chrono:
 
+/usr/include/nlohmann/detail/iterators/primitive_iterator.hpp:
+
 /usr/include/boost/asio/detail/completion_handler.hpp:
 
 /usr/include/boost/asio/executor_work_guard.hpp:
@@ -4131,6 +4338,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 
 /usr/include/boost/config/pragma_message.hpp:
 
+/usr/include/nlohmann/detail/abi_macros.hpp:
+
 /usr/include/boost/mpl/void_fwd.hpp:
 
 /usr/include/boost/preprocessor/list/fold_left.hpp:
@@ -4164,6 +4373,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 /usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
+/usr/include/c++/12/bits/valarray_array.tcc:
 
 /usr/include/boost/asio/generic/seq_packet_protocol.hpp:
 
@@ -4325,6 +4536,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 
 /usr/include/boost/mpl/aux_/adl_barrier.hpp:
 
+/usr/include/nlohmann/detail/iterators/iter_impl.hpp:
+
 /usr/include/boost/numeric/conversion/bounds.hpp:
 
 /usr/include/boost/mpl/aux_/config/gcc.hpp:
@@ -4440,6 +4653,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 /usr/include/boost/asio/impl/write.hpp:
 
 /usr/include/boost/preprocessor/tuple/elem.hpp:
+
+/usr/include/nlohmann/detail/string_concat.hpp:
 
 /usr/include/boost/asio/posix/basic_descriptor.hpp:
 
@@ -4649,6 +4864,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 
 /usr/include/boost/asio/basic_waitable_timer.hpp:
 
+/usr/include/nlohmann/detail/json_pointer.hpp:
+
 /usr/include/boost/asio/execution_context.hpp:
 
 /usr/include/boost/asio/defer.hpp:
@@ -4709,6 +4926,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 
 /usr/include/boost/asio/generic/basic_endpoint.hpp:
 
+/usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h:
+
 /usr/include/boost/asio/generic/detail/endpoint.hpp:
 
 /usr/include/boost/asio/execution/submit.hpp:
@@ -4720,6 +4939,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/boost/asio/io_service.hpp:
+
+/usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp:
 
 /usr/include/boost/asio/ip/detail/socket_option.hpp:
 
@@ -4754,6 +4975,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 /usr/include/boost/asio/ip/address_v6_iterator.hpp:
 
 /usr/include/boost/asio/ip/impl/network_v4.hpp:
+
+/usr/include/c++/12/bits/forward_list.tcc:
 
 /usr/include/boost/asio/detail/impl/service_registry.ipp:
 
@@ -4874,6 +5097,8 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/C
 /usr/include/boost/predef/compiler.h:
 
 /usr/include/boost/predef/compiler/clang.h:
+
+/usr/include/nlohmann/detail/input/position_t.hpp:
 
 /usr/include/boost/predef/compiler/diab.h:
 
