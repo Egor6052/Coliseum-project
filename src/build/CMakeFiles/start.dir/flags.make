@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK
 
-CXX_INCLUDES = -I/home/admin1/Стільниця/Coliseum-project/src/lib/nlohmann
+CXX_INCLUDES = -I"/home/admin1/Рабочий стол/Coliseum-project/src/lib/nlohmann"
 
 CXX_FLAGS = 
 

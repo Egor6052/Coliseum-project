@@ -1,3 +1,3 @@
-/home/admin1/Стільниця/Coliseum-project/src/build/CMakeFiles/start.dir
-/home/admin1/Стільниця/Coliseum-project/src/build/CMakeFiles/edit_cache.dir
-/home/admin1/Стільниця/Coliseum-project/src/build/CMakeFiles/rebuild_cache.dir
+/home/admin1/Рабочий стол/Coliseum-project/src/build/CMakeFiles/start.dir
+/home/admin1/Рабочий стол/Coliseum-project/src/build/CMakeFiles/edit_cache.dir
+/home/admin1/Рабочий стол/Coliseum-project/src/build/CMakeFiles/rebuild_cache.dir

@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/admin1/Стільниця/Coliseum-project/src/main.cpp" "CMakeFiles/start.dir/main.cpp.o" "gcc" "CMakeFiles/start.dir/main.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/server/HTTP_server.cpp" "CMakeFiles/start.dir/server/HTTP_server.cpp.o" "gcc" "CMakeFiles/start.dir/server/HTTP_server.cpp.o.d"
+  "/home/admin1/Рабочий стол/Coliseum-project/src/main.cpp" "CMakeFiles/start.dir/main.cpp.o" "gcc" "CMakeFiles/start.dir/main.cpp.o.d"
+  "/home/admin1/Рабочий стол/Coliseum-project/src/server/HTTP_server.cpp" "CMakeFiles/start.dir/server/HTTP_server.cpp.o" "gcc" "CMakeFiles/start.dir/server/HTTP_server.cpp.o.d"
   )
 
 # Targets to which this target links.

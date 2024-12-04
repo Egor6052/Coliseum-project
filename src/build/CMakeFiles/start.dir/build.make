@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/admin1/Стільниця/Coliseum-project/src
+CMAKE_SOURCE_DIR = "/home/admin1/Рабочий стол/Coliseum-project/src"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/admin1/Стільниця/Coliseum-project/src/build
+CMAKE_BINARY_DIR = "/home/admin1/Рабочий стол/Coliseum-project/src/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/start.dir/depend.make
@@ -70,32 +70,32 @@ include CMakeFiles/start.dir/progress.make
 include CMakeFiles/start.dir/flags.make
 
 CMakeFiles/start.dir/main.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/main.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/main.cpp
+CMakeFiles/start.dir/main.cpp.o: /home/admin1/Рабочий\ стол/Coliseum-project/src/main.cpp
 CMakeFiles/start.dir/main.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/start.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/main.cpp.o -MF CMakeFiles/start.dir/main.cpp.o.d -o CMakeFiles/start.dir/main.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/admin1/Рабочий стол/Coliseum-project/src/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/start.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/main.cpp.o -MF CMakeFiles/start.dir/main.cpp.o.d -o CMakeFiles/start.dir/main.cpp.o -c "/home/admin1/Рабочий стол/Coliseum-project/src/main.cpp"
 
 CMakeFiles/start.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/start.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/main.cpp > CMakeFiles/start.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/admin1/Рабочий стол/Coliseum-project/src/main.cpp" > CMakeFiles/start.dir/main.cpp.i
 
 CMakeFiles/start.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/start.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/main.cpp -o CMakeFiles/start.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/admin1/Рабочий стол/Coliseum-project/src/main.cpp" -o CMakeFiles/start.dir/main.cpp.s
 
 CMakeFiles/start.dir/server/HTTP_server.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/server/HTTP_server.cpp
+CMakeFiles/start.dir/server/HTTP_server.cpp.o: /home/admin1/Рабочий\ стол/Coliseum-project/src/server/HTTP_server.cpp
 CMakeFiles/start.dir/server/HTTP_server.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/start.dir/server/HTTP_server.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/server/HTTP_server.cpp.o -MF CMakeFiles/start.dir/server/HTTP_server.cpp.o.d -o CMakeFiles/start.dir/server/HTTP_server.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/server/HTTP_server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/admin1/Рабочий стол/Coliseum-project/src/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/start.dir/server/HTTP_server.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/server/HTTP_server.cpp.o -MF CMakeFiles/start.dir/server/HTTP_server.cpp.o.d -o CMakeFiles/start.dir/server/HTTP_server.cpp.o -c "/home/admin1/Рабочий стол/Coliseum-project/src/server/HTTP_server.cpp"
 
 CMakeFiles/start.dir/server/HTTP_server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/start.dir/server/HTTP_server.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/server/HTTP_server.cpp > CMakeFiles/start.dir/server/HTTP_server.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/admin1/Рабочий стол/Coliseum-project/src/server/HTTP_server.cpp" > CMakeFiles/start.dir/server/HTTP_server.cpp.i
 
 CMakeFiles/start.dir/server/HTTP_server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/start.dir/server/HTTP_server.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/server/HTTP_server.cpp -o CMakeFiles/start.dir/server/HTTP_server.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/admin1/Рабочий стол/Coliseum-project/src/server/HTTP_server.cpp" -o CMakeFiles/start.dir/server/HTTP_server.cpp.s
 
 # Object files for target start
 start_OBJECTS = \
@@ -112,7 +112,7 @@ start: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0
 start: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.74.0
 start: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.74.0
 start: CMakeFiles/start.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/admin1/Стільниця/Coliseum-project/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable start"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/admin1/Рабочий стол/Coliseum-project/src/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable start"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/start.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -124,6 +124,6 @@ CMakeFiles/start.dir/clean:
 .PHONY : CMakeFiles/start.dir/clean
 
 CMakeFiles/start.dir/depend:
-	cd /home/admin1/Стільниця/Coliseum-project/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/admin1/Стільниця/Coliseum-project/src /home/admin1/Стільниця/Coliseum-project/src /home/admin1/Стільниця/Coliseum-project/src/build /home/admin1/Стільниця/Coliseum-project/src/build /home/admin1/Стільниця/Coliseum-project/src/build/CMakeFiles/start.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/home/admin1/Рабочий стол/Coliseum-project/src/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/admin1/Рабочий стол/Coliseum-project/src" "/home/admin1/Рабочий стол/Coliseum-project/src" "/home/admin1/Рабочий стол/Coliseum-project/src/build" "/home/admin1/Рабочий стол/Coliseum-project/src/build" "/home/admin1/Рабочий стол/Coliseum-project/src/build/CMakeFiles/start.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/start.dir/depend
 

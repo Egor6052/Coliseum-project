@@ -99,3 +99,13 @@ For json:
 ```
 sudo apt install nlohmann-json3-dev
 ```
+For PostrgeSQL:
+```
+sudo apt install postgresql postgresql-contrib
+```
+And lib for him:
+```
+sudo apt install libpqxx-dev
+```
+
+

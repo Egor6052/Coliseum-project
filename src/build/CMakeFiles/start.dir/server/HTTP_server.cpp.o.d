@@ -1,5 +1,5 @@
 CMakeFiles/start.dir/server/HTTP_server.cpp.o: \
- /home/admin1/Стільниця/Coliseum-project/src/server/HTTP_server.cpp \
+ /home/admin1/Рабочий\ стол/Coliseum-project/src/server/HTTP_server.cpp \
  /usr/include/stdc-predef.h /usr/include/boost/asio.hpp \
  /usr/include/boost/asio/associated_allocator.hpp \
  /usr/include/boost/asio/detail/config.hpp /usr/include/boost/config.hpp \
@@ -1111,7 +1111,7 @@ CMakeFiles/start.dir/server/HTTP_server.cpp.o: \
  /usr/include/boost/asio/windows/stream_handle.hpp \
  /usr/include/boost/asio/write_at.hpp \
  /usr/include/boost/asio/impl/write_at.hpp \
- /home/admin1/Стільниця/Coliseum-project/src/server/HTTP_server.h \
+ /home/admin1/Рабочий\ стол/Coliseum-project/src/server/HTTP_server.h \
  /usr/include/c++/12/iostream /usr/include/c++/12/fstream \
  /usr/include/c++/12/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \

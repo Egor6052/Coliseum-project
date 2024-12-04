@@ -154,7 +154,8 @@ void HTTP::start() {
         boost::asio::io_context io_context;
         tcp::acceptor acceptor(io_context, tcp::endpoint(tcp::v4(), port));
 
-        std::cout << "The HTTP server is running on the port " << port << "..." << std::endl;
+        printf("The HTTP server is running...\n");
+        printf("\033[32m http://localhost:%d/api/data \033[0m\n", port);
 
         while (true) {
             tcp::socket socket(io_context);

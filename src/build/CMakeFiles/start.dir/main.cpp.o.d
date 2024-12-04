@@ -1,5 +1,5 @@
 CMakeFiles/start.dir/main.cpp.o: \
- /home/admin1/Стільниця/Coliseum-project/src/main.cpp \
+ /home/admin1/Рабочий\ стол/Coliseum-project/src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/12/iostream \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
@@ -148,7 +148,7 @@ CMakeFiles/start.dir/main.cpp.o: \
  /usr/include/c++/12/bits/basic_ios.tcc \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
  /usr/include/c++/12/bits/istream.tcc \
- /home/admin1/Стільниця/Coliseum-project/src/./server/HTTP_server.h \
+ /home/admin1/Рабочий\ стол/Coliseum-project/src/./server/HTTP_server.h \
  /usr/include/boost/asio.hpp \
  /usr/include/boost/asio/associated_allocator.hpp \
  /usr/include/boost/asio/detail/config.hpp /usr/include/boost/config.hpp \
