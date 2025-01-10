@@ -7,11 +7,11 @@ void User::CreateUser(std::string valueAnswer) {
         std::cout << "Enter user name: ";
         std::string name, password;
         std::getline(std::cin, name);
-        setUserName(name);
+        User::setUserName(name);
 
         std::cout << "Enter user password: ";
         std::getline(std::cin, password);
-        setUserPassword(password);
+        User::setUserPassword(password);
 
         std::string command = "../bash/CreateUser.sh " + getUserName() + " " + getUserPassword();
 

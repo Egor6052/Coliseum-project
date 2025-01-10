@@ -18,24 +18,25 @@ int main(){
     user.CreateUser(answer);
 
     printf("--- Enter user data ---\n");
-    prinft("User name: ");
+    printf("User name: ");
     std::cin >> answer;
     std::cin.ignore();
     user.setUserName(answer);
-    prinft("User password: ");
+    printf("User password: ");
     std::cin >> answer;
     std::cin.ignore();
     user.setUserPassword(answer);
-    prinft("Host name: ");
+    printf("Host name: ");
+    std::cin >> answer;
+    std::cin.ignore();
+    user.setHostName(answer);
+
+
+    printf("--- Create Table? ---\n Y/N?");
     std::cin >> answer;
     std::cin.ignore();
     user.CreateTable(answer);
 
-
-    printf("--- Create Table? ---\n Y/N?")
-    std::cin >> answer;
-    std::cin.ignore();
-    user.CreateTable(answer);
 
     return 0;
 }

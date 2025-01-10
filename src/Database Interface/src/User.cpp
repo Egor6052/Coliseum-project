@@ -6,6 +6,7 @@ User::User(){
     this->id = 0;
     this->userName = "";
     this->userPassword = "";
+    this->hostName = "";
 }
 
 User::~User(){}

@@ -10,6 +10,7 @@ class User {
 private:
     int id;
     std::string userName, userPassword;
+    std::string hostName;
 
 // DB: server
 // User: user1
@@ -23,9 +24,11 @@ public:
 
     void setUserName(std::string nameValue);
     void setUserPassword(std::string passwordValue);
+    void setHostName(std::string hostNameValue);
 
     std::string getUserName();
     std::string getUserPassword();
+    std::string getHostName();
 
 
     void installDB(std::string valueAnswer);
