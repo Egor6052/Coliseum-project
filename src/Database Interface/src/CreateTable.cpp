@@ -1,4 +1,6 @@
-#include <pqxx/pqxx> 
+#include <pqxx/pqxx>
+#include <iostream>
+#include <string.h>
 #include "../lib/User.h"
 
 void User::CreateTable(std::string valueAnswer){

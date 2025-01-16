@@ -24,7 +24,7 @@ find_package(Threads REQUIRED)
 
 # Create an executable file
 add_executable(start main.cpp 
-    ./server/HTTP_server.cpp 
+    ./server/*.cpp
     # dao/entity/SensorData.cpp 
     # dao/repository/SensorDataRepository.cpp
     # service/ISendData.cpp
