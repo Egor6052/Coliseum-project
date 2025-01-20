@@ -95,10 +95,6 @@ Folder "temp": files need distribution
 
 
 ## Libraries
-For json:
-```
-sudo apt install nlohmann-json3-dev
-```
 For PostrgeSQL:
 ```
 sudo apt install postgresql postgresql-contrib
