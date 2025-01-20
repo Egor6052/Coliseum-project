@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/start.dir/main.cpp.o CMakeFiles/start.dir/server/HTTP_server.cpp.o -o start  /usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0 /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.74.0 /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.74.0 
