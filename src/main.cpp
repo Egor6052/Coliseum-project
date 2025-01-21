@@ -7,7 +7,7 @@ int main(){
 
     std::cout << "\033[1m\033[35m˚｡⋆\033[36mWelcome to the Server!\033[35m⋆｡˚\033[0m\n" << std::endl;
     std::string adminPassword;
-    std::printf("Enter admin password: ");
+    std::printf("Enter PostgreSQL admin password: ");
     std::cin >> adminPassword;
     std::cin.ignore();
 
