@@ -18,7 +18,7 @@ int main(){
         std::string menu, answer;
         menu = "|\033[37mStart server - 1 \033[0m|   |\033[37m Create record - 2 \033[0m|  |\033[37m Delete record - 3 \033[0m|   |\033[37m View records - 4 \033[0m|   |\033[37m Create backup - 5 \033[0m|";
 
-        std::string horizontalLine(menu.length()-36, '-');
+        std::string horizontalLine(menu.length()-45, '-');
         std::cout << horizontalLine << "\n" << menu << "\n" << horizontalLine << std::endl;
 
         std::cin >> answer;
@@ -42,7 +42,6 @@ int main(){
             server.createBackup();
         }
     } while (true);
-
 
     return 0;
 }
