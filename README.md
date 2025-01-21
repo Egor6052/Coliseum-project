@@ -95,6 +95,15 @@ Folder "temp": files need distribution
 
 
 ## Libraries
+For JSON format:
+if Fedora dnf
+```
+sudo dnf install nlohmann-json-devel
+```
+or, if Debian apt
+```
+sudo apt install nlohmann-json-devel
+```
 For PostrgeSQL:
 ```
 sudo apt install postgresql postgresql-contrib
@@ -103,5 +112,3 @@ And lib for him:
 ```
 sudo apt install libpqxx-dev
 ```
-
-

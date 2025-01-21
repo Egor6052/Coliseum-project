@@ -20,13 +20,12 @@ void Server::handleClient(int clientSocket) {
     read(clientSocket, buffer, sizeof(buffer) - 1);
 
     // Sending reply 
-    // TODO
     std::string response =
-        "HTTP/1.1 200 OK\r\n"
-        "Content-Type: text/plain\r\n"
-        "Connection: close\r\n"
-        "\r\n"
-        "Hello, world!";
+        // "HTTP/1.1 200 OK\r\n"
+        // "Content-Type: text/plain\r\n"
+        // "Connection: close\r\n"
+        // "\r\n"
+        getData();
     send(clientSocket, response.c_str(), response.size(), 0);
     close(clientSocket);
 }
@@ -56,6 +55,8 @@ void Server::start() {
         close(serverSocket);
         return;
     }
+
+    // http://localhost:8080/api/data
 
     std::cout << "The HTTP server is running...\n";
     std::cout << "\033[32m http://localhost:" << port << "/api/data \033[0m\n";

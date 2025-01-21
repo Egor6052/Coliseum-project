@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string.h>
 #include <pqxx/pqxx>
+#include <nlohmann/json.hpp>
+#include <stdexcept>
 #include "../../lib/Database.h"
 
 Database::Database(){
@@ -75,40 +77,38 @@ std::string Database::getData() {
         );
 
         if (res.empty()) {
-            return "No sensor data found in the database.";
+            nlohmann::json response = {{"message", "No sensor data found in the database."}};
+            return response.dump(4);
         }
 
-        // Generating output
-        std::string sensorData;
+        // Створення JSON-масиву для зберігання даних
+        nlohmann::json jsonData = nlohmann::json::array();
+
+        // Обробка рядків результату
         for (const auto& row : res) {
-            int id = row["id"].as<int>();
-            std::string date = row["date"].as<std::string>();
-            std::string ipAddress = row["ip_address"].as<std::string>();
-            std::string sensorName = row["sensor_name"].as<std::string>();
-            float current = row["current"].as<float>();
-            float voltage = row["voltage"].as<float>();
-            float activePower = row["active_power"].as<float>();
-            float reactivePower = row["reactive_power"].as<float>();
+            nlohmann::json sensor = {
+                {"id", row["id"].as<int>()},
+                {"date", row["date"].as<std::string>()},
+                {"ip_address", row["ip_address"].as<std::string>()},
+                {"sensor_name", row["sensor_name"].as<std::string>()},
+                {"current", row["current"].as<float>()},
+                {"voltage", row["voltage"].as<float>()},
+                {"active_power", row["active_power"].as<float>()},
+                {"reactive_power", row["reactive_power"].as<float>()}
+            };
 
-            sensorData += "ID: " + std::to_string(id) + "\n";
-            sensorData += "  Date: " + date + "\n";
-            sensorData += "  IP Address: " + ipAddress + "\n";
-            sensorData += "  Sensor Name: " + sensorName + "\n";
-            sensorData += "  Current: " + std::to_string(current) + " A\n";
-            sensorData += "  Voltage: " + std::to_string(voltage) + " V\n";
-            sensorData += "  Active Power: " + std::to_string(activePower) + " W\n";
-            sensorData += "  Reactive Power: " + std::to_string(reactivePower) + " VAR\n";
-            // sensorData += "---------------------------------------------\n";
+            jsonData.push_back(sensor);
         }
 
-        return sensorData;
+        return jsonData.dump(4);
 
     } catch (const std::exception& e) {
-        std::cerr << "Error: " << e.what() << '\n';
-        return "Error retrieving sensor data.";
+        nlohmann::json errorResponse = {
+            {"error", e.what()}
+        };
+        return errorResponse.dump(4);
     }
 }
-
 
 void Database::deleteData(std::string valueID) {
     try {
