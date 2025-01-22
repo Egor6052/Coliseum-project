@@ -100,7 +100,7 @@ if Fedora dnf
 ```
 sudo dnf install nlohmann-json-devel
 ```
-or, if Debian apt
+else Debian apt
 ```
 sudo apt install nlohmann-json-devel
 ```
