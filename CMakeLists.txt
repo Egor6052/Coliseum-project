@@ -29,6 +29,8 @@ set(SOURCE_FILES
     ./src/dao/entity/PowerFactor.cpp
     ./src/dao/entity/ReactivePower.cpp
     ./src/dao/entity/Voltage.cpp
+    
+    ./src/dao/entity/roundNumber.cpp
 )
 
 # Заголовкові файли

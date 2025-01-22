@@ -29,6 +29,8 @@ class Database : public UserDB{
         float getPowerFactor();
         float getReactivePower();
 
+        float roundNumber(float valueNumber);
+
         void CreateTable();
 
         void setData();
