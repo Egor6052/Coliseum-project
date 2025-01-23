@@ -19,7 +19,7 @@ void Server::handleClient(int clientSocket) {
     //Reading data from the client
     read(clientSocket, buffer, sizeof(buffer) - 1);
 
-    // Sending reply 
+    // Sending reply
     std::string response =
         // "HTTP/1.1 200 OK\r\n"
         // "Content-Type: text/plain\r\n"

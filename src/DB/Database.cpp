@@ -8,8 +8,7 @@
 Database::Database(){
     this->data = "";
     this->ipAddress = "";
-    this->nameSensor = "Sensor1";
-    this->current = 0.0f;
+    this->nameSensor = "";
     this->voltage = 0.0f;
     this->activePower = 0.0f;
     this->reactivePower = 0.0f;
@@ -23,10 +22,10 @@ void Database::setData(){
         this->data = getCurrentDateTime();
         this->ipAddress = getIpAddress();
         this->nameSensor = getNameSensor();
-        this->current = getCurrent();
-        this->voltage = getVoltage();
-        this->activePower = getActivePower();
-        this->reactivePower = getReactivePower();
+        this->current = roundNumber(getCurrent());
+        this->voltage = roundNumber(getVoltage());
+        this->activePower = roundNumber(getActivePower());
+        this->reactivePower = roundNumber(getReactivePower());
 
         pqxx::connection conn("dbname=sensordata user=" + getUserName() + " password=" + getUserPassword() + " host=localhost");
 
