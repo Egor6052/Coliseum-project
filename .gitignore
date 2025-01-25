@@ -1,2 +1,5 @@
 #VS code config files
 .vscode/*
+
+./build/CMakeFiles
+./build/CMakeCache.txt
