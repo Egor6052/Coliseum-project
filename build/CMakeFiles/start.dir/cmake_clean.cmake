@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o"
+  "CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o.d"
+  "CMakeFiles/start.dir/src/DB/CreateTable.cpp.o"
+  "CMakeFiles/start.dir/src/DB/CreateTable.cpp.o.d"
+  "CMakeFiles/start.dir/src/DB/Database.cpp.o"
+  "CMakeFiles/start.dir/src/DB/Database.cpp.o.d"
+  "CMakeFiles/start.dir/src/DB/DateTime.cpp.o"
+  "CMakeFiles/start.dir/src/DB/DateTime.cpp.o.d"
+  "CMakeFiles/start.dir/src/Server/Server.cpp.o"
+  "CMakeFiles/start.dir/src/Server/Server.cpp.o.d"
+  "CMakeFiles/start.dir/src/User/CreatePostgresUser.cpp.o"
+  "CMakeFiles/start.dir/src/User/CreatePostgresUser.cpp.o.d"
+  "CMakeFiles/start.dir/src/User/UserDB.cpp.o"
+  "CMakeFiles/start.dir/src/User/UserDB.cpp.o.d"
+  "CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o"
+  "CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o.d"
+  "CMakeFiles/start.dir/src/dao/entity/Current.cpp.o"
+  "CMakeFiles/start.dir/src/dao/entity/Current.cpp.o.d"
+  "CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o"
+  "CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o.d"
+  "CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o"
+  "CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o.d"
+  "CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o"
+  "CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o.d"
+  "CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o"
+  "CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o.d"
+  "CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o"
+  "CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o.d"
+  "CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o"
+  "CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o.d"
+  "CMakeFiles/start.dir/src/main.cpp.o"
+  "CMakeFiles/start.dir/src/main.cpp.o.d"
+  "start"
+  "start.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/start.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
