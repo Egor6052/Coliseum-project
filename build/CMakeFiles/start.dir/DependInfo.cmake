@@ -8,22 +8,22 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/admin1/Стільниця/Coliseum-project/src/DB/CreateBackup.cpp" "CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o" "gcc" "CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/DB/CreateTable.cpp" "CMakeFiles/start.dir/src/DB/CreateTable.cpp.o" "gcc" "CMakeFiles/start.dir/src/DB/CreateTable.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/DB/Database.cpp" "CMakeFiles/start.dir/src/DB/Database.cpp.o" "gcc" "CMakeFiles/start.dir/src/DB/Database.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/DB/DateTime.cpp" "CMakeFiles/start.dir/src/DB/DateTime.cpp.o" "gcc" "CMakeFiles/start.dir/src/DB/DateTime.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/Server/Server.cpp" "CMakeFiles/start.dir/src/Server/Server.cpp.o" "gcc" "CMakeFiles/start.dir/src/Server/Server.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/User/CreatePostgresUser.cpp" "CMakeFiles/start.dir/src/User/CreatePostgresUser.cpp.o" "gcc" "CMakeFiles/start.dir/src/User/CreatePostgresUser.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/User/UserDB.cpp" "CMakeFiles/start.dir/src/User/UserDB.cpp.o" "gcc" "CMakeFiles/start.dir/src/User/UserDB.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/dao/entity/ActivePower.cpp" "CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/dao/entity/Current.cpp" "CMakeFiles/start.dir/src/dao/entity/Current.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/Current.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/dao/entity/IpAddress.cpp" "CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/dao/entity/NameSensor.cpp" "CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/dao/entity/PowerFactor.cpp" "CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/dao/entity/ReactivePower.cpp" "CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/dao/entity/Voltage.cpp" "CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/dao/entity/roundNumber.cpp" "CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/main.cpp" "CMakeFiles/start.dir/src/main.cpp.o" "gcc" "CMakeFiles/start.dir/src/main.cpp.o.d"
+  "/home/admin1/Стільниця/MySql-Coliseum-project/src/DB/CreateBackup.cpp" "CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o" "gcc" "CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o.d"
+  "/home/admin1/Стільниця/MySql-Coliseum-project/src/DB/CreateTable.cpp" "CMakeFiles/start.dir/src/DB/CreateTable.cpp.o" "gcc" "CMakeFiles/start.dir/src/DB/CreateTable.cpp.o.d"
+  "/home/admin1/Стільниця/MySql-Coliseum-project/src/DB/Database.cpp" "CMakeFiles/start.dir/src/DB/Database.cpp.o" "gcc" "CMakeFiles/start.dir/src/DB/Database.cpp.o.d"
+  "/home/admin1/Стільниця/MySql-Coliseum-project/src/DB/DateTime.cpp" "CMakeFiles/start.dir/src/DB/DateTime.cpp.o" "gcc" "CMakeFiles/start.dir/src/DB/DateTime.cpp.o.d"
+  "/home/admin1/Стільниця/MySql-Coliseum-project/src/Server/Server.cpp" "CMakeFiles/start.dir/src/Server/Server.cpp.o" "gcc" "CMakeFiles/start.dir/src/Server/Server.cpp.o.d"
+  "/home/admin1/Стільниця/MySql-Coliseum-project/src/User/UserDB.cpp" "CMakeFiles/start.dir/src/User/UserDB.cpp.o" "gcc" "CMakeFiles/start.dir/src/User/UserDB.cpp.o.d"
+  "/home/admin1/Стільниця/MySql-Coliseum-project/src/User/createMySQLUser.cpp" "CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o" "gcc" "CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o.d"
+  "/home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/ActivePower.cpp" "CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o.d"
+  "/home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/Current.cpp" "CMakeFiles/start.dir/src/dao/entity/Current.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/Current.cpp.o.d"
+  "/home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/IpAddress.cpp" "CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o.d"
+  "/home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/NameSensor.cpp" "CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o.d"
+  "/home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/PowerFactor.cpp" "CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o.d"
+  "/home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/ReactivePower.cpp" "CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o.d"
+  "/home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/Voltage.cpp" "CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o.d"
+  "/home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/roundNumber.cpp" "CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o.d"
+  "/home/admin1/Стільниця/MySql-Coliseum-project/src/main.cpp" "CMakeFiles/start.dir/src/main.cpp.o" "gcc" "CMakeFiles/start.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -8,7 +8,7 @@
 
 // http://localhost:8080/api/data
 
-class Server : public Database{
+class Server : public Database {
 private:
     int port;
 

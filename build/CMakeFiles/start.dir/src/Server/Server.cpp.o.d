@@ -1,7 +1,7 @@
 CMakeFiles/start.dir/src/Server/Server.cpp.o: \
- /home/admin1/Стільниця/Coliseum-project/src/Server/Server.cpp \
+ /home/admin1/Стільниця/MySql-Coliseum-project/src/Server/Server.cpp \
  /usr/include/stdc-predef.h \
- /home/admin1/Стільниця/Coliseum-project/./lib/Server.h \
+ /home/admin1/Стільниця/MySql-Coliseum-project/./lib/Server.h \
  /usr/include/c++/14/iostream /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
@@ -131,8 +131,8 @@ CMakeFiles/start.dir/src/Server/Server.cpp.o: \
  /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
  /usr/include/c++/14/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h \
- /home/admin1/Стільниця/Coliseum-project/./lib/Database.h \
- /home/admin1/Стільниця/Coliseum-project/./lib/UserDB.h \
+ /home/admin1/Стільниця/MySql-Coliseum-project/./lib/Database.h \
+ /home/admin1/Стільниця/MySql-Coliseum-project/./lib/UserDB.h \
  /usr/include/c++/14/cstring /usr/include/c++/14/thread \
  /usr/include/c++/14/bits/std_thread.h \
  /usr/include/c++/14/bits/unique_ptr.h \

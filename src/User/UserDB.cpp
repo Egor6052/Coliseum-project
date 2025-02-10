@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string.h>
-#include <pqxx/pqxx>
+// #include <pqxx/pqxx>
 #include "../../lib/UserDB.h"
 
 UserDB::UserDB(){
     this->name = "data_writer";
-    this->password = "psql";
+    this->password = "MySqlStrongPassword123!";
+    this->dbName = "SensorData";
 }
 UserDB::~UserDB(){
 
@@ -29,6 +30,9 @@ std::string UserDB::getUserPassword(){
 }
 std::string UserDB::getUserName(){
     return this->name;
+}
+std::string UserDB::getDBName(){
+    return this->dbName;
 }
 
 std::string UserDB::getUser(){

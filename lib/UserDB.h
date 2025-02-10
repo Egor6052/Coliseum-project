@@ -9,16 +9,18 @@ class UserDB {
     private:
     std::string name; 
     std::string password;
+    std::string dbName;
 
     public:
         UserDB();
         ~UserDB();
         void setName(std::string valueName);
         void setPassword(std::string valuePassword);
-        void createPostgresUser(const std::string& adminPassword);
+        void createMySQLUser(const std::string& adminPassword);
 
         std::string getUserPassword();
         std::string getUserName();
+        std::string getDBName();
         std::string getUser();
 };
 

@@ -1,44 +1,42 @@
 #include <iostream>
-#include <string.h>
-#include <pqxx/pqxx>
+#include <string>
+#include <mysql/mysql.h>
 #include "../../lib/Database.h"
-
 
 void Database::CreateTable() {
     try {
-        std::string connectionString = "dbname=sensordata user=" + getUserName() + " password=" + getUserPassword() + " host=localhost";
-
-        pqxx::connection conn(connectionString);
-
-        if (!conn.is_open()) {
-            throw std::runtime_error("Failed to connect to database!");
+        MYSQL *conn = mysql_init(nullptr);
+        if (!conn) {
+            throw std::runtime_error("MySQL initialization failed!");
         }
 
-        // Checking if a table exists
-        pqxx::work txn(conn);
-        pqxx::result res = txn.exec("SELECT to_regclass('public.SensorData');");
-
-        if (res[0][0].is_null()) {
-            // If the table does not exist, create it
-            std::string createTableQuery = R"(
-                CREATE TABLE public.SensorData (
-                    id SERIAL PRIMARY KEY,
-                    date TIMESTAMP,
-                    ip_address VARCHAR(255) NOT NULL,
-                    sensor_name VARCHAR(255) NOT NULL,
-                    current FLOAT NOT NULL,
-                    voltage FLOAT NOT NULL,
-                    active_power FLOAT NOT NULL,
-                    reactive_power FLOAT NOT NULL
-                );
-            )";
-            txn.exec(createTableQuery);
-            txn.commit();
-            std::cout << "\033[1m\033[35m⋆⟡₊⊹\033[36mTable 'SensorData' created successfully!\033[35m⊹₊⟡⋆\033[0m\n" << std::endl;
-        } else {
-            std::cout << "\033[1m\033[35m⋆⟡₊⊹\033[36mTable 'SensorData' already exists!\033[35m⊹₊⟡⋆\033[0m\n" << std::endl;
+        conn = mysql_real_connect(conn, "localhost", getUserName().c_str(), getUserPassword().c_str(), getDBName().c_str(), 0, nullptr, 0);
+        if (!conn) {
+            throw std::runtime_error("Failed to connect to MySQL database!");
         }
-    } catch (const std::exception& e) {
+
+        // Створення таблиці, якщо вона не існує
+        std::string createTableQuery = "CREATE TABLE IF NOT EXISTS " + getDBName() + " ("
+                        "id INT AUTO_INCREMENT PRIMARY KEY, "
+                        "date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, "
+                        "ip_address VARCHAR(255) NOT NULL, "
+                        "sensor_name VARCHAR(255) NOT NULL, "
+                        "current FLOAT NOT NULL, "
+                        "voltage FLOAT NOT NULL, "
+                        "active_power FLOAT NOT NULL, "
+                        "reactive_power FLOAT NOT NULL"
+                    ");";
+
+        if (mysql_query(conn, createTableQuery.c_str())) {
+            throw std::runtime_error("Failed to create table: " + std::string(mysql_error(conn)));
+        }
+
+        std::cout << "\033[1m\033[35m⋆⟡₊⊹\033[36mTable '" + getDBName() + "' created successfully!\033[35m⊹₊⟡⋆\033[0m\n" << std::endl;
+
+        mysql_close(conn);
+    } catch (const std::exception &e) {
         std::cerr << "Error: " << e.what() << '\n';
     }
 }
+
+

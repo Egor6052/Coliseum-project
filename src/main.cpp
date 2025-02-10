@@ -7,11 +7,11 @@ int main(){
 
     std::cout << "\033[1m\033[35m˚｡⋆\033[36mWelcome to the Server!\033[35m⋆｡˚\033[0m\n" << std::endl;
     std::string adminPassword;
-    std::printf("Enter PostgreSQL admin password: ");
+    std::printf("Enter MySql admin password: ");
     std::cin >> adminPassword;
     std::cin.ignore();
 
-    server.createPostgresUser(adminPassword);
+    server.createMySQLUser(adminPassword);
     server.CreateTable();
 
     do {
@@ -20,9 +20,10 @@ int main(){
 
         std::string horizontalLine(menu.length()-45, '-');
         std::cout << horizontalLine << "\n" << menu << "\n" << horizontalLine << std::endl;
-
+        
         std::cin >> answer;
         std::cin.ignore();
+
         if (answer == "1"){
             server.start();
             server.handleClient(1212);

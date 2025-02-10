@@ -1,5 +1,5 @@
 CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o: \
- /home/admin1/Стільниця/Coliseum-project/src/DB/CreateBackup.cpp \
+ /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/CreateBackup.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/14/iostream \
  /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
@@ -128,114 +128,42 @@ CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o: \
  /usr/include/c++/14/bits/locale_facets.tcc \
  /usr/include/c++/14/bits/basic_ios.tcc \
  /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
- /usr/include/c++/14/bits/istream.tcc /usr/include/string.h \
- /usr/include/strings.h /usr/include/pqxx/pqxx \
- /usr/include/pqxx/internal/header-pre.hxx /usr/include/c++/14/version \
- /usr/include/pqxx/config-public-compiler.h /usr/include/c++/14/ciso646 \
- /usr/include/pqxx/array.hxx /usr/include/c++/14/algorithm \
- /usr/include/c++/14/bits/stl_algo.h \
- /usr/include/c++/14/bits/algorithmfwd.h \
- /usr/include/c++/14/bits/stl_heap.h \
- /usr/include/c++/14/bits/uniform_int_dist.h \
- /usr/include/c++/14/bits/stl_tempbuf.h \
- /usr/include/c++/14/pstl/glue_algorithm_defs.h \
- /usr/include/c++/14/pstl/execution_defs.h /usr/include/c++/14/cassert \
- /usr/include/assert.h /usr/include/c++/14/utility \
- /usr/include/c++/14/bits/stl_relops.h /usr/include/c++/14/vector \
- /usr/include/c++/14/bits/stl_uninitialized.h \
- /usr/include/c++/14/bits/stl_vector.h \
- /usr/include/c++/14/bits/stl_bvector.h \
- /usr/include/c++/14/bits/vector.tcc /usr/include/pqxx/connection.hxx \
- /usr/include/c++/14/ctime /usr/include/c++/14/list \
- /usr/include/c++/14/bits/stl_list.h \
- /usr/include/c++/14/bits/allocated_ptr.h \
- /usr/include/c++/14/ext/aligned_buffer.h \
- /usr/include/c++/14/bits/list.tcc /usr/include/c++/14/map \
- /usr/include/c++/14/bits/stl_tree.h \
- /usr/include/c++/14/bits/node_handle.h \
- /usr/include/c++/14/bits/stl_map.h \
- /usr/include/c++/14/bits/stl_multimap.h \
- /usr/include/c++/14/bits/erase_if.h /usr/include/c++/14/memory \
- /usr/include/c++/14/bits/stl_raw_storage_iter.h \
- /usr/include/c++/14/bits/align.h \
+ /usr/include/c++/14/bits/istream.tcc /usr/include/c++/14/fstream \
+ /usr/include/c++/14/bits/codecvt.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \
+ /usr/include/c++/14/bits/fstream.tcc /usr/include/c++/14/filesystem \
+ /usr/include/c++/14/bits/fs_fwd.h /usr/include/c++/14/cstdint \
  /usr/lib/gcc/x86_64-redhat-linux/14/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
- /usr/include/bits/stdint-least.h /usr/include/c++/14/bits/unique_ptr.h \
- /usr/include/c++/14/bits/shared_ptr.h \
- /usr/include/c++/14/bits/shared_ptr_base.h \
- /usr/include/c++/14/ext/concurrence.h \
- /usr/include/c++/14/bits/shared_ptr_atomic.h \
- /usr/include/c++/14/bits/atomic_base.h \
- /usr/include/c++/14/bits/atomic_lockfree_defines.h \
- /usr/include/c++/14/backward/auto_ptr.h \
- /usr/include/c++/14/pstl/glue_memory_defs.h \
- /usr/include/pqxx/errorhandler.hxx /usr/include/pqxx/types.hxx \
- /usr/include/c++/14/cstdint /usr/include/c++/14/iterator \
- /usr/include/c++/14/bits/stream_iterator.h /usr/include/pqxx/except.hxx \
- /usr/include/pqxx/internal/concat.hxx /usr/include/pqxx/strconv.hxx \
- /usr/include/c++/14/charconv /usr/include/c++/14/cstring \
- /usr/include/c++/14/limits /usr/include/c++/14/sstream \
- /usr/include/c++/14/bits/sstream.tcc /usr/include/c++/14/ranges \
- /usr/include/pqxx/util.hxx /usr/include/c++/14/functional \
- /usr/include/c++/14/bits/std_function.h \
- /usr/include/c++/14/unordered_map \
- /usr/include/c++/14/bits/unordered_map.h \
- /usr/include/c++/14/bits/hashtable.h \
- /usr/include/c++/14/bits/hashtable_policy.h \
- /usr/include/c++/14/bits/enable_special_members.h \
- /usr/include/c++/14/array /usr/include/c++/14/compare \
- /usr/include/pqxx/version.hxx \
- /usr/include/pqxx/internal/libpq-forward.hxx \
- /usr/include/pqxx/internal/ignore-deprecated-pre.hxx \
- /usr/include/pqxx/internal/ignore-deprecated-post.hxx \
- /usr/include/pqxx/zview.hxx /usr/include/pqxx/internal/conversions.hxx \
- /usr/include/c++/14/numeric /usr/include/c++/14/bits/stl_numeric.h \
- /usr/include/c++/14/pstl/glue_numeric_defs.h \
- /usr/include/c++/14/optional /usr/include/c++/14/variant \
- /usr/include/c++/14/bits/parse_numbers.h /usr/include/pqxx/params.hxx \
- /usr/include/pqxx/internal/statement_parameters.hxx \
- /usr/include/pqxx/binarystring.hxx /usr/include/pqxx/result.hxx \
- /usr/include/pqxx/internal/encodings.hxx /usr/include/c++/14/iomanip \
- /usr/include/c++/14/locale \
+ /usr/include/bits/stdint-least.h /usr/include/c++/14/bits/chrono.h \
+ /usr/include/c++/14/ratio /usr/include/c++/14/limits \
+ /usr/include/c++/14/ctime /usr/include/c++/14/bits/parse_numbers.h \
+ /usr/include/c++/14/bits/fs_path.h /usr/include/c++/14/locale \
  /usr/include/c++/14/bits/locale_facets_nonio.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/time_members.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/14/bits/codecvt.h \
- /usr/include/c++/14/bits/locale_facets_nonio.tcc \
- /usr/include/c++/14/bits/locale_conv.h \
- /usr/include/c++/14/bits/quoted_string.h \
- /usr/include/pqxx/internal/encoding_group.hxx \
- /usr/include/pqxx/separated_list.hxx \
- /usr/include/pqxx/internal/array-composite.hxx \
- /usr/include/pqxx/blob.hxx /usr/include/c++/14/filesystem \
- /usr/include/c++/14/bits/fs_fwd.h /usr/include/c++/14/bits/chrono.h \
- /usr/include/c++/14/ratio /usr/include/c++/14/bits/fs_path.h \
- /usr/include/c++/14/codecvt /usr/include/c++/14/bits/fs_dir.h \
- /usr/include/c++/14/bits/fs_ops.h /usr/include/c++/14/span \
- /usr/include/pqxx/dbtransaction.hxx \
- /usr/include/pqxx/transaction_base.hxx \
- /usr/include/pqxx/internal/stream_query.hxx \
- /usr/include/pqxx/internal/gates/connection-stream_from.hxx \
- /usr/include/pqxx/internal/callgate.hxx \
- /usr/include/pqxx/internal/stream_iterator.hxx \
- /usr/include/pqxx/transaction_focus.hxx /usr/include/pqxx/isolation.hxx \
- /usr/include/pqxx/row.hxx /usr/include/pqxx/field.hxx \
- /usr/include/pqxx/composite.hxx \
- /usr/include/pqxx/internal/stream_query_impl.hxx \
- /usr/include/pqxx/cursor.hxx /usr/include/pqxx/internal/sql_cursor.hxx \
- /usr/include/pqxx/largeobject.hxx /usr/include/pqxx/nontransaction.hxx \
- /usr/include/pqxx/transaction.hxx /usr/include/pqxx/notification.hxx \
- /usr/include/pqxx/pipeline.hxx /usr/include/pqxx/prepared_statement.hxx \
- /usr/include/pqxx/params.hxx /usr/include/pqxx/range.hxx \
- /usr/include/pqxx/internal/result_iterator.hxx \
- /usr/include/pqxx/internal/result_iter.hxx \
- /usr/include/pqxx/robusttransaction.hxx \
- /usr/include/pqxx/stream_from.hxx /usr/include/pqxx/stream_to.hxx \
- /usr/include/pqxx/subtransaction.hxx /usr/include/pqxx/time.hxx \
- /usr/include/c++/14/chrono /usr/include/pqxx/transactor.hxx \
- /usr/include/pqxx/internal/header-post.hxx /usr/include/c++/14/fstream \
- /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
- /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \
- /usr/include/c++/14/bits/fstream.tcc \
- /home/admin1/Стільниця/Coliseum-project/src/DB/../../lib/Database.h \
- /home/admin1/Стільниця/Coliseum-project/src/DB/../../lib/UserDB.h
+ /usr/include/libintl.h /usr/include/c++/14/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/14/bits/locale_conv.h /usr/include/c++/14/iomanip \
+ /usr/include/c++/14/bits/quoted_string.h /usr/include/c++/14/sstream \
+ /usr/include/c++/14/bits/sstream.tcc /usr/include/c++/14/codecvt \
+ /usr/include/c++/14/ext/concurrence.h \
+ /usr/include/c++/14/bits/shared_ptr.h \
+ /usr/include/c++/14/bits/shared_ptr_base.h \
+ /usr/include/c++/14/bits/allocated_ptr.h \
+ /usr/include/c++/14/bits/unique_ptr.h \
+ /usr/include/c++/14/ext/aligned_buffer.h \
+ /usr/include/c++/14/bits/fs_dir.h /usr/include/c++/14/bits/fs_ops.h \
+ /usr/include/mysql/mysql.h \
+ /usr/lib/gcc/x86_64-redhat-linux/14/include/stdbool.h \
+ /usr/include/mysql/field_types.h /usr/include/mysql/my_list.h \
+ /usr/include/mysql/mysql_com.h /usr/include/mysql/my_command.h \
+ /usr/include/mysql/my_compress.h \
+ /usr/include/mysql/mysql/udf_registration_types.h \
+ /usr/include/mysql/mysql/client_plugin.h /usr/include/c++/14/stdlib.h \
+ /usr/include/mysql/mysql/plugin_auth_common.h \
+ /usr/include/mysql/mysql_version.h /usr/include/mysql/mysql_time.h \
+ /usr/include/mysql/errmsg.h \
+ /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/../../lib/Database.h \
+ /usr/include/string.h /usr/include/strings.h \
+ /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/../../lib/UserDB.h

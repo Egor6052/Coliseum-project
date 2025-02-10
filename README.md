@@ -21,46 +21,26 @@ The distributed data collection system (hereinafter "the System") is designed fo
 - **Operating Systems**: Compatible with Linux and Windows.
 
 
+Start Server:
+```
+sudo systemctl start mysqld
+```
+
 ## API
 ```
 http://localhost:8080/api/data
-```
-## Compilation from folder src
-
-To compile the project:
-```
-g++ -o ./src/build/Start ./src/main.cpp
-```
-
-Run the program:
-```
-../build/Start
 ```
 ## Compilation using CMake build system
 
 Configuration:
 ```
-cmake 
+cmake ..
 ```
 Compile the binary:
-```
-cmake build
-```
-Clear build folder:
-```
-rm -r ./src/build/*
-```
-Run App:
-```
-cd ./src/build && cmake ..
-```
 ```
 cmake --build .
 ```
 Start:
-```
-make
-```
 ```
 ./start
 ```
@@ -104,6 +84,31 @@ else Debian apt
 ```
 sudo apt install nlohmann-json-devel
 ```
+MySQL:
+_if dnf_
+```
+sudo dnf install mysql-server mysql-devel
+```
+_if apt_
+```
+sudo apt install mysql-server
+```
+
+Start server:
+```
+sudo systemctl start mysqld
+```
+Add to startup:
+```
+sudo systemctl enable mysqld
+```
+_Checking the status:_
+```
+sudo systemctl status mysqld
+```
+
+
+
 For PostrgeSQL:
 ```
 sudo apt install postgresql postgresql-contrib

@@ -1,5 +1,5 @@
 CMakeFiles/start.dir/src/main.cpp.o: \
- /home/admin1/Стільниця/Coliseum-project/src/main.cpp \
+ /home/admin1/Стільниця/MySql-Coliseum-project/src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/14/iostream \
  /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
@@ -130,6 +130,6 @@ CMakeFiles/start.dir/src/main.cpp.o: \
  /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
  /usr/include/c++/14/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h \
- /home/admin1/Стільниця/Coliseum-project/src/../lib/Server.h \
- /home/admin1/Стільниця/Coliseum-project/src/../lib/Database.h \
- /home/admin1/Стільниця/Coliseum-project/src/../lib/UserDB.h
+ /home/admin1/Стільниця/MySql-Coliseum-project/src/../lib/Server.h \
+ /home/admin1/Стільниця/MySql-Coliseum-project/src/../lib/Database.h \
+ /home/admin1/Стільниця/MySql-Coliseum-project/src/../lib/UserDB.h

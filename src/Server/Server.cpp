@@ -21,10 +21,7 @@ void Server::handleClient(int clientSocket) {
 
     // Sending reply
     std::string response =
-        // "HTTP/1.1 200 OK\r\n"
-        // "Content-Type: text/plain\r\n"
-        // "Connection: close\r\n"
-        // "\r\n"
+        
         getData();
     send(clientSocket, response.c_str(), response.size(), 0);
     close(clientSocket);

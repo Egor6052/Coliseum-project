@@ -12,16 +12,13 @@ message(STATUS "Compile with static library? ${USE_STATIC}")
 
 # Шлях до вихідних файлів
 set(SOURCE_FILES
-    ./src/User/CreatePostgresUser.cpp
+    ./src/User/createMySQLUser.cpp
     ./src/User/UserDB.cpp
-    
     ./src/Server/Server.cpp
-
     ./src/DB/Database.cpp
     ./src/DB/DateTime.cpp
     ./src/DB/CreateTable.cpp
     ./src/DB/CreateBackup.cpp
-
     ./src/dao/entity/ActivePower.cpp
     ./src/dao/entity/Current.cpp
     ./src/dao/entity/IpAddress.cpp
@@ -29,7 +26,6 @@ set(SOURCE_FILES
     ./src/dao/entity/PowerFactor.cpp
     ./src/dao/entity/ReactivePower.cpp
     ./src/dao/entity/Voltage.cpp
-    
     ./src/dao/entity/roundNumber.cpp
 )
 
@@ -56,7 +52,23 @@ target_compile_options(start
 target_include_directories(start
     PRIVATE
         ./lib
+        /usr/include/mysql
 )
 
-find_package(PostgreSQL REQUIRED)
-target_link_libraries(start PRIVATE pqxx)
+# Вказуємо шлях до бібліотеки mysqlclient
+# link_directories(/usr/lib64/mysql)
+
+find_library(MYSQL_LIB mysqlclient HINTS /usr/lib64/mysql)
+target_link_libraries(start PRIVATE ${MYSQL_LIB})
+
+# Підключаємо бібліотеку mysqlclient для лінкування
+# target_link_libraries(start PRIVATE mysqlclient)
+# find_library(MYSQL_LIB mysqlclient HINTS /usr/lib64/mysql)
+# target_link_libraries(start PRIVATE ${MYSQL_LIB})
+
+
+
+# Лінкування з бібліотеками MySQL
+# find_package(MySQL REQUIRED)
+# target_link_libraries(start PRIVATE ${MYSQL_LIBRARIES})
+
