@@ -20,12 +20,6 @@ The distributed data collection system (hereinafter "the System") is designed fo
 - **Database**: SQL database for storing and managing collected data.
 - **Operating Systems**: Compatible with Linux and Windows.
 
-
-Start Server:
-```
-sudo systemctl start mysqld
-```
-
 ## API
 ```
 http://localhost:8080/api/data
