@@ -85,6 +85,7 @@ else Debian apt
 sudo apt install nlohmann-json-devel
 ```
 MySQL:
+
 _if dnf_
 ```
 sudo dnf install mysql-server mysql-devel
@@ -105,15 +106,4 @@ sudo systemctl enable mysqld
 _Checking the status:_
 ```
 sudo systemctl status mysqld
-```
-
-
-
-For PostrgeSQL:
-```
-sudo apt install postgresql postgresql-contrib
-```
-And lib for him:
-```
-sudo apt install libpqxx-dev
 ```
