@@ -12,6 +12,7 @@ message(STATUS "Compile with static library? ${USE_STATIC}")
 
 # Шлях до вихідних файлів
 set(SOURCE_FILES
+    ./src/Accounts/Accounts.cpp
     ./src/User/createMySQLUser.cpp
     ./src/User/UserDB.cpp
     ./src/Server/Server.cpp
@@ -31,6 +32,7 @@ set(SOURCE_FILES
 
 # Заголовкові файли
 set(HEADER_FILES
+    ./lib/Accounts.h
     ./lib/Database.h
     ./lib/Server.h
     ./lib/UserDB.h
