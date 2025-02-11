@@ -20,10 +20,6 @@ void Accounts::registerAsUser() {
         return;
     }
 
-    // Отримуємо дані для створення нового користувача
-    // std::string username = getUserName();
-    // std::string password = getUserPassword();
-
     // Створення нового користувача для додатка з мінімальними правами
     std::string createUserQuery = "CREATE USER IF NOT EXISTS '" + getUserName() + "'@'localhost' IDENTIFIED BY '" + getUserPassword() + "';";
 

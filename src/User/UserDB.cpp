@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string.h>
-// #include <pqxx/pqxx>
 #include "../../lib/UserDB.h"
 
 UserDB::UserDB(){

@@ -19,9 +19,12 @@ void Accounts::registerAsAdmin() {
         return;
     }
 
-    // // Отримуємо дані для створення адміністратора
-    // std::string username = getUserName();
-    // std::string password = getUserPassword();
+    // Переключення на базу даних, яку ви хочете використовувати
+    if (mysql_select_db(conn, getDBName().c_str())) {
+        std::cerr << "Database selection failed: " << mysql_error(conn) << '\n';
+        mysql_close(conn);
+        return;
+    }
 
     // Створення нового адміністратора для додатка
     std::string createUserQuery = "CREATE USER IF NOT EXISTS '" + getUserName() + "'@'localhost' IDENTIFIED BY '" + getUserPassword() + "';";
@@ -32,7 +35,7 @@ void Accounts::registerAsAdmin() {
         return;
     }
 
-    // Надання привілеїв адміністратора (повний доступ до бази даних)
+    // Надання привілеїв адміністратора на конкретну базу даних
     std::string grantQuery = "GRANT ALL PRIVILEGES ON " + getDBName() + ".* TO '" + getUserName() + "'@'localhost';";
 
     if (mysql_query(conn, grantQuery.c_str())) {

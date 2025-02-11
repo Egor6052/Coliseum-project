@@ -40,11 +40,12 @@ std::string Accounts::getAllAdminsFromDB() {
         return "";
     }
 
-    int num_fields = mysql_num_fields(res);
-    if (num_fields == 0) {
-        std::cerr << "No fields in the result\n";
+    int num_rows = mysql_num_rows(res);
+
+    if (num_rows == 0) {
+        std::cout << "No administrators found.\n";
     } else {
-        std::cout << "Number of fields: " << num_fields << '\n';
+        std::cout << "Number of administrators found: " << num_rows << '\n';
     }
 
     // Формуємо рядок з адміністраторами
