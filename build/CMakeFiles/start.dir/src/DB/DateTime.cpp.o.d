@@ -1,7 +1,7 @@
 CMakeFiles/start.dir/src/DB/DateTime.cpp.o: \
- /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/DateTime.cpp \
+ /home/admin1/Стільниця/Coliseum-project/src/DB/DateTime.cpp \
  /usr/include/stdc-predef.h \
- /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/../../lib/Database.h \
+ /home/admin1/Стільниця/Coliseum-project/src/DB/../../lib/Database.h \
  /usr/include/c++/14/iostream /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
@@ -131,7 +131,8 @@ CMakeFiles/start.dir/src/DB/DateTime.cpp.o: \
  /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
  /usr/include/c++/14/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h \
- /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/../../lib/UserDB.h \
+ /home/admin1/Стільниця/Coliseum-project/src/DB/../../lib/Accounts.h \
+ /home/admin1/Стільниця/Coliseum-project/src/DB/../../lib/UserDB.h \
  /usr/include/c++/14/chrono /usr/include/c++/14/bits/chrono.h \
  /usr/include/c++/14/ratio /usr/include/c++/14/cstdint \
  /usr/lib/gcc/x86_64-redhat-linux/14/include/stdint.h \

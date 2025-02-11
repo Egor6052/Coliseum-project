@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/admin1/Стільниця/MySql-Coliseum-project
+CMAKE_SOURCE_DIR = /home/admin1/Стільниця/Coliseum-project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/admin1/Стільниця/MySql-Coliseum-project/build
+CMAKE_BINARY_DIR = /home/admin1/Стільниця/Coliseum-project/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/start.dir/depend.make
@@ -70,232 +70,337 @@ include CMakeFiles/start.dir/progress.make
 include CMakeFiles/start.dir/flags.make
 
 CMakeFiles/start.dir/src/main.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/MySql-Coliseum-project/src/main.cpp
+CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/main.cpp
 CMakeFiles/start.dir/src/main.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/start.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/main.cpp.o -MF CMakeFiles/start.dir/src/main.cpp.o.d -o CMakeFiles/start.dir/src/main.cpp.o -c /home/admin1/Стільниця/MySql-Coliseum-project/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/start.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/main.cpp.o -MF CMakeFiles/start.dir/src/main.cpp.o.d -o CMakeFiles/start.dir/src/main.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/main.cpp
 
 CMakeFiles/start.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/MySql-Coliseum-project/src/main.cpp > CMakeFiles/start.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/main.cpp > CMakeFiles/start.dir/src/main.cpp.i
 
 CMakeFiles/start.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/MySql-Coliseum-project/src/main.cpp -o CMakeFiles/start.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/main.cpp -o CMakeFiles/start.dir/src/main.cpp.s
+
+CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/Accounts/GenerateUID.cpp
+CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.o -MF CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.o.d -o CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/Accounts/GenerateUID.cpp
+
+CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/Accounts/GenerateUID.cpp > CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.i
+
+CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/Accounts/GenerateUID.cpp -o CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.s
+
+CMakeFiles/start.dir/src/Accounts/Accounts.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Accounts/Accounts.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/Accounts/Accounts.cpp
+CMakeFiles/start.dir/src/Accounts/Accounts.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/start.dir/src/Accounts/Accounts.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Accounts/Accounts.cpp.o -MF CMakeFiles/start.dir/src/Accounts/Accounts.cpp.o.d -o CMakeFiles/start.dir/src/Accounts/Accounts.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/Accounts/Accounts.cpp
+
+CMakeFiles/start.dir/src/Accounts/Accounts.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Accounts/Accounts.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/Accounts/Accounts.cpp > CMakeFiles/start.dir/src/Accounts/Accounts.cpp.i
+
+CMakeFiles/start.dir/src/Accounts/Accounts.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Accounts/Accounts.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/Accounts/Accounts.cpp -o CMakeFiles/start.dir/src/Accounts/Accounts.cpp.s
+
+CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/Accounts/GetAllAdmins.cpp
+CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.o -MF CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.o.d -o CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/Accounts/GetAllAdmins.cpp
+
+CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/Accounts/GetAllAdmins.cpp > CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.i
+
+CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/Accounts/GetAllAdmins.cpp -o CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.s
+
+CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/Accounts/GetAllUsers.cpp
+CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.o -MF CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.o.d -o CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/Accounts/GetAllUsers.cpp
+
+CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/Accounts/GetAllUsers.cpp > CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.i
+
+CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/Accounts/GetAllUsers.cpp -o CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.s
+
+CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/Accounts/RegisterAsAdmin.cpp
+CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.o -MF CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.o.d -o CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/Accounts/RegisterAsAdmin.cpp
+
+CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/Accounts/RegisterAsAdmin.cpp > CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.i
+
+CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/Accounts/RegisterAsAdmin.cpp -o CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.s
+
+CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/Accounts/RegisterAsUser.cpp
+CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.o -MF CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.o.d -o CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/Accounts/RegisterAsUser.cpp
+
+CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/Accounts/RegisterAsUser.cpp > CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.i
+
+CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/Accounts/RegisterAsUser.cpp -o CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.s
+
+CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/Accounts/RegisterUser.cpp
+CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.o -MF CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.o.d -o CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/Accounts/RegisterUser.cpp
+
+CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/Accounts/RegisterUser.cpp > CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.i
+
+CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/Accounts/RegisterUser.cpp -o CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.s
 
 CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o: /home/admin1/Стільниця/MySql-Coliseum-project/src/User/createMySQLUser.cpp
+CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/User/createMySQLUser.cpp
 CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o -MF CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o.d -o CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o -c /home/admin1/Стільниця/MySql-Coliseum-project/src/User/createMySQLUser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o -MF CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o.d -o CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/User/createMySQLUser.cpp
 
 CMakeFiles/start.dir/src/User/createMySQLUser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/User/createMySQLUser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/MySql-Coliseum-project/src/User/createMySQLUser.cpp > CMakeFiles/start.dir/src/User/createMySQLUser.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/User/createMySQLUser.cpp > CMakeFiles/start.dir/src/User/createMySQLUser.cpp.i
 
 CMakeFiles/start.dir/src/User/createMySQLUser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/User/createMySQLUser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/MySql-Coliseum-project/src/User/createMySQLUser.cpp -o CMakeFiles/start.dir/src/User/createMySQLUser.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/User/createMySQLUser.cpp -o CMakeFiles/start.dir/src/User/createMySQLUser.cpp.s
 
 CMakeFiles/start.dir/src/User/UserDB.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/User/UserDB.cpp.o: /home/admin1/Стільниця/MySql-Coliseum-project/src/User/UserDB.cpp
+CMakeFiles/start.dir/src/User/UserDB.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/User/UserDB.cpp
 CMakeFiles/start.dir/src/User/UserDB.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/start.dir/src/User/UserDB.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/User/UserDB.cpp.o -MF CMakeFiles/start.dir/src/User/UserDB.cpp.o.d -o CMakeFiles/start.dir/src/User/UserDB.cpp.o -c /home/admin1/Стільниця/MySql-Coliseum-project/src/User/UserDB.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/start.dir/src/User/UserDB.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/User/UserDB.cpp.o -MF CMakeFiles/start.dir/src/User/UserDB.cpp.o.d -o CMakeFiles/start.dir/src/User/UserDB.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/User/UserDB.cpp
 
 CMakeFiles/start.dir/src/User/UserDB.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/User/UserDB.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/MySql-Coliseum-project/src/User/UserDB.cpp > CMakeFiles/start.dir/src/User/UserDB.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/User/UserDB.cpp > CMakeFiles/start.dir/src/User/UserDB.cpp.i
 
 CMakeFiles/start.dir/src/User/UserDB.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/User/UserDB.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/MySql-Coliseum-project/src/User/UserDB.cpp -o CMakeFiles/start.dir/src/User/UserDB.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/User/UserDB.cpp -o CMakeFiles/start.dir/src/User/UserDB.cpp.s
 
 CMakeFiles/start.dir/src/Server/Server.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/Server/Server.cpp.o: /home/admin1/Стільниця/MySql-Coliseum-project/src/Server/Server.cpp
+CMakeFiles/start.dir/src/Server/Server.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/Server/Server.cpp
 CMakeFiles/start.dir/src/Server/Server.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/start.dir/src/Server/Server.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Server/Server.cpp.o -MF CMakeFiles/start.dir/src/Server/Server.cpp.o.d -o CMakeFiles/start.dir/src/Server/Server.cpp.o -c /home/admin1/Стільниця/MySql-Coliseum-project/src/Server/Server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/start.dir/src/Server/Server.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Server/Server.cpp.o -MF CMakeFiles/start.dir/src/Server/Server.cpp.o.d -o CMakeFiles/start.dir/src/Server/Server.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/Server/Server.cpp
 
 CMakeFiles/start.dir/src/Server/Server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Server/Server.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/MySql-Coliseum-project/src/Server/Server.cpp > CMakeFiles/start.dir/src/Server/Server.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/Server/Server.cpp > CMakeFiles/start.dir/src/Server/Server.cpp.i
 
 CMakeFiles/start.dir/src/Server/Server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Server/Server.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/MySql-Coliseum-project/src/Server/Server.cpp -o CMakeFiles/start.dir/src/Server/Server.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/Server/Server.cpp -o CMakeFiles/start.dir/src/Server/Server.cpp.s
 
 CMakeFiles/start.dir/src/DB/Database.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/DB/Database.cpp.o: /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/Database.cpp
+CMakeFiles/start.dir/src/DB/Database.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/DB/Database.cpp
 CMakeFiles/start.dir/src/DB/Database.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/start.dir/src/DB/Database.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DB/Database.cpp.o -MF CMakeFiles/start.dir/src/DB/Database.cpp.o.d -o CMakeFiles/start.dir/src/DB/Database.cpp.o -c /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/Database.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/start.dir/src/DB/Database.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DB/Database.cpp.o -MF CMakeFiles/start.dir/src/DB/Database.cpp.o.d -o CMakeFiles/start.dir/src/DB/Database.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/DB/Database.cpp
 
 CMakeFiles/start.dir/src/DB/Database.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/DB/Database.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/Database.cpp > CMakeFiles/start.dir/src/DB/Database.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/DB/Database.cpp > CMakeFiles/start.dir/src/DB/Database.cpp.i
 
 CMakeFiles/start.dir/src/DB/Database.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/DB/Database.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/Database.cpp -o CMakeFiles/start.dir/src/DB/Database.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/DB/Database.cpp -o CMakeFiles/start.dir/src/DB/Database.cpp.s
 
 CMakeFiles/start.dir/src/DB/DateTime.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/DB/DateTime.cpp.o: /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/DateTime.cpp
+CMakeFiles/start.dir/src/DB/DateTime.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/DB/DateTime.cpp
 CMakeFiles/start.dir/src/DB/DateTime.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/start.dir/src/DB/DateTime.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DB/DateTime.cpp.o -MF CMakeFiles/start.dir/src/DB/DateTime.cpp.o.d -o CMakeFiles/start.dir/src/DB/DateTime.cpp.o -c /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/DateTime.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/start.dir/src/DB/DateTime.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DB/DateTime.cpp.o -MF CMakeFiles/start.dir/src/DB/DateTime.cpp.o.d -o CMakeFiles/start.dir/src/DB/DateTime.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/DB/DateTime.cpp
 
 CMakeFiles/start.dir/src/DB/DateTime.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/DB/DateTime.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/DateTime.cpp > CMakeFiles/start.dir/src/DB/DateTime.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/DB/DateTime.cpp > CMakeFiles/start.dir/src/DB/DateTime.cpp.i
 
 CMakeFiles/start.dir/src/DB/DateTime.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/DB/DateTime.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/DateTime.cpp -o CMakeFiles/start.dir/src/DB/DateTime.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/DB/DateTime.cpp -o CMakeFiles/start.dir/src/DB/DateTime.cpp.s
 
 CMakeFiles/start.dir/src/DB/CreateTable.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/DB/CreateTable.cpp.o: /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/CreateTable.cpp
+CMakeFiles/start.dir/src/DB/CreateTable.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/DB/CreateTable.cpp
 CMakeFiles/start.dir/src/DB/CreateTable.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/start.dir/src/DB/CreateTable.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DB/CreateTable.cpp.o -MF CMakeFiles/start.dir/src/DB/CreateTable.cpp.o.d -o CMakeFiles/start.dir/src/DB/CreateTable.cpp.o -c /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/CreateTable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/start.dir/src/DB/CreateTable.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DB/CreateTable.cpp.o -MF CMakeFiles/start.dir/src/DB/CreateTable.cpp.o.d -o CMakeFiles/start.dir/src/DB/CreateTable.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/DB/CreateTable.cpp
 
 CMakeFiles/start.dir/src/DB/CreateTable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/DB/CreateTable.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/CreateTable.cpp > CMakeFiles/start.dir/src/DB/CreateTable.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/DB/CreateTable.cpp > CMakeFiles/start.dir/src/DB/CreateTable.cpp.i
 
 CMakeFiles/start.dir/src/DB/CreateTable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/DB/CreateTable.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/CreateTable.cpp -o CMakeFiles/start.dir/src/DB/CreateTable.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/DB/CreateTable.cpp -o CMakeFiles/start.dir/src/DB/CreateTable.cpp.s
 
 CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o: /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/CreateBackup.cpp
+CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/DB/CreateBackup.cpp
 CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o -MF CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o.d -o CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o -c /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/CreateBackup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o -MF CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o.d -o CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/DB/CreateBackup.cpp
 
 CMakeFiles/start.dir/src/DB/CreateBackup.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/DB/CreateBackup.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/CreateBackup.cpp > CMakeFiles/start.dir/src/DB/CreateBackup.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/DB/CreateBackup.cpp > CMakeFiles/start.dir/src/DB/CreateBackup.cpp.i
 
 CMakeFiles/start.dir/src/DB/CreateBackup.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/DB/CreateBackup.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/CreateBackup.cpp -o CMakeFiles/start.dir/src/DB/CreateBackup.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/DB/CreateBackup.cpp -o CMakeFiles/start.dir/src/DB/CreateBackup.cpp.s
 
 CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o: /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/ActivePower.cpp
+CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/dao/entity/ActivePower.cpp
 CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o -c /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/ActivePower.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/dao/entity/ActivePower.cpp
 
 CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/ActivePower.cpp > CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/dao/entity/ActivePower.cpp > CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.i
 
 CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/ActivePower.cpp -o CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/dao/entity/ActivePower.cpp -o CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.s
 
 CMakeFiles/start.dir/src/dao/entity/Current.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/dao/entity/Current.cpp.o: /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/Current.cpp
+CMakeFiles/start.dir/src/dao/entity/Current.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/dao/entity/Current.cpp
 CMakeFiles/start.dir/src/dao/entity/Current.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/start.dir/src/dao/entity/Current.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/Current.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/Current.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/Current.cpp.o -c /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/Current.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/start.dir/src/dao/entity/Current.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/Current.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/Current.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/Current.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/dao/entity/Current.cpp
 
 CMakeFiles/start.dir/src/dao/entity/Current.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/dao/entity/Current.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/Current.cpp > CMakeFiles/start.dir/src/dao/entity/Current.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/dao/entity/Current.cpp > CMakeFiles/start.dir/src/dao/entity/Current.cpp.i
 
 CMakeFiles/start.dir/src/dao/entity/Current.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/dao/entity/Current.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/Current.cpp -o CMakeFiles/start.dir/src/dao/entity/Current.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/dao/entity/Current.cpp -o CMakeFiles/start.dir/src/dao/entity/Current.cpp.s
 
 CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o: /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/IpAddress.cpp
+CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/dao/entity/IpAddress.cpp
 CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o -c /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/IpAddress.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/dao/entity/IpAddress.cpp
 
 CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/IpAddress.cpp > CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/dao/entity/IpAddress.cpp > CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.i
 
 CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/IpAddress.cpp -o CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/dao/entity/IpAddress.cpp -o CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.s
 
 CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o: /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/NameSensor.cpp
+CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/dao/entity/NameSensor.cpp
 CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o -c /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/NameSensor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/dao/entity/NameSensor.cpp
 
 CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/NameSensor.cpp > CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/dao/entity/NameSensor.cpp > CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.i
 
 CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/NameSensor.cpp -o CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/dao/entity/NameSensor.cpp -o CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.s
 
 CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o: /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/PowerFactor.cpp
+CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/dao/entity/PowerFactor.cpp
 CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o -c /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/PowerFactor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/dao/entity/PowerFactor.cpp
 
 CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/PowerFactor.cpp > CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/dao/entity/PowerFactor.cpp > CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.i
 
 CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/PowerFactor.cpp -o CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/dao/entity/PowerFactor.cpp -o CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.s
 
 CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o: /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/ReactivePower.cpp
+CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/dao/entity/ReactivePower.cpp
 CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o -c /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/ReactivePower.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/dao/entity/ReactivePower.cpp
 
 CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/ReactivePower.cpp > CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/dao/entity/ReactivePower.cpp > CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.i
 
 CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/ReactivePower.cpp -o CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/dao/entity/ReactivePower.cpp -o CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.s
 
 CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o: /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/Voltage.cpp
+CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/dao/entity/Voltage.cpp
 CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o -c /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/Voltage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/dao/entity/Voltage.cpp
 
 CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/Voltage.cpp > CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/dao/entity/Voltage.cpp > CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.i
 
 CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/Voltage.cpp -o CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/dao/entity/Voltage.cpp -o CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.s
 
 CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o: /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/roundNumber.cpp
+CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/dao/entity/roundNumber.cpp
 CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o -c /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/roundNumber.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/dao/entity/roundNumber.cpp
 
 CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/roundNumber.cpp > CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/dao/entity/roundNumber.cpp > CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.i
 
 CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/roundNumber.cpp -o CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/dao/entity/roundNumber.cpp -o CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.s
 
 # Object files for target start
 start_OBJECTS = \
 "CMakeFiles/start.dir/src/main.cpp.o" \
+"CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.o" \
+"CMakeFiles/start.dir/src/Accounts/Accounts.cpp.o" \
+"CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.o" \
+"CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.o" \
+"CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.o" \
+"CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.o" \
+"CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.o" \
 "CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o" \
 "CMakeFiles/start.dir/src/User/UserDB.cpp.o" \
 "CMakeFiles/start.dir/src/Server/Server.cpp.o" \
@@ -316,6 +421,13 @@ start_OBJECTS = \
 start_EXTERNAL_OBJECTS =
 
 start: CMakeFiles/start.dir/src/main.cpp.o
+start: CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.o
+start: CMakeFiles/start.dir/src/Accounts/Accounts.cpp.o
+start: CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.o
+start: CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.o
+start: CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.o
+start: CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.o
+start: CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.o
 start: CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o
 start: CMakeFiles/start.dir/src/User/UserDB.cpp.o
 start: CMakeFiles/start.dir/src/Server/Server.cpp.o
@@ -334,7 +446,7 @@ start: CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o
 start: CMakeFiles/start.dir/build.make
 start: /usr/lib64/mysql/libmysqlclient.so
 start: CMakeFiles/start.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable start"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX executable start"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/start.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -346,6 +458,6 @@ CMakeFiles/start.dir/clean:
 .PHONY : CMakeFiles/start.dir/clean
 
 CMakeFiles/start.dir/depend:
-	cd /home/admin1/Стільниця/MySql-Coliseum-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/admin1/Стільниця/MySql-Coliseum-project /home/admin1/Стільниця/MySql-Coliseum-project /home/admin1/Стільниця/MySql-Coliseum-project/build /home/admin1/Стільниця/MySql-Coliseum-project/build /home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles/start.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/admin1/Стільниця/Coliseum-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/admin1/Стільниця/Coliseum-project /home/admin1/Стільниця/Coliseum-project /home/admin1/Стільниця/Coliseum-project/build /home/admin1/Стільниця/Coliseum-project/build /home/admin1/Стільниця/Coliseum-project/build/CMakeFiles/start.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/start.dir/depend
 

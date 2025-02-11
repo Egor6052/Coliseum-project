@@ -1,12 +1,12 @@
 #pragma once
-#ifndef DATABASE
-#define NOTE_H
+#ifndef DATABASE_H
+#define DATABASE_H
 
 #include <iostream>
 #include <string.h>
-#include "UserDB.h"
+#include "Accounts.h"
 
-class Database : public UserDB{
+class Database : public Accounts {
     private:
         std::string data;
         std::string ipAddress;

@@ -1,5 +1,5 @@
 CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o: \
- /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/roundNumber.cpp \
+ /home/admin1/Стільниця/Coliseum-project/src/dao/entity/roundNumber.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/14/iostream \
  /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
@@ -129,9 +129,10 @@ CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o: \
  /usr/include/c++/14/bits/basic_ios.tcc \
  /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
  /usr/include/c++/14/bits/istream.tcc \
- /home/admin1/Стільниця/MySql-Coliseum-project/./lib/../lib/Database.h \
+ /home/admin1/Стільниця/Coliseum-project/./lib/../lib/Database.h \
  /usr/include/string.h /usr/include/strings.h \
- /home/admin1/Стільниця/MySql-Coliseum-project/./lib/../lib/UserDB.h \
+ /home/admin1/Стільниця/Coliseum-project/./lib/../lib/Accounts.h \
+ /home/admin1/Стільниця/Coliseum-project/./lib/../lib/UserDB.h \
  /usr/include/c++/14/cmath /usr/include/math.h \
  /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
  /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \

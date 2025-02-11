@@ -2,7 +2,7 @@
 #include <mysql/mysql.h>
 #include "../../lib/UserDB.h"
 
-void UserDB::createMySQLUser(const std::string& adminPassword) {
+void UserDB::createMySQLUser() {
     MYSQL *conn;
     conn = mysql_init(nullptr);
 
@@ -12,7 +12,7 @@ void UserDB::createMySQLUser(const std::string& adminPassword) {
     }
 
     // Підключення як root
-    if (!mysql_real_connect(conn, "localhost", "root", adminPassword.c_str(), nullptr, 0, nullptr, 0)) {
+    if (!mysql_real_connect(conn, "localhost", "root", getAdminPassword().c_str(), nullptr, 0, nullptr, 0)) {
         std::cerr << "Connection failed: " << mysql_error(conn) << '\n';
         mysql_close(conn);
         return;
@@ -30,13 +30,13 @@ void UserDB::createMySQLUser(const std::string& adminPassword) {
     }
 
     // Створення користувача для додатка, якщо не існує
-    std::string createUserQuery = "CREATE USER IF NOT EXISTS '" + getUserName() + "'@'localhost' IDENTIFIED BY '" + getUserPassword() + "';";
+    std::string createUserQuery = "CREATE USER IF NOT EXISTS '" + getUserDBName() + "'@'localhost' IDENTIFIED BY '" + getUserDBPassword() + "';";
     if (mysql_query(conn, createUserQuery.c_str())) {
         std::cerr << "User creation failed: " << mysql_error(conn) << '\n';
     }
 
     // Надання привілеїв
-    std::string grantQuery = "GRANT ALL PRIVILEGES ON " + getDBName() + ".* TO '" + getUserName() + "'@'localhost';";
+    std::string grantQuery = "GRANT ALL PRIVILEGES ON " + getDBName() + ".* TO '" + getUserDBName() + "'@'localhost';";
     if (mysql_query(conn, grantQuery.c_str())) {
         std::cerr << "Granting privileges failed: " << mysql_error(conn) << '\n';
     }

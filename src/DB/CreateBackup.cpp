@@ -16,7 +16,7 @@ void Database::createBackup() {
             throw std::runtime_error("mysql_init() failed");
         }
 
-        if (mysql_real_connect(conn, "localhost", getUserName().c_str(), getUserPassword().c_str(), getDBName().c_str(), 3306, NULL, 0) == NULL) {
+        if (mysql_real_connect(conn, "localhost", getUserDBName().c_str(), getUserDBPassword().c_str(), getDBName().c_str(), 3306, NULL, 0) == NULL) {
             mysql_close(conn);
             throw std::runtime_error("mysql_real_connect() failed");
         }

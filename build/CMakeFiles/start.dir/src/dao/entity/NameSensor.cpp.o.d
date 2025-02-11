@@ -1,5 +1,5 @@
 CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o: \
- /home/admin1/Стільниця/MySql-Coliseum-project/src/dao/entity/NameSensor.cpp \
+ /home/admin1/Стільниця/Coliseum-project/src/dao/entity/NameSensor.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/14/iostream \
  /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
@@ -162,5 +162,6 @@ CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o: \
  /usr/include/c++/14/bits/stl_numeric.h \
  /usr/include/c++/14/pstl/glue_numeric_defs.h \
  /usr/include/c++/14/pstl/execution_defs.h \
- /home/admin1/Стільниця/MySql-Coliseum-project/./lib/../lib/Database.h \
- /home/admin1/Стільниця/MySql-Coliseum-project/./lib/../lib/UserDB.h
+ /home/admin1/Стільниця/Coliseum-project/./lib/../lib/Database.h \
+ /home/admin1/Стільниця/Coliseum-project/./lib/../lib/Accounts.h \
+ /home/admin1/Стільниця/Coliseum-project/./lib/../lib/UserDB.h

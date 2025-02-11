@@ -30,7 +30,7 @@ void Database::setData() {
             throw std::runtime_error("MySQL initialization failed!");
         }
 
-        if (!mysql_real_connect(conn, "localhost", getUserName().c_str(), getUserPassword().c_str(), getDBName().c_str(), 0, nullptr, 0)) {
+        if (!mysql_real_connect(conn, "localhost", getUserDBName().c_str(), getUserDBPassword().c_str(), getDBName().c_str(), 0, nullptr, 0)) {
             throw std::runtime_error(mysql_error(conn));
         }
 
@@ -58,7 +58,7 @@ std::string Database::getData() {
             throw std::runtime_error("MySQL initialization failed!");
         }
 
-        if (!mysql_real_connect(conn, "localhost", getUserName().c_str(), getUserPassword().c_str(), getDBName().c_str(), 0, nullptr, 0)) {
+        if (!mysql_real_connect(conn, "localhost", getUserDBName().c_str(), getUserDBPassword().c_str(), getDBName().c_str(), 0, nullptr, 0)) {
             throw std::runtime_error(mysql_error(conn));
         }
 
@@ -105,7 +105,7 @@ void Database::deleteData(std::string valueID) {
             throw std::runtime_error("MySQL initialization failed!");
         }
 
-        if (!mysql_real_connect(conn, "localhost", getUserName().c_str(), getUserPassword().c_str(), getDBName().c_str(), 0, nullptr, 0)) {
+        if (!mysql_real_connect(conn, "localhost", getUserDBName().c_str(), getUserDBPassword().c_str(), getDBName().c_str(), 0, nullptr, 0)) {
             throw std::runtime_error(mysql_error(conn));
         }
 

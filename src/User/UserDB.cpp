@@ -11,24 +11,35 @@ UserDB::UserDB(){
 UserDB::~UserDB(){
 
 }
-void UserDB::setName(std::string valueName){
+void UserDB::setUserDBName(std::string valueName){
     if (valueName == ""){
         std::cerr << "\033[32mError: Name must not be null!\033[0m" << "\n";
     } else {
         this->name = valueName;
     }
 }
-void UserDB::setPassword(std::string valuePassword){
+void UserDB::setUserDBPassword(std::string valuePassword){
     if (valuePassword == "") {
         std::cerr << "\033[32mError: Password must not be null!\033[0m" << "\n";
     }
     this->password = valuePassword;
 }
 
-std::string UserDB::getUserPassword(){
+void UserDB::setAdminPassword(std::string valueAdminPassword){
+    if (valueAdminPassword == "") {
+        std::cerr << "\033[32mError: Password must not be null!\033[0m" << "\n";
+    }
+    this->adminPassword = valueAdminPassword;
+}
+
+std::string UserDB::getAdminPassword(){
+    return adminPassword;
+}
+
+std::string UserDB::getUserDBPassword(){
     return this->password;
 }
-std::string UserDB::getUserName(){
+std::string UserDB::getUserDBName(){
     return this->name;
 }
 std::string UserDB::getDBName(){

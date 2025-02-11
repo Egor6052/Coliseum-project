@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/admin1/Стільниця/MySql-Coliseum-project
+CMAKE_SOURCE_DIR = /home/admin1/Стільниця/Coliseum-project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/admin1/Стільниця/MySql-Coliseum-project/build
+CMAKE_BINARY_DIR = /home/admin1/Стільниця/Coliseum-project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles /home/admin1/Стільниця/MySql-Coliseum-project/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin1/Стільниця/Coliseum-project/build/CMakeFiles /home/admin1/Стільниця/Coliseum-project/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin1/Стільниця/MySql-Coliseum-project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin1/Стільниця/Coliseum-project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,174 @@ start: cmake_check_build_system
 start/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/build
 .PHONY : start/fast
+
+src/Accounts/Accounts.o: src/Accounts/Accounts.cpp.o
+.PHONY : src/Accounts/Accounts.o
+
+# target to build an object file
+src/Accounts/Accounts.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/Accounts.cpp.o
+.PHONY : src/Accounts/Accounts.cpp.o
+
+src/Accounts/Accounts.i: src/Accounts/Accounts.cpp.i
+.PHONY : src/Accounts/Accounts.i
+
+# target to preprocess a source file
+src/Accounts/Accounts.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/Accounts.cpp.i
+.PHONY : src/Accounts/Accounts.cpp.i
+
+src/Accounts/Accounts.s: src/Accounts/Accounts.cpp.s
+.PHONY : src/Accounts/Accounts.s
+
+# target to generate assembly for a file
+src/Accounts/Accounts.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/Accounts.cpp.s
+.PHONY : src/Accounts/Accounts.cpp.s
+
+src/Accounts/GenerateUID.o: src/Accounts/GenerateUID.cpp.o
+.PHONY : src/Accounts/GenerateUID.o
+
+# target to build an object file
+src/Accounts/GenerateUID.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.o
+.PHONY : src/Accounts/GenerateUID.cpp.o
+
+src/Accounts/GenerateUID.i: src/Accounts/GenerateUID.cpp.i
+.PHONY : src/Accounts/GenerateUID.i
+
+# target to preprocess a source file
+src/Accounts/GenerateUID.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.i
+.PHONY : src/Accounts/GenerateUID.cpp.i
+
+src/Accounts/GenerateUID.s: src/Accounts/GenerateUID.cpp.s
+.PHONY : src/Accounts/GenerateUID.s
+
+# target to generate assembly for a file
+src/Accounts/GenerateUID.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.s
+.PHONY : src/Accounts/GenerateUID.cpp.s
+
+src/Accounts/GetAllAdmins.o: src/Accounts/GetAllAdmins.cpp.o
+.PHONY : src/Accounts/GetAllAdmins.o
+
+# target to build an object file
+src/Accounts/GetAllAdmins.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.o
+.PHONY : src/Accounts/GetAllAdmins.cpp.o
+
+src/Accounts/GetAllAdmins.i: src/Accounts/GetAllAdmins.cpp.i
+.PHONY : src/Accounts/GetAllAdmins.i
+
+# target to preprocess a source file
+src/Accounts/GetAllAdmins.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.i
+.PHONY : src/Accounts/GetAllAdmins.cpp.i
+
+src/Accounts/GetAllAdmins.s: src/Accounts/GetAllAdmins.cpp.s
+.PHONY : src/Accounts/GetAllAdmins.s
+
+# target to generate assembly for a file
+src/Accounts/GetAllAdmins.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.s
+.PHONY : src/Accounts/GetAllAdmins.cpp.s
+
+src/Accounts/GetAllUsers.o: src/Accounts/GetAllUsers.cpp.o
+.PHONY : src/Accounts/GetAllUsers.o
+
+# target to build an object file
+src/Accounts/GetAllUsers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.o
+.PHONY : src/Accounts/GetAllUsers.cpp.o
+
+src/Accounts/GetAllUsers.i: src/Accounts/GetAllUsers.cpp.i
+.PHONY : src/Accounts/GetAllUsers.i
+
+# target to preprocess a source file
+src/Accounts/GetAllUsers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.i
+.PHONY : src/Accounts/GetAllUsers.cpp.i
+
+src/Accounts/GetAllUsers.s: src/Accounts/GetAllUsers.cpp.s
+.PHONY : src/Accounts/GetAllUsers.s
+
+# target to generate assembly for a file
+src/Accounts/GetAllUsers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.s
+.PHONY : src/Accounts/GetAllUsers.cpp.s
+
+src/Accounts/RegisterAsAdmin.o: src/Accounts/RegisterAsAdmin.cpp.o
+.PHONY : src/Accounts/RegisterAsAdmin.o
+
+# target to build an object file
+src/Accounts/RegisterAsAdmin.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.o
+.PHONY : src/Accounts/RegisterAsAdmin.cpp.o
+
+src/Accounts/RegisterAsAdmin.i: src/Accounts/RegisterAsAdmin.cpp.i
+.PHONY : src/Accounts/RegisterAsAdmin.i
+
+# target to preprocess a source file
+src/Accounts/RegisterAsAdmin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.i
+.PHONY : src/Accounts/RegisterAsAdmin.cpp.i
+
+src/Accounts/RegisterAsAdmin.s: src/Accounts/RegisterAsAdmin.cpp.s
+.PHONY : src/Accounts/RegisterAsAdmin.s
+
+# target to generate assembly for a file
+src/Accounts/RegisterAsAdmin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.s
+.PHONY : src/Accounts/RegisterAsAdmin.cpp.s
+
+src/Accounts/RegisterAsUser.o: src/Accounts/RegisterAsUser.cpp.o
+.PHONY : src/Accounts/RegisterAsUser.o
+
+# target to build an object file
+src/Accounts/RegisterAsUser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.o
+.PHONY : src/Accounts/RegisterAsUser.cpp.o
+
+src/Accounts/RegisterAsUser.i: src/Accounts/RegisterAsUser.cpp.i
+.PHONY : src/Accounts/RegisterAsUser.i
+
+# target to preprocess a source file
+src/Accounts/RegisterAsUser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.i
+.PHONY : src/Accounts/RegisterAsUser.cpp.i
+
+src/Accounts/RegisterAsUser.s: src/Accounts/RegisterAsUser.cpp.s
+.PHONY : src/Accounts/RegisterAsUser.s
+
+# target to generate assembly for a file
+src/Accounts/RegisterAsUser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.s
+.PHONY : src/Accounts/RegisterAsUser.cpp.s
+
+src/Accounts/RegisterUser.o: src/Accounts/RegisterUser.cpp.o
+.PHONY : src/Accounts/RegisterUser.o
+
+# target to build an object file
+src/Accounts/RegisterUser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.o
+.PHONY : src/Accounts/RegisterUser.cpp.o
+
+src/Accounts/RegisterUser.i: src/Accounts/RegisterUser.cpp.i
+.PHONY : src/Accounts/RegisterUser.i
+
+# target to preprocess a source file
+src/Accounts/RegisterUser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.i
+.PHONY : src/Accounts/RegisterUser.cpp.i
+
+src/Accounts/RegisterUser.s: src/Accounts/RegisterUser.cpp.s
+.PHONY : src/Accounts/RegisterUser.s
+
+# target to generate assembly for a file
+src/Accounts/RegisterUser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.s
+.PHONY : src/Accounts/RegisterUser.cpp.s
 
 src/DB/CreateBackup.o: src/DB/CreateBackup.cpp.o
 .PHONY : src/DB/CreateBackup.o
@@ -522,6 +690,27 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... start"
+	@echo "... src/Accounts/Accounts.o"
+	@echo "... src/Accounts/Accounts.i"
+	@echo "... src/Accounts/Accounts.s"
+	@echo "... src/Accounts/GenerateUID.o"
+	@echo "... src/Accounts/GenerateUID.i"
+	@echo "... src/Accounts/GenerateUID.s"
+	@echo "... src/Accounts/GetAllAdmins.o"
+	@echo "... src/Accounts/GetAllAdmins.i"
+	@echo "... src/Accounts/GetAllAdmins.s"
+	@echo "... src/Accounts/GetAllUsers.o"
+	@echo "... src/Accounts/GetAllUsers.i"
+	@echo "... src/Accounts/GetAllUsers.s"
+	@echo "... src/Accounts/RegisterAsAdmin.o"
+	@echo "... src/Accounts/RegisterAsAdmin.i"
+	@echo "... src/Accounts/RegisterAsAdmin.s"
+	@echo "... src/Accounts/RegisterAsUser.o"
+	@echo "... src/Accounts/RegisterAsUser.i"
+	@echo "... src/Accounts/RegisterAsUser.s"
+	@echo "... src/Accounts/RegisterUser.o"
+	@echo "... src/Accounts/RegisterUser.i"
+	@echo "... src/Accounts/RegisterUser.s"
 	@echo "... src/DB/CreateBackup.o"
 	@echo "... src/DB/CreateBackup.i"
 	@echo "... src/DB/CreateBackup.s"

@@ -1,5 +1,5 @@
 CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o: \
- /home/admin1/Стільниця/MySql-Coliseum-project/src/User/createMySQLUser.cpp \
+ /home/admin1/Стільниця/Coliseum-project/src/User/createMySQLUser.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/14/iostream \
  /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
@@ -140,5 +140,5 @@ CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o: \
  /usr/include/mysql/mysql/plugin_auth_common.h \
  /usr/include/mysql/mysql_version.h /usr/include/mysql/mysql_time.h \
  /usr/include/mysql/errmsg.h \
- /home/admin1/Стільниця/MySql-Coliseum-project/src/User/../../lib/UserDB.h \
+ /home/admin1/Стільниця/Coliseum-project/src/User/../../lib/UserDB.h \
  /usr/include/string.h /usr/include/strings.h

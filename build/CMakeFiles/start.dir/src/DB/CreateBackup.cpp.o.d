@@ -1,5 +1,5 @@
 CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o: \
- /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/CreateBackup.cpp \
+ /home/admin1/Стільниця/Coliseum-project/src/DB/CreateBackup.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/14/iostream \
  /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
@@ -164,6 +164,7 @@ CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o: \
  /usr/include/mysql/mysql/plugin_auth_common.h \
  /usr/include/mysql/mysql_version.h /usr/include/mysql/mysql_time.h \
  /usr/include/mysql/errmsg.h \
- /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/../../lib/Database.h \
+ /home/admin1/Стільниця/Coliseum-project/src/DB/../../lib/Database.h \
  /usr/include/string.h /usr/include/strings.h \
- /home/admin1/Стільниця/MySql-Coliseum-project/src/DB/../../lib/UserDB.h
+ /home/admin1/Стільниця/Coliseum-project/src/DB/../../lib/Accounts.h \
+ /home/admin1/Стільниця/Coliseum-project/src/DB/../../lib/UserDB.h

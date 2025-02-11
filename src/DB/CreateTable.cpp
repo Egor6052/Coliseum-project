@@ -10,7 +10,7 @@ void Database::CreateTable() {
             throw std::runtime_error("MySQL initialization failed!");
         }
 
-        conn = mysql_real_connect(conn, "localhost", getUserName().c_str(), getUserPassword().c_str(), getDBName().c_str(), 0, nullptr, 0);
+        conn = mysql_real_connect(conn, "localhost", getUserDBName().c_str(), getUserDBPassword().c_str(), getDBName().c_str(), 0, nullptr, 0);
         if (!conn) {
             throw std::runtime_error("Failed to connect to MySQL database!");
         }

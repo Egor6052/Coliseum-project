@@ -12,7 +12,15 @@ message(STATUS "Compile with static library? ${USE_STATIC}")
 
 # Шлях до вихідних файлів
 set(SOURCE_FILES
+    ./src/Accounts/GenerateUID.cpp
     ./src/Accounts/Accounts.cpp
+    ./src/Accounts/GetAllAdmins.cpp
+    ./src/Accounts/GetAllUsers.cpp
+    ./src/Accounts/RegisterAsAdmin.cpp
+    ./src/Accounts/RegisterAsUser.cpp
+    ./src/Accounts/RegisterUser.cpp
+
+
     ./src/User/createMySQLUser.cpp
     ./src/User/UserDB.cpp
     ./src/Server/Server.cpp

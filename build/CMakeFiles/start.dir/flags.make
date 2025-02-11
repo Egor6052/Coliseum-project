@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/admin1/Стільниця/MySql-Coliseum-project/./lib -I/usr/include/mysql
+CXX_INCLUDES = -I/home/admin1/Стільниця/Coliseum-project/./lib -I/usr/include/mysql
 
 CXX_FLAGS = -Wall -fPIC
 
