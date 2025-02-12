@@ -6,6 +6,7 @@ UserDB::UserDB(){
     this->name = "data_writer";
     this->password = "MySqlStrongPassword123!";
     this->dbName = "SensorData";
+    this->dbUsersName = "users";
 }
 UserDB::~UserDB(){
 
@@ -43,6 +44,10 @@ std::string UserDB::getUserDBName(){
 }
 std::string UserDB::getDBName(){
     return this->dbName;
+}
+
+std::string UserDB::getDBUsersName(){
+    return this->dbUsersName;
 }
 
 std::string UserDB::getUser(){

@@ -19,15 +19,22 @@ set(SOURCE_FILES
     ./src/Accounts/RegisterAsAdmin.cpp
     ./src/Accounts/RegisterAsUser.cpp
     ./src/Accounts/RegisterUser.cpp
+    ./src/Accounts/IsAdministrator.cpp
+    ./src/Accounts/Login.cpp
 
 
     ./src/User/createMySQLUser.cpp
     ./src/User/UserDB.cpp
     ./src/Server/Server.cpp
+
     ./src/DB/Database.cpp
     ./src/DB/DateTime.cpp
     ./src/DB/CreateTable.cpp
     ./src/DB/CreateBackup.cpp
+    ./src/DB/GetData.cpp
+    ./src/DB/DeleteData.cpp
+
+
     ./src/dao/entity/ActivePower.cpp
     ./src/dao/entity/Current.cpp
     ./src/dao/entity/IpAddress.cpp

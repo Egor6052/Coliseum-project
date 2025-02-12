@@ -11,6 +11,7 @@ class UserDB {
     std::string password;
     std::string adminPassword;
     std::string dbName;
+    std::string dbUsersName;
 
     public:
         UserDB();
@@ -20,11 +21,12 @@ class UserDB {
         void setAdminPassword(std::string valueAdminPassword);
         void createMySQLUser();
 
-        std::string getUserDBPassword();
         std::string getUserDBName();
+        std::string getUserDBPassword();
         std::string getAdminPassword();
         
         std::string getDBName();
+        std::string getDBUsersName();
         std::string getUser();
 };
 

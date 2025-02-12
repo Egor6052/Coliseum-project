@@ -35,8 +35,8 @@ class Accounts : public UserDB {
         std::string getUserName();
         std::string getUID();
 
-        std::string getAllUsers();
-        std::string getAllAdmins();
+        bool Login();
+        bool isAdministrator();
         
 };
 

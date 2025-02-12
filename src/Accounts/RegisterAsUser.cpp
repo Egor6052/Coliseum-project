@@ -3,41 +3,43 @@
 #include <iostream>
 #include <mysql/mysql.h>
 
-
 void Accounts::registerAsUser() {
-    MYSQL *conn;
-    conn = mysql_init(nullptr);
+    try {
+        MYSQL *conn = mysql_init(nullptr);
+        if (!conn) {
+            throw std::runtime_error("MySQL initialization failed!");
+        }
 
-    if (!conn) {
-        std::cerr << "MySQL initialization failed!\n";
-        return;
-    }
+        conn = mysql_real_connect(conn, "localhost", getUserDBName().c_str(), getUserDBPassword().c_str(), getDBName().c_str(), 0, nullptr, 0);
+        if (!conn) {
+            throw std::runtime_error("Failed to connect to MySQL database!");
+        }
 
-    // Підключення як root
-    if (!mysql_real_connect(conn, "localhost", "root", this->getAdminPassword().c_str(), nullptr, 0, nullptr, 0)) {
-        std::cerr << "Connection failed: " << mysql_error(conn) << '\n';
+        // Перевірка, чи існує вже користувач з таким логіном
+        std::string checkUserQuery = "SELECT * FROM " + getDBUsersName() + " WHERE login = '" + getUserName() + "' LIMIT 1";
+        if (mysql_query(conn, checkUserQuery.c_str())) {
+            throw std::runtime_error("Failed to check user existence: " + std::string(mysql_error(conn)));
+        }
+
+        MYSQL_RES* res = mysql_store_result(conn);
+        if (mysql_num_rows(res) > 0) {
+            throw std::runtime_error("User with this login already exists!");
+        }
+
+        // Генерація UID
+        std::string uid = generateUID();  // Викликаєте вашу функцію для генерації UID
+
+        // Якщо користувача не знайдено, вставляємо новий запис для користувача
+        std::string insertUserQuery = "INSERT INTO " + getDBUsersName() + " (uid, login, password, role) VALUES ('" + uid + "', '" + getUserName() + "', '" + getUserPassword() + "', 'user')";
+        if (mysql_query(conn, insertUserQuery.c_str())) {
+            throw std::runtime_error("Failed to insert user: " + std::string(mysql_error(conn)));
+        }
+
+        std::cout << "User registered successfully with login: " << getUserName() << " and UID: " << uid << std::endl;
+
+        mysql_free_result(res);
         mysql_close(conn);
-        return;
+    } catch (const std::exception &e) {
+        std::cerr << "Error: " << e.what() << '\n';
     }
-
-    // Створення нового користувача для додатка з мінімальними правами
-    std::string createUserQuery = "CREATE USER IF NOT EXISTS '" + getUserName() + "'@'localhost' IDENTIFIED BY '" + getUserPassword() + "';";
-
-    if (mysql_query(conn, createUserQuery.c_str())) {
-        std::cerr << "User creation failed: " << mysql_error(conn) << '\n';
-        mysql_close(conn);
-        return;
-    }
-
-    // Надання прав лише для перегляду (SELECT)
-    std::string grantQuery = "GRANT SELECT ON " + getDBName() + ".* TO '" + getUserName() + "'@'localhost';";
-
-    if (mysql_query(conn, grantQuery.c_str())) {
-        std::cerr << "Granting privileges failed: " << mysql_error(conn) << '\n';
-        mysql_close(conn);
-        return;
-    }
-
-    std::cout << "User registered successfully with SELECT privileges.\n";
-    mysql_close(conn);
 }

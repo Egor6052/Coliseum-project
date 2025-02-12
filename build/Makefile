@@ -225,6 +225,54 @@ src/Accounts/GetAllUsers.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.s
 .PHONY : src/Accounts/GetAllUsers.cpp.s
 
+src/Accounts/IsAdministrator.o: src/Accounts/IsAdministrator.cpp.o
+.PHONY : src/Accounts/IsAdministrator.o
+
+# target to build an object file
+src/Accounts/IsAdministrator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/IsAdministrator.cpp.o
+.PHONY : src/Accounts/IsAdministrator.cpp.o
+
+src/Accounts/IsAdministrator.i: src/Accounts/IsAdministrator.cpp.i
+.PHONY : src/Accounts/IsAdministrator.i
+
+# target to preprocess a source file
+src/Accounts/IsAdministrator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/IsAdministrator.cpp.i
+.PHONY : src/Accounts/IsAdministrator.cpp.i
+
+src/Accounts/IsAdministrator.s: src/Accounts/IsAdministrator.cpp.s
+.PHONY : src/Accounts/IsAdministrator.s
+
+# target to generate assembly for a file
+src/Accounts/IsAdministrator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/IsAdministrator.cpp.s
+.PHONY : src/Accounts/IsAdministrator.cpp.s
+
+src/Accounts/Login.o: src/Accounts/Login.cpp.o
+.PHONY : src/Accounts/Login.o
+
+# target to build an object file
+src/Accounts/Login.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/Login.cpp.o
+.PHONY : src/Accounts/Login.cpp.o
+
+src/Accounts/Login.i: src/Accounts/Login.cpp.i
+.PHONY : src/Accounts/Login.i
+
+# target to preprocess a source file
+src/Accounts/Login.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/Login.cpp.i
+.PHONY : src/Accounts/Login.cpp.i
+
+src/Accounts/Login.s: src/Accounts/Login.cpp.s
+.PHONY : src/Accounts/Login.s
+
+# target to generate assembly for a file
+src/Accounts/Login.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/Login.cpp.s
+.PHONY : src/Accounts/Login.cpp.s
+
 src/Accounts/RegisterAsAdmin.o: src/Accounts/RegisterAsAdmin.cpp.o
 .PHONY : src/Accounts/RegisterAsAdmin.o
 
@@ -392,6 +440,54 @@ src/DB/DateTime.s: src/DB/DateTime.cpp.s
 src/DB/DateTime.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DB/DateTime.cpp.s
 .PHONY : src/DB/DateTime.cpp.s
+
+src/DB/DeleteData.o: src/DB/DeleteData.cpp.o
+.PHONY : src/DB/DeleteData.o
+
+# target to build an object file
+src/DB/DeleteData.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DB/DeleteData.cpp.o
+.PHONY : src/DB/DeleteData.cpp.o
+
+src/DB/DeleteData.i: src/DB/DeleteData.cpp.i
+.PHONY : src/DB/DeleteData.i
+
+# target to preprocess a source file
+src/DB/DeleteData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DB/DeleteData.cpp.i
+.PHONY : src/DB/DeleteData.cpp.i
+
+src/DB/DeleteData.s: src/DB/DeleteData.cpp.s
+.PHONY : src/DB/DeleteData.s
+
+# target to generate assembly for a file
+src/DB/DeleteData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DB/DeleteData.cpp.s
+.PHONY : src/DB/DeleteData.cpp.s
+
+src/DB/GetData.o: src/DB/GetData.cpp.o
+.PHONY : src/DB/GetData.o
+
+# target to build an object file
+src/DB/GetData.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DB/GetData.cpp.o
+.PHONY : src/DB/GetData.cpp.o
+
+src/DB/GetData.i: src/DB/GetData.cpp.i
+.PHONY : src/DB/GetData.i
+
+# target to preprocess a source file
+src/DB/GetData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DB/GetData.cpp.i
+.PHONY : src/DB/GetData.cpp.i
+
+src/DB/GetData.s: src/DB/GetData.cpp.s
+.PHONY : src/DB/GetData.s
+
+# target to generate assembly for a file
+src/DB/GetData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DB/GetData.cpp.s
+.PHONY : src/DB/GetData.cpp.s
 
 src/Server/Server.o: src/Server/Server.cpp.o
 .PHONY : src/Server/Server.o
@@ -702,6 +798,12 @@ help:
 	@echo "... src/Accounts/GetAllUsers.o"
 	@echo "... src/Accounts/GetAllUsers.i"
 	@echo "... src/Accounts/GetAllUsers.s"
+	@echo "... src/Accounts/IsAdministrator.o"
+	@echo "... src/Accounts/IsAdministrator.i"
+	@echo "... src/Accounts/IsAdministrator.s"
+	@echo "... src/Accounts/Login.o"
+	@echo "... src/Accounts/Login.i"
+	@echo "... src/Accounts/Login.s"
 	@echo "... src/Accounts/RegisterAsAdmin.o"
 	@echo "... src/Accounts/RegisterAsAdmin.i"
 	@echo "... src/Accounts/RegisterAsAdmin.s"
@@ -723,6 +825,12 @@ help:
 	@echo "... src/DB/DateTime.o"
 	@echo "... src/DB/DateTime.i"
 	@echo "... src/DB/DateTime.s"
+	@echo "... src/DB/DeleteData.o"
+	@echo "... src/DB/DeleteData.i"
+	@echo "... src/DB/DeleteData.s"
+	@echo "... src/DB/GetData.o"
+	@echo "... src/DB/GetData.i"
+	@echo "... src/DB/GetData.s"
 	@echo "... src/Server/Server.o"
 	@echo "... src/Server/Server.i"
 	@echo "... src/Server/Server.s"
