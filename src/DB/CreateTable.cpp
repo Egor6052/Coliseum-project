@@ -29,7 +29,7 @@ void Database::CreateTable() {
 
         std::cout << "\033[1m\033[35m⋆⟡₊⊹\033[36mTable " + getDBUsersName() + " created successfully!\033[35m⊹₊⟡⋆\033[0m\n" << std::endl;
 
-        // Створення таблиці sensor_data (показники датчиків)
+        // Створення таблиці (показники датчиків)
         std::string createSensorDataTableQuery = "CREATE TABLE IF NOT EXISTS  " + getDBName() + " ("
             "id INT AUTO_INCREMENT PRIMARY KEY, "
             "date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, "
