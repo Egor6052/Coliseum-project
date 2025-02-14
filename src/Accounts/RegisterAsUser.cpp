@@ -26,7 +26,7 @@ void Accounts::registerAsUser() {
         MYSQL_RES* res = mysql_store_result(conn);
         if (res && mysql_num_rows(res) > 0) {
             mysql_free_result(res);
-            throw std::runtime_error("User with this login, email, or phone number already exists!");
+            throw std::runtime_error("User with this login already exists!");
         }
 
         std::string uid = generateUID();

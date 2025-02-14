@@ -6790,6 +6790,8 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdint-least.h \
+  /usr/include/bits/stdint-uintn.h \
   /usr/include/bits/stdio_lim.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
@@ -6841,6 +6843,7 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
   /usr/include/c++/14/bits/basic_string.tcc \
   /usr/include/c++/14/bits/char_traits.h \
   /usr/include/c++/14/bits/charconv.h \
+  /usr/include/c++/14/bits/chrono.h \
   /usr/include/c++/14/bits/concept_check.h \
   /usr/include/c++/14/bits/cpp_type_traits.h \
   /usr/include/c++/14/bits/cxxabi_forced.h \
@@ -6866,6 +6869,7 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
   /usr/include/c++/14/bits/new_allocator.h \
   /usr/include/c++/14/bits/ostream.tcc \
   /usr/include/c++/14/bits/ostream_insert.h \
+  /usr/include/c++/14/bits/parse_numbers.h \
   /usr/include/c++/14/bits/postypes.h \
   /usr/include/c++/14/bits/predefined_ops.h \
   /usr/include/c++/14/bits/ptr_traits.h \
@@ -6873,6 +6877,7 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
   /usr/include/c++/14/bits/refwrap.h \
   /usr/include/c++/14/bits/requires_hosted.h \
   /usr/include/c++/14/bits/std_abs.h \
+  /usr/include/c++/14/bits/std_thread.h \
   /usr/include/c++/14/bits/stl_algobase.h \
   /usr/include/c++/14/bits/stl_construct.h \
   /usr/include/c++/14/bits/stl_function.h \
@@ -6884,6 +6889,8 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
   /usr/include/c++/14/bits/streambuf_iterator.h \
   /usr/include/c++/14/bits/string_view.tcc \
   /usr/include/c++/14/bits/stringfwd.h \
+  /usr/include/c++/14/bits/this_thread_sleep.h \
+  /usr/include/c++/14/bits/unique_ptr.h \
   /usr/include/c++/14/bits/uses_allocator.h \
   /usr/include/c++/14/bits/uses_allocator_args.h \
   /usr/include/c++/14/bits/utility.h \
@@ -6893,8 +6900,10 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
+  /usr/include/c++/14/ctime \
   /usr/include/c++/14/cwchar \
   /usr/include/c++/14/cwctype \
   /usr/include/c++/14/debug/assertions.h \
@@ -6910,14 +6919,17 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
   /usr/include/c++/14/iosfwd \
   /usr/include/c++/14/iostream \
   /usr/include/c++/14/istream \
+  /usr/include/c++/14/limits \
   /usr/include/c++/14/new \
   /usr/include/c++/14/ostream \
   /usr/include/c++/14/pstl/pstl_config.h \
+  /usr/include/c++/14/ratio \
   /usr/include/c++/14/stdexcept \
   /usr/include/c++/14/streambuf \
   /usr/include/c++/14/string \
   /usr/include/c++/14/string_view \
   /usr/include/c++/14/system_error \
+  /usr/include/c++/14/thread \
   /usr/include/c++/14/tuple \
   /usr/include/c++/14/type_traits \
   /usr/include/c++/14/typeinfo \
@@ -6944,6 +6956,7 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/string.h \
@@ -6956,7 +6969,8 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
   /usr/include/wchar.h \
   /usr/include/wctype.h \
   /usr/lib/gcc/x86_64-redhat-linux/14/include/stdarg.h \
-  /usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h
+  /usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h \
+  /usr/lib/gcc/x86_64-redhat-linux/14/include/stdint.h
 
 
 /home/admin1/Стільниця/Coliseum-project/src/dao/entity/roundNumber.cpp:

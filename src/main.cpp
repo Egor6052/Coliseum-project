@@ -1,9 +1,18 @@
 #include <iostream>
 #include <string.h>
+#include <thread>
 #include "../lib/Server.h"
+
+void startServer(Server& server) {
+    server.start();
+}
 
 int main(){
     Server server;
+    std::thread serverThread(startServer, std::ref(server));
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+
     std::cout << "\033[1m\033[35m˚｡⋆\033[36mWelcome to the Server!\033[35m⋆｡˚\033[0m\n" << std::endl;
 
     // для додатку
@@ -71,16 +80,13 @@ int main(){
                 if (server.isAdministrator()) {
                     while (true) {
                         std::string answerMenu;
-                        std::string menu = "|\033[37mStart server - 1 \033[0m|   |\033[37m Create record - 2 \033[0m|   |\033[37m Delete record - 3 \033[0m|\n";
+                        std::string menu = "|\033[37m Create record - 2 \033[0m|   |\033[37m Delete record - 3 \033[0m|\n";
                         menu += "|\033[37mView records - 4 \033[0m|   |\033[37m Create backup - 5 \033[0m|   |\033[37m View all users - 6 \033[0m|\n";
                         menu += "|\033[37mSet Phone Number - 7 \033[0m|   |\033[37m Set Email - 8 \033[0m|\n";
                         std::cout << menu;
                         std::cin >> answerMenu;
 
-                        if (answerMenu == "1") {
-                            server.start();
-                            server.handleClient(1212);
-                        } else if (answerMenu == "2") {
+                        if (answerMenu == "2") {
                             std::cout << "Database for " + server.getCurrentDateTime() + " = " << std::endl;
                             server.setData();
                         } else if (answerMenu == "3") {
@@ -126,15 +132,12 @@ int main(){
                 } else {
                     while (true) {
                         std::string answerMenu;
-                        std::string menu = "|\033[37mStart server - 1 \033[0m|   |\033[37mCreate record - 2 \033[0m|   |\033[37mView records - 4 \033[0m|\n";
+                        std::string menu = "|\033[37mCreate record - 2 \033[0m|   |\033[37mView records - 4 \033[0m|\n";
                         menu += "|\033[37mCreate backup - 5 \033[0m|   |\033[37mSet Phone Number - 6 \033[0m|   |\033[37mSet Email - 7 \033[0m|\n";
                         std::cout << menu;
                         std::cin >> answerMenu;
 
-                        if (answerMenu == "1") {
-                            server.start();
-                            server.handleClient(1212);
-                        } else if (answerMenu == "2") {
+                        if (answerMenu == "2") {
                             std::cout << "Database for " + server.getCurrentDateTime() + " = " << std::endl;
                             server.setData();
                         } else if (answerMenu == "4") {
@@ -173,6 +176,9 @@ int main(){
         std::cin >> continueChoice;
         if (continueChoice != 'y' && continueChoice != 'Y') break;
     }
+
+    // Закриваємо сервер
+    serverThread.join(); 
 
     return 0;
 }
