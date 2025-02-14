@@ -14,7 +14,6 @@ int main(){
         std::cin.ignore();
 
         server.setAdminPassword(adminPassword);
-        server.createMySQLUser();
         server.CreateTable();
         break;
     }
@@ -72,7 +71,9 @@ int main(){
                 if (server.isAdministrator()) {
                     while (true) {
                         std::string answerMenu;
-                        std::string menu = "|\033[37mStart server - 1 \033[0m|   |\033[37m Create record - 2 \033[0m|  |\033[37m Delete record - 3 \033[0m|\n|\033[37m View records - 4 \033[0m|   |\033[37m Create backup - 5 \033[0m|   |\033[37m View all users - 6 \033[0m|\n";
+                        std::string menu = "|\033[37mStart server - 1 \033[0m|   |\033[37m Create record - 2 \033[0m|   |\033[37m Delete record - 3 \033[0m|\n";
+                        menu += "|\033[37mView records - 4 \033[0m|   |\033[37m Create backup - 5 \033[0m|   |\033[37m View all users - 6 \033[0m|\n";
+                        menu += "|\033[37mSet Phone Number - 7 \033[0m|   |\033[37m Set Email - 8 \033[0m|\n";
                         std::cout << menu;
                         std::cin >> answerMenu;
 
@@ -102,12 +103,31 @@ int main(){
                             std::string usersData = server.getAllUsersFromDB();
                             std::cout << usersData << std::endl;
 
+                        } else if (answerMenu == "7"){
+                            std::string phoneNumber;
+                            printf("Enter Phone Number \n");
+                            std::cin >> phoneNumber;
+                            std::cin.ignore();
+                            std::string uid = server.getUID();
+                            server.setPhoneNumber(uid, phoneNumber);
+                            printf("Your profile:\n");
+                            server.getUserData();
+                        } else if (answerMenu == "8"){
+                            std::string email;
+                            printf("Enter Email: \n");
+                            std::cin >> email;
+                            std::cin.ignore();
+                            std::string uid = server.getUID();
+                            server.setEmail(uid, email);
+                            printf("Your profile:\n");
+                            server.getUserData();
                         }
                     }
                 } else {
                     while (true) {
                         std::string answerMenu;
-                        std::string menu = "|\033[37mStart server - 1 \033[0m|   |\033[37m Create record - 2 \033[0m|   |\033[37m View records - 4 \033[0m|   |\033[37m Create backup - 5 \033[0m|\n";
+                        std::string menu = "|\033[37mStart server - 1 \033[0m|   |\033[37mCreate record - 2 \033[0m|   |\033[37mView records - 4 \033[0m|\n";
+                        menu += "|\033[37mCreate backup - 5 \033[0m|   |\033[37mSet Phone Number - 6 \033[0m|   |\033[37mSet Email - 7 \033[0m|\n";
                         std::cout << menu;
                         std::cin >> answerMenu;
 
@@ -121,6 +141,24 @@ int main(){
                             std::cout << server.getData() << std::endl;
                         } else if (answerMenu == "5") {
                             server.createBackup();
+                        } else if (answerMenu == "6"){
+                            std::string phoneNumber;
+                            printf("Enter Phone Number \n");
+                            std::cin >> phoneNumber;
+                            std::cin.ignore();
+                            std::string uid = server.getUID();
+                            server.setPhoneNumber(uid, phoneNumber);
+                            printf("Your profile:\n");
+                            server.getUserData();
+                        } else if (answerMenu == "7"){
+                            std::string email;
+                            printf("Enter Email: \n");
+                            std::cin >> email;
+                            std::cin.ignore();
+                            std::string uid = server.getUID();
+                            server.setEmail(uid, email);
+                            printf("Your profile:\n");
+                            server.getUserData();
                         }
                     }
                 }
@@ -138,61 +176,3 @@ int main(){
 
     return 0;
 }
-
-
-        // std::string menu, answer;
-        // menu = "|\033[37mStart server - 1 \033[0m|   |\033[37m Create record - 2 \033[0m|  |\033[37m Delete record - 3 \033[0m|   |\033[37m View records - 4 \033[0m|   |\033[37m Create backup - 5 \033[0m|\n";
-        // menu += "   |\033[37m Create User - 6 \033[0m|   |\033[37m Create Admin - 7 \033[0m|   |\033[37m View All Users - 8 \033[0m|   |\033[37m View All Admins - 9 \033[0m|";
-
-        // // std::string horizontalLine(menu.length()-45, '-');
-        // // std::cout << horizontalLine << "\n" << menu << "\n" << horizontalLine << std::endl;
-        
-        // std::cin >> answer;
-        // std::cin.ignore();
-
-        // if (answer == "1"){
-        //     server.start();
-        //     server.handleClient(1212);
-        // } else if (answer == "2") {
-        //     std::cout << "Database for " + server.getCurrentDateTime() + " = " << std::endl;
-        //     server.setData();
-        // } else if (answer == "3"){
-        //     std::cout << server.getData() << std::endl;
-        //     std::printf("Enter id record would you like to delete: ");
-        //     std::cin >> answer;
-        //     std::cin.ignore();
-        //     server.deleteData(answer);
-        //     std::cout << server.getData() << std::endl;
-        // } else if (answer == "4"){
-        //     std::cout << server.getData() << std::endl;
-        // } else if (answer == "5"){
-        //     server.createBackup();
-        // } else if (answer == "6"){
-        //     std::string Login, Password;
-        //     std::printf("Enter User Login: ");
-        //     std::cin >> Login;
-        //     std::printf("Enter User Password: ");
-        //     std::cin >> Password;
-        //     server.setName(Login);
-        //     server.setPassword(Password);
-        //     server.registerAsUser();
-
-        //     server.getAllUsersFromDB();
-
-        // } else if (answer == "7"){
-        //     std::string Login, Password;
-        //     std::printf("Enter Admin Login: ");
-        //     std::cin >> Login;
-        //     std::printf("Enter Admin Password: ");
-        //     std::cin >> Password;
-        //     server.setName(Login);
-        //     server.setPassword(Password);
-        //     server.registerAsAdmin();
-            
-        //     server.getAllAdminsFromDB();
-
-        // } else if (answer == "8"){
-        //     server.getAllUsersFromDB();
-        // } else if (answer == "9"){
-        //     server.getAllAdminsFromDB();
-        // }

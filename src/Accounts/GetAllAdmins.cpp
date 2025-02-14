@@ -4,6 +4,7 @@
 #include <nlohmann/json.hpp>
 #include "../../lib/Database.h"
 
+
 std::string Accounts::getAllAdminsFromDB() {
     try {
         MYSQL *conn = mysql_init(nullptr);
@@ -17,7 +18,7 @@ std::string Accounts::getAllAdminsFromDB() {
         }
 
         // Запит для отримання всіх адміністраторів
-        std::string query = "SELECT uid, login FROM " + getDBUsersName() + " WHERE role = 'admin'";
+        std::string query = "SELECT uid, login, email, phone_number, role FROM " + getDBUsersName() + " WHERE role = 'admin'";
         if (mysql_query(conn, query.c_str())) {
             throw std::runtime_error("Failed to execute query: " + std::string(mysql_error(conn)));
         }
@@ -35,12 +36,15 @@ std::string Accounts::getAllAdminsFromDB() {
         // Логування для перевірки кількості рядків
         std::cout << "Total number of rows: " << mysql_num_rows(res) << std::endl;
 
-        // Формуємо список адміністраторів в JSON форматі
+        // Формуємо в JSON форматі
         while ((row = mysql_fetch_row(res))) {
-            if (row[0] && row[1]) {
+            if (row[0] && row[1] && row[2] && row[3] && row[4]) {
                 nlohmann::json admin = {
-                    {"uid", std::stoi(row[0])},
-                    {"login", row[1]}
+                    {"uid", row[0]},
+                    {"login", row[1]},
+                    {"email", row[2]},
+                    {"phone_number", row[3]},
+                    {"role", row[4]}
                 };
                 adminsJson.push_back(admin);
                 adminCount++;
@@ -64,3 +68,4 @@ std::string Accounts::getAllAdminsFromDB() {
         return errorResponse.dump(4);
     }
 }
+

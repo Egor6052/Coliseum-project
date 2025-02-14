@@ -8,22 +8,7 @@ UserDB::UserDB(){
     this->dbName = "SensorData";
     this->dbUsersName = "users";
 }
-UserDB::~UserDB(){
-
-}
-void UserDB::setUserDBName(std::string valueName){
-    if (valueName == ""){
-        std::cerr << "\033[32mError: Name must not be null!\033[0m" << "\n";
-    } else {
-        this->name = valueName;
-    }
-}
-void UserDB::setUserDBPassword(std::string valuePassword){
-    if (valuePassword == "") {
-        std::cerr << "\033[32mError: Password must not be null!\033[0m" << "\n";
-    }
-    this->password = valuePassword;
-}
+UserDB::~UserDB(){  }
 
 void UserDB::setAdminPassword(std::string valueAdminPassword){
     if (valueAdminPassword == "") {
@@ -36,18 +21,19 @@ std::string UserDB::getAdminPassword(){
     return adminPassword;
 }
 
-std::string UserDB::getUserDBPassword(){
-    return this->password;
-}
-std::string UserDB::getUserDBName(){
-    return this->name;
-}
 std::string UserDB::getDBName(){
     return this->dbName;
 }
 
 std::string UserDB::getDBUsersName(){
     return this->dbUsersName;
+}
+
+std::string UserDB::getUserDBName(){
+    return this->name;
+}
+std::string UserDB::getUserDBPassword(){
+    return this->password;
 }
 
 std::string UserDB::getUser(){

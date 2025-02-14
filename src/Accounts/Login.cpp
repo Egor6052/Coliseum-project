@@ -31,25 +31,25 @@ bool Accounts::Login() {
             std::cerr << "User not found.\n";
             mysql_free_result(res);
             mysql_close(conn);
-            return false; // Користувача немає в базі
+            return false;
         }
 
         // Перевірка пароля
         MYSQL_ROW row = mysql_fetch_row(res);
-        std::string storedPassword = row[2]; // припускаємо, що пароль в базі на 1-й позиції
+        std::string storedPassword = row[2];
 
         if (storedPassword != getUserPassword()) {
             std::cerr << "Incorrect password.\n";
             mysql_free_result(res);
             mysql_close(conn);
-            return false; // Невірний пароль
+            return false;
         }
 
         mysql_free_result(res);
         mysql_close(conn);
-        return true; // Успішний вхід
+        return true;
     } catch (const std::exception &e) {
         std::cerr << "Error: " << e.what() << '\n';
-        return false; // Виникла помилка
+        return false;
     }
 }

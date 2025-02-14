@@ -3,9 +3,11 @@
 #include <iostream>
 
 Accounts::Accounts(){
-    this->UserName = "";
-    this->UserPassword ="";
     this->Uid = "";
+    this->UserName = "";
+    this->UserPassword = "";
+    this->phoneNumber = " ";
+    this->UserEmail = " ";
 }
 
 Accounts::~Accounts(){  }

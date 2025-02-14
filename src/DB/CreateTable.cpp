@@ -15,14 +15,14 @@ void Database::CreateTable() {
             throw std::runtime_error("Failed to connect to MySQL database!");
         }
 
-        // Створення таблиці users (акаунти)
         std::string createUsersTableQuery = "CREATE TABLE IF NOT EXISTS " + getDBUsersName() + " ("
             "uid VARCHAR(255) PRIMARY KEY, "
             "login VARCHAR(255) NOT NULL UNIQUE, "
             "password VARCHAR(255) NOT NULL, "
+            "email VARCHAR(255) NOT NULL UNIQUE, "
+            "phone_number VARCHAR(20) UNIQUE, "
             "role ENUM('user', 'admin') NOT NULL DEFAULT 'user'"
         ");";
-
 
         if (mysql_query(conn, createUsersTableQuery.c_str())) {
             throw std::runtime_error("Failed to create " + getDBUsersName() + " table: " + std::string(mysql_error(conn)));

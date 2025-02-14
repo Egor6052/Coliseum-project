@@ -9,9 +9,11 @@
 
 class Accounts : public UserDB {
     private:
+    std::string Uid;
     std::string UserName; 
     std::string UserPassword;
-    std::string Uid;
+    std::string phoneNumber;
+    std::string UserEmail;
 
     bool isNotEmpty(const std::string& str);
     std::string generateUID();
@@ -20,20 +22,28 @@ class Accounts : public UserDB {
         Accounts();
         ~Accounts();
 
+        void setUID();
         void setName(std::string valueName);
         void setPassword(std::string valuePassword);
-        void setUID();
-        void registerUser();
+        void setPhoneNumber(std::string uid, std::string valuePhoneNumber);
+        void setEmail(std::string uid, std::string valueEmail);
+        // void registerUser();
 
         void registerAsUser();
         void registerAsAdmin();
 
+        // void sendToEmail();
+
         std::string getAllUsersFromDB();
         std::string getAllAdminsFromDB();
 
-        std::string getUserPassword();
-        std::string getUserName();
         std::string getUID();
+        std::string getUserName();
+        std::string getUserPassword();
+        std::string getUserPhoneNumber();
+        std::string getUserEmail();
+
+        std::string getUserData();
 
         bool Login();
         bool isAdministrator();

@@ -225,6 +225,30 @@ src/Accounts/GetAllUsers.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.s
 .PHONY : src/Accounts/GetAllUsers.cpp.s
 
+src/Accounts/GetUserData.o: src/Accounts/GetUserData.cpp.o
+.PHONY : src/Accounts/GetUserData.o
+
+# target to build an object file
+src/Accounts/GetUserData.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GetUserData.cpp.o
+.PHONY : src/Accounts/GetUserData.cpp.o
+
+src/Accounts/GetUserData.i: src/Accounts/GetUserData.cpp.i
+.PHONY : src/Accounts/GetUserData.i
+
+# target to preprocess a source file
+src/Accounts/GetUserData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GetUserData.cpp.i
+.PHONY : src/Accounts/GetUserData.cpp.i
+
+src/Accounts/GetUserData.s: src/Accounts/GetUserData.cpp.s
+.PHONY : src/Accounts/GetUserData.s
+
+# target to generate assembly for a file
+src/Accounts/GetUserData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GetUserData.cpp.s
+.PHONY : src/Accounts/GetUserData.cpp.s
+
 src/Accounts/IsAdministrator.o: src/Accounts/IsAdministrator.cpp.o
 .PHONY : src/Accounts/IsAdministrator.o
 
@@ -320,6 +344,54 @@ src/Accounts/RegisterAsUser.s: src/Accounts/RegisterAsUser.cpp.s
 src/Accounts/RegisterAsUser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.s
 .PHONY : src/Accounts/RegisterAsUser.cpp.s
+
+src/Accounts/SetEmail.o: src/Accounts/SetEmail.cpp.o
+.PHONY : src/Accounts/SetEmail.o
+
+# target to build an object file
+src/Accounts/SetEmail.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/SetEmail.cpp.o
+.PHONY : src/Accounts/SetEmail.cpp.o
+
+src/Accounts/SetEmail.i: src/Accounts/SetEmail.cpp.i
+.PHONY : src/Accounts/SetEmail.i
+
+# target to preprocess a source file
+src/Accounts/SetEmail.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/SetEmail.cpp.i
+.PHONY : src/Accounts/SetEmail.cpp.i
+
+src/Accounts/SetEmail.s: src/Accounts/SetEmail.cpp.s
+.PHONY : src/Accounts/SetEmail.s
+
+# target to generate assembly for a file
+src/Accounts/SetEmail.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/SetEmail.cpp.s
+.PHONY : src/Accounts/SetEmail.cpp.s
+
+src/Accounts/SetPhoneNumber.o: src/Accounts/SetPhoneNumber.cpp.o
+.PHONY : src/Accounts/SetPhoneNumber.o
+
+# target to build an object file
+src/Accounts/SetPhoneNumber.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/SetPhoneNumber.cpp.o
+.PHONY : src/Accounts/SetPhoneNumber.cpp.o
+
+src/Accounts/SetPhoneNumber.i: src/Accounts/SetPhoneNumber.cpp.i
+.PHONY : src/Accounts/SetPhoneNumber.i
+
+# target to preprocess a source file
+src/Accounts/SetPhoneNumber.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/SetPhoneNumber.cpp.i
+.PHONY : src/Accounts/SetPhoneNumber.cpp.i
+
+src/Accounts/SetPhoneNumber.s: src/Accounts/SetPhoneNumber.cpp.s
+.PHONY : src/Accounts/SetPhoneNumber.s
+
+# target to generate assembly for a file
+src/Accounts/SetPhoneNumber.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/SetPhoneNumber.cpp.s
+.PHONY : src/Accounts/SetPhoneNumber.cpp.s
 
 src/DB/CreateBackup.o: src/DB/CreateBackup.cpp.o
 .PHONY : src/DB/CreateBackup.o
@@ -512,30 +584,6 @@ src/User/UserDB.s: src/User/UserDB.cpp.s
 src/User/UserDB.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/User/UserDB.cpp.s
 .PHONY : src/User/UserDB.cpp.s
-
-src/User/createMySQLUser.o: src/User/createMySQLUser.cpp.o
-.PHONY : src/User/createMySQLUser.o
-
-# target to build an object file
-src/User/createMySQLUser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/User/createMySQLUser.cpp.o
-.PHONY : src/User/createMySQLUser.cpp.o
-
-src/User/createMySQLUser.i: src/User/createMySQLUser.cpp.i
-.PHONY : src/User/createMySQLUser.i
-
-# target to preprocess a source file
-src/User/createMySQLUser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/User/createMySQLUser.cpp.i
-.PHONY : src/User/createMySQLUser.cpp.i
-
-src/User/createMySQLUser.s: src/User/createMySQLUser.cpp.s
-.PHONY : src/User/createMySQLUser.s
-
-# target to generate assembly for a file
-src/User/createMySQLUser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/User/createMySQLUser.cpp.s
-.PHONY : src/User/createMySQLUser.cpp.s
 
 src/dao/entity/ActivePower.o: src/dao/entity/ActivePower.cpp.o
 .PHONY : src/dao/entity/ActivePower.o
@@ -774,6 +822,9 @@ help:
 	@echo "... src/Accounts/GetAllUsers.o"
 	@echo "... src/Accounts/GetAllUsers.i"
 	@echo "... src/Accounts/GetAllUsers.s"
+	@echo "... src/Accounts/GetUserData.o"
+	@echo "... src/Accounts/GetUserData.i"
+	@echo "... src/Accounts/GetUserData.s"
 	@echo "... src/Accounts/IsAdministrator.o"
 	@echo "... src/Accounts/IsAdministrator.i"
 	@echo "... src/Accounts/IsAdministrator.s"
@@ -786,6 +837,12 @@ help:
 	@echo "... src/Accounts/RegisterAsUser.o"
 	@echo "... src/Accounts/RegisterAsUser.i"
 	@echo "... src/Accounts/RegisterAsUser.s"
+	@echo "... src/Accounts/SetEmail.o"
+	@echo "... src/Accounts/SetEmail.i"
+	@echo "... src/Accounts/SetEmail.s"
+	@echo "... src/Accounts/SetPhoneNumber.o"
+	@echo "... src/Accounts/SetPhoneNumber.i"
+	@echo "... src/Accounts/SetPhoneNumber.s"
 	@echo "... src/DB/CreateBackup.o"
 	@echo "... src/DB/CreateBackup.i"
 	@echo "... src/DB/CreateBackup.s"
@@ -810,9 +867,6 @@ help:
 	@echo "... src/User/UserDB.o"
 	@echo "... src/User/UserDB.i"
 	@echo "... src/User/UserDB.s"
-	@echo "... src/User/createMySQLUser.o"
-	@echo "... src/User/createMySQLUser.i"
-	@echo "... src/User/createMySQLUser.s"
 	@echo "... src/dao/entity/ActivePower.o"
 	@echo "... src/dao/entity/ActivePower.i"
 	@echo "... src/dao/entity/ActivePower.s"

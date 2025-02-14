@@ -16,8 +16,8 @@ std::string Accounts::getAllUsersFromDB() {
             throw std::runtime_error("Failed to connect to MySQL database!");
         }
 
-        // Запит для отримання всіх адміністраторів
-        std::string query = "SELECT uid, login FROM " + getDBUsersName() + " WHERE role = 'user'";
+        // Запит для отримання всіх користувачів
+        std::string query = "SELECT uid, login, email, phone_number, role FROM " + getDBUsersName() + " WHERE role = 'user'";
         if (mysql_query(conn, query.c_str())) {
             throw std::runtime_error("Failed to execute query: " + std::string(mysql_error(conn)));
         }
@@ -35,12 +35,15 @@ std::string Accounts::getAllUsersFromDB() {
         // Логування для перевірки кількості рядків
         std::cout << "Total number of rows: " << mysql_num_rows(res) << std::endl;
 
-        // Формуємо список адміністраторів в JSON форматі
+        // Формуємо в JSON форматі
         while ((row = mysql_fetch_row(res))) {
-            if (row[0] && row[1]) { 
+            if (row[0] && row[1] && row[2] && row[3] && row[4]) { 
                 nlohmann::json user = {
-                    {"uid", std::stoi(row[0])},
-                    {"login", row[1]}
+                    {"uid", row[0]},
+                    {"login", row[1]},
+                    {"email", row[2]},
+                    {"phone_number", row[3]},
+                    {"role", row[4]}
                 };
                 usersJson.push_back(user);
                 usersCount++;
@@ -50,13 +53,13 @@ std::string Accounts::getAllUsersFromDB() {
         mysql_free_result(res);
         mysql_close(conn);
 
-        // Формуємо результат з кількістю адміністраторів
+        // Формуємо результат з кількістю користувачів
         nlohmann::json result = {
             {"users", usersJson},
             {"total_users", usersCount}
         };
 
-        return result.dump(4); // Повертаємо JSON у форматі з відступами
+        return result.dump(4);
 
     } catch (const std::exception &e) {
         std::cerr << "Error: " << e.what() << '\n';

@@ -16,10 +16,9 @@ class UserDB {
     public:
         UserDB();
         ~UserDB();
-        void setUserDBName(std::string valueName);
-        void setUserDBPassword(std::string valuePassword);
+        // void setUserDBName(std::string valueName);
+        // void setUserDBPassword(std::string valuePassword);
         void setAdminPassword(std::string valueAdminPassword);
-        void createMySQLUser();
 
         std::string getUserDBName();
         std::string getUserDBPassword();

@@ -18,12 +18,15 @@ set(SOURCE_FILES
     ./src/Accounts/GetAllUsers.cpp
     ./src/Accounts/RegisterAsAdmin.cpp
     ./src/Accounts/RegisterAsUser.cpp
+    ./src/Accounts/SetEmail.cpp
+    ./src/Accounts/SetPhoneNumber.cpp
     # ./src/Accounts/RegisterUser.cpp
     ./src/Accounts/IsAdministrator.cpp
     ./src/Accounts/Login.cpp
+    ./src/Accounts/GetUserData.cpp
 
 
-    ./src/User/createMySQLUser.cpp
+    # ./src/User/createMySQLUser.cpp
     ./src/User/UserDB.cpp
     ./src/Server/Server.cpp
 
