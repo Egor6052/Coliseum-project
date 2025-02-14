@@ -321,30 +321,6 @@ src/Accounts/RegisterAsUser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.s
 .PHONY : src/Accounts/RegisterAsUser.cpp.s
 
-src/Accounts/RegisterUser.o: src/Accounts/RegisterUser.cpp.o
-.PHONY : src/Accounts/RegisterUser.o
-
-# target to build an object file
-src/Accounts/RegisterUser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.o
-.PHONY : src/Accounts/RegisterUser.cpp.o
-
-src/Accounts/RegisterUser.i: src/Accounts/RegisterUser.cpp.i
-.PHONY : src/Accounts/RegisterUser.i
-
-# target to preprocess a source file
-src/Accounts/RegisterUser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.i
-.PHONY : src/Accounts/RegisterUser.cpp.i
-
-src/Accounts/RegisterUser.s: src/Accounts/RegisterUser.cpp.s
-.PHONY : src/Accounts/RegisterUser.s
-
-# target to generate assembly for a file
-src/Accounts/RegisterUser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.s
-.PHONY : src/Accounts/RegisterUser.cpp.s
-
 src/DB/CreateBackup.o: src/DB/CreateBackup.cpp.o
 .PHONY : src/DB/CreateBackup.o
 
@@ -810,9 +786,6 @@ help:
 	@echo "... src/Accounts/RegisterAsUser.o"
 	@echo "... src/Accounts/RegisterAsUser.i"
 	@echo "... src/Accounts/RegisterAsUser.s"
-	@echo "... src/Accounts/RegisterUser.o"
-	@echo "... src/Accounts/RegisterUser.i"
-	@echo "... src/Accounts/RegisterUser.s"
 	@echo "... src/DB/CreateBackup.o"
 	@echo "... src/DB/CreateBackup.i"
 	@echo "... src/DB/CreateBackup.s"

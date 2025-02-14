@@ -18,7 +18,7 @@ set(SOURCE_FILES
     ./src/Accounts/GetAllUsers.cpp
     ./src/Accounts/RegisterAsAdmin.cpp
     ./src/Accounts/RegisterAsUser.cpp
-    ./src/Accounts/RegisterUser.cpp
+    # ./src/Accounts/RegisterUser.cpp
     ./src/Accounts/IsAdministrator.cpp
     ./src/Accounts/Login.cpp
 

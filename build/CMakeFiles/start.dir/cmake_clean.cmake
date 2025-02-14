@@ -15,8 +15,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.o.d"
   "CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.o"
   "CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.o.d"
-  "CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.o"
-  "CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.o.d"
   "CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o"
   "CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o.d"
   "CMakeFiles/start.dir/src/DB/CreateTable.cpp.o"

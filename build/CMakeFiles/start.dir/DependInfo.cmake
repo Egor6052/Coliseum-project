@@ -16,7 +16,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/admin1/Стільниця/Coliseum-project/src/Accounts/Login.cpp" "CMakeFiles/start.dir/src/Accounts/Login.cpp.o" "gcc" "CMakeFiles/start.dir/src/Accounts/Login.cpp.o.d"
   "/home/admin1/Стільниця/Coliseum-project/src/Accounts/RegisterAsAdmin.cpp" "CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.o" "gcc" "CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.o.d"
   "/home/admin1/Стільниця/Coliseum-project/src/Accounts/RegisterAsUser.cpp" "CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.o" "gcc" "CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/Accounts/RegisterUser.cpp" "CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.o" "gcc" "CMakeFiles/start.dir/src/Accounts/RegisterUser.cpp.o.d"
   "/home/admin1/Стільниця/Coliseum-project/src/DB/CreateBackup.cpp" "CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o" "gcc" "CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o.d"
   "/home/admin1/Стільниця/Coliseum-project/src/DB/CreateTable.cpp" "CMakeFiles/start.dir/src/DB/CreateTable.cpp.o" "gcc" "CMakeFiles/start.dir/src/DB/CreateTable.cpp.o.d"
   "/home/admin1/Стільниця/Coliseum-project/src/DB/Database.cpp" "CMakeFiles/start.dir/src/DB/Database.cpp.o" "gcc" "CMakeFiles/start.dir/src/DB/Database.cpp.o.d"

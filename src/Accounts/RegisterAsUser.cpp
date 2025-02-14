@@ -26,16 +26,13 @@ void Accounts::registerAsUser() {
             throw std::runtime_error("User with this login already exists!");
         }
 
-        // Генерація UID
-        std::string uid = generateUID();  // Викликаєте вашу функцію для генерації UID
-
         // Якщо користувача не знайдено, вставляємо новий запис для користувача
-        std::string insertUserQuery = "INSERT INTO " + getDBUsersName() + " (uid, login, password, role) VALUES ('" + uid + "', '" + getUserName() + "', '" + getUserPassword() + "', 'user')";
+        std::string insertUserQuery = "INSERT INTO " + getDBUsersName() + " (uid, login, password, role) VALUES ('" + generateUID().c_str() + "', '" + getUserName() + "', '" + getUserPassword() + "', 'user')";
         if (mysql_query(conn, insertUserQuery.c_str())) {
             throw std::runtime_error("Failed to insert user: " + std::string(mysql_error(conn)));
         }
 
-        std::cout << "User registered successfully with login: " << getUserName() << " and UID: " << uid << std::endl;
+        std::cout << "User registered successfully with login: " << getUserName() << " and UID: " << generateUID().c_str() << std::endl;
 
         mysql_free_result(res);
         mysql_close(conn);

@@ -17,11 +17,12 @@ void Database::CreateTable() {
 
         // Створення таблиці users (акаунти)
         std::string createUsersTableQuery = "CREATE TABLE IF NOT EXISTS " + getDBUsersName() + " ("
-            "uid INT AUTO_INCREMENT PRIMARY KEY, "
+            "uid VARCHAR(255) PRIMARY KEY, "
             "login VARCHAR(255) NOT NULL UNIQUE, "
             "password VARCHAR(255) NOT NULL, "
             "role ENUM('user', 'admin') NOT NULL DEFAULT 'user'"
         ");";
+
 
         if (mysql_query(conn, createUsersTableQuery.c_str())) {
             throw std::runtime_error("Failed to create " + getDBUsersName() + " table: " + std::string(mysql_error(conn)));
