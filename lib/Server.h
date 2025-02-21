@@ -6,8 +6,6 @@
 #include <string.h>
 #include "Database.h"
 
-// http://localhost:8080/api/data
-
 class Server : public Database {
 private:
     int port;
@@ -17,6 +15,7 @@ public:
     ~Server();
     void handleClient(int clientSocket);
 
+    void RS485();
     void start();
 
 };
