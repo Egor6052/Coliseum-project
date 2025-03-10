@@ -1,5 +1,5 @@
-CMakeFiles/start.dir/src/main.cpp.o: \
- /home/admin1/Стільниця/Coliseum-project/src/main.cpp \
+CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o: \
+ /home/admin1/Стільниця/Coliseum-project/src/Daemon/addToStartup.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/14/iostream \
  /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
@@ -128,19 +128,10 @@ CMakeFiles/start.dir/src/main.cpp.o: \
  /usr/include/c++/14/bits/locale_facets.tcc \
  /usr/include/c++/14/bits/basic_ios.tcc \
  /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
- /usr/include/c++/14/bits/istream.tcc /usr/include/string.h \
- /usr/include/strings.h /usr/include/c++/14/thread \
- /usr/include/c++/14/bits/std_thread.h \
- /usr/include/c++/14/bits/unique_ptr.h \
- /usr/include/c++/14/bits/this_thread_sleep.h \
- /usr/include/c++/14/bits/chrono.h /usr/include/c++/14/ratio \
- /usr/include/c++/14/cstdint \
- /usr/lib/gcc/x86_64-redhat-linux/14/include/stdint.h \
- /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
- /usr/include/bits/stdint-least.h /usr/include/c++/14/limits \
- /usr/include/c++/14/ctime /usr/include/c++/14/bits/parse_numbers.h \
- /home/admin1/Стільниця/Coliseum-project/src/../lib/Server.h \
- /home/admin1/Стільниця/Coliseum-project/src/../lib/Database.h \
- /home/admin1/Стільниця/Coliseum-project/src/../lib/Accounts.h \
- /home/admin1/Стільниця/Coliseum-project/src/../lib/UserDB.h \
- /home/admin1/Стільниця/Coliseum-project/src/../lib/Daemon.h
+ /usr/include/c++/14/bits/istream.tcc /usr/include/c++/14/fstream \
+ /usr/include/c++/14/bits/codecvt.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \
+ /usr/include/c++/14/bits/fstream.tcc \
+ /home/admin1/Стільниця/Coliseum-project/src/Daemon/../../lib/Daemon.h \
+ /usr/include/string.h /usr/include/strings.h

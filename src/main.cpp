@@ -2,6 +2,7 @@
 #include <string.h>
 #include <thread>
 #include "../lib/Server.h"
+#include "../lib/Daemon.h"
 
 void startServer(Server& server) {
     server.start();
@@ -9,6 +10,12 @@ void startServer(Server& server) {
 
 int main(){
     Server server;
+
+    Daemon daemon;
+    daemon.addToStartup();
+    // daemon.removeFromAutostart();
+    daemon.backgroundMode();
+
     std::thread serverThread(startServer, std::ref(server));
 
     std::this_thread::sleep_for(std::chrono::milliseconds(500));

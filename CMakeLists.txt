@@ -25,6 +25,10 @@ set(SOURCE_FILES
     ./src/Accounts/Login.cpp
     ./src/Accounts/GetUserData.cpp
 
+    ./src/Daemon/Daemon.cpp
+    ./src/Daemon/addToStartup.cpp
+    ./src/Daemon/backgroundMode.cpp
+    ./src/Daemon/removeFromAutostart.cpp
 
     # ./src/User/createMySQLUser.cpp
     ./src/User/UserDB.cpp
@@ -52,6 +56,7 @@ set(SOURCE_FILES
 set(HEADER_FILES
     ./lib/Accounts.h
     ./lib/Database.h
+    ./lib/Daemon.h
     ./lib/Server.h
     ./lib/UserDB.h
 )

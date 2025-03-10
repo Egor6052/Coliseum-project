@@ -537,6 +537,102 @@ src/DB/GetData.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DB/GetData.cpp.s
 .PHONY : src/DB/GetData.cpp.s
 
+src/Daemon/Daemon.o: src/Daemon/Daemon.cpp.o
+.PHONY : src/Daemon/Daemon.o
+
+# target to build an object file
+src/Daemon/Daemon.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o
+.PHONY : src/Daemon/Daemon.cpp.o
+
+src/Daemon/Daemon.i: src/Daemon/Daemon.cpp.i
+.PHONY : src/Daemon/Daemon.i
+
+# target to preprocess a source file
+src/Daemon/Daemon.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Daemon/Daemon.cpp.i
+.PHONY : src/Daemon/Daemon.cpp.i
+
+src/Daemon/Daemon.s: src/Daemon/Daemon.cpp.s
+.PHONY : src/Daemon/Daemon.s
+
+# target to generate assembly for a file
+src/Daemon/Daemon.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Daemon/Daemon.cpp.s
+.PHONY : src/Daemon/Daemon.cpp.s
+
+src/Daemon/addToStartup.o: src/Daemon/addToStartup.cpp.o
+.PHONY : src/Daemon/addToStartup.o
+
+# target to build an object file
+src/Daemon/addToStartup.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o
+.PHONY : src/Daemon/addToStartup.cpp.o
+
+src/Daemon/addToStartup.i: src/Daemon/addToStartup.cpp.i
+.PHONY : src/Daemon/addToStartup.i
+
+# target to preprocess a source file
+src/Daemon/addToStartup.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.i
+.PHONY : src/Daemon/addToStartup.cpp.i
+
+src/Daemon/addToStartup.s: src/Daemon/addToStartup.cpp.s
+.PHONY : src/Daemon/addToStartup.s
+
+# target to generate assembly for a file
+src/Daemon/addToStartup.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.s
+.PHONY : src/Daemon/addToStartup.cpp.s
+
+src/Daemon/backgroundMode.o: src/Daemon/backgroundMode.cpp.o
+.PHONY : src/Daemon/backgroundMode.o
+
+# target to build an object file
+src/Daemon/backgroundMode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Daemon/backgroundMode.cpp.o
+.PHONY : src/Daemon/backgroundMode.cpp.o
+
+src/Daemon/backgroundMode.i: src/Daemon/backgroundMode.cpp.i
+.PHONY : src/Daemon/backgroundMode.i
+
+# target to preprocess a source file
+src/Daemon/backgroundMode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Daemon/backgroundMode.cpp.i
+.PHONY : src/Daemon/backgroundMode.cpp.i
+
+src/Daemon/backgroundMode.s: src/Daemon/backgroundMode.cpp.s
+.PHONY : src/Daemon/backgroundMode.s
+
+# target to generate assembly for a file
+src/Daemon/backgroundMode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Daemon/backgroundMode.cpp.s
+.PHONY : src/Daemon/backgroundMode.cpp.s
+
+src/Daemon/removeFromAutostart.o: src/Daemon/removeFromAutostart.cpp.o
+.PHONY : src/Daemon/removeFromAutostart.o
+
+# target to build an object file
+src/Daemon/removeFromAutostart.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.o
+.PHONY : src/Daemon/removeFromAutostart.cpp.o
+
+src/Daemon/removeFromAutostart.i: src/Daemon/removeFromAutostart.cpp.i
+.PHONY : src/Daemon/removeFromAutostart.i
+
+# target to preprocess a source file
+src/Daemon/removeFromAutostart.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.i
+.PHONY : src/Daemon/removeFromAutostart.cpp.i
+
+src/Daemon/removeFromAutostart.s: src/Daemon/removeFromAutostart.cpp.s
+.PHONY : src/Daemon/removeFromAutostart.s
+
+# target to generate assembly for a file
+src/Daemon/removeFromAutostart.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.s
+.PHONY : src/Daemon/removeFromAutostart.cpp.s
+
 src/Server/Server.o: src/Server/Server.cpp.o
 .PHONY : src/Server/Server.o
 
@@ -861,6 +957,18 @@ help:
 	@echo "... src/DB/GetData.o"
 	@echo "... src/DB/GetData.i"
 	@echo "... src/DB/GetData.s"
+	@echo "... src/Daemon/Daemon.o"
+	@echo "... src/Daemon/Daemon.i"
+	@echo "... src/Daemon/Daemon.s"
+	@echo "... src/Daemon/addToStartup.o"
+	@echo "... src/Daemon/addToStartup.i"
+	@echo "... src/Daemon/addToStartup.s"
+	@echo "... src/Daemon/backgroundMode.o"
+	@echo "... src/Daemon/backgroundMode.i"
+	@echo "... src/Daemon/backgroundMode.s"
+	@echo "... src/Daemon/removeFromAutostart.o"
+	@echo "... src/Daemon/removeFromAutostart.i"
+	@echo "... src/Daemon/removeFromAutostart.s"
 	@echo "... src/Server/Server.o"
 	@echo "... src/Server/Server.i"
 	@echo "... src/Server/Server.s"
