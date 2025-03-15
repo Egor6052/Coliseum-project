@@ -35,7 +35,10 @@ set(SOURCE_FILES
     # User
     # ./src/User/createMySQLUser.cpp
     ./src/User/UserDB.cpp
+
+    # Server
     ./src/Server/Server.cpp
+    ./src/Server/Start.cpp
 
     # Database
     ./src/DB/Database.cpp

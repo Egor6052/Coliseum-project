@@ -1,5 +1,5 @@
-CMakeFiles/start.dir/src/Server/Server.cpp.o: \
- /home/admin1/Стільниця/Coliseum-project/src/Server/Server.cpp \
+CMakeFiles/start.dir/src/Server/Start.cpp.o: \
+ /home/admin1/Стільниця/Coliseum-project/src/Server/Start.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/14/iostream \
  /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
@@ -139,7 +139,6 @@ CMakeFiles/start.dir/src/Server/Server.cpp.o: \
  /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
  /usr/include/bits/stdint-least.h /usr/include/c++/14/limits \
  /usr/include/c++/14/ctime /usr/include/c++/14/bits/parse_numbers.h \
- /usr/include/c++/14/sstream /usr/include/c++/14/bits/sstream.tcc \
  /usr/include/sys/socket.h /usr/include/bits/types/struct_iovec.h \
  /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
  /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \

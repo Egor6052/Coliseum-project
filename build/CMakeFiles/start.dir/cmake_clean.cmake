@@ -49,6 +49,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/start.dir/src/Logger/logError.cpp.o.d"
   "CMakeFiles/start.dir/src/Server/Server.cpp.o"
   "CMakeFiles/start.dir/src/Server/Server.cpp.o.d"
+  "CMakeFiles/start.dir/src/Server/Start.cpp.o"
+  "CMakeFiles/start.dir/src/Server/Start.cpp.o.d"
   "CMakeFiles/start.dir/src/User/UserDB.cpp.o"
   "CMakeFiles/start.dir/src/User/UserDB.cpp.o.d"
   "CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o"

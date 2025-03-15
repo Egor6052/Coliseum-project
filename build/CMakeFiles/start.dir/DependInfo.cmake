@@ -33,6 +33,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/admin1/Стільниця/Coliseum-project/src/Logger/Logger.cpp" "CMakeFiles/start.dir/src/Logger/Logger.cpp.o" "gcc" "CMakeFiles/start.dir/src/Logger/Logger.cpp.o.d"
   "/home/admin1/Стільниця/Coliseum-project/src/Logger/logError.cpp" "CMakeFiles/start.dir/src/Logger/logError.cpp.o" "gcc" "CMakeFiles/start.dir/src/Logger/logError.cpp.o.d"
   "/home/admin1/Стільниця/Coliseum-project/src/Server/Server.cpp" "CMakeFiles/start.dir/src/Server/Server.cpp.o" "gcc" "CMakeFiles/start.dir/src/Server/Server.cpp.o.d"
+  "/home/admin1/Стільниця/Coliseum-project/src/Server/Start.cpp" "CMakeFiles/start.dir/src/Server/Start.cpp.o" "gcc" "CMakeFiles/start.dir/src/Server/Start.cpp.o.d"
   "/home/admin1/Стільниця/Coliseum-project/src/User/UserDB.cpp" "CMakeFiles/start.dir/src/User/UserDB.cpp.o" "gcc" "CMakeFiles/start.dir/src/User/UserDB.cpp.o.d"
   "/home/admin1/Стільниця/Coliseum-project/src/dao/entity/ActivePower.cpp" "CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o.d"
   "/home/admin1/Стільниця/Coliseum-project/src/dao/entity/Current.cpp" "CMakeFiles/start.dir/src/dao/entity/Current.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/Current.cpp.o.d"

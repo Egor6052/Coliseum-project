@@ -729,6 +729,30 @@ src/Server/Server.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/Server.cpp.s
 .PHONY : src/Server/Server.cpp.s
 
+src/Server/Start.o: src/Server/Start.cpp.o
+.PHONY : src/Server/Start.o
+
+# target to build an object file
+src/Server/Start.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/Start.cpp.o
+.PHONY : src/Server/Start.cpp.o
+
+src/Server/Start.i: src/Server/Start.cpp.i
+.PHONY : src/Server/Start.i
+
+# target to preprocess a source file
+src/Server/Start.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/Start.cpp.i
+.PHONY : src/Server/Start.cpp.i
+
+src/Server/Start.s: src/Server/Start.cpp.s
+.PHONY : src/Server/Start.s
+
+# target to generate assembly for a file
+src/Server/Start.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/Start.cpp.s
+.PHONY : src/Server/Start.cpp.s
+
 src/User/UserDB.o: src/User/UserDB.cpp.o
 .PHONY : src/User/UserDB.o
 
@@ -1053,6 +1077,9 @@ help:
 	@echo "... src/Server/Server.o"
 	@echo "... src/Server/Server.i"
 	@echo "... src/Server/Server.s"
+	@echo "... src/Server/Start.o"
+	@echo "... src/Server/Start.i"
+	@echo "... src/Server/Start.s"
 	@echo "... src/User/UserDB.o"
 	@echo "... src/User/UserDB.i"
 	@echo "... src/User/UserDB.s"

@@ -1,13 +1,16 @@
-#include "Server.h"
 #include <iostream>
 #include <cstring>
 #include <thread>
+#include <sstream>
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <unistd.h>
 
+#include "Server.h"
+
 Server::Server() {
     this->port = 8080;
+    this->host_name = "localhost";
 }
 
 Server::~Server() {}
@@ -16,65 +19,106 @@ void Server::handleClient(int clientSocket) {
     char buffer[1024];
     memset(buffer, 0, sizeof(buffer));
 
-    //Reading data from the client
     read(clientSocket, buffer, sizeof(buffer) - 1);
+    std::cout << "Request:\n" << buffer << std::endl;
 
-    // Sending reply
-    std::string response =
-        
-        getData();
-    send(clientSocket, response.c_str(), response.size(), 0);
+    std::string request(buffer);
+    
+
+
+
+    if (request.find("GET /api/data") != std::string::npos) {
+        // /api/data
+        std::string body = getData();
+        std::string response =
+            "HTTP/1.1 200 OK\r\n"
+            "Content-Type: application/json\r\n"
+            "Content-Length: " + std::to_string(body.size()) + "\r\n"
+            "Connection: close\r\n"
+            "\r\n" +
+            body;
+
+        send(clientSocket, response.c_str(), response.size(), 0);
+    } 
+if (request.find("GET /api/reg") != std::string::npos) {
+    std::ifstream file("../Front/index.html");
+    if (file) {
+        std::stringstream buffer;
+        buffer << file.rdbuf();
+        std::string htmlContent = buffer.str();
+
+        std::string response =
+            "HTTP/1.1 200 OK\r\n"
+            "Content-Type: text/html\r\n"
+            "Content-Length: " + std::to_string(htmlContent.size()) + "\r\n"
+            "Connection: close\r\n"
+            "\r\n" +
+            htmlContent;
+
+        send(clientSocket, response.c_str(), response.size(), 0);
+    } else {
+        std::string response =
+            "HTTP/1.1 404 Not Found\r\n"
+            "Content-Type: text/html\r\n"
+            "Connection: close\r\n"
+            "\r\n"
+            "<html><body><h1>404 Not Found</h1></body></html>";
+        send(clientSocket, response.c_str(), response.size(), 0);
+    }
+}
+
+    if (request.find("POST /api/register") != std::string::npos) {
+        std::string body = getRequestBody(request);
+        std::string name = extractParameter(body, "name");
+        std::string password = extractParameter(body, "password");
+
+        // registerAsUser(name, password);
+
+        std::string response =
+            "HTTP/1.1 200 OK\r\n"
+            "Content-Type: text/html\r\n"           
+            "Connection: close\r\n"
+            "\r\n"
+            "User registered successfully!";
+
+        send(clientSocket, response.c_str(), response.size(), 0);
+        return;
+    }
+    else {
+        std::string response =
+            "HTTP/1.1 404 Not Found\r\n"
+            "Content-Type: text/html\r\n"
+            "Connection: close\r\n"
+            "\r\n"
+            "<html><body><h1>404 Not Found</h1></body></html>";
+
+        send(clientSocket, response.c_str(), response.size(), 0);
+    }
+
     close(clientSocket);
 }
 
-void Server::start() {
-    int serverSocket = socket(AF_INET, SOCK_STREAM, 0);
-    if (serverSocket == -1) {
-        std::cerr << "Error: Unable to create socket.\n";
-        logError("Error: Unable to create socket.\n");
-        return;
+
+// Функція для витягування тіла запиту
+std::string Server::getRequestBody(const std::string& request) {
+    size_t bodyStart = request.find("\r\n\r\n");
+    if (bodyStart != std::string::npos) {
+        return request.substr(bodyStart + 4);
     }
-
-    sockaddr_in serverAddr;
-    serverAddr.sin_family = AF_INET;
-    serverAddr.sin_port = htons(port);
-    serverAddr.sin_addr.s_addr = INADDR_ANY;
-
-    // Bind the socket to the port
-    if (bind(serverSocket, (sockaddr*)&serverAddr, sizeof(serverAddr)) == -1) {
-        std::cerr << "Error: Unable to bind socket to port.\n";
-        logError("Error: Unable to bind socket to port.\n");
-        close(serverSocket);
-        return;
-    }
-
-    // We start listening to the connection
-    if (listen(serverSocket, 10) == -1) {
-        std::cerr << "Error: Unable to listen on socket.\n";
-        logError("Error: Unable to listen on socket.\n");
-        close(serverSocket);
-        return;
-    }
-
-    // http://localhost:8080/api/data
-
-    std::cout << "The HTTP server is running...\n";
-    std::cout << "\033[32m http://localhost:" << port << "/api/data \033[0m\n";
-
-    while (true) {
-        sockaddr_in clientAddr;
-        socklen_t clientSize = sizeof(clientAddr);
-        int clientSocket = accept(serverSocket, (sockaddr*)&clientAddr, &clientSize);
-
-        if (clientSocket == -1) {
-            std::cerr << "Error: Unable to accept connection.\n";
-            logError("Error: Unable to accept connection.\n");
-            continue;
-        }
-
-        // We process the client connection in a new thread
-        std::thread(&Server::handleClient, this, clientSocket).detach();
-    }
-
-    close(serverSocket);
+    return "";
 }
+
+// Функція для отримання параметра з тіла запиту
+std::string Server::extractParameter(const std::string& body, const std::string& param) {
+    size_t paramPos = body.find(param + "=");
+    if (paramPos != std::string::npos) {
+        size_t startPos = paramPos + param.length() + 1;
+        size_t endPos = body.find("&", startPos);
+        if (endPos == std::string::npos) {
+            endPos = body.length();
+        }
+        return body.substr(startPos, endPos - startPos);
+    }
+    return "";
+}
+
