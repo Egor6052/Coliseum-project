@@ -5,7 +5,9 @@
 #include <iostream>
 #include <string.h>
 
-class UserDB {
+#include "Logger.h"
+
+class UserDB : public Logger {
     private:
     std::string name; 
     std::string password;

@@ -21,6 +21,7 @@ void Accounts::setName(std::string valueName){
         this->UserName = valueName;
     } else {
         std::cerr << "Error: User name cannot be empty!" << std::endl;
+        logError("Error: User name cannot be empty!");
     }
 }
 
@@ -29,6 +30,7 @@ void Accounts::setPassword(std::string valuePassword){
         this->UserPassword = valuePassword;
     } else {
         std::cerr << "Error: Password cannot be empty!" << std::endl;
+        logError("Error: Password cannot be empty!");
     }   
 }
 

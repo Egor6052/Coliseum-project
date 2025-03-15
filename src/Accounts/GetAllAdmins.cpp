@@ -10,23 +10,27 @@ std::string Accounts::getAllAdminsFromDB() {
         MYSQL *conn = mysql_init(nullptr);
         if (!conn) {
             throw std::runtime_error("MySQL initialization failed!");
+            logError("MySQL initialization failed!");
         }
 
         conn = mysql_real_connect(conn, "localhost", getUserDBName().c_str(), getUserDBPassword().c_str(), getDBName().c_str(), 0, nullptr, 0);
         if (!conn) {
             throw std::runtime_error("Failed to connect to MySQL database!");
+            logError("Failed to connect to MySQL database!");
         }
 
         // Запит для отримання всіх адміністраторів
         std::string query = "SELECT uid, login, email, phone_number, role FROM " + getDBUsersName() + " WHERE role = 'admin'";
         if (mysql_query(conn, query.c_str())) {
             throw std::runtime_error("Failed to execute query: " + std::string(mysql_error(conn)));
+            logError("Failed to execute query: " + std::string(mysql_error(conn)));
         }
 
         // Обробка результату запиту
         MYSQL_RES* res = mysql_store_result(conn);
         if (!res) {
             throw std::runtime_error("Failed to store result: " + std::string(mysql_error(conn)));
+            logError("Failed to store result: " + std::string(mysql_error(conn)));
         }
 
         MYSQL_ROW row;
@@ -65,6 +69,7 @@ std::string Accounts::getAllAdminsFromDB() {
     } catch (const std::exception &e) {
         std::cerr << "Error: " << e.what() << '\n';
         nlohmann::json errorResponse = {{"error", e.what()}};
+        logError(errorResponse);
         return errorResponse.dump(4);
     }
 }

@@ -5,8 +5,9 @@
 #include <iostream>
 #include <string.h>
 #include "Accounts.h"
+#include "Logger.h"
 
-class Database : public Accounts {
+class Database : public Accounts, public Logger {
     private:
         std::string data;
         std::string ipAddress;

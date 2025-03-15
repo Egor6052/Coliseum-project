@@ -8,11 +8,13 @@ void Database::CreateTable() {
         MYSQL *conn = mysql_init(nullptr);
         if (!conn) {
             throw std::runtime_error("MySQL initialization failed!");
+            logError("MySQL initialization failed!");
         }
 
         conn = mysql_real_connect(conn, "localhost", getUserDBName().c_str(), getUserDBPassword().c_str(), getDBName().c_str(), 0, nullptr, 0);
         if (!conn) {
             throw std::runtime_error("Failed to connect to MySQL database!");
+            logError("Failed to connect to MySQL database!");
         }
 
         std::string createUsersTableQuery = "CREATE TABLE IF NOT EXISTS " + getDBUsersName() + " ("
@@ -27,6 +29,7 @@ void Database::CreateTable() {
 
         if (mysql_query(conn, createUsersTableQuery.c_str())) {
             throw std::runtime_error("Failed to create " + getDBUsersName() + " table: " + std::string(mysql_error(conn)));
+            logError("Failed to create " + getDBUsersName() + " table: " + std::string(mysql_error(conn)));
         }
 
         std::cout << "\033[1m\033[35m⋆⟡₊⊹\033[36mTable " + getDBUsersName() + " created successfully!\033[35m⊹₊⟡⋆\033[0m\n" << std::endl;
@@ -45,6 +48,7 @@ void Database::CreateTable() {
 
         if (mysql_query(conn, createSensorDataTableQuery.c_str())) {
             throw std::runtime_error("Failed to create " + getDBName() + " table: " + std::string(mysql_error(conn)));
+            logError("Failed to create " + getDBName() + " table: " + std::string(mysql_error(conn)));
         }
 
         std::cout << "\033[1m\033[35m⋆⟡₊⊹\033[36mTable " + getDBName() + " created successfully!\033[35m⊹₊⟡⋆\033[0m\n" << std::endl;
@@ -52,5 +56,6 @@ void Database::CreateTable() {
         mysql_close(conn);
     } catch (const std::exception &e) {
         std::cerr << "Error: " << e.what() << '\n';
+        logError("Error: " + e.what());
     }
 }

@@ -14,7 +14,7 @@ int main(){
     Daemon daemon;
     daemon.addToStartup();
     // daemon.removeFromAutostart();
-    daemon.backgroundMode();
+    // daemon.backgroundMode();
 
     std::thread serverThread(startServer, std::ref(server));
 

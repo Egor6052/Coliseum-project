@@ -13,6 +13,7 @@ UserDB::~UserDB(){  }
 void UserDB::setAdminPassword(std::string valueAdminPassword){
     if (valueAdminPassword == "") {
         std::cerr << "\033[32mError: Password must not be null!\033[0m" << "\n";
+        logError("\033[32mError: Password must not be null!\033[0m" << "\n");
     }
     this->adminPassword = valueAdminPassword;
 }

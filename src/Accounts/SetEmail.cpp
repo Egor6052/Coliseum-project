@@ -10,17 +10,20 @@ void Accounts::setEmail(std::string uid, std::string valueEmail) {
 
     if (!std::regex_match(valueEmail, emailRegex)) {
         throw std::invalid_argument("Invalid email format!");
+        logError("Invalid email format!");
     }
 
     try {
         MYSQL *conn = mysql_init(nullptr);
         if (!conn) {
             throw std::runtime_error("MySQL initialization failed!");
+            logError("MySQL initialization failed!");
         }
 
         conn = mysql_real_connect(conn, "localhost", getUserDBName().c_str(), getUserDBPassword().c_str(), getDBName().c_str(), 0, nullptr, 0);
         if (!conn) {
             throw std::runtime_error("Failed to connect to MySQL database!");
+            logError("Failed to connect to MySQL database!");
         }
 
         // SQL-запит для оновлення email користувача за UID
@@ -30,6 +33,7 @@ void Accounts::setEmail(std::string uid, std::string valueEmail) {
 
         if (mysql_query(conn, updateQuery.c_str())) {
             throw std::runtime_error("Failed to update email: " + std::string(mysql_error(conn)));
+            logError("Failed to update email: " + std::string(mysql_error(conn)));
         }
 
         mysql_close(conn);
@@ -39,6 +43,7 @@ void Accounts::setEmail(std::string uid, std::string valueEmail) {
 
     } catch (const std::exception &e) {
         std::cerr << "Error: " << e.what() << '\n';
+        logError("Error: " + e.what());
         throw;
     }
 }

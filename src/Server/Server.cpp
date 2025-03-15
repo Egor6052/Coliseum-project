@@ -31,6 +31,7 @@ void Server::start() {
     int serverSocket = socket(AF_INET, SOCK_STREAM, 0);
     if (serverSocket == -1) {
         std::cerr << "Error: Unable to create socket.\n";
+        logError("Error: Unable to create socket.\n");
         return;
     }
 
@@ -42,6 +43,7 @@ void Server::start() {
     // Bind the socket to the port
     if (bind(serverSocket, (sockaddr*)&serverAddr, sizeof(serverAddr)) == -1) {
         std::cerr << "Error: Unable to bind socket to port.\n";
+        logError("Error: Unable to bind socket to port.\n");
         close(serverSocket);
         return;
     }
@@ -49,6 +51,7 @@ void Server::start() {
     // We start listening to the connection
     if (listen(serverSocket, 10) == -1) {
         std::cerr << "Error: Unable to listen on socket.\n";
+        logError("Error: Unable to listen on socket.\n");
         close(serverSocket);
         return;
     }
@@ -65,6 +68,7 @@ void Server::start() {
 
         if (clientSocket == -1) {
             std::cerr << "Error: Unable to accept connection.\n";
+            logError("Error: Unable to accept connection.\n");
             continue;
         }
 

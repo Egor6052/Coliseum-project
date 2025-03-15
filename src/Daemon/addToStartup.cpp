@@ -15,12 +15,14 @@
 void Daemon::addToStartup() {
     if (servicePath.empty()) {
         std::cerr << "Error: servicePath is empty!" << std::endl;
+        logError("Error: servicePath is empty!");
         return;
     }
 
     std::ofstream serviceFile(servicePath, std::ios::out | std::ios::trunc);
     if (!serviceFile) {
         std::cerr << "Could not open " << servicePath << " for writing." << std::endl;
+        logError("Could not open " << servicePath << " for writing.");
         return;
     }
 
@@ -28,6 +30,7 @@ void Daemon::addToStartup() {
     const char* homeDir = getenv("HOME");
     if (homeDir == nullptr) {
         std::cerr << "Error: Unable to find home directory!" << std::endl;
+        logError("Error: Unable to find home directory!");
         return;
     }
 
@@ -50,6 +53,7 @@ void Daemon::addToStartup() {
     int reloadStatus = system("sudo systemctl daemon-reload");
     if (reloadStatus != 0) {
         std::cerr << "Error: Failed to reload systemd daemon!" << std::endl;
+        logError("Error: Failed to reload systemd daemon!");
         return;
     }
 
@@ -57,6 +61,7 @@ void Daemon::addToStartup() {
     int enableStatus = system("sudo systemctl enable SensorDaemon.service");
     if (enableStatus != 0) {
         std::cerr << "Error: Failed to enable SensorDaemon service!" << std::endl;
+        logError("Error: Failed to enable SensorDaemon service!");
         return;
     }
 

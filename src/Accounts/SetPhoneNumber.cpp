@@ -17,11 +17,13 @@ void Accounts::setPhoneNumber(std::string uid, std::string valuePhoneNumber) {
         MYSQL *conn = mysql_init(nullptr);
         if (!conn) {
             throw std::runtime_error("MySQL initialization failed!");
+            logError("MySQL initialization failed!");
         }
 
         conn = mysql_real_connect(conn, "localhost", getUserDBName().c_str(), getUserDBPassword().c_str(), getDBName().c_str(), 0, nullptr, 0);
         if (!conn) {
             throw std::runtime_error("Failed to connect to MySQL database!");
+            logError("Failed to connect to MySQL database!");
         }
 
         // SQL-запит для оновлення номера телефону користувача за UID
@@ -31,6 +33,7 @@ void Accounts::setPhoneNumber(std::string uid, std::string valuePhoneNumber) {
 
         if (mysql_query(conn, updateQuery.c_str())) {
             throw std::runtime_error("Failed to update phone number: " + std::string(mysql_error(conn)));
+            logError("Failed to update phone number: " + std::string(mysql_error(conn)));
         }
 
         mysql_close(conn);
@@ -40,6 +43,7 @@ void Accounts::setPhoneNumber(std::string uid, std::string valuePhoneNumber) {
 
     } catch (const std::exception &e) {
         std::cerr << "Error: " << e.what() << '\n';
+        logError"Error: " + e.what()();
         throw;
     }
 }
