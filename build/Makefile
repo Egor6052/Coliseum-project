@@ -633,6 +633,78 @@ src/Daemon/removeFromAutostart.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.s
 .PHONY : src/Daemon/removeFromAutostart.cpp.s
 
+src/Logger/DataTime.o: src/Logger/DataTime.cpp.o
+.PHONY : src/Logger/DataTime.o
+
+# target to build an object file
+src/Logger/DataTime.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Logger/DataTime.cpp.o
+.PHONY : src/Logger/DataTime.cpp.o
+
+src/Logger/DataTime.i: src/Logger/DataTime.cpp.i
+.PHONY : src/Logger/DataTime.i
+
+# target to preprocess a source file
+src/Logger/DataTime.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Logger/DataTime.cpp.i
+.PHONY : src/Logger/DataTime.cpp.i
+
+src/Logger/DataTime.s: src/Logger/DataTime.cpp.s
+.PHONY : src/Logger/DataTime.s
+
+# target to generate assembly for a file
+src/Logger/DataTime.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Logger/DataTime.cpp.s
+.PHONY : src/Logger/DataTime.cpp.s
+
+src/Logger/Logger.o: src/Logger/Logger.cpp.o
+.PHONY : src/Logger/Logger.o
+
+# target to build an object file
+src/Logger/Logger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Logger/Logger.cpp.o
+.PHONY : src/Logger/Logger.cpp.o
+
+src/Logger/Logger.i: src/Logger/Logger.cpp.i
+.PHONY : src/Logger/Logger.i
+
+# target to preprocess a source file
+src/Logger/Logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Logger/Logger.cpp.i
+.PHONY : src/Logger/Logger.cpp.i
+
+src/Logger/Logger.s: src/Logger/Logger.cpp.s
+.PHONY : src/Logger/Logger.s
+
+# target to generate assembly for a file
+src/Logger/Logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Logger/Logger.cpp.s
+.PHONY : src/Logger/Logger.cpp.s
+
+src/Logger/logError.o: src/Logger/logError.cpp.o
+.PHONY : src/Logger/logError.o
+
+# target to build an object file
+src/Logger/logError.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Logger/logError.cpp.o
+.PHONY : src/Logger/logError.cpp.o
+
+src/Logger/logError.i: src/Logger/logError.cpp.i
+.PHONY : src/Logger/logError.i
+
+# target to preprocess a source file
+src/Logger/logError.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Logger/logError.cpp.i
+.PHONY : src/Logger/logError.cpp.i
+
+src/Logger/logError.s: src/Logger/logError.cpp.s
+.PHONY : src/Logger/logError.s
+
+# target to generate assembly for a file
+src/Logger/logError.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Logger/logError.cpp.s
+.PHONY : src/Logger/logError.cpp.s
+
 src/Server/Server.o: src/Server/Server.cpp.o
 .PHONY : src/Server/Server.o
 
@@ -969,6 +1041,15 @@ help:
 	@echo "... src/Daemon/removeFromAutostart.o"
 	@echo "... src/Daemon/removeFromAutostart.i"
 	@echo "... src/Daemon/removeFromAutostart.s"
+	@echo "... src/Logger/DataTime.o"
+	@echo "... src/Logger/DataTime.i"
+	@echo "... src/Logger/DataTime.s"
+	@echo "... src/Logger/Logger.o"
+	@echo "... src/Logger/Logger.i"
+	@echo "... src/Logger/Logger.s"
+	@echo "... src/Logger/logError.o"
+	@echo "... src/Logger/logError.i"
+	@echo "... src/Logger/logError.s"
 	@echo "... src/Server/Server.o"
 	@echo "... src/Server/Server.i"
 	@echo "... src/Server/Server.s"

@@ -55,8 +55,9 @@ bool Accounts::Login() {
         mysql_close(conn);
         return true;
     } catch (const std::exception &e) {
-        std::cerr << "Error: " << e.what() << '\n';
-        logError("Error: " + e.what());
+        std::string errorMessage = "Error: " + std::string(e.what()) + '\n';
+        std::cerr << errorMessage;
+        logError(errorMessage);
         return false;
     }
 }

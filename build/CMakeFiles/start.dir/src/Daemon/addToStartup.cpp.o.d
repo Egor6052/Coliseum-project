@@ -134,4 +134,6 @@ CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o: \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \
  /usr/include/c++/14/bits/fstream.tcc \
  /home/admin1/Стільниця/Coliseum-project/src/Daemon/../../lib/Daemon.h \
- /usr/include/string.h /usr/include/strings.h
+ /usr/include/string.h /usr/include/strings.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Daemon/../../lib/Logger.h \
+ /usr/include/c++/14/ctime

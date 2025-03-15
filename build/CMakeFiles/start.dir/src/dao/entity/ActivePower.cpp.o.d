@@ -150,4 +150,9 @@ CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o: \
  /usr/include/c++/14/tr1/riemann_zeta.tcc \
  /home/admin1/Стільниця/Coliseum-project/./lib/../lib/Database.h \
  /home/admin1/Стільниця/Coliseum-project/./lib/../lib/Accounts.h \
- /home/admin1/Стільниця/Coliseum-project/./lib/../lib/UserDB.h
+ /home/admin1/Стільниця/Coliseum-project/./lib/../lib/UserDB.h \
+ /home/admin1/Стільниця/Coliseum-project/./lib/../lib/Logger.h \
+ /usr/include/c++/14/fstream /usr/include/c++/14/bits/codecvt.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \
+ /usr/include/c++/14/bits/fstream.tcc /usr/include/c++/14/ctime

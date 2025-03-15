@@ -36,8 +36,40 @@ cmake --build .
 ```
 Start:
 ```
-./start
+sudo ./start
 ```
+
+## Daemon Management
+
+Reload Daemons
+```
+sudo systemctl daemon-reload
+```
+
+Restart Daemon
+```
+sudo systemctl restart SensorDaemon.service
+```
+
+Check Daemon Status
+```
+sudo systemctl status SensorDaemon.service
+```
+
+Disable Daemon
+```
+sudo systemctl disable SensorDaemon.service
+```
+
+Enable Daemon
+```
+sudo systemctl enable SensorDaemon.service
+```
+Start daemon
+```
+sudo systemctl start SensorDaemon.service
+```
+
 ## For develoders
 
 1) Structure folders "src/":

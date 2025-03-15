@@ -132,6 +132,11 @@ CMakeFiles/start.dir/src/Accounts/SetEmail.cpp.o: \
  /usr/include/c++/14/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h \
  /home/admin1/Стільниця/Coliseum-project/src/Accounts/../../lib/UserDB.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Accounts/../../lib/Logger.h \
+ /usr/include/c++/14/fstream /usr/include/c++/14/bits/codecvt.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \
+ /usr/include/c++/14/bits/fstream.tcc /usr/include/c++/14/ctime \
  /usr/include/mysql/mysql.h \
  /usr/lib/gcc/x86_64-redhat-linux/14/include/stdbool.h \
  /usr/lib/gcc/x86_64-redhat-linux/14/include/stdint.h \
@@ -145,11 +150,10 @@ CMakeFiles/start.dir/src/Accounts/SetEmail.cpp.o: \
  /usr/include/mysql/mysql_version.h /usr/include/mysql/mysql_time.h \
  /usr/include/mysql/errmsg.h /usr/include/c++/14/regex \
  /usr/include/c++/14/bitset /usr/include/c++/14/locale \
- /usr/include/c++/14/bits/locale_facets_nonio.h /usr/include/c++/14/ctime \
+ /usr/include/c++/14/bits/locale_facets_nonio.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/time_members.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/14/bits/codecvt.h \
- /usr/include/c++/14/bits/locale_facets_nonio.tcc \
+ /usr/include/libintl.h /usr/include/c++/14/bits/locale_facets_nonio.tcc \
  /usr/include/c++/14/bits/locale_conv.h /usr/include/c++/14/sstream \
  /usr/include/c++/14/bits/sstream.tcc /usr/include/c++/14/stack \
  /usr/include/c++/14/deque /usr/include/c++/14/bits/stl_uninitialized.h \

@@ -79,7 +79,8 @@ void Database::createBackup() {
         mysql_close(conn);
         std::cout << "\033[1m\033[35m˚｡⋆\033[36m Backup created successfully in file: \033[35m" << backupFileName << "\033[0m\n" << std::endl;
     } catch (const std::exception& e) {
-        std::cerr << "\033[31mError creating backup: " << e.what() << "\033[0m\n";
-        logError("\033[31mError creating backup: " << e.what() << "\033[0m\n");
+        std::string errorMessage = "\033[31mError creating backup: " + std::string(e.what()) + "\033[0m\n";
+        std::cerr << errorMessage;
+        logError(errorMessage);
     }
 }

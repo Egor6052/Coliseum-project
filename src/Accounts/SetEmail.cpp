@@ -42,8 +42,9 @@ void Accounts::setEmail(std::string uid, std::string valueEmail) {
         this->UserEmail = valueEmail;
 
     } catch (const std::exception &e) {
-        std::cerr << "Error: " << e.what() << '\n';
-        logError("Error: " + e.what());
+        std::string errorMessage = "Error: " + std::string(e.what()) + "\n";
+        std::cerr << errorMessage;
+        logError(errorMessage);
         throw;
     }
 }

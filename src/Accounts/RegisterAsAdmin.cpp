@@ -61,8 +61,9 @@ void Accounts::registerAsAdmin() {
         mysql_free_result(res);
         mysql_close(conn);
     } catch (const std::exception &e) {
-        std::cerr << "Error: " << e.what() << '\n';
-        logError("Error: " + e.what());
+        std::string errorMessage = "Error: " + std::string(e.what()) + "\n";
+        std::cerr << errorMessage;
+        logError(errorMessage);
     }
 }
 

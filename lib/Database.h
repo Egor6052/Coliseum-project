@@ -7,7 +7,7 @@
 #include "Accounts.h"
 #include "Logger.h"
 
-class Database : public Accounts, public Logger {
+class Database : public Accounts {
     private:
         std::string data;
         std::string ipAddress;

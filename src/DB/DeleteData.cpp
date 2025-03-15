@@ -27,7 +27,8 @@ void Database::deleteData(std::string valueID) {
         std::cout << "\033[36mNote with ID " << valueID << " deleted successfully.\033[0m" << std::endl;
         mysql_close(conn);
     } catch (const std::exception &e) {
-        std::cerr << "Error: " << e.what() << '\n';
-        logError("Error: " + e.what() + '\n');
+        std::string errorMessage = "Error: " + std::string(e.what()) + "\n";
+        std::cerr << errorMessage;
+        logError(errorMessage);
     }
 }

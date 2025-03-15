@@ -8,7 +8,7 @@
 #include "UserDB.h"
 #include "Logger.h"
 
-class Accounts : public UserDB, public Logger {
+class Accounts : public UserDB {
     private:
     std::string Uid;
     std::string UserName; 

@@ -517,6 +517,48 @@ CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/dao/entity/roundNumber.cpp -o CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.s
 
+CMakeFiles/start.dir/src/Logger/DataTime.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Logger/DataTime.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/Logger/DataTime.cpp
+CMakeFiles/start.dir/src/Logger/DataTime.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/start.dir/src/Logger/DataTime.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Logger/DataTime.cpp.o -MF CMakeFiles/start.dir/src/Logger/DataTime.cpp.o.d -o CMakeFiles/start.dir/src/Logger/DataTime.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/Logger/DataTime.cpp
+
+CMakeFiles/start.dir/src/Logger/DataTime.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Logger/DataTime.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/Logger/DataTime.cpp > CMakeFiles/start.dir/src/Logger/DataTime.cpp.i
+
+CMakeFiles/start.dir/src/Logger/DataTime.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Logger/DataTime.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/Logger/DataTime.cpp -o CMakeFiles/start.dir/src/Logger/DataTime.cpp.s
+
+CMakeFiles/start.dir/src/Logger/logError.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Logger/logError.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/Logger/logError.cpp
+CMakeFiles/start.dir/src/Logger/logError.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/start.dir/src/Logger/logError.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Logger/logError.cpp.o -MF CMakeFiles/start.dir/src/Logger/logError.cpp.o.d -o CMakeFiles/start.dir/src/Logger/logError.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/Logger/logError.cpp
+
+CMakeFiles/start.dir/src/Logger/logError.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Logger/logError.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/Logger/logError.cpp > CMakeFiles/start.dir/src/Logger/logError.cpp.i
+
+CMakeFiles/start.dir/src/Logger/logError.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Logger/logError.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/Logger/logError.cpp -o CMakeFiles/start.dir/src/Logger/logError.cpp.s
+
+CMakeFiles/start.dir/src/Logger/Logger.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Logger/Logger.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/Logger/Logger.cpp
+CMakeFiles/start.dir/src/Logger/Logger.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/start.dir/src/Logger/Logger.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Logger/Logger.cpp.o -MF CMakeFiles/start.dir/src/Logger/Logger.cpp.o.d -o CMakeFiles/start.dir/src/Logger/Logger.cpp.o -c /home/admin1/Стільниця/Coliseum-project/src/Logger/Logger.cpp
+
+CMakeFiles/start.dir/src/Logger/Logger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Logger/Logger.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Coliseum-project/src/Logger/Logger.cpp > CMakeFiles/start.dir/src/Logger/Logger.cpp.i
+
+CMakeFiles/start.dir/src/Logger/Logger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Logger/Logger.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Coliseum-project/src/Logger/Logger.cpp -o CMakeFiles/start.dir/src/Logger/Logger.cpp.s
+
 # Object files for target start
 start_OBJECTS = \
 "CMakeFiles/start.dir/src/main.cpp.o" \
@@ -550,7 +592,10 @@ start_OBJECTS = \
 "CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o" \
 "CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o" \
 "CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o" \
-"CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o"
+"CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o" \
+"CMakeFiles/start.dir/src/Logger/DataTime.cpp.o" \
+"CMakeFiles/start.dir/src/Logger/logError.cpp.o" \
+"CMakeFiles/start.dir/src/Logger/Logger.cpp.o"
 
 # External object files for target start
 start_EXTERNAL_OBJECTS =
@@ -587,10 +632,13 @@ start: CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o
 start: CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o
 start: CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o
 start: CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o
+start: CMakeFiles/start.dir/src/Logger/DataTime.cpp.o
+start: CMakeFiles/start.dir/src/Logger/logError.cpp.o
+start: CMakeFiles/start.dir/src/Logger/Logger.cpp.o
 start: CMakeFiles/start.dir/build.make
 start: /usr/lib64/mysql/libmysqlclient.so
 start: CMakeFiles/start.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking CXX executable start"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/admin1/Стільниця/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Linking CXX executable start"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/start.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

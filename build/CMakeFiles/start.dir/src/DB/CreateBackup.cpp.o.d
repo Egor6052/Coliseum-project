@@ -167,4 +167,5 @@ CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o: \
  /home/admin1/Стільниця/Coliseum-project/src/DB/../../lib/Database.h \
  /usr/include/string.h /usr/include/strings.h \
  /home/admin1/Стільниця/Coliseum-project/src/DB/../../lib/Accounts.h \
- /home/admin1/Стільниця/Coliseum-project/src/DB/../../lib/UserDB.h
+ /home/admin1/Стільниця/Coliseum-project/src/DB/../../lib/UserDB.h \
+ /home/admin1/Стільниця/Coliseum-project/src/DB/../../lib/Logger.h

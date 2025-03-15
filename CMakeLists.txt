@@ -12,6 +12,7 @@ message(STATUS "Compile with static library? ${USE_STATIC}")
 
 # Шлях до вихідних файлів
 set(SOURCE_FILES
+    # Accounts
     ./src/Accounts/GenerateUID.cpp
     ./src/Accounts/Accounts.cpp
     ./src/Accounts/GetAllAdmins.cpp
@@ -25,15 +26,18 @@ set(SOURCE_FILES
     ./src/Accounts/Login.cpp
     ./src/Accounts/GetUserData.cpp
 
+    # Daemon
     ./src/Daemon/Daemon.cpp
     ./src/Daemon/addToStartup.cpp
     ./src/Daemon/backgroundMode.cpp
     ./src/Daemon/removeFromAutostart.cpp
 
+    # User
     # ./src/User/createMySQLUser.cpp
     ./src/User/UserDB.cpp
     ./src/Server/Server.cpp
 
+    # Database
     ./src/DB/Database.cpp
     ./src/DB/DateTime.cpp
     ./src/DB/CreateTable.cpp
@@ -41,7 +45,7 @@ set(SOURCE_FILES
     ./src/DB/GetData.cpp
     ./src/DB/DeleteData.cpp
 
-
+    # entity
     ./src/dao/entity/ActivePower.cpp
     ./src/dao/entity/Current.cpp
     ./src/dao/entity/IpAddress.cpp
@@ -50,6 +54,11 @@ set(SOURCE_FILES
     ./src/dao/entity/ReactivePower.cpp
     ./src/dao/entity/Voltage.cpp
     ./src/dao/entity/roundNumber.cpp
+
+    # Logger
+    ./src/Logger/DataTime.cpp
+    ./src/Logger/logError.cpp
+    ./src/Logger/Logger.cpp
 )
 
 # Заголовкові файли
@@ -59,6 +68,7 @@ set(HEADER_FILES
     ./lib/Daemon.h
     ./lib/Server.h
     ./lib/UserDB.h
+    ./lib/Logger.h
 )
 
 # Додавання виконуваного файлу

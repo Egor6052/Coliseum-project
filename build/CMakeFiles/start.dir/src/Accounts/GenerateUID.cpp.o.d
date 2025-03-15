@@ -132,6 +132,11 @@ CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.o: \
  /usr/include/c++/14/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h \
  /home/admin1/Стільниця/Coliseum-project/src/Accounts/../../lib/UserDB.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Accounts/../../lib/Logger.h \
+ /usr/include/c++/14/fstream /usr/include/c++/14/bits/codecvt.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \
+ /usr/include/c++/14/bits/fstream.tcc /usr/include/c++/14/ctime \
  /usr/include/c++/14/random /usr/include/c++/14/cmath /usr/include/math.h \
  /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
  /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
@@ -163,5 +168,5 @@ CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.o: \
  /usr/include/c++/14/bits/random.tcc /usr/include/c++/14/numeric \
  /usr/include/c++/14/bits/stl_numeric.h \
  /usr/include/c++/14/pstl/glue_numeric_defs.h \
- /usr/include/c++/14/pstl/execution_defs.h /usr/include/c++/14/ctime \
- /usr/include/c++/14/sstream /usr/include/c++/14/bits/sstream.tcc
+ /usr/include/c++/14/pstl/execution_defs.h /usr/include/c++/14/sstream \
+ /usr/include/c++/14/bits/sstream.tcc

@@ -42,8 +42,9 @@ void Accounts::setPhoneNumber(std::string uid, std::string valuePhoneNumber) {
         this->phoneNumber = valuePhoneNumber;
 
     } catch (const std::exception &e) {
-        std::cerr << "Error: " << e.what() << '\n';
-        logError"Error: " + e.what()();
+        std::string errorMessage = "Error: " + std::string(e.what()) + "\n";
+        std::cerr << errorMessage;
+        logError(errorMessage);
         throw;
     }
 }

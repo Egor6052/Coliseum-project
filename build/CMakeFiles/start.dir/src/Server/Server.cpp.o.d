@@ -134,6 +134,11 @@ CMakeFiles/start.dir/src/Server/Server.cpp.o: \
  /home/admin1/Стільниця/Coliseum-project/./lib/Database.h \
  /home/admin1/Стільниця/Coliseum-project/./lib/Accounts.h \
  /home/admin1/Стільниця/Coliseum-project/./lib/UserDB.h \
+ /home/admin1/Стільниця/Coliseum-project/./lib/Logger.h \
+ /usr/include/c++/14/fstream /usr/include/c++/14/bits/codecvt.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \
+ /usr/include/c++/14/bits/fstream.tcc /usr/include/c++/14/ctime \
  /usr/include/c++/14/cstring /usr/include/c++/14/thread \
  /usr/include/c++/14/bits/std_thread.h \
  /usr/include/c++/14/bits/unique_ptr.h \
@@ -143,15 +148,15 @@ CMakeFiles/start.dir/src/Server/Server.cpp.o: \
  /usr/lib/gcc/x86_64-redhat-linux/14/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
  /usr/include/bits/stdint-least.h /usr/include/c++/14/limits \
- /usr/include/c++/14/ctime /usr/include/c++/14/bits/parse_numbers.h \
- /usr/include/sys/socket.h /usr/include/bits/types/struct_iovec.h \
- /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
- /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
- /usr/include/asm-generic/socket.h /usr/include/linux/posix_types.h \
- /usr/include/linux/stddef.h /usr/include/asm/posix_types.h \
- /usr/include/asm/posix_types_64.h /usr/include/asm-generic/posix_types.h \
- /usr/include/asm/bitsperlong.h /usr/include/asm-generic/bitsperlong.h \
- /usr/include/asm/sockios.h /usr/include/asm-generic/sockios.h \
+ /usr/include/c++/14/bits/parse_numbers.h /usr/include/sys/socket.h \
+ /usr/include/bits/types/struct_iovec.h /usr/include/bits/socket.h \
+ /usr/include/bits/socket_type.h /usr/include/bits/sockaddr.h \
+ /usr/include/asm/socket.h /usr/include/asm-generic/socket.h \
+ /usr/include/linux/posix_types.h /usr/include/linux/stddef.h \
+ /usr/include/asm/posix_types.h /usr/include/asm/posix_types_64.h \
+ /usr/include/asm-generic/posix_types.h /usr/include/asm/bitsperlong.h \
+ /usr/include/asm-generic/bitsperlong.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h \
  /usr/include/bits/types/struct_osockaddr.h /usr/include/arpa/inet.h \
  /usr/include/netinet/in.h /usr/include/bits/in.h /usr/include/unistd.h \
  /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \

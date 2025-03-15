@@ -143,4 +143,9 @@ CMakeFiles/start.dir/src/main.cpp.o: \
  /home/admin1/Стільниця/Coliseum-project/src/../lib/Database.h \
  /home/admin1/Стільниця/Coliseum-project/src/../lib/Accounts.h \
  /home/admin1/Стільниця/Coliseum-project/src/../lib/UserDB.h \
+ /home/admin1/Стільниця/Coliseum-project/src/../lib/Logger.h \
+ /usr/include/c++/14/fstream /usr/include/c++/14/bits/codecvt.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \
+ /usr/include/c++/14/bits/fstream.tcc \
  /home/admin1/Стільниця/Coliseum-project/src/../lib/Daemon.h

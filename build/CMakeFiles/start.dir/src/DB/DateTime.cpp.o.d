@@ -133,18 +133,22 @@ CMakeFiles/start.dir/src/DB/DateTime.cpp.o: \
  /usr/include/strings.h \
  /home/admin1/Стільниця/Coliseum-project/src/DB/../../lib/Accounts.h \
  /home/admin1/Стільниця/Coliseum-project/src/DB/../../lib/UserDB.h \
+ /home/admin1/Стільниця/Coliseum-project/src/DB/../../lib/Logger.h \
+ /usr/include/c++/14/fstream /usr/include/c++/14/bits/codecvt.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \
+ /usr/include/c++/14/bits/fstream.tcc /usr/include/c++/14/ctime \
  /usr/include/c++/14/chrono /usr/include/c++/14/bits/chrono.h \
  /usr/include/c++/14/ratio /usr/include/c++/14/cstdint \
  /usr/lib/gcc/x86_64-redhat-linux/14/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
  /usr/include/bits/stdint-least.h /usr/include/c++/14/limits \
- /usr/include/c++/14/ctime /usr/include/c++/14/bits/parse_numbers.h \
- /usr/include/c++/14/iomanip /usr/include/c++/14/locale \
+ /usr/include/c++/14/bits/parse_numbers.h /usr/include/c++/14/iomanip \
+ /usr/include/c++/14/locale \
  /usr/include/c++/14/bits/locale_facets_nonio.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/time_members.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/14/bits/codecvt.h \
- /usr/include/c++/14/bits/locale_facets_nonio.tcc \
+ /usr/include/libintl.h /usr/include/c++/14/bits/locale_facets_nonio.tcc \
  /usr/include/c++/14/bits/locale_conv.h \
  /usr/include/c++/14/bits/quoted_string.h /usr/include/c++/14/sstream \
  /usr/include/c++/14/bits/sstream.tcc

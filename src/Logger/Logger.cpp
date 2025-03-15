@@ -9,8 +9,9 @@ Logger::Logger() {
     const std::string logFile = "../../logs/" + getLoggerDateTime() + ".log";
     logStream.open(logFile, std::ios::out | std::ios::app);
     if (!logStream) {
-        std::cerr << "Error: Could not open log file!" << std::endl;
-        logError("Error: Could not open log file!");
+        std::string errorMessage = "Error: Could not open log file!";
+        std::cerr << errorMessage << std::endl;
+        logError(errorMessage);
     }
 }
 
