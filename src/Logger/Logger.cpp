@@ -3,7 +3,7 @@
 #include <string>
 #include <ctime>
 
-#include "../../lib/Logger.h"
+#include "../headers/Logger.h"
 
 Logger::Logger() {
     const std::string logFile = "../../logs/" + getLoggerDateTime() + ".log";

@@ -2,7 +2,7 @@
 #include <string>
 #include <mysql/mysql.h>
 #include <nlohmann/json.hpp>
-#include "../../lib/Database.h"
+#include "../headers/Database.h"
 
 std::string Accounts::getAllUsersFromDB() {
     try {

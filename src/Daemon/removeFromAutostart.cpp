@@ -1,4 +1,4 @@
-#include "../../lib/Daemon.h"
+#include "../headers/Daemon.h"
 
 // Remove from autostart
 void Daemon::removeFromAutostart() {

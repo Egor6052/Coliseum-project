@@ -3,7 +3,7 @@
 #include <string>
 #include <ctime>
 
-#include "../../lib/Logger.h"
+#include "../headers/Logger.h"
 
 void Logger::logError(const std::string& message) {
     if (logStream.is_open()) {

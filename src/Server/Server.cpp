@@ -1,124 +1,67 @@
+#include <boost/beast/core.hpp>
+#include <boost/beast/http.hpp>
+#include <boost/asio.hpp>
+#include <nlohmann/json.hpp>
 #include <iostream>
-#include <cstring>
-#include <thread>
-#include <sstream>
-#include <sys/socket.h>
-#include <arpa/inet.h>
-#include <unistd.h>
+#include <memory>
+#include <string>
 
 #include "Server.h"
 
+namespace beast = boost::beast;
+namespace http = beast::http;
+namespace net = boost::asio;
+using tcp = net::ip::tcp;
+using json = nlohmann::json;
+
 Server::Server() {
+    this->configFilePath = "../../configurations/configFile.conf";    
     this->port = 8080;
     this->host_name = "localhost";
+
+    Configuration();
 }
 
-Server::~Server() {}
+// TODO
+// /api/get_data = то всі записи датчиків.
+// /api/all_users = список користувачів з бд.
 
-void Server::handleClient(int clientSocket) {
-    char buffer[1024];
-    memset(buffer, 0, sizeof(buffer));
+// /api/registration = на реєстрацію. Зареєструвати користувача та отримати відповідь
+// /api/login = на вхід. Передати на сервер данні для входу для перевірки, та отримати відповідь
+// /api/remove_data = видалиння записів Передати на сервер id запису, який видалиться
+// /api/backup = показати бекапи з бд. Можна буде створити бекап, треба на сервері визвати функцію.
 
-    read(clientSocket, buffer, sizeof(buffer) - 1);
-    std::cout << "Request:\n" << buffer << std::endl;
+Server::~Server() { 
+    serverThread.join(); 
 
-    std::string request(buffer);
-    
-
-
-
-    if (request.find("GET /api/data") != std::string::npos) {
-        // /api/data
-        std::string body = getData();
-        std::string response =
-            "HTTP/1.1 200 OK\r\n"
-            "Content-Type: application/json\r\n"
-            "Content-Length: " + std::to_string(body.size()) + "\r\n"
-            "Connection: close\r\n"
-            "\r\n" +
-            body;
-
-        send(clientSocket, response.c_str(), response.size(), 0);
-    } 
-if (request.find("GET /api/reg") != std::string::npos) {
-    std::ifstream file("../Front/index.html");
-    if (file) {
-        std::stringstream buffer;
-        buffer << file.rdbuf();
-        std::string htmlContent = buffer.str();
-
-        std::string response =
-            "HTTP/1.1 200 OK\r\n"
-            "Content-Type: text/html\r\n"
-            "Content-Length: " + std::to_string(htmlContent.size()) + "\r\n"
-            "Connection: close\r\n"
-            "\r\n" +
-            htmlContent;
-
-        send(clientSocket, response.c_str(), response.size(), 0);
-    } else {
-        std::string response =
-            "HTTP/1.1 404 Not Found\r\n"
-            "Content-Type: text/html\r\n"
-            "Connection: close\r\n"
-            "\r\n"
-            "<html><body><h1>404 Not Found</h1></body></html>";
-        send(clientSocket, response.c_str(), response.size(), 0);
-    }
 }
 
-    if (request.find("POST /api/register") != std::string::npos) {
-        std::string body = getRequestBody(request);
-        std::string name = extractParameter(body, "name");
-        std::string password = extractParameter(body, "password");
-
-        // registerAsUser(name, password);
-
-        std::string response =
-            "HTTP/1.1 200 OK\r\n"
-            "Content-Type: text/html\r\n"           
-            "Connection: close\r\n"
-            "\r\n"
-            "User registered successfully!";
-
-        send(clientSocket, response.c_str(), response.size(), 0);
-        return;
-    }
-    else {
-        std::string response =
-            "HTTP/1.1 404 Not Found\r\n"
-            "Content-Type: text/html\r\n"
-            "Connection: close\r\n"
-            "\r\n"
-            "<html><body><h1>404 Not Found</h1></body></html>";
-
-        send(clientSocket, response.c_str(), response.size(), 0);
-    }
-
-    close(clientSocket);
+void Server::run() {
+    accept();
+    io_context_.run();
 }
 
-
-// Функція для витягування тіла запиту
-std::string Server::getRequestBody(const std::string& request) {
-    size_t bodyStart = request.find("\r\n\r\n");
-    if (bodyStart != std::string::npos) {
-        return request.substr(bodyStart + 4);
+void Server::accept() {
+        auto socket = std::make_shared<tcp::socket>(io_context_);
+        acceptor_.async_accept(*socket, [this, socket](boost::system::error_code ec) {
+            if (!ec) {
+                handle_client(socket);
+            }
+            accept();
+        });
     }
-    return "";
-}
 
-// Функція для отримання параметра з тіла запиту
-std::string Server::extractParameter(const std::string& body, const std::string& param) {
-    size_t paramPos = body.find(param + "=");
-    if (paramPos != std::string::npos) {
-        size_t startPos = paramPos + param.length() + 1;
-        size_t endPos = body.find("&", startPos);
-        if (endPos == std::string::npos) {
-            endPos = body.length();
-        }
-        return body.substr(startPos, endPos - startPos);
-    }
-    return "";
+
+void Server::handleClient(std::shared_ptr<tcp::socket> socket) {
+    auto buffer = std::make_shared<beast::flat_buffer>();
+    auto req = std::make_shared<http::request<http::string_body>>();
+
+    http::async_read(*socket, *buffer, *req,
+        [this, socket, req](beast::error_code ec, std::size_t) {
+            if (!ec) {
+                process_request(socket, *req);
+            }
+            socket->shutdown(tcp::socket::shutdown_send, ec);
+        });
 }
 

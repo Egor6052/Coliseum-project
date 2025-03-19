@@ -5,7 +5,7 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 
-#include "Server.h"
+#include "../headers/Server.h"
 
 void Server::start() {
     int serverSocket = socket(AF_INET, SOCK_STREAM, 0);

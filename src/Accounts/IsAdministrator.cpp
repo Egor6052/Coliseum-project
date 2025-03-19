@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <mysql/mysql.h>
-#include "../../lib/Database.h"
+#include "../headers/Database.h"
 
 bool Accounts::isAdministrator() {
     try {

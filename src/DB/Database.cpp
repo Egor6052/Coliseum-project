@@ -2,7 +2,7 @@
 #include <mysql/mysql.h>
 #include <nlohmann/json.hpp>
 #include <stdexcept>
-#include "../../lib/Database.h"
+#include "../headers/Database.h"
 
 Database::Database() {
     this->data = "";

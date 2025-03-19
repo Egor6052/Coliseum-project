@@ -3,7 +3,7 @@
 #include <fstream>
 #include <filesystem>
 #include <mysql/mysql.h>
-#include "../../lib/Database.h"
+#include "../headers/Database.h"
 
 void Database::createBackup() {
     MYSQL *conn;

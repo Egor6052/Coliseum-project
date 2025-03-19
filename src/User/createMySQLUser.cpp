@@ -1,6 +1,6 @@
 // #include <iostream>
 // #include <mysql/mysql.h>
-// #include "../../lib/UserDB.h"
+// #include "../headers/UserDB.h"
 
 // void UserDB::createMySQLUser() {
 //     MYSQL *conn;

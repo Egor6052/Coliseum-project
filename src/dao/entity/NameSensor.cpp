@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string.h>
 #include <random>
-#include "../lib/Database.h"
+#include "../../headers/Database.h"
 
 
 std::string Database::getNameSensor(){

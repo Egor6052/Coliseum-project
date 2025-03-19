@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string.h>
-#include "../../lib/UserDB.h"
+#include "../headers/UserDB.h"
 
 UserDB::UserDB(){
     this->name = "data_writer";

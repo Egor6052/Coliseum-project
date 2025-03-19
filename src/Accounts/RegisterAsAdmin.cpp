@@ -1,7 +1,8 @@
-#include "../../lib/Accounts.h"
 #include <string.h>
 #include <iostream>
 #include <mysql/mysql.h>
+
+#include "../headers/Accounts.h"
 
 
 void Accounts::registerAsAdmin() {

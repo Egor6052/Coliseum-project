@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string.h>
 #include <thread>
-#include "../lib/Server.h"
-#include "../lib/Daemon.h"
+#include "./headers/Server.h"
+#include "./headers/Daemon.h"
 
 void startServer(Server& server) {
     server.start();
@@ -36,6 +36,7 @@ int main(){
 
     // для користувача
     while (true) {
+        server.run();
         std::string answer;
         std::printf("|\033[37mRegister - 1 \033[0m|   |\033[37mLogin - 2 \033[0m|");
         std::cin >> answer;
@@ -182,10 +183,10 @@ int main(){
         std::cout << "Do you want to continue? (y/n): ";
         std::cin >> continueChoice;
         if (continueChoice != 'y' && continueChoice != 'Y') break;
+    } catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+        return 1;
     }
-
-    // Закриваємо сервер
-    serverThread.join(); 
 
     return 0;
 }

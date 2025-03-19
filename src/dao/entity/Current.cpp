@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string.h>
 #include <random>
-#include "../lib/Database.h"
+#include "../../headers/Database.h"
 
 float Database::getCurrent(){
     std::random_device rd;

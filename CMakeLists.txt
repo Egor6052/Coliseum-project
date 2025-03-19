@@ -37,6 +37,8 @@ set(SOURCE_FILES
     ./src/User/UserDB.cpp
 
     # Server
+    ./src/Server/Configuration.cpp
+    ./src/Server/Process_request.cpp
     ./src/Server/Server.cpp
     ./src/Server/Start.cpp
 

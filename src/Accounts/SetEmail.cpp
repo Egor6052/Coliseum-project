@@ -1,9 +1,10 @@
-#include "../../lib/Accounts.h"
 #include <string>
 #include <iostream>
 #include <mysql/mysql.h>
 #include <regex>
 #include <stdexcept>
+
+#include "../headers/Accounts.h"
 
 void Accounts::setEmail(std::string uid, std::string valueEmail) {
     std::regex emailRegex(R"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)");

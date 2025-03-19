@@ -2,8 +2,7 @@
 #include <mysql/mysql.h>
 #include <nlohmann/json.hpp>
 #include <stdexcept>
-#include "../../lib/Database.h"
-
+#include "../headers/Database.h"
 
 std::string Database::getData() {
     try {

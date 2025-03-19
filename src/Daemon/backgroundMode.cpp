@@ -4,7 +4,7 @@
 // #include <sys/stat.h>
 // #include <fcntl.h>
 // #include <csignal>
-// #include "../../lib/Daemon.h"
+// #include "../headers/Daemon.h"
 
 // void Daemon::backgroundMode() {
 //     pid_t pid = fork();

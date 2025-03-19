@@ -1,9 +1,11 @@
-#include "../../lib/Accounts.h"
 #include <string>
 #include <iostream>
 #include <mysql/mysql.h>
 #include <regex>
 #include <stdexcept>
+
+#include "../headers/Accounts.h"
+
 
 void Accounts::setPhoneNumber(std::string uid, std::string valuePhoneNumber) {
     std::regex phoneRegex(R"(^\+?\d{1,3}?[-.(]?\d{3}[-.)]?\d{3}[-.]?\d{2}[-.]?\d{2}$)");

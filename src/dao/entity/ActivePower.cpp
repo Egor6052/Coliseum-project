@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string.h>
 #include <cmath>
-#include "../lib/Database.h"
+#include "../../headers/Database.h"
 
 float Database::getActivePower() {
 
