@@ -13,7 +13,6 @@ class Accounts : public UserDB {
     std::string Uid;
     std::string UserName; 
     std::string UserPassword;
-    std::string phoneNumber;
     std::string UserEmail;
 
     bool isNotEmpty(const std::string& str);
@@ -23,31 +22,31 @@ class Accounts : public UserDB {
         Accounts();
         ~Accounts();
 
-        void setUID();
+        // void mysqlConnect();
+        // void mysqlDisconnection(); 
+
         void setName(std::string valueName);
         void setPassword(std::string valuePassword);
-        void setPhoneNumber(std::string uid, std::string valuePhoneNumber);
-        void setEmail(std::string uid, std::string valueEmail);
-        // void registerUser();
+        void setEmail(std::string valueEmail);
 
-        void registerAsUser();
-        void registerAsAdmin();
+        void registerNewUser(std::string login, std::string password, std::string email, std::string userRole);
+        // void registerAsUser();
+        // void registerAsAdmin();
 
         // void sendToEmail();
 
         std::string getAllUsersFromDB();
-        std::string getAllAdminsFromDB();
+        // std::string getAllAdminsFromDB();
+
 
         std::string getUID();
-        std::string getUserName();
-        std::string getUserPassword();
-        std::string getUserPhoneNumber();
-        std::string getUserEmail();
+        std::string getUserName(std::string uid);
+        std::string getUserPassword(std::string uid);
+        std::string getUserEmail(std::string uid);
 
         std::string getUserData();
-
-        bool Login();
-        bool isAdministrator();
+        bool Login(std::string login, std::string password);
+        bool isAdministrator(std::string login, std::string password);
         
 };
 

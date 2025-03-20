@@ -1,5 +1,9 @@
 #include <iostream>
 #include <string.h>
+#include <mysql/mysql.h>
+#include <nlohmann/json.hpp>
+#include <stdexcept>
+
 #include "../headers/UserDB.h"
 
 UserDB::UserDB(){
@@ -7,8 +11,37 @@ UserDB::UserDB(){
     this->password = "MySqlStrongPassword123!";
     this->dbName = "SensorData";
     this->dbUsersName = "users";
+    this->host_name = "localhost";
+    this->conn = nullptr;
 }
-UserDB::~UserDB(){  }
+UserDB::~UserDB(){ 
+    if (conn) {
+        mysql_close(conn);
+    }
+}
+
+void UserDB::mysqlConnect() {
+    conn = mysql_init(nullptr);
+    if (!conn) {
+        throw std::runtime_error("MySQL initialization failed!");
+        logError("MySQL initialization failed!");
+    }
+
+    if (!mysql_real_connect(conn, host_name.c_str(), getUserDBName().c_str(), getUserDBPassword().c_str(), getDBName().c_str(), 0, nullptr, 0)) {
+        throw std::runtime_error(mysql_error(conn));
+        logError(mysql_error(conn));
+    }
+}
+
+void UserDB::mysqlDisconnection(MYSQL_RES* res) {
+    if (res) {
+        mysql_free_result(res);
+    }
+    if (conn) {
+        mysql_close(conn);
+        conn = nullptr;
+    }
+}
 
 void UserDB::setAdminPassword(std::string valueAdminPassword){
     if (valueAdminPassword == "") {

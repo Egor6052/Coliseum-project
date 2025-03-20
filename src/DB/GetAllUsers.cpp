@@ -4,7 +4,7 @@
 #include <stdexcept>
 #include "../headers/Database.h"
 
-std::string Database::getData() {
+std::string Database::getAllUsers() {
     try {
         mysqlConnect();
 

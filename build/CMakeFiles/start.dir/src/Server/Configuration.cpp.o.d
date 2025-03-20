@@ -1,6 +1,6 @@
-CMakeFiles/start.dir/src/main.cpp.o: \
- /home/admin1/Стільниця/Coliseum-project/src/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/14/iostream \
+CMakeFiles/start.dir/src/Server/Configuration.cpp.o: \
+ /home/admin1/Стільниця/Coliseum-project/src/Server/Configuration.cpp \
+ /usr/include/stdc-predef.h /usr/include/c++/14/fstream \
  /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
@@ -10,7 +10,7 @@ CMakeFiles/start.dir/src/main.cpp.o: \
  /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \
  /usr/include/gnu/stubs-64.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/cpu_defines.h \
- /usr/include/c++/14/pstl/pstl_config.h /usr/include/c++/14/ostream \
+ /usr/include/c++/14/pstl/pstl_config.h /usr/include/c++/14/istream \
  /usr/include/c++/14/ios /usr/include/c++/14/iosfwd \
  /usr/include/c++/14/bits/stringfwd.h \
  /usr/include/c++/14/bits/memoryfwd.h /usr/include/c++/14/bits/postypes.h \
@@ -126,20 +126,31 @@ CMakeFiles/start.dir/src/main.cpp.o: \
  /usr/include/c++/14/bits/streambuf_iterator.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/ctype_inline.h \
  /usr/include/c++/14/bits/locale_facets.tcc \
- /usr/include/c++/14/bits/basic_ios.tcc \
- /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
- /usr/include/c++/14/bits/istream.tcc /usr/include/string.h \
- /usr/include/strings.h /usr/include/c++/14/thread \
- /usr/include/c++/14/bits/std_thread.h \
- /usr/include/c++/14/bits/unique_ptr.h \
- /usr/include/c++/14/bits/this_thread_sleep.h \
- /usr/include/c++/14/bits/chrono.h /usr/include/c++/14/ratio \
- /usr/include/c++/14/cstdint \
- /usr/lib/gcc/x86_64-redhat-linux/14/include/stdint.h \
- /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
- /usr/include/bits/stdint-least.h /usr/include/c++/14/limits \
- /usr/include/c++/14/ctime /usr/include/c++/14/bits/parse_numbers.h \
- /home/admin1/Стільниця/Coliseum-project/src/./headers/Server.h \
+ /usr/include/c++/14/bits/basic_ios.tcc /usr/include/c++/14/ostream \
+ /usr/include/c++/14/bits/ostream.tcc \
+ /usr/include/c++/14/bits/istream.tcc /usr/include/c++/14/bits/codecvt.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \
+ /usr/include/c++/14/bits/fstream.tcc /usr/include/c++/14/sstream \
+ /usr/include/c++/14/bits/sstream.tcc /usr/include/c++/14/map \
+ /usr/include/c++/14/bits/stl_tree.h \
+ /usr/include/c++/14/ext/aligned_buffer.h \
+ /usr/include/c++/14/bits/node_handle.h \
+ /usr/include/c++/14/bits/stl_map.h \
+ /usr/include/c++/14/bits/stl_multimap.h \
+ /usr/include/c++/14/bits/erase_if.h /usr/include/c++/14/unordered_map \
+ /usr/include/c++/14/bits/unordered_map.h \
+ /usr/include/c++/14/bits/hashtable.h \
+ /usr/include/c++/14/bits/hashtable_policy.h \
+ /usr/include/c++/14/bits/enable_special_members.h \
+ /usr/include/c++/14/algorithm /usr/include/c++/14/bits/stl_algo.h \
+ /usr/include/c++/14/bits/algorithmfwd.h \
+ /usr/include/c++/14/bits/stl_heap.h \
+ /usr/include/c++/14/bits/uniform_int_dist.h \
+ /usr/include/c++/14/bits/stl_tempbuf.h \
+ /usr/include/c++/14/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/14/pstl/execution_defs.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Server/../headers/Server.h \
  /usr/include/boost/beast/core.hpp \
  /usr/include/boost/beast/core/detail/config.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
@@ -175,16 +186,11 @@ CMakeFiles/start.dir/src/main.cpp.o: \
  /usr/include/boost/system/detail/config.hpp \
  /usr/include/boost/system/detail/requires_cxx11.hpp \
  /usr/include/boost/config/pragma_message.hpp \
- /usr/include/boost/cstdint.hpp /usr/include/c++/14/functional \
- /usr/include/c++/14/bits/std_function.h \
- /usr/include/c++/14/unordered_map \
- /usr/include/c++/14/bits/unordered_map.h \
- /usr/include/c++/14/bits/hashtable.h \
- /usr/include/c++/14/bits/hashtable_policy.h \
- /usr/include/c++/14/ext/aligned_buffer.h \
- /usr/include/c++/14/bits/enable_special_members.h \
- /usr/include/c++/14/bits/node_handle.h \
- /usr/include/c++/14/bits/erase_if.h /usr/include/c++/14/vector \
+ /usr/include/boost/cstdint.hpp \
+ /usr/lib/gcc/x86_64-redhat-linux/14/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
+ /usr/include/bits/stdint-least.h /usr/include/c++/14/functional \
+ /usr/include/c++/14/bits/std_function.h /usr/include/c++/14/vector \
  /usr/include/c++/14/bits/stl_uninitialized.h \
  /usr/include/c++/14/bits/stl_vector.h \
  /usr/include/c++/14/bits/stl_bvector.h \
@@ -195,7 +201,7 @@ CMakeFiles/start.dir/src/main.cpp.o: \
  /usr/include/boost/system/detail/error_condition.hpp \
  /usr/include/boost/system/detail/generic_category.hpp \
  /usr/include/boost/system/detail/generic_category_message.hpp \
- /usr/include/c++/14/cstring \
+ /usr/include/c++/14/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/boost/system/detail/enable_if.hpp \
  /usr/include/boost/system/detail/is_same.hpp \
  /usr/include/boost/system/detail/errc.hpp \
@@ -216,6 +222,9 @@ CMakeFiles/start.dir/src/main.cpp.o: \
  /usr/include/boost/system/detail/error_category_impl.hpp \
  /usr/include/boost/system/detail/std_category_impl.hpp \
  /usr/include/boost/system/detail/mutex.hpp /usr/include/c++/14/mutex \
+ /usr/include/c++/14/bits/chrono.h /usr/include/c++/14/ratio \
+ /usr/include/c++/14/cstdint /usr/include/c++/14/limits \
+ /usr/include/c++/14/ctime /usr/include/c++/14/bits/parse_numbers.h \
  /usr/include/c++/14/bits/std_mutex.h \
  /usr/include/c++/14/bits/unique_lock.h \
  /usr/include/boost/system/error_condition.hpp \
@@ -264,16 +273,16 @@ CMakeFiles/start.dir/src/main.cpp.o: \
  /usr/include/boost/type_traits/conditional.hpp \
  /usr/include/boost/asio/associated_allocator.hpp \
  /usr/include/boost/asio/detail/config.hpp /usr/include/linux/version.h \
- /usr/include/c++/14/memory /usr/include/c++/14/bits/stl_tempbuf.h \
+ /usr/include/c++/14/memory \
  /usr/include/c++/14/bits/stl_raw_storage_iter.h \
- /usr/include/c++/14/bits/align.h /usr/include/c++/14/bits/shared_ptr.h \
+ /usr/include/c++/14/bits/align.h /usr/include/c++/14/bits/unique_ptr.h \
+ /usr/include/c++/14/bits/shared_ptr.h \
  /usr/include/c++/14/bits/shared_ptr_base.h \
  /usr/include/c++/14/bits/allocated_ptr.h \
  /usr/include/c++/14/ext/concurrence.h \
  /usr/include/c++/14/bits/shared_ptr_atomic.h \
  /usr/include/c++/14/backward/auto_ptr.h \
  /usr/include/c++/14/pstl/glue_memory_defs.h \
- /usr/include/c++/14/pstl/execution_defs.h \
  /usr/include/boost/asio/associator.hpp \
  /usr/include/boost/asio/detail/push_options.hpp \
  /usr/include/boost/asio/detail/pop_options.hpp \
@@ -642,11 +651,6 @@ CMakeFiles/start.dir/src/main.cpp.o: \
  /usr/include/boost/core/detail/sp_thread_pause.hpp \
  /usr/include/boost/core/detail/sp_thread_yield.hpp \
  /usr/include/boost/core/detail/sp_thread_sleep.hpp \
- /usr/include/c++/14/algorithm /usr/include/c++/14/bits/stl_algo.h \
- /usr/include/c++/14/bits/algorithmfwd.h \
- /usr/include/c++/14/bits/stl_heap.h \
- /usr/include/c++/14/bits/uniform_int_dist.h \
- /usr/include/c++/14/pstl/glue_algorithm_defs.h \
  /usr/include/boost/smart_ptr/detail/operator_bool.hpp \
  /usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
  /usr/include/boost/smart_ptr/detail/local_counted_base.hpp \
@@ -704,7 +708,6 @@ CMakeFiles/start.dir/src/main.cpp.o: \
  /usr/include/boost/date_time/adjust_functors.hpp \
  /usr/include/boost/date_time/wrapping_int.hpp \
  /usr/include/boost/date_time/date_generators.hpp \
- /usr/include/c++/14/sstream /usr/include/c++/14/bits/sstream.tcc \
  /usr/include/boost/date_time/date_clock_device.hpp \
  /usr/include/boost/date_time/date_iterator.hpp \
  /usr/include/boost/date_time/time_system_split.hpp \
@@ -1437,6 +1440,7 @@ CMakeFiles/start.dir/src/main.cpp.o: \
  /usr/include/boost/asio/detail/future.hpp /usr/include/c++/14/future \
  /usr/include/c++/14/condition_variable \
  /usr/include/c++/14/bits/atomic_futex.h \
+ /usr/include/c++/14/bits/std_thread.h \
  /usr/include/boost/asio/placeholders.hpp /usr/include/boost/bind/arg.hpp \
  /usr/include/boost/asio/posix/basic_descriptor.hpp \
  /usr/include/boost/asio/posix/basic_stream_descriptor.hpp \
@@ -1624,10 +1628,11 @@ CMakeFiles/start.dir/src/main.cpp.o: \
  /usr/include/boost/asio/windows/stream_handle.hpp \
  /usr/include/boost/asio/writable_pipe.hpp \
  /usr/include/boost/asio/write_at.hpp \
- /usr/include/boost/asio/impl/write_at.hpp \
- /home/admin1/Стільниця/Coliseum-project/src/./headers/Database.h \
- /home/admin1/Стільниця/Coliseum-project/src/./headers/Accounts.h \
- /home/admin1/Стільниця/Coliseum-project/src/./headers/UserDB.h \
+ /usr/include/boost/asio/impl/write_at.hpp /usr/include/c++/14/iostream \
+ /usr/include/c++/14/thread /usr/include/c++/14/bits/this_thread_sleep.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Server/../headers/Database.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Server/../headers/Accounts.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Server/../headers/UserDB.h \
  /usr/include/mysql/mysql.h \
  /usr/lib/gcc/x86_64-redhat-linux/14/include/stdbool.h \
  /usr/include/mysql/field_types.h /usr/include/mysql/my_list.h \
@@ -1638,9 +1643,4 @@ CMakeFiles/start.dir/src/main.cpp.o: \
  /usr/include/mysql/mysql/plugin_auth_common.h \
  /usr/include/mysql/mysql_version.h /usr/include/mysql/mysql_time.h \
  /usr/include/mysql/errmsg.h \
- /home/admin1/Стільниця/Coliseum-project/src/./headers/Logger.h \
- /usr/include/c++/14/fstream /usr/include/c++/14/bits/codecvt.h \
- /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
- /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \
- /usr/include/c++/14/bits/fstream.tcc \
- /home/admin1/Стільниця/Coliseum-project/src/./headers/Daemon.h
+ /home/admin1/Стільниця/Coliseum-project/src/Server/../headers/Logger.h

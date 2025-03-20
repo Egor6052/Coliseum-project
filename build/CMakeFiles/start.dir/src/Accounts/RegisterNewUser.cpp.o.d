@@ -1,29 +1,29 @@
-CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o: \
- /home/admin1/Стільниця/Coliseum-project/src/Daemon/addToStartup.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/14/iostream \
- /usr/include/c++/14/bits/requires_hosted.h \
- /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
- /usr/include/bits/wordsize.h \
- /usr/include/c++/14/x86_64-redhat-linux/bits/os_defines.h \
- /usr/include/features.h /usr/include/features-time64.h \
+CMakeFiles/start.dir/src/Accounts/RegisterNewUser.cpp.o: \
+ /home/admin1/Стільниця/Coliseum-project/src/Accounts/RegisterNewUser.cpp \
+ /usr/include/stdc-predef.h /usr/include/string.h \
+ /usr/include/bits/libc-header-start.h /usr/include/features.h \
+ /usr/include/features-time64.h /usr/include/bits/wordsize.h \
  /usr/include/bits/timesize.h /usr/include/sys/cdefs.h \
  /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \
  /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h \
+ /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
+ /usr/include/strings.h /usr/include/c++/14/iostream \
+ /usr/include/c++/14/bits/requires_hosted.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
+ /usr/include/c++/14/x86_64-redhat-linux/bits/os_defines.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/cpu_defines.h \
  /usr/include/c++/14/pstl/pstl_config.h /usr/include/c++/14/ostream \
  /usr/include/c++/14/ios /usr/include/c++/14/iosfwd \
  /usr/include/c++/14/bits/stringfwd.h \
  /usr/include/c++/14/bits/memoryfwd.h /usr/include/c++/14/bits/postypes.h \
  /usr/include/c++/14/cwchar /usr/include/wchar.h \
- /usr/include/bits/libc-header-start.h /usr/include/bits/floatn.h \
- /usr/include/bits/floatn-common.h \
- /usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h \
+ /usr/include/bits/floatn.h /usr/include/bits/floatn-common.h \
  /usr/lib/gcc/x86_64-redhat-linux/14/include/stdarg.h \
  /usr/include/bits/wchar.h /usr/include/bits/types/wint_t.h \
  /usr/include/bits/types/mbstate_t.h \
  /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
- /usr/include/bits/types/FILE.h /usr/include/bits/types/locale_t.h \
- /usr/include/bits/types/__locale_t.h /usr/include/c++/14/exception \
+ /usr/include/bits/types/FILE.h /usr/include/c++/14/exception \
  /usr/include/c++/14/bits/exception.h /usr/include/c++/14/bits/version.h \
  /usr/include/c++/14/bits/exception_ptr.h \
  /usr/include/c++/14/bits/exception_defines.h \
@@ -128,12 +128,22 @@ CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o: \
  /usr/include/c++/14/bits/locale_facets.tcc \
  /usr/include/c++/14/bits/basic_ios.tcc \
  /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
- /usr/include/c++/14/bits/istream.tcc /usr/include/c++/14/fstream \
- /usr/include/c++/14/bits/codecvt.h \
+ /usr/include/c++/14/bits/istream.tcc /usr/include/mysql/mysql.h \
+ /usr/lib/gcc/x86_64-redhat-linux/14/include/stdbool.h \
+ /usr/lib/gcc/x86_64-redhat-linux/14/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
+ /usr/include/bits/stdint-least.h /usr/include/mysql/field_types.h \
+ /usr/include/mysql/my_list.h /usr/include/mysql/mysql_com.h \
+ /usr/include/mysql/my_command.h /usr/include/mysql/my_compress.h \
+ /usr/include/mysql/mysql/udf_registration_types.h \
+ /usr/include/mysql/mysql/client_plugin.h /usr/include/c++/14/stdlib.h \
+ /usr/include/mysql/mysql/plugin_auth_common.h \
+ /usr/include/mysql/mysql_version.h /usr/include/mysql/mysql_time.h \
+ /usr/include/mysql/errmsg.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Accounts/../headers/Accounts.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Accounts/../headers/UserDB.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Accounts/../headers/Logger.h \
+ /usr/include/c++/14/fstream /usr/include/c++/14/bits/codecvt.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \
- /usr/include/c++/14/bits/fstream.tcc \
- /home/admin1/Стільниця/Coliseum-project/src/Daemon/../headers/Daemon.h \
- /usr/include/string.h /usr/include/strings.h \
- /home/admin1/Стільниця/Coliseum-project/src/Daemon/../headers/Logger.h \
- /usr/include/c++/14/ctime
+ /usr/include/c++/14/bits/fstream.tcc /usr/include/c++/14/ctime

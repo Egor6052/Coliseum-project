@@ -3,22 +3,12 @@
 #include <mysql/mysql.h>
 #include "../headers/Database.h"
 
-bool Accounts::isAdministrator() {
+bool Accounts::isAdministrator(std::string login, std::string password) {
     try {
-        MYSQL *conn = mysql_init(nullptr);
-        if (!conn) {
-            throw std::runtime_error("MySQL initialization failed!");
-            logError("MySQL initialization failed!");
-        }
-
-        conn = mysql_real_connect(conn, "localhost", getUserDBName().c_str(), getUserDBPassword().c_str(), getDBName().c_str(), 0, nullptr, 0);
-        if (!conn) {
-            throw std::runtime_error("Failed to connect to MySQL database!");
-            logError("Failed to connect to MySQL database!");
-        }
+        mysqlConnect();
 
         // Запит для перевірки ролі користувача за його логіном і паролем
-        std::string query = "SELECT role FROM " + getDBUsersName() + " WHERE login = '" + getUserName() + "' AND password = '" + getUserPassword() + "'";
+        std::string query = "SELECT role FROM " + getDBUsersName() + " WHERE login = '" + login + "' AND password = '" + password + "'";
         if (mysql_query(conn, query.c_str())) {
             throw std::runtime_error("Failed to execute query: " + std::string(mysql_error(conn)));
             logError("Failed to execute query: " + std::string(mysql_error(conn)));
@@ -42,8 +32,7 @@ bool Accounts::isAdministrator() {
             }
         }
 
-        mysql_free_result(res);
-        mysql_close(conn);
+        mysqlDisconnection(res);
 
         return isAdmin;
 
@@ -51,6 +40,7 @@ bool Accounts::isAdministrator() {
         std::string errorMessage = "Error: " + std::string(e.what()) + "\n";
         std::cerr << errorMessage;
         logError(errorMessage);
+        mysqlDisconnection();
         return false;
     }
 }

@@ -1,7 +1,7 @@
 CMakeFiles/start.dir/src/Accounts/GetUserData.cpp.o: \
  /home/admin1/Стільниця/Coliseum-project/src/Accounts/GetUserData.cpp \
  /usr/include/stdc-predef.h \
- /home/admin1/Стільниця/Coliseum-project/src/Accounts/../../lib/Accounts.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Accounts/../headers/Accounts.h \
  /usr/include/c++/14/iostream /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
@@ -131,8 +131,20 @@ CMakeFiles/start.dir/src/Accounts/GetUserData.cpp.o: \
  /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
  /usr/include/c++/14/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h \
- /home/admin1/Стільниця/Coliseum-project/src/Accounts/../../lib/UserDB.h \
- /home/admin1/Стільниця/Coliseum-project/src/Accounts/../../lib/Logger.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Accounts/../headers/UserDB.h \
+ /usr/include/mysql/mysql.h \
+ /usr/lib/gcc/x86_64-redhat-linux/14/include/stdbool.h \
+ /usr/lib/gcc/x86_64-redhat-linux/14/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
+ /usr/include/bits/stdint-least.h /usr/include/mysql/field_types.h \
+ /usr/include/mysql/my_list.h /usr/include/mysql/mysql_com.h \
+ /usr/include/mysql/my_command.h /usr/include/mysql/my_compress.h \
+ /usr/include/mysql/mysql/udf_registration_types.h \
+ /usr/include/mysql/mysql/client_plugin.h /usr/include/c++/14/stdlib.h \
+ /usr/include/mysql/mysql/plugin_auth_common.h \
+ /usr/include/mysql/mysql_version.h /usr/include/mysql/mysql_time.h \
+ /usr/include/mysql/errmsg.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Accounts/../headers/Logger.h \
  /usr/include/c++/14/fstream /usr/include/c++/14/bits/codecvt.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \

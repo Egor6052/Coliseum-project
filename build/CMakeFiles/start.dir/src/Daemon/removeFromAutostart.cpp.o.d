@@ -1,7 +1,7 @@
 CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.o: \
  /home/admin1/Стільниця/Coliseum-project/src/Daemon/removeFromAutostart.cpp \
  /usr/include/stdc-predef.h \
- /home/admin1/Стільниця/Coliseum-project/src/Daemon/../../lib/Daemon.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Daemon/../headers/Daemon.h \
  /usr/include/c++/14/iostream /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
@@ -131,7 +131,7 @@ CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.o: \
  /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
  /usr/include/c++/14/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h \
- /home/admin1/Стільниця/Coliseum-project/src/Daemon/../../lib/Logger.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Daemon/../headers/Logger.h \
  /usr/include/c++/14/fstream /usr/include/c++/14/bits/codecvt.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \

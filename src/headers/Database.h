@@ -33,12 +33,13 @@ class Database : public Accounts {
         float roundNumber(float valueNumber);
 
         void CreateTable();
-
-        void setData();
+        void dataCollector();
+        void setData(std::string data, std::string ipAddress, std::string nameSensor, std::string current, std::string voltage, std::string activePower, std::string reactivePower);
 
         void deleteData(std::string valueID);
         void createBackup();
         std::string getData();
+        std::string getAllUsers();
 };
 
 #endif

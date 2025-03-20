@@ -140,11 +140,11 @@ CMakeFiles/start.dir/src/Accounts/Login.cpp.o: \
  /usr/include/mysql/mysql/plugin_auth_common.h \
  /usr/include/mysql/mysql_version.h /usr/include/mysql/mysql_time.h \
  /usr/include/mysql/errmsg.h \
- /home/admin1/Стільниця/Coliseum-project/src/Accounts/../../lib/Database.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Accounts/../headers/Database.h \
  /usr/include/string.h /usr/include/strings.h \
- /home/admin1/Стільниця/Coliseum-project/src/Accounts/../../lib/Accounts.h \
- /home/admin1/Стільниця/Coliseum-project/src/Accounts/../../lib/UserDB.h \
- /home/admin1/Стільниця/Coliseum-project/src/Accounts/../../lib/Logger.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Accounts/../headers/Accounts.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Accounts/../headers/UserDB.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Accounts/../headers/Logger.h \
  /usr/include/c++/14/fstream /usr/include/c++/14/bits/codecvt.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \

@@ -7,9 +7,8 @@ std::string Accounts::getUserData() {
     std::stringstream json;
     json << "{"
             << "\"uid\": \"" << getUID() << "\", "
-            << "\"name\": \"" << getUserName() << "\", "
-            << "\"phone\": \"" << getUserPhoneNumber() << "\", "
-            << "\"email\": \"" << getUserEmail() << "\""
+            << "\"name\": \"" << getUserName(getUID()) << "\", "
+            << "\"email\": \"" << getUserEmail(getUID()) << "\""
             << "}";
 
     return json.str();

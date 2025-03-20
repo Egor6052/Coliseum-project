@@ -3,22 +3,12 @@
 #include <mysql/mysql.h>
 #include "../headers/Database.h"
 
-bool Accounts::Login() {
+bool Accounts::Login(std::string login, std::string password) {
     try {
-        MYSQL *conn = mysql_init(nullptr);
-        if (!conn) {
-            throw std::runtime_error("MySQL initialization failed!");
-            logError("MySQL initialization failed!");
-        }
-
-        conn = mysql_real_connect(conn, "localhost", getUserDBName().c_str(), getUserDBPassword().c_str(), getDBName().c_str(), 0, nullptr, 0);
-        if (!conn) {
-            throw std::runtime_error("Failed to connect to MySQL database!");
-            logError("Failed to connect to MySQL database!");
-        }
+        mysqlConnect();
 
         // Перевірка, чи існує користувач з таким логіном
-        std::string checkQuery = "SELECT * FROM " + getDBUsersName() + " WHERE login = '" + getUserName() + "'";
+        std::string checkQuery = "SELECT uid, login, password FROM " + getDBUsersName() + " WHERE login = '" + login + "'";
         if (mysql_query(conn, checkQuery.c_str())) {
             throw std::runtime_error("Failed to execute query: " + std::string(mysql_error(conn)));
             logError("Failed to execute query: " + std::string(mysql_error(conn)));
@@ -34,30 +24,46 @@ bool Accounts::Login() {
         if (mysql_num_rows(res) == 0) {
             std::cerr << "User not found.\n";
             logError("User not found.\n");
-            mysql_free_result(res);
-            mysql_close(conn);
+            mysqlDisconnection(res);
             return false;
         }
 
-        // Перевірка пароля
+        // Перевірка пароля та отримання uid
         MYSQL_ROW row = mysql_fetch_row(res);
+        std::string storedUid = row[0];
+        std::string storedLogin = row[1];
         std::string storedPassword = row[2];
 
-        if (storedPassword != getUserPassword()) {
+        if (storedPassword != password) {
             std::cerr << "Incorrect password.\n";
             logError("Incorrect password.\n");
-            mysql_free_result(res);
-            mysql_close(conn);
+            mysqlDisconnection(res);
             return false;
         }
 
-        mysql_free_result(res);
-        mysql_close(conn);
+        this->Uid = storedUid;
+
+        // Успішний логін, викликаємо методи з uid
+        std::string userName = getUserName(storedUid);
+        std::string userPassword = getUserPassword(storedUid);
+        std::string userEmail = getUserEmail(storedUid);
+
+        // Для перевірки виведемо отримані дані (опціонально)
+        std::cout << "Logged in successfully!\n";
+        std::cout << "UID: " << storedUid << "\n";
+        std::cout << "Username: " << userName << "\n";
+        std::cout << "Password: " << userPassword << "\n";
+        std::cout << "Email: " << userEmail << "\n";
+
+        mysqlDisconnection(res);
+
         return true;
+
     } catch (const std::exception &e) {
         std::string errorMessage = "Error: " + std::string(e.what()) + '\n';
         std::cerr << errorMessage;
         logError(errorMessage);
+        mysqlDisconnection();
         return false;
     }
 }

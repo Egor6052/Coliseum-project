@@ -4,22 +4,28 @@
 
 #include <iostream>
 #include <string.h>
+#include <mysql/mysql.h>
 
 #include "Logger.h"
 
 class UserDB : public Logger {
     private:
-    std::string name; 
+    std::string name;
     std::string password;
     std::string adminPassword;
+    
+    std::string host_name;
     std::string dbName;
     std::string dbUsersName;
 
     public:
         UserDB();
         ~UserDB();
-        // void setUserDBName(std::string valueName);
-        // void setUserDBPassword(std::string valuePassword);
+        MYSQL* conn;
+
+        void mysqlConnect();
+        void mysqlDisconnection(MYSQL_RES* res = nullptr);
+
         void setAdminPassword(std::string valueAdminPassword);
 
         std::string getUserDBName();

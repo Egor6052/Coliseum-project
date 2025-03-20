@@ -267,10 +267,10 @@ CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.o: \
  /usr/include/nlohmann/ordered_map.hpp /usr/include/c++/14/any \
  /usr/include/nlohmann/detail/macro_unscope.hpp \
  /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
- /home/admin1/Стільниця/Coliseum-project/src/Accounts/../../lib/Database.h \
- /home/admin1/Стільниця/Coliseum-project/src/Accounts/../../lib/Accounts.h \
- /home/admin1/Стільниця/Coliseum-project/src/Accounts/../../lib/UserDB.h \
- /home/admin1/Стільниця/Coliseum-project/src/Accounts/../../lib/Logger.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Accounts/../headers/Database.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Accounts/../headers/Accounts.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Accounts/../headers/UserDB.h \
+ /home/admin1/Стільниця/Coliseum-project/src/Accounts/../headers/Logger.h \
  /usr/include/c++/14/fstream \
  /usr/include/c++/14/x86_64-redhat-linux/bits/basic_file.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++io.h \

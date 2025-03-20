@@ -177,30 +177,6 @@ src/Accounts/GenerateUID.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.s
 .PHONY : src/Accounts/GenerateUID.cpp.s
 
-src/Accounts/GetAllAdmins.o: src/Accounts/GetAllAdmins.cpp.o
-.PHONY : src/Accounts/GetAllAdmins.o
-
-# target to build an object file
-src/Accounts/GetAllAdmins.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.o
-.PHONY : src/Accounts/GetAllAdmins.cpp.o
-
-src/Accounts/GetAllAdmins.i: src/Accounts/GetAllAdmins.cpp.i
-.PHONY : src/Accounts/GetAllAdmins.i
-
-# target to preprocess a source file
-src/Accounts/GetAllAdmins.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.i
-.PHONY : src/Accounts/GetAllAdmins.cpp.i
-
-src/Accounts/GetAllAdmins.s: src/Accounts/GetAllAdmins.cpp.s
-.PHONY : src/Accounts/GetAllAdmins.s
-
-# target to generate assembly for a file
-src/Accounts/GetAllAdmins.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GetAllAdmins.cpp.s
-.PHONY : src/Accounts/GetAllAdmins.cpp.s
-
 src/Accounts/GetAllUsers.o: src/Accounts/GetAllUsers.cpp.o
 .PHONY : src/Accounts/GetAllUsers.o
 
@@ -297,101 +273,29 @@ src/Accounts/Login.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/Login.cpp.s
 .PHONY : src/Accounts/Login.cpp.s
 
-src/Accounts/RegisterAsAdmin.o: src/Accounts/RegisterAsAdmin.cpp.o
-.PHONY : src/Accounts/RegisterAsAdmin.o
+src/Accounts/RegisterNewUser.o: src/Accounts/RegisterNewUser.cpp.o
+.PHONY : src/Accounts/RegisterNewUser.o
 
 # target to build an object file
-src/Accounts/RegisterAsAdmin.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.o
-.PHONY : src/Accounts/RegisterAsAdmin.cpp.o
+src/Accounts/RegisterNewUser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterNewUser.cpp.o
+.PHONY : src/Accounts/RegisterNewUser.cpp.o
 
-src/Accounts/RegisterAsAdmin.i: src/Accounts/RegisterAsAdmin.cpp.i
-.PHONY : src/Accounts/RegisterAsAdmin.i
-
-# target to preprocess a source file
-src/Accounts/RegisterAsAdmin.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.i
-.PHONY : src/Accounts/RegisterAsAdmin.cpp.i
-
-src/Accounts/RegisterAsAdmin.s: src/Accounts/RegisterAsAdmin.cpp.s
-.PHONY : src/Accounts/RegisterAsAdmin.s
-
-# target to generate assembly for a file
-src/Accounts/RegisterAsAdmin.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterAsAdmin.cpp.s
-.PHONY : src/Accounts/RegisterAsAdmin.cpp.s
-
-src/Accounts/RegisterAsUser.o: src/Accounts/RegisterAsUser.cpp.o
-.PHONY : src/Accounts/RegisterAsUser.o
-
-# target to build an object file
-src/Accounts/RegisterAsUser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.o
-.PHONY : src/Accounts/RegisterAsUser.cpp.o
-
-src/Accounts/RegisterAsUser.i: src/Accounts/RegisterAsUser.cpp.i
-.PHONY : src/Accounts/RegisterAsUser.i
+src/Accounts/RegisterNewUser.i: src/Accounts/RegisterNewUser.cpp.i
+.PHONY : src/Accounts/RegisterNewUser.i
 
 # target to preprocess a source file
-src/Accounts/RegisterAsUser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.i
-.PHONY : src/Accounts/RegisterAsUser.cpp.i
+src/Accounts/RegisterNewUser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterNewUser.cpp.i
+.PHONY : src/Accounts/RegisterNewUser.cpp.i
 
-src/Accounts/RegisterAsUser.s: src/Accounts/RegisterAsUser.cpp.s
-.PHONY : src/Accounts/RegisterAsUser.s
-
-# target to generate assembly for a file
-src/Accounts/RegisterAsUser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterAsUser.cpp.s
-.PHONY : src/Accounts/RegisterAsUser.cpp.s
-
-src/Accounts/SetEmail.o: src/Accounts/SetEmail.cpp.o
-.PHONY : src/Accounts/SetEmail.o
-
-# target to build an object file
-src/Accounts/SetEmail.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/SetEmail.cpp.o
-.PHONY : src/Accounts/SetEmail.cpp.o
-
-src/Accounts/SetEmail.i: src/Accounts/SetEmail.cpp.i
-.PHONY : src/Accounts/SetEmail.i
-
-# target to preprocess a source file
-src/Accounts/SetEmail.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/SetEmail.cpp.i
-.PHONY : src/Accounts/SetEmail.cpp.i
-
-src/Accounts/SetEmail.s: src/Accounts/SetEmail.cpp.s
-.PHONY : src/Accounts/SetEmail.s
+src/Accounts/RegisterNewUser.s: src/Accounts/RegisterNewUser.cpp.s
+.PHONY : src/Accounts/RegisterNewUser.s
 
 # target to generate assembly for a file
-src/Accounts/SetEmail.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/SetEmail.cpp.s
-.PHONY : src/Accounts/SetEmail.cpp.s
-
-src/Accounts/SetPhoneNumber.o: src/Accounts/SetPhoneNumber.cpp.o
-.PHONY : src/Accounts/SetPhoneNumber.o
-
-# target to build an object file
-src/Accounts/SetPhoneNumber.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/SetPhoneNumber.cpp.o
-.PHONY : src/Accounts/SetPhoneNumber.cpp.o
-
-src/Accounts/SetPhoneNumber.i: src/Accounts/SetPhoneNumber.cpp.i
-.PHONY : src/Accounts/SetPhoneNumber.i
-
-# target to preprocess a source file
-src/Accounts/SetPhoneNumber.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/SetPhoneNumber.cpp.i
-.PHONY : src/Accounts/SetPhoneNumber.cpp.i
-
-src/Accounts/SetPhoneNumber.s: src/Accounts/SetPhoneNumber.cpp.s
-.PHONY : src/Accounts/SetPhoneNumber.s
-
-# target to generate assembly for a file
-src/Accounts/SetPhoneNumber.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/SetPhoneNumber.cpp.s
-.PHONY : src/Accounts/SetPhoneNumber.cpp.s
+src/Accounts/RegisterNewUser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterNewUser.cpp.s
+.PHONY : src/Accounts/RegisterNewUser.cpp.s
 
 src/DB/CreateBackup.o: src/DB/CreateBackup.cpp.o
 .PHONY : src/DB/CreateBackup.o
@@ -513,6 +417,30 @@ src/DB/DeleteData.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DB/DeleteData.cpp.s
 .PHONY : src/DB/DeleteData.cpp.s
 
+src/DB/GetAllUsers.o: src/DB/GetAllUsers.cpp.o
+.PHONY : src/DB/GetAllUsers.o
+
+# target to build an object file
+src/DB/GetAllUsers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DB/GetAllUsers.cpp.o
+.PHONY : src/DB/GetAllUsers.cpp.o
+
+src/DB/GetAllUsers.i: src/DB/GetAllUsers.cpp.i
+.PHONY : src/DB/GetAllUsers.i
+
+# target to preprocess a source file
+src/DB/GetAllUsers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DB/GetAllUsers.cpp.i
+.PHONY : src/DB/GetAllUsers.cpp.i
+
+src/DB/GetAllUsers.s: src/DB/GetAllUsers.cpp.s
+.PHONY : src/DB/GetAllUsers.s
+
+# target to generate assembly for a file
+src/DB/GetAllUsers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DB/GetAllUsers.cpp.s
+.PHONY : src/DB/GetAllUsers.cpp.s
+
 src/DB/GetData.o: src/DB/GetData.cpp.o
 .PHONY : src/DB/GetData.o
 
@@ -536,6 +464,30 @@ src/DB/GetData.s: src/DB/GetData.cpp.s
 src/DB/GetData.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DB/GetData.cpp.s
 .PHONY : src/DB/GetData.cpp.s
+
+src/DB/dataCollector.o: src/DB/dataCollector.cpp.o
+.PHONY : src/DB/dataCollector.o
+
+# target to build an object file
+src/DB/dataCollector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DB/dataCollector.cpp.o
+.PHONY : src/DB/dataCollector.cpp.o
+
+src/DB/dataCollector.i: src/DB/dataCollector.cpp.i
+.PHONY : src/DB/dataCollector.i
+
+# target to preprocess a source file
+src/DB/dataCollector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DB/dataCollector.cpp.i
+.PHONY : src/DB/dataCollector.cpp.i
+
+src/DB/dataCollector.s: src/DB/dataCollector.cpp.s
+.PHONY : src/DB/dataCollector.s
+
+# target to generate assembly for a file
+src/DB/dataCollector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DB/dataCollector.cpp.s
+.PHONY : src/DB/dataCollector.cpp.s
 
 src/Daemon/Daemon.o: src/Daemon/Daemon.cpp.o
 .PHONY : src/Daemon/Daemon.o
@@ -584,30 +536,6 @@ src/Daemon/addToStartup.s: src/Daemon/addToStartup.cpp.s
 src/Daemon/addToStartup.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.s
 .PHONY : src/Daemon/addToStartup.cpp.s
-
-src/Daemon/backgroundMode.o: src/Daemon/backgroundMode.cpp.o
-.PHONY : src/Daemon/backgroundMode.o
-
-# target to build an object file
-src/Daemon/backgroundMode.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Daemon/backgroundMode.cpp.o
-.PHONY : src/Daemon/backgroundMode.cpp.o
-
-src/Daemon/backgroundMode.i: src/Daemon/backgroundMode.cpp.i
-.PHONY : src/Daemon/backgroundMode.i
-
-# target to preprocess a source file
-src/Daemon/backgroundMode.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Daemon/backgroundMode.cpp.i
-.PHONY : src/Daemon/backgroundMode.cpp.i
-
-src/Daemon/backgroundMode.s: src/Daemon/backgroundMode.cpp.s
-.PHONY : src/Daemon/backgroundMode.s
-
-# target to generate assembly for a file
-src/Daemon/backgroundMode.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Daemon/backgroundMode.cpp.s
-.PHONY : src/Daemon/backgroundMode.cpp.s
 
 src/Daemon/removeFromAutostart.o: src/Daemon/removeFromAutostart.cpp.o
 .PHONY : src/Daemon/removeFromAutostart.o
@@ -704,6 +632,54 @@ src/Logger/logError.s: src/Logger/logError.cpp.s
 src/Logger/logError.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Logger/logError.cpp.s
 .PHONY : src/Logger/logError.cpp.s
+
+src/Server/Configuration.o: src/Server/Configuration.cpp.o
+.PHONY : src/Server/Configuration.o
+
+# target to build an object file
+src/Server/Configuration.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/Configuration.cpp.o
+.PHONY : src/Server/Configuration.cpp.o
+
+src/Server/Configuration.i: src/Server/Configuration.cpp.i
+.PHONY : src/Server/Configuration.i
+
+# target to preprocess a source file
+src/Server/Configuration.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/Configuration.cpp.i
+.PHONY : src/Server/Configuration.cpp.i
+
+src/Server/Configuration.s: src/Server/Configuration.cpp.s
+.PHONY : src/Server/Configuration.s
+
+# target to generate assembly for a file
+src/Server/Configuration.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/Configuration.cpp.s
+.PHONY : src/Server/Configuration.cpp.s
+
+src/Server/ProcessRequest.o: src/Server/ProcessRequest.cpp.o
+.PHONY : src/Server/ProcessRequest.o
+
+# target to build an object file
+src/Server/ProcessRequest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/ProcessRequest.cpp.o
+.PHONY : src/Server/ProcessRequest.cpp.o
+
+src/Server/ProcessRequest.i: src/Server/ProcessRequest.cpp.i
+.PHONY : src/Server/ProcessRequest.i
+
+# target to preprocess a source file
+src/Server/ProcessRequest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/ProcessRequest.cpp.i
+.PHONY : src/Server/ProcessRequest.cpp.i
+
+src/Server/ProcessRequest.s: src/Server/ProcessRequest.cpp.s
+.PHONY : src/Server/ProcessRequest.s
+
+# target to generate assembly for a file
+src/Server/ProcessRequest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/ProcessRequest.cpp.s
+.PHONY : src/Server/ProcessRequest.cpp.s
 
 src/Server/Server.o: src/Server/Server.cpp.o
 .PHONY : src/Server/Server.o
@@ -1008,9 +984,6 @@ help:
 	@echo "... src/Accounts/GenerateUID.o"
 	@echo "... src/Accounts/GenerateUID.i"
 	@echo "... src/Accounts/GenerateUID.s"
-	@echo "... src/Accounts/GetAllAdmins.o"
-	@echo "... src/Accounts/GetAllAdmins.i"
-	@echo "... src/Accounts/GetAllAdmins.s"
 	@echo "... src/Accounts/GetAllUsers.o"
 	@echo "... src/Accounts/GetAllUsers.i"
 	@echo "... src/Accounts/GetAllUsers.s"
@@ -1023,18 +996,9 @@ help:
 	@echo "... src/Accounts/Login.o"
 	@echo "... src/Accounts/Login.i"
 	@echo "... src/Accounts/Login.s"
-	@echo "... src/Accounts/RegisterAsAdmin.o"
-	@echo "... src/Accounts/RegisterAsAdmin.i"
-	@echo "... src/Accounts/RegisterAsAdmin.s"
-	@echo "... src/Accounts/RegisterAsUser.o"
-	@echo "... src/Accounts/RegisterAsUser.i"
-	@echo "... src/Accounts/RegisterAsUser.s"
-	@echo "... src/Accounts/SetEmail.o"
-	@echo "... src/Accounts/SetEmail.i"
-	@echo "... src/Accounts/SetEmail.s"
-	@echo "... src/Accounts/SetPhoneNumber.o"
-	@echo "... src/Accounts/SetPhoneNumber.i"
-	@echo "... src/Accounts/SetPhoneNumber.s"
+	@echo "... src/Accounts/RegisterNewUser.o"
+	@echo "... src/Accounts/RegisterNewUser.i"
+	@echo "... src/Accounts/RegisterNewUser.s"
 	@echo "... src/DB/CreateBackup.o"
 	@echo "... src/DB/CreateBackup.i"
 	@echo "... src/DB/CreateBackup.s"
@@ -1050,18 +1014,21 @@ help:
 	@echo "... src/DB/DeleteData.o"
 	@echo "... src/DB/DeleteData.i"
 	@echo "... src/DB/DeleteData.s"
+	@echo "... src/DB/GetAllUsers.o"
+	@echo "... src/DB/GetAllUsers.i"
+	@echo "... src/DB/GetAllUsers.s"
 	@echo "... src/DB/GetData.o"
 	@echo "... src/DB/GetData.i"
 	@echo "... src/DB/GetData.s"
+	@echo "... src/DB/dataCollector.o"
+	@echo "... src/DB/dataCollector.i"
+	@echo "... src/DB/dataCollector.s"
 	@echo "... src/Daemon/Daemon.o"
 	@echo "... src/Daemon/Daemon.i"
 	@echo "... src/Daemon/Daemon.s"
 	@echo "... src/Daemon/addToStartup.o"
 	@echo "... src/Daemon/addToStartup.i"
 	@echo "... src/Daemon/addToStartup.s"
-	@echo "... src/Daemon/backgroundMode.o"
-	@echo "... src/Daemon/backgroundMode.i"
-	@echo "... src/Daemon/backgroundMode.s"
 	@echo "... src/Daemon/removeFromAutostart.o"
 	@echo "... src/Daemon/removeFromAutostart.i"
 	@echo "... src/Daemon/removeFromAutostart.s"
@@ -1074,6 +1041,12 @@ help:
 	@echo "... src/Logger/logError.o"
 	@echo "... src/Logger/logError.i"
 	@echo "... src/Logger/logError.s"
+	@echo "... src/Server/Configuration.o"
+	@echo "... src/Server/Configuration.i"
+	@echo "... src/Server/Configuration.s"
+	@echo "... src/Server/ProcessRequest.o"
+	@echo "... src/Server/ProcessRequest.i"
+	@echo "... src/Server/ProcessRequest.s"
 	@echo "... src/Server/Server.o"
 	@echo "... src/Server/Server.i"
 	@echo "... src/Server/Server.s"

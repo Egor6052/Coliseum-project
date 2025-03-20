@@ -6,40 +6,26 @@
 #include "../headers/Database.h"
 
 void Database::createBackup() {
-    MYSQL *conn;
     MYSQL_RES *res;
     MYSQL_ROW row;
 
     try {
-        conn = mysql_init(NULL);
-        if (conn == NULL) {
-            throw std::runtime_error("mysql_init() failed");
-            logError("mysql_init() failed");
-        }
-
-        if (mysql_real_connect(conn, "localhost", getUserDBName().c_str(), getUserDBPassword().c_str(), getDBName().c_str(), 3306, NULL, 0) == NULL) {
-            mysql_close(conn);
-            throw std::runtime_error("mysql_real_connect() failed");
-            logError("mysql_real_connect() failed");
-        }
+        mysqlConnect();
 
         std::string query = "SELECT id, date, ip_address, sensor_name, current, voltage, active_power, reactive_power FROM " + getDBName() + " ORDER BY id ASC;";
         if (mysql_query(conn, query.c_str())) {
-            mysql_close(conn);
             throw std::runtime_error("SELECT query failed");
             logError("SELECT query failed");
         }
 
         res = mysql_store_result(conn);
         if (res == NULL) {
-            mysql_close(conn);
             throw std::runtime_error("mysql_store_result() failed");
             logError("mysql_store_result() failed");
         }
 
         if (mysql_num_rows(res) == 0) {
             mysql_free_result(res);
-            mysql_close(conn);
             throw std::runtime_error("No data found in the database to back up.");
             logError("No data found in the database to back up.");
         }
@@ -55,7 +41,6 @@ void Database::createBackup() {
         std::ofstream backupFile(backupFileName);
         if (!backupFile.is_open()) {
             mysql_free_result(res);
-            mysql_close(conn);
             throw std::runtime_error("Failed to open backup file for writing.");
             logError("Failed to open backup file for writing.");
         }
@@ -76,11 +61,18 @@ void Database::createBackup() {
 
         backupFile.close();
         mysql_free_result(res);
-        mysql_close(conn);
+        mysqlDisconnection();
         std::cout << "\033[1m\033[35m˚｡⋆\033[36m Backup created successfully in file: \033[35m" << backupFileName << "\033[0m\n" << std::endl;
+
     } catch (const std::exception& e) {
         std::string errorMessage = "\033[31mError creating backup: " + std::string(e.what()) + "\033[0m\n";
         std::cerr << errorMessage;
         logError(errorMessage);
+        if (conn) { // Закриваємо підключення, якщо воно відкрите
+            if (res) {
+                mysql_free_result(res);
+            }
+            mysqlDisconnection();
+        }
     }
 }

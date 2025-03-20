@@ -15,13 +15,8 @@ set(SOURCE_FILES
     # Accounts
     ./src/Accounts/GenerateUID.cpp
     ./src/Accounts/Accounts.cpp
-    ./src/Accounts/GetAllAdmins.cpp
     ./src/Accounts/GetAllUsers.cpp
-    ./src/Accounts/RegisterAsAdmin.cpp
-    ./src/Accounts/RegisterAsUser.cpp
-    ./src/Accounts/SetEmail.cpp
-    ./src/Accounts/SetPhoneNumber.cpp
-    # ./src/Accounts/RegisterUser.cpp
+    ./src/Accounts/RegisterNewUser.cpp
     ./src/Accounts/IsAdministrator.cpp
     ./src/Accounts/Login.cpp
     ./src/Accounts/GetUserData.cpp
@@ -29,7 +24,7 @@ set(SOURCE_FILES
     # Daemon
     ./src/Daemon/Daemon.cpp
     ./src/Daemon/addToStartup.cpp
-    ./src/Daemon/backgroundMode.cpp
+    # ./src/Daemon/backgroundMode.cpp
     ./src/Daemon/removeFromAutostart.cpp
 
     # User
@@ -38,17 +33,19 @@ set(SOURCE_FILES
 
     # Server
     ./src/Server/Configuration.cpp
-    ./src/Server/Process_request.cpp
+    ./src/Server/ProcessRequest.cpp
     ./src/Server/Server.cpp
     ./src/Server/Start.cpp
 
     # Database
-    ./src/DB/Database.cpp
-    ./src/DB/DateTime.cpp
-    ./src/DB/CreateTable.cpp
     ./src/DB/CreateBackup.cpp
-    ./src/DB/GetData.cpp
+    ./src/DB/CreateTable.cpp
+    ./src/DB/Database.cpp
+    src/DB/dataCollector.cpp
+    ./src/DB/DateTime.cpp
     ./src/DB/DeleteData.cpp
+    ./src/DB/GetAllUsers.cpp
+    ./src/DB/GetData.cpp
 
     # entity
     ./src/dao/entity/ActivePower.cpp

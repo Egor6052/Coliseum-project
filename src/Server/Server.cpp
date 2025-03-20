@@ -6,7 +6,7 @@
 #include <memory>
 #include <string>
 
-#include "Server.h"
+#include "../headers/Server.h"
 
 namespace beast = boost::beast;
 namespace http = beast::http;
@@ -15,7 +15,7 @@ using tcp = net::ip::tcp;
 using json = nlohmann::json;
 
 Server::Server() {
-    this->configFilePath = "../../configurations/configFile.conf";    
+    this->configFilePath = "../../config/configFile.conf";    
     this->port = 8080;
     this->host_name = "localhost";
 
@@ -32,25 +32,27 @@ Server::Server() {
 // /api/backup = показати бекапи з бд. Можна буде створити бекап, треба на сервері визвати функцію.
 
 Server::~Server() { 
-    serverThread.join(); 
-
+    if (serverThread.joinable()) {
+        serverThread.join();
+    }
 }
 
 void Server::run() {
-    accept();
-    io_context_.run();
+    serverThread = std::thread([this]() {
+        accept(); 
+        io_context_.run();
+    });
 }
 
 void Server::accept() {
-        auto socket = std::make_shared<tcp::socket>(io_context_);
-        acceptor_.async_accept(*socket, [this, socket](boost::system::error_code ec) {
-            if (!ec) {
-                handle_client(socket);
-            }
-            accept();
-        });
-    }
-
+    auto socket = std::make_shared<boost::asio::ip::tcp::socket>(io_context_);
+    acceptor_.async_accept(*socket, [this, socket](const boost::system::error_code& ec) {
+        if (!ec) {
+            handleClient(socket);
+        }
+        accept();
+    });
+}
 
 void Server::handleClient(std::shared_ptr<tcp::socket> socket) {
     auto buffer = std::make_shared<beast::flat_buffer>();
