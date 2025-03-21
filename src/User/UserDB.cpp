@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string.h>
-#include <mysql/mysql.h>
+#include <mariadb/mysql.h>
 #include <nlohmann/json.hpp>
 #include <stdexcept>
 

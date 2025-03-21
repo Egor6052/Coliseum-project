@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <mysql/mysql.h>
+#include <mariadb/mysql.h>
 #include "../headers/Database.h"
 
 void Database::CreateTable() {

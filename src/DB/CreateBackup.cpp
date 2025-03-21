@@ -2,7 +2,7 @@
 #include <string>
 #include <fstream>
 #include <filesystem>
-#include <mysql/mysql.h>
+#include <mariadb/mysql.h>
 #include "../headers/Database.h"
 
 void Database::createBackup() {

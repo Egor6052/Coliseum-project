@@ -20,9 +20,9 @@ private:
     std::string host_name;
     std::unordered_map<std::string, std::string> configValues;
 
-    boost::asio::io_context io_context_;
-    boost::asio::ip::tcp::acceptor acceptor_;
-    std::thread serverThread;
+    // boost::asio::io_context io_context_;
+    // boost::asio::ip::tcp::acceptor acceptor_;
+    // std::thread serverThread;
 
 public:
     Server();
@@ -32,14 +32,14 @@ public:
     void ConfigFields();
 
     // http
-    void run();
-    void accept();
+    // void run();
+    // void accept();
     void handleClient(std::shared_ptr<boost::asio::ip::tcp::socket> socket);
-    void process_request(std::shared_ptr<boost::asio::ip::tcp::socket> socket, 
-    const boost::beast::http::request<boost::beast::http::string_body>& req);
+    // void process_request(std::shared_ptr<boost::asio::ip::tcp::socket> socket, 
+    // const boost::beast::http::request<boost::beast::http::string_body>& req);
     
     // Retrieving the request body
-    std::string getRequestBody(const std::string& request);
+    // std::string getRequestBody(const std::string& request);
 
     // Getting a parameter from the request body
     // std::string extractParameter(const std::string& body, const std::string& param);

@@ -28,7 +28,7 @@ int main(){
 
     // для користувача
     try {
-        server.run();
+        // server.run();
         
         std::string answer;
         std::printf("|\033[37mRegister - 1 \033[0m|   |\033[37mLogin - 2 \033[0m|");

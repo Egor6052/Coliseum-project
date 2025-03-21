@@ -34,7 +34,7 @@ class Database : public Accounts {
 
         void CreateTable();
         void dataCollector();
-        void setData(std::string data, std::string ipAddress, std::string nameSensor, std::string current, std::string voltage, std::string activePower, std::string reactivePower);
+        void setData(std::string data, std::string ipAddress, std::string nameSensor, float current, float voltage, float activePower, float reactivePower);
 
         void deleteData(std::string valueID);
         void createBackup();

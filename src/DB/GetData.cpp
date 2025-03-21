@@ -1,5 +1,5 @@
 #include <iostream>
-#include <mysql/mysql.h>
+#include <mariadb/mysql.h>
 #include <nlohmann/json.hpp>
 #include <stdexcept>
 #include "../headers/Database.h"

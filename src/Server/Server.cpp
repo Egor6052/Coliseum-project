@@ -32,27 +32,27 @@ Server::Server() {
 // /api/backup = показати бекапи з бд. Можна буде створити бекап, треба на сервері визвати функцію.
 
 Server::~Server() { 
-    if (serverThread.joinable()) {
-        serverThread.join();
-    }
+    // if (serverThread.joinable()) {
+        // serverThread.join();
+    // }
 }
 
-void Server::run() {
-    serverThread = std::thread([this]() {
-        accept(); 
-        io_context_.run();
-    });
-}
+// void Server::run() {
+//     serverThread = std::thread([this]() {
+//         accept(); 
+//         io_context_.run();
+//     });
+// }
 
-void Server::accept() {
-    auto socket = std::make_shared<boost::asio::ip::tcp::socket>(io_context_);
-    acceptor_.async_accept(*socket, [this, socket](const boost::system::error_code& ec) {
-        if (!ec) {
-            handleClient(socket);
-        }
-        accept();
-    });
-}
+// void Server::accept() {
+//     auto socket = std::make_shared<boost::asio::ip::tcp::socket>(io_context_);
+//     acceptor_.async_accept(*socket, [this, socket](const boost::system::error_code& ec) {
+//         if (!ec) {
+//             handleClient(socket);
+//         }
+//         accept();
+//     });
+// }
 
 void Server::handleClient(std::shared_ptr<tcp::socket> socket) {
     auto buffer = std::make_shared<beast::flat_buffer>();
@@ -61,7 +61,7 @@ void Server::handleClient(std::shared_ptr<tcp::socket> socket) {
     http::async_read(*socket, *buffer, *req,
         [this, socket, req](beast::error_code ec, std::size_t) {
             if (!ec) {
-                process_request(socket, *req);
+                // process_request(socket, *req);
             }
             socket->shutdown(tcp::socket::shutdown_send, ec);
         });

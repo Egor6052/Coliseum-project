@@ -1,5 +1,5 @@
 #include <iostream>
-#include <mysql/mysql.h>
+#include <mariadb/mysql.h>
 #include <nlohmann/json.hpp>
 #include <stdexcept>
 #include "../headers/Database.h"
@@ -15,14 +15,16 @@ Database::Database() {
 
 Database::~Database() {}
 
-void Database::setData(std::string data, std::string ipAddress, std::string nameSensor, std::string current, std::string voltage, std::string activePower, std::string reactivePower) {
+void Database::setData(std::string data, std::string ipAddress, std::string nameSensor, float current, float voltage, float activePower, float reactivePower) {
     try {
         mysqlConnect();
 
-        // Insert data directly into the table
         std::string query = "INSERT INTO " + getDBName() + " (date, ip_address, sensor_name, current, voltage, active_power, reactive_power) VALUES ('" +
-                            data + "', '" + ipAddress + "', '" + nameSensor + "', " + current + ", " + voltage + ", " +
-                            activePower + ", " + reactivePower + ");";
+                            data + "', '" + ipAddress + "', '" + nameSensor + "', " + 
+                            std::to_string(current) + ", " + 
+                            std::to_string(voltage) + ", " + 
+                            std::to_string(activePower) + ", " + 
+                            std::to_string(reactivePower) + ");";
 
         if (mysql_query(conn, query.c_str())) {
             throw std::runtime_error(mysql_error(conn));

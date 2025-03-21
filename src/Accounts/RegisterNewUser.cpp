@@ -1,6 +1,6 @@
 #include <string.h>
 #include <iostream>
-#include <mysql/mysql.h>
+#include <mariadb/mysql.h>
 #include "../headers/Accounts.h"
 
 void Accounts::registerNewUser(std::string login, std::string password, std::string email, std::string userRole) {

@@ -43,16 +43,16 @@ void Server::start() {
     while (true) {
         sockaddr_in clientAddr;
         socklen_t clientSize = sizeof(clientAddr);
-        int clientSocket = accept(serverSocket, (sockaddr*)&clientAddr, &clientSize);
+        // int clientSocket = accept(serverSocket, (sockaddr*)&clientAddr, &clientSize);
 
-        if (clientSocket == -1) {
-            std::cerr << "Error: Unable to accept connection.\n";
-            logError("Error: Unable to accept connection.\n");
-            continue;
-        }
+        // if (clientSocket == -1) {
+        //     std::cerr << "Error: Unable to accept connection.\n";
+        //     logError("Error: Unable to accept connection.\n");
+        //     continue;
+        // }
 
         // Обробляємо підключення в новому потоці
-        std::thread(&Server::handleClient, this, clientSocket).detach();
+        // std::thread(&Server::handleClient, this, clientSocket).detach();
     }
 
     close(serverSocket);
