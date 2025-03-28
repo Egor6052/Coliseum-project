@@ -44,6 +44,8 @@ public:
     // Getting a parameter from the request body
     // std::string extractParameter(const std::string& body, const std::string& param);
     
+    void createCSV(const std::string& filename);
+    void sendToEmail(const std::string& recipient, const std::string& filename);
     void RS485();
     void start();
 
