@@ -6,7 +6,7 @@
 #include "../lib/Server.h"
 
 void Server::RS485(){
-
+// TODO
     const char* port = "/dev/ttyUSB0";
 
     int serial_port = open(port, O_RDWR | O_NOCTTY);

@@ -24,24 +24,21 @@ set(SOURCE_FILES
     # Daemon
     ./src/Daemon/Daemon.cpp
     ./src/Daemon/addToStartup.cpp
-    # ./src/Daemon/backgroundMode.cpp
     ./src/Daemon/removeFromAutostart.cpp
 
     # User
-    # ./src/User/createMySQLUser.cpp
     ./src/User/UserDB.cpp
 
     # Server
     ./src/Server/Configuration.cpp
-    ./src/Server/ProcessRequest.cpp
     ./src/Server/Server.cpp
-    ./src/Server/Start.cpp
+    ./src/Server/httpServer.cpp
 
     # Database
     ./src/DB/CreateBackup.cpp
     ./src/DB/CreateTable.cpp
     ./src/DB/Database.cpp
-    src/DB/dataCollector.cpp
+    ./src/DB/dataCollector.cpp
     ./src/DB/DateTime.cpp
     ./src/DB/DeleteData.cpp
     ./src/DB/GetAllUsers.cpp
@@ -85,27 +82,54 @@ target_compile_options(start
         -Wall -fPIC
 )
 
-# Додавання шляхів до заголовкових файлів
-target_include_directories(start
-    PRIVATE
-        ./lib
-        /usr/include/mysql
+# Додаємо include-директорії
+target_include_directories(start PRIVATE
+    ./lib
 )
 
-# Вказуємо шлях до бібліотеки mysqlclient
-# link_directories(/usr/lib64/mysql)
+# Знаходимо бібліотеку MariaDB
+find_library(MARIADB_LIBRARY
+    NAMES mariadb mariadbclient
+    PATHS /usr/lib /usr/lib64 /usr/local/lib /usr/local/lib64
+)
 
-find_library(MYSQL_LIB mysqlclient HINTS /usr/lib64/mysql)
-target_link_libraries(start PRIVATE ${MYSQL_LIB})
+find_path(MARIADB_INCLUDE_DIR
+    NAMES mysql.h
+    PATHS /usr/include /usr/include/mysql /usr/local/include /usr/local/include/mysql
+)
 
-# Підключаємо бібліотеку mysqlclient для лінкування
-# target_link_libraries(start PRIVATE mysqlclient)
-# find_library(MYSQL_LIB mysqlclient HINTS /usr/lib64/mysql)
-# target_link_libraries(start PRIVATE ${MYSQL_LIB})
+if (NOT MARIADB_LIBRARY OR NOT MARIADB_INCLUDE_DIR)
+    message(FATAL_ERROR "MariaDB library or headers not found. Please install MariaDB development package.")
+endif()
 
+# Додаємо include-директорію для MariaDB
+target_include_directories(start PRIVATE ${MARIADB_INCLUDE_DIR})
 
+# Знаходимо бібліотеку jsoncpp
+find_library(JSONCPP_LIBRARY
+    NAMES jsoncpp
+    PATHS /usr/lib /usr/lib64 /usr/local/lib /usr/local/lib64
+)
 
-# Лінкування з бібліотеками MySQL
-# find_package(MySQL REQUIRED)
-# target_link_libraries(start PRIVATE ${MYSQL_LIBRARIES})
+find_path(JSONCPP_INCLUDE_DIR
+    NAMES json/json.h
+    PATHS /usr/include /usr/include/json /usr/local/include /usr/local/include/json
+)
 
+if (NOT JSONCPP_LIBRARY OR NOT JSONCPP_INCLUDE_DIR)
+    message(FATAL_ERROR "jsoncpp library or headers not found. Please install jsoncpp development package.")
+endif()
+
+# Додаємо include-директорію для jsoncpp
+target_include_directories(start PRIVATE ${JSONCPP_INCLUDE_DIR})
+
+# Лінкуємо бібліотеки
+target_link_libraries(start PRIVATE
+    ${MARIADB_LIBRARY}
+    ${JSONCPP_LIBRARY}
+    z  # Для zlib
+    ssl  # Для OpenSSL
+    crypto  # Для OpenSSL
+    dl  # Для динамічного завантаження (на Linux)
+    pthread  # Для потоків
+)

@@ -30,9 +30,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/admin1/Стільниця/Coliseum-project/src/Logger/Logger.cpp" "CMakeFiles/start.dir/src/Logger/Logger.cpp.o" "gcc" "CMakeFiles/start.dir/src/Logger/Logger.cpp.o.d"
   "/home/admin1/Стільниця/Coliseum-project/src/Logger/logError.cpp" "CMakeFiles/start.dir/src/Logger/logError.cpp.o" "gcc" "CMakeFiles/start.dir/src/Logger/logError.cpp.o.d"
   "/home/admin1/Стільниця/Coliseum-project/src/Server/Configuration.cpp" "CMakeFiles/start.dir/src/Server/Configuration.cpp.o" "gcc" "CMakeFiles/start.dir/src/Server/Configuration.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/Server/ProcessRequest.cpp" "CMakeFiles/start.dir/src/Server/ProcessRequest.cpp.o" "gcc" "CMakeFiles/start.dir/src/Server/ProcessRequest.cpp.o.d"
   "/home/admin1/Стільниця/Coliseum-project/src/Server/Server.cpp" "CMakeFiles/start.dir/src/Server/Server.cpp.o" "gcc" "CMakeFiles/start.dir/src/Server/Server.cpp.o.d"
-  "/home/admin1/Стільниця/Coliseum-project/src/Server/Start.cpp" "CMakeFiles/start.dir/src/Server/Start.cpp.o" "gcc" "CMakeFiles/start.dir/src/Server/Start.cpp.o.d"
+  "/home/admin1/Стільниця/Coliseum-project/src/Server/httpServer.cpp" "CMakeFiles/start.dir/src/Server/httpServer.cpp.o" "gcc" "CMakeFiles/start.dir/src/Server/httpServer.cpp.o.d"
   "/home/admin1/Стільниця/Coliseum-project/src/User/UserDB.cpp" "CMakeFiles/start.dir/src/User/UserDB.cpp.o" "gcc" "CMakeFiles/start.dir/src/User/UserDB.cpp.o.d"
   "/home/admin1/Стільниця/Coliseum-project/src/dao/entity/ActivePower.cpp" "CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o.d"
   "/home/admin1/Стільниця/Coliseum-project/src/dao/entity/Current.cpp" "CMakeFiles/start.dir/src/dao/entity/Current.cpp.o" "gcc" "CMakeFiles/start.dir/src/dao/entity/Current.cpp.o.d"
@@ -45,8 +44,12 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/admin1/Стільниця/Coliseum-project/src/main.cpp" "CMakeFiles/start.dir/src/main.cpp.o" "gcc" "CMakeFiles/start.dir/src/main.cpp.o.d"
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

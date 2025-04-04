@@ -4,23 +4,19 @@
 #include "./headers/Server.h"
 #include "./headers/Daemon.h"
 
-void startServer(Server& server) {
-    server.start();
-}
+// void startServer(Server& server) {
+//     server.start();
+// }
 
 int main(){
     Server server;
-
     Daemon daemon;
-    daemon.addToStartup();
-    // daemon.removeFromAutostart();
-    // daemon.backgroundMode();
-
-    std::thread serverThread(startServer, std::ref(server));
-    
-    // std::this_thread::sleep_for(std::chrono::milliseconds(500));
 
     std::cout << "\033[1m\033[35m˚｡⋆\033[36mWelcome to the Server!\033[35m⋆｡˚\033[0m\n" << std::endl;
+
+    daemon.addToStartup();
+    // daemon.removeFromAutostart();
+    server.http_start();
 
     server.setAdminPassword("MySqlStrongPassword123!");
     server.CreateTable();
@@ -141,7 +137,6 @@ int main(){
             }
         }
 
-        
     } catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << std::endl;
         return 1;

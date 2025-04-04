@@ -12,5 +12,4 @@ void Database::dataCollector(){
     float reactivePower = roundNumber(getReactivePower());
 
     setData(data, ipAddress, nameSensor, current, voltage, activePower, reactivePower);
-
 }

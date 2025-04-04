@@ -12,6 +12,6 @@ float Database::getActivePower() {
     // float radians = degrees * M_PI / 180.0f;
     // float activePower =  getVoltage() *  getCurrent() * std::cos(radians);
 
-    float activePower = getVoltage() * getCurrent() * std::cos(getPowerFactor());
+    float activePower = getVoltage() * getCurrent() * std::sin(getPowerFactor());
     return activePower;
 }

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string.h>
-#include <mariadb/mysql.h>
+#include "../../lib/mysql/mysql.h"
 #include <nlohmann/json.hpp>
 #include <stdexcept>
 
@@ -14,6 +14,7 @@ UserDB::UserDB(){
     this->host_name = "localhost";
     this->conn = nullptr;
 }
+
 UserDB::~UserDB(){ 
     if (conn) {
         mysql_close(conn);

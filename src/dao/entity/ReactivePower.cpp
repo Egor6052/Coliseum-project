@@ -9,6 +9,6 @@ float Database::getReactivePower() {
     float phi = std::acos(getPowerFactor());
 
     // Q = V * I * sin(φ)
-    float reactivePower = getVoltage() * getCurrent() * std::sin(phi);
+    float reactivePower = getVoltage() * getCurrent() * std::cos(phi);
     return reactivePower;
 }

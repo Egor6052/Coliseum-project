@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include <string.h>
-#include <mariadb/mysql.h>
+#include "../../lib/mysql/mysql.h"
 
 #include "Logger.h"
 
