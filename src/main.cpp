@@ -18,7 +18,7 @@ int main() {
     server.dataCollector();
 
     // Основний потік просто чекає
-    std::cout << "Server is running. Use HTTP endpoints to interact. Press Ctrl+C to exit." << std::endl;
+    std::cout << "Server is running in \033[1m\033[35mhttp://localhost:8080/\033[36m. Use HTTP endpoints to interact. Press Ctrl+C to exit." << std::endl;
     while (true) {
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
