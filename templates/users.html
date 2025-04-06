@@ -17,6 +17,78 @@
 
         const response = await fetch(`/users?login=${encodeURIComponent(login)}&password=${encodeURIComponent(password)}`);
         const data = await response.json();
-        document.getElementById('usersResponse').innerText = JSON.stringify(data, null, 2);
+
+        if (data.status !== "Success") {
+            document.getElementById('usersResponse').innerText = "Error: Could not fetch users";
+            return;
+        }
+
+        // Парсимо рядок data.users у JSON
+        const usersData = JSON.parse(data.users);
+        const users = usersData.users;
+
+        // Якщо немає користувачів
+        if (!users || users.length === 0) {
+            document.getElementById('usersResponse').innerText = "No users found.";
+            return;
+        }
+
+        // Створюємо HTML-таблицю
+        let tableHtml = `
+            <style>
+                .users-table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin-top: 10px;
+                    font-size: 14px;
+                }
+                .users-table th, .users-table td {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    text-align: center;
+                }
+                .users-table th {
+                    background-color: #333;
+                    color: white;
+                }
+                .users-table tr:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+                .users-table tr:hover {
+                    background-color: #ddd;
+                }
+            </style>
+            <table class="users-table">
+                <thead>
+                    <tr>
+                        <th>UID</th>
+                        <th>Login</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+        `;
+
+        // Додаємо рядки до таблиці
+        users.forEach(user => {
+            tableHtml += `
+                <tr>
+                    <td>${user.uid}</td>
+                    <td>${user.login}</td>
+                    <td>${user.email.trim() === '' ? 'N/A' : user.email}</td>
+                    <td>${user.role}</td>
+                </tr>
+            `;
+        });
+
+        tableHtml += `
+                </tbody>
+            </table>
+            <p>Total Users: ${usersData.total_users}</p>
+        `;
+
+        // Вставляємо таблицю у DOM
+        document.getElementById('usersResponse').innerHTML = tableHtml;
     }
 </script>

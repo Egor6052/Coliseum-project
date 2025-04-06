@@ -1,4 +1,4 @@
-<h2>View Records</h2>
+<h2>View Records (Last 30 Days)</h2>
 <button onclick="viewRecords()">View Records</button>
 <div id="recordsResponse" class="response"></div>
 <script>
@@ -12,6 +12,96 @@
     async function viewRecords() {
         const response = await fetch('/records?fetch=true');
         const data = await response.json();
-        document.getElementById('recordsResponse').innerText = JSON.stringify(data, null, 2);
+        
+        if (data.status !== "Success") {
+            document.getElementById('recordsResponse').innerText = "Error: Could not fetch records";
+            return;
+        }
+
+        // Парсимо рядок data.data у JSON
+        const records = JSON.parse(data.data);
+
+        // Поточна дата — 6 квітня 2025 року
+        const now = new Date('2025-04-06');
+        // Дата 30 днів тому
+        const thirtyDaysAgo = new Date(now);
+        thirtyDaysAgo.setDate(now.getDate() - 30);
+
+        // Фільтруємо записи за останні 30 днів
+        const filteredRecords = records.filter(record => {
+            const recordDate = new Date(record.date);
+            return recordDate >= thirtyDaysAgo && recordDate <= now;
+        });
+
+        // Якщо немає записів за останні 30 днів
+        if (filteredRecords.length === 0) {
+            document.getElementById('recordsResponse').innerText = "No records found for the last 30 days.";
+            return;
+        }
+
+        // Створюємо HTML-таблицю
+        let tableHtml = `
+            <style>
+                .records-table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin-top: 10px;
+                    font-size: 14px;
+                }
+                .records-table th, .records-table td {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    text-align: center;
+                }
+                .records-table th {
+                    background-color: #333;
+                    color: white;
+                }
+                .records-table tr:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+                .records-table tr:hover {
+                    background-color: #ddd;
+                }
+            </style>
+            <table class="records-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Sensor Name</th>
+                        <th>IP Address</th>
+                        <th>Date</th>
+                        <th>Active Power (W)</th>
+                        <th>Reactive Power (VAR)</th>
+                        <th>Voltage (V)</th>
+                        <th>Current (A)</th>
+                    </tr>
+                </thead>
+                <tbody>
+        `;
+
+        // Додаємо рядки до таблиці
+        filteredRecords.forEach(record => {
+            tableHtml += `
+                <tr>
+                    <td>${record.id}</td>
+                    <td>${record.sensor_name}</td>
+                    <td>${record.ip_address}</td>
+                    <td>${record.date}</td>
+                    <td>${record.active_power.toFixed(2)}</td>
+                    <td>${record.reactive_power.toFixed(2)}</td>
+                    <td>${record.voltage.toFixed(2)}</td>
+                    <td>${record.current.toFixed(2)}</td>
+                </tr>
+            `;
+        });
+
+        tableHtml += `
+                </tbody>
+            </table>
+        `;
+
+        // Вставляємо таблицю у DOM
+        document.getElementById('recordsResponse').innerHTML = tableHtml;
     }
 </script>
