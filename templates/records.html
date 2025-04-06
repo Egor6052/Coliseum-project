@@ -1,0 +1,17 @@
+<h2>View Records</h2>
+<button onclick="viewRecords()">View Records</button>
+<div id="recordsResponse" class="response"></div>
+<script>
+    window.onload = function() {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (!user) {
+            window.location.href = '/';
+        }
+    };
+
+    async function viewRecords() {
+        const response = await fetch('/records?fetch=true');
+        const data = await response.json();
+        document.getElementById('recordsResponse').innerText = JSON.stringify(data, null, 2);
+    }
+</script>

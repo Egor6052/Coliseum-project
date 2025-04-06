@@ -30,6 +30,9 @@ set(SOURCE_FILES
     ./src/User/UserDB.cpp
 
     # Server
+    # ./src/Server/readFile.cpp
+    # ./src/Server/getCommonHeader.cpp
+    # ./src/Server/getCommonFooter.cpp
     ./src/Server/Configuration.cpp
     ./src/Server/Server.cpp
     ./src/Server/httpServer.cpp

@@ -13,7 +13,5 @@ Server::Server() {
 }
 
 Server::~Server() { 
-    // if (serverThread.joinable()) {
-        // serverThread.join();
-    // }
+
 }

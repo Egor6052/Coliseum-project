@@ -1,16 +1,125 @@
 #include <iostream>
 #include <thread>
+#include <fstream>
 #include "../headers/Server.h"
 #include "../../lib/http/httplib.h"
 #include <json/json.h>
 
+// Функція для читання HTML-файлу
+std::string readFile(const std::string& path) {
+    std::ifstream file(path);
+    if (!file) {
+        return "<h2>Error: Template file not found</h2>";
+    }
+    return std::string((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+}
+
+// Функція для генерації спільного HTML-заголовка з навігацією
+std::string getCommonHeader() {
+    return R"(
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Control Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #555;
+        }
+        input, button, select {
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .response {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar"></div>
+    <div class="container">
+)";
+}
+
+// Функція для генерації закриття HTML
+std::string getCommonFooter() {
+    return R"(
+    </div>
+</body>
+</html>
+)";
+}
+
 void Server::http_start() {
+    // Ендпоінт для головної сторінки
+    svr.Get("/", [](const httplib::Request& req, httplib::Response& res) {
+        std::string html = getCommonHeader();
+        html += readFile("../templates/index.html");
+        html += getCommonFooter();
+        res.set_content(html, "text/html");
+    });
+
     // Ендпоінт для команди (існуючий)
     svr.Post("/command", [this](const httplib::Request& req, httplib::Response& res) {
         http_server(req, res);
     });
 
-    // Ендпоінт для реєстрації користувача
+    // Ендпоінт для реєстрації користувача (GET - сторінка, POST - логіка)
+    svr.Get("/register", [](const httplib::Request& req, httplib::Response& res) {
+        std::string html = getCommonHeader();
+        html += readFile("../templates/register.html");
+        html += getCommonFooter();
+        res.set_content(html, "text/html");
+    });
+
     svr.Post("/register", [this](const httplib::Request& req, httplib::Response& res) {
         if (req.method != "POST") {
             res.status = 405;
@@ -50,7 +159,14 @@ void Server::http_start() {
         }
     });
 
-    // Ендпоінт для логіну
+    // Ендпоінт для логіну (GET - сторінка, POST - логіка)
+    svr.Get("/login", [](const httplib::Request& req, httplib::Response& res) {
+        std::string html = getCommonHeader();
+        html += readFile("../templates/login.html");
+        html += getCommonFooter();
+        res.set_content(html, "text/html");
+    });
+
     svr.Post("/login", [this](const httplib::Request& req, httplib::Response& res) {
         if (req.method != "POST") {
             res.status = 405;
@@ -86,7 +202,14 @@ void Server::http_start() {
         }
     });
 
-    // Ендпоінт для видалення запису (тільки для адмінів)
+    // Ендпоінт для видалення запису (GET - сторінка, POST - логіка)
+    svr.Get("/delete", [](const httplib::Request& req, httplib::Response& res) {
+        std::string html = getCommonHeader();
+        html += readFile("../templates/delete.html");
+        html += getCommonFooter();
+        res.set_content(html, "text/html");
+    });
+
     svr.Post("/delete", [this](const httplib::Request& req, httplib::Response& res) {
         if (req.method != "POST") {
             res.status = 405;
@@ -124,23 +247,39 @@ void Server::http_start() {
         }
     });
 
-    // Ендпоінт для перегляду записів
+    // Ендпоінт для перегляду записів (GET - сторінка та логіка)
     svr.Get("/records", [this](const httplib::Request& req, httplib::Response& res) {
-        try {
-            std::string data = getData();
-            Json::Value response;
-            response["status"] = "Success";
-            response["data"] = data;
+        if (req.has_param("fetch")) {
+            // Якщо є параметр fetch, повертаємо JSON
+            try {
+                std::string data = getData();
+                Json::Value response;
+                response["status"] = "Success";
+                response["data"] = data;
 
-            Json::FastWriter writer;
-            res.set_content(writer.write(response), "application/json");
-        } catch (const std::exception& e) {
-            res.status = 500;
-            res.set_content("{\"error\":\"" + std::string(e.what()) + "\"}", "application/json");
+                Json::FastWriter writer;
+                res.set_content(writer.write(response), "application/json");
+            } catch (const std::exception& e) {
+                res.status = 500;
+                res.set_content("{\"error\":\"" + std::string(e.what()) + "\"}", "application/json");
+            }
+        } else {
+            // Інакше повертаємо HTML-сторінку
+            std::string html = getCommonHeader();
+            html += readFile("../templates/records.html");
+            html += getCommonFooter();
+            res.set_content(html, "text/html");
         }
     });
 
-    // Ендпоінт для створення бекапу
+    // Ендпоінт для створення бекапу (GET - сторінка, POST - логіка)
+    svr.Get("/backup", [](const httplib::Request& req, httplib::Response& res) {
+        std::string html = getCommonHeader();
+        html += readFile("../templates/backup.html");
+        html += getCommonFooter();
+        res.set_content(html, "text/html");
+    });
+
     svr.Post("/backup", [this](const httplib::Request& req, httplib::Response& res) {
         if (req.method != "POST") {
             res.status = 405;
@@ -157,34 +296,37 @@ void Server::http_start() {
         }
     });
 
-    // Ендпоінт для перегляду всіх користувачів (тільки для адмінів)
+    // Ендпоінт для перегляду всіх користувачів (GET - сторінка та логіка)
     svr.Get("/users", [this](const httplib::Request& req, httplib::Response& res) {
-        if (!req.has_param("login") || !req.has_param("password")) {
-            res.status = 400;
-            res.set_content("{\"error\":\"Missing query parameters (login, password)\"}", "application/json");
-            return;
-        }
+        if (req.has_param("login") && req.has_param("password")) {
+            // Якщо є параметри login і password, повертаємо JSON
+            std::string login = req.get_param_value("login");
+            std::string password = req.get_param_value("password");
 
-        std::string login = req.get_param_value("login");
-        std::string password = req.get_param_value("password");
+            if (!isAdministrator(login, password)) {
+                res.status = 403;
+                res.set_content("{\"error\":\"Access denied. Admin privileges required\"}", "application/json");
+                return;
+            }
 
-        if (!isAdministrator(login, password)) {
-            res.status = 403;
-            res.set_content("{\"error\":\"Access denied. Admin privileges required\"}", "application/json");
-            return;
-        }
+            try {
+                std::string users = getAllUsersFromDB();
+                Json::Value response;
+                response["status"] = "Success";
+                response["users"] = users;
 
-        try {
-            std::string users = getAllUsersFromDB();
-            Json::Value response;
-            response["status"] = "Success";
-            response["users"] = users;
-
-            Json::FastWriter writer;
-            res.set_content(writer.write(response), "application/json");
-        } catch (const std::exception& e) {
-            res.status = 500;
-            res.set_content("{\"error\":\"" + std::string(e.what()) + "\"}", "application/json");
+                Json::FastWriter writer;
+                res.set_content(writer.write(response), "application/json");
+            } catch (const std::exception& e) {
+                res.status = 500;
+                res.set_content("{\"error\":\"" + std::string(e.what()) + "\"}", "application/json");
+            }
+        } else {
+            // Інакше повертаємо HTML-сторінку
+            std::string html = getCommonHeader();
+            html += readFile("../templates/users.html");
+            html += getCommonFooter();
+            res.set_content(html, "text/html");
         }
     });
 

@@ -1,0 +1,50 @@
+<div id="authSection">
+    <h2>Welcome</h2>
+    <p>Please log in or register to continue:</p>
+    <button onclick="window.location.href='/login'">Login</button>
+    <button onclick="window.location.href='/register'">Register</button>
+</div>
+<div id="dashboardSection" style="display: none;">
+    <h2>Welcome, <span id="username"></span>!</h2>
+    <button onclick="logout()">Logout</button>
+</div>
+<script>
+    function checkAuth() {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user) {
+            document.getElementById('authSection').style.display = 'none';
+            document.getElementById('dashboardSection').style.display = 'block';
+            document.getElementById('username').innerText = user.login;
+
+            const navbar = document.querySelector('.navbar');
+            if (user.role === 'admin') {
+                navbar.innerHTML = `
+                    <a href="/register">Register</a>
+                    <a href="/login">Login</a>
+                    <a href="/delete">Delete Record</a>
+                    <a href="/records">View Records</a>
+                    <a href="/backup">Create Backup</a>
+                    <a href="/users">View Users</a>
+                    <a href="http://localhost:3000" target="_blank">Grafana</a>
+                `;
+            } else {
+                navbar.innerHTML = `
+                    <a href="/records">View Records</a>
+                    <a href="/backup">Create Backup</a>
+                    <a href="http://localhost:3000" target="_blank">Grafana</a>
+                `;
+            }
+        } else {
+            document.getElementById('authSection').style.display = 'block';
+            document.getElementById('dashboardSection').style.display = 'none';
+            document.querySelector('.navbar').innerHTML = '';
+        }
+    }
+
+    function logout() {
+        localStorage.removeItem('user');
+        window.location.href = '/';
+    }
+
+    window.onload = checkAuth;
+</script>

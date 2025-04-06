@@ -1,0 +1,28 @@
+<h2>Delete Record (Admin Only)</h2>
+<input type="text" id="deleteId" placeholder="Record ID" required>
+<input type="text" id="deleteLogin" placeholder="Admin Login" required>
+<input type="password" id="deletePassword" placeholder="Admin Password" required>
+<button onclick="deleteRecord()">Delete</button>
+<div id="deleteResponse" class="response"></div>
+<script>
+    window.onload = function() {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (!user || user.role !== 'admin') {
+            window.location.href = '/';
+        }
+    };
+
+    async function deleteRecord() {
+        const id = document.getElementById('deleteId').value;
+        const login = document.getElementById('deleteLogin').value;
+        const password = document.getElementById('deletePassword').value;
+
+        const response = await fetch('/delete', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id, login, password })
+        });
+        const data = await response.json();
+        document.getElementById('deleteResponse').innerText = JSON.stringify(data, null, 2);
+    }
+</script>

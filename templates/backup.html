@@ -1,0 +1,21 @@
+<h2>Create Backup</h2>
+<button onclick="createBackup()">Create Backup</button>
+<div id="backupResponse" class="response"></div>
+<script>
+    window.onload = function() {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (!user) {
+            window.location.href = '/';
+        }
+    };
+
+    async function createBackup() {
+        const response = await fetch('/backup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({})
+        });
+        const data = await response.json();
+        document.getElementById('backupResponse').innerText = JSON.stringify(data, null, 2);
+    }
+</script>

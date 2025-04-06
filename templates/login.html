@@ -1,0 +1,24 @@
+<h2>Login</h2>
+<input type="text" id="loginLogin" placeholder="Login" required>
+<input type="password" id="loginPassword" placeholder="Password" required>
+<button onclick="login()">Login</button>
+<div id="loginResponse" class="response"></div>
+<script>
+    async function login() {
+        const login = document.getElementById('loginLogin').value;
+        const password = document.getElementById('loginPassword').value;
+
+        const response = await fetch('/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ login, password })
+        });
+        const data = await response.json();
+        document.getElementById('loginResponse').innerText = JSON.stringify(data, null, 2);
+
+        if (data.status === "Login successful") {
+            localStorage.setItem('user', JSON.stringify({ login: data.user, role: data.isAdmin ? 'admin' : 'user' }));
+            window.location.href = '/';
+        }
+    }
+</script>

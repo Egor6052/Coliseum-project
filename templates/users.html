@@ -1,0 +1,22 @@
+<h2>View All Users (Admin Only)</h2>
+<input type="text" id="usersLogin" placeholder="Admin Login" required>
+<input type="password" id="usersPassword" placeholder="Admin Password" required>
+<button onclick="viewUsers()">View Users</button>
+<div id="usersResponse" class="response"></div>
+<script>
+    window.onload = function() {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (!user || user.role !== 'admin') {
+            window.location.href = '/';
+        }
+    };
+
+    async function viewUsers() {
+        const login = document.getElementById('usersLogin').value;
+        const password = document.getElementById('usersPassword').value;
+
+        const response = await fetch(`/users?login=${encodeURIComponent(login)}&password=${encodeURIComponent(password)}`);
+        const data = await response.json();
+        document.getElementById('usersResponse').innerText = JSON.stringify(data, null, 2);
+    }
+</script>

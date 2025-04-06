@@ -1,0 +1,30 @@
+<h2>Register</h2>
+<input type="text" id="regLogin" placeholder="Login" required>
+<input type="password" id="regPassword" placeholder="Password" required>
+<input type="email" id="regEmail" placeholder="Email" required>
+<select id="regRole">
+    <option value="user">User</option>
+    <option value="admin">Admin</option>
+</select>
+<button onclick="register()">Register</button>
+<div id="regResponse" class="response"></div>
+<script>
+    async function register() {
+        const login = document.getElementById('regLogin').value;
+        const password = document.getElementById('regPassword').value;
+        const email = document.getElementById('regEmail').value;
+        const role = document.getElementById('regRole').value;
+
+        const response = await fetch('/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ login, password, email, role })
+        });
+        const data = await response.json();
+        document.getElementById('regResponse').innerText = JSON.stringify(data, null, 2);
+
+        if (data.status === "User registered successfully") {
+            window.location.href = '/login';
+        }
+    }
+</script>

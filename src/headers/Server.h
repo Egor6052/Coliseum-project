@@ -28,20 +28,11 @@ public:
     void ConfigFields();
 
     // http
+    // std::string getCommonHeader();
+    // std::string getCommonFooter();
+    // std::string readFile(const std::string& path);
     void http_start();
     void http_server(const httplib::Request& req, httplib::Response& res);
-
-    // void run();
-    // void accept();
-    // void handleClient(std::shared_ptr<boost::asio::ip::tcp::socket> socket);
-    // void process_request(std::shared_ptr<boost::asio::ip::tcp::socket> socket, 
-    // const boost::beast::http::request<boost::beast::http::string_body>& req);
-    
-    // Retrieving the request body
-    // std::string getRequestBody(const std::string& request);
-
-    // Getting a parameter from the request body
-    // std::string extractParameter(const std::string& body, const std::string& param);
     
     void createCSV(const std::string& filename);
     void sendToEmail(const std::string& recipient, const std::string& filename);
