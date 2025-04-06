@@ -10,7 +10,7 @@ std::string Database::getNameSensor(){
     std::uniform_int_distribution<int> distribution(1, 3);
     int randomInt = distribution(generator);
 
-    std::string SensorName = "Sensor" + std::to_string(randomInt);
+    std::string SensorName = "Office" + std::to_string(randomInt);
     
     return SensorName;
 }

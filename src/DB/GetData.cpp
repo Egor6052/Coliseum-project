@@ -20,20 +20,32 @@ std::string Database::getData() {
             logError(mysql_error(conn));
         }
 
+        // Отримуємо поточну дату у форматі "YYYY-MM-DD HH:MM:SS"
+        std::string currentDateTime = getCurrentDateTime();
+        // Витягуємо рік і місяць із поточної дати (наприклад, "2025-04")
+        std::string currentYearMonth = currentDateTime.substr(0, 7);
+
         nlohmann::json jsonData = nlohmann::json::array();
         MYSQL_ROW row;
         while ((row = mysql_fetch_row(result))) {
-            nlohmann::json sensor = {
-                {"id", std::stoi(row[0])},
-                {"date", row[1]},
-                {"ip_address", row[2]},
-                {"sensor_name", row[3]},
-                {"current", std::stof(row[4])},
-                {"voltage", std::stof(row[5])},
-                {"active_power", std::stof(row[6])},
-                {"reactive_power", std::stof(row[7])}
-            };
-            jsonData.push_back(sensor);
+            // Отримуємо дату з запису (формат: "2025-04-06 22:15:11")
+            std::string recordDate = row[1];
+            std::string recordYearMonth = recordDate.substr(0, 7); // Витягуємо "2025-04"
+
+            // Перевіряємо, чи місяць і рік збігаються з поточними
+            if (recordYearMonth == currentYearMonth) {
+                nlohmann::json sensor = {
+                    {"id", std::stoi(row[0])},
+                    {"date", row[1]},
+                    {"ip_address", row[2]},
+                    {"sensor_name", row[3]},
+                    {"current", std::stof(row[4])},
+                    {"voltage", std::stof(row[5])},
+                    {"active_power", std::stof(row[6])},
+                    {"reactive_power", std::stof(row[7])}
+                };
+                jsonData.push_back(sensor);
+            }
         }
 
         mysqlDisconnection(result);

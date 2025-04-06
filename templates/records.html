@@ -1,4 +1,4 @@
-<h2>View Records (Last 30 Days)</h2>
+<h2>View Records (Current Month)</h2>
 <button onclick="viewRecords()">View Records</button>
 <div id="recordsResponse" class="response"></div>
 <script>
@@ -21,21 +21,9 @@
         // Парсимо рядок data.data у JSON
         const records = JSON.parse(data.data);
 
-        // Поточна дата — 6 квітня 2025 року
-        const now = new Date('2025-04-06');
-        // Дата 30 днів тому
-        const thirtyDaysAgo = new Date(now);
-        thirtyDaysAgo.setDate(now.getDate() - 30);
-
-        // Фільтруємо записи за останні 30 днів
-        const filteredRecords = records.filter(record => {
-            const recordDate = new Date(record.date);
-            return recordDate >= thirtyDaysAgo && recordDate <= now;
-        });
-
-        // Якщо немає записів за останні 30 днів
-        if (filteredRecords.length === 0) {
-            document.getElementById('recordsResponse').innerText = "No records found for the last 30 days.";
+        // Якщо немає записів за поточний місяць
+        if (records.length === 0) {
+            document.getElementById('recordsResponse').innerText = "No records found for the current month.";
             return;
         }
 
@@ -81,7 +69,7 @@
         `;
 
         // Додаємо рядки до таблиці
-        filteredRecords.forEach(record => {
+        records.forEach(record => {
             tableHtml += `
                 <tr>
                     <td>${record.id}</td>
