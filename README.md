@@ -37,7 +37,7 @@ The distributed data collection system (hereinafter "the System") is designed fo
 ## API
 ---
 ```sh
-http://localhost:8080/api/data
+http://localhost:8080/
 ```
 
 ## Compiling
@@ -67,11 +67,6 @@ Restart Daemon
 sudo systemctl restart SensorDaemon.service
 ```
 
-Check Daemon Status
-```sh
-sudo systemctl status SensorDaemon.service
-```
-
 Disable Daemon
 ```sh
 sudo systemctl disable SensorDaemon.service
@@ -86,7 +81,12 @@ Start daemon
 sudo systemctl start SensorDaemon.service
 ```
 
-### Start server:
+Check Daemon Status
+```sh
+sudo systemctl status SensorDaemon.service
+```
+
+### Start database:
 ---
 ```sh
 sudo systemctl start mysqld

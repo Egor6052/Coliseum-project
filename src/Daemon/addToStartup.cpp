@@ -48,6 +48,7 @@ void Daemon::addToStartup() {
         logError("Error: Failed to reload systemd daemon!");
         return;
     }
+    std::cout << "Daemon reloaded successful!" << std::endl;
 
     // Включення автозапуску
     int enableStatus = system("sudo systemctl enable SensorDaemon.service");
