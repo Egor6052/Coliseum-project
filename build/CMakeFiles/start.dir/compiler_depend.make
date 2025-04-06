@@ -4273,9 +4273,17 @@ CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o: /home/admin1/Стільни�
   /home/admin1/Стільниця/Coliseum-project/src/headers/Daemon.h \
   /home/admin1/Стільниця/Coliseum-project/src/headers/Logger.h \
   /usr/include/alloca.h \
+  /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm/bitsperlong.h \
   /usr/include/asm/errno.h \
+  /usr/include/asm/posix_types.h \
+  /usr/include/asm/posix_types_64.h \
+  /usr/include/asm/types.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
   /usr/include/bits/cpu-set.h \
@@ -4293,6 +4301,9 @@ CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o: /home/admin1/Стільни�
   /usr/include/bits/sched.h \
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
+  /usr/include/bits/stat.h \
+  /usr/include/bits/statx-generic.h \
+  /usr/include/bits/statx.h \
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
@@ -4300,6 +4311,7 @@ CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o: /home/admin1/Стільни�
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
+  /usr/include/bits/struct_stat.h \
   /usr/include/bits/thread-shared-types.h \
   /usr/include/bits/time.h \
   /usr/include/bits/time64.h \
@@ -4324,6 +4336,8 @@ CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o: /home/admin1/Стільни�
   /usr/include/bits/types/struct___jmp_buf_tag.h \
   /usr/include/bits/types/struct_itimerspec.h \
   /usr/include/bits/types/struct_sched_param.h \
+  /usr/include/bits/types/struct_statx.h \
+  /usr/include/bits/types/struct_statx_timestamp.h \
   /usr/include/bits/types/struct_timespec.h \
   /usr/include/bits/types/struct_timeval.h \
   /usr/include/bits/types/struct_tm.h \
@@ -4452,6 +4466,10 @@ CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o: /home/admin1/Стільни�
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/stat.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/linux/types.h \
   /usr/include/locale.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
@@ -4463,6 +4481,7 @@ CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o: /home/admin1/Стільни�
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
+  /usr/include/sys/stat.h \
   /usr/include/sys/types.h \
   /usr/include/time.h \
   /usr/include/wchar.h \
@@ -10347,6 +10366,26 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 
 /home/admin1/Стільниця/Coliseum-project/src/Daemon/addToStartup.cpp:
 
+/usr/include/asm-generic/posix_types.h:
+
+/usr/include/asm/bitsperlong.h:
+
+/usr/include/asm/posix_types_64.h:
+
+/usr/include/asm/types.h:
+
+/usr/include/c++/14/bits/basic_ios.tcc:
+
+/usr/include/bits/stat.h:
+
+/usr/include/c++/14/string:
+
+/usr/include/bits/statx.h:
+
+/usr/include/linux/stat.h:
+
+/usr/include/sys/stat.h:
+
 /usr/include/c++/14/bits/random.tcc:
 
 /home/admin1/Стільниця/Coliseum-project/src/Daemon/removeFromAutostart.cpp:
@@ -10371,25 +10410,17 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 
 /usr/include/asm-generic/param.h:
 
-/usr/include/asm-generic/posix_types.h:
-
 /usr/include/asm-generic/socket.h:
 
 /usr/include/asm-generic/sockios.h:
-
-/usr/include/asm/bitsperlong.h:
 
 /usr/include/nlohmann/detail/conversions/from_json.hpp:
 
 /usr/include/asm/param.h:
 
-/usr/include/asm/posix_types_64.h:
-
 /usr/include/bits/mathcalls-helper-functions.h:
 
 /usr/include/asm/socket.h:
-
-/usr/include/asm/types.h:
 
 /usr/include/bits/fcntl-linux.h:
 
@@ -10432,14 +10463,6 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 /usr/include/bits/socket.h:
 
 /usr/include/bits/ss_flags.h:
-
-/usr/include/c++/14/bits/basic_ios.tcc:
-
-/usr/include/bits/stat.h:
-
-/usr/include/c++/14/string:
-
-/usr/include/bits/statx.h:
 
 /usr/include/bits/types/siginfo_t.h:
 
@@ -10515,8 +10538,6 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 
 /usr/include/linux/close_range.h:
 
-/usr/include/linux/stat.h:
-
 /usr/include/netinet/in.h:
 
 /usr/include/c++/14/bits/regex_error.h:
@@ -10528,5 +10549,3 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 /usr/include/rpc/netdb.h:
 
 /usr/include/sys/param.h:
-
-/usr/include/sys/stat.h:

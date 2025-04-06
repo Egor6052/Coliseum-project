@@ -2,14 +2,23 @@
 #include <fstream>
 #include <cstdlib>
 #include <string>
+#include <sys/stat.h>
 
 #include "../headers/Daemon.h"
+
+// Перевірка, чи існує файл
+bool fileExists(const std::string& filename) {
+    struct stat buffer;
+    return (stat(filename.c_str(), &buffer) == 0);
+}
 
 // sudo systemctl daemon-reload
 
 // sudo systemctl restart SensorDaemon.service
 
 // sudo systemctl status SensorDaemon.service
+
+// sudo journalctl -u SensorDaemon.service
 
 // Додавання до автозапуску
 void Daemon::addToStartup() {
@@ -20,37 +29,35 @@ void Daemon::addToStartup() {
         return;
     }
 
-    std::ofstream serviceFile(servicePath, std::ios::out | std::ios::trunc);
-    if (!serviceFile) {
-        std::string errorMessage = "Could not open " + servicePath + " for writing.\n";
-        std::cerr << errorMessage;
-        logError(errorMessage);
-        return;
+    // Перевіряємо, чи існує файл
+    if (!fileExists(servicePath)) {
+        std::ofstream serviceFile(servicePath, std::ios::out | std::ios::trunc);
+        if (!serviceFile) {
+            std::string errorMessage = "Could not open " + servicePath + " for writing.\n";
+            std::cerr << errorMessage;
+            logError(errorMessage);
+            return;
+        }
+
+        // Записуємо вміст у файл
+        serviceFile << "[Unit]\n";
+        serviceFile << "Description=SensorDaemon\n";
+        serviceFile << "After=network.target\n\n";
+
+        serviceFile << "[Service]\n";
+        serviceFile << "ExecStart=/home/admin1/Стільниця/Coliseum-project/build/start\n";
+        serviceFile << "Restart=always\n";
+        serviceFile << "User=root\n";
+        serviceFile << "WorkingDirectory=/\n\n";
+
+        serviceFile << "[Install]\n";
+        serviceFile << "WantedBy=multi-user.target\n";
+
+        serviceFile.close();
+        std::cout << "File created: " << servicePath << std::endl;
+    } else {
+        std::cout << "File already exists: " << servicePath << std::endl;
     }
-
-    // Отримуємо домашній шлях користувача (для підтримки ~)
-    // const char* homeDir = getenv("HOME");
-    // if (homeDir == nullptr) {
-    //     std::string errorMessage = "Error: Unable to find home directory!\n";
-    //     std::cerr << errorMessage;
-    //     logError(errorMessage);
-    //     return;
-    // }
-
-    serviceFile << "[Unit]\n";
-    serviceFile << "Description=SensorDaemon\n";
-    serviceFile << "After=network.target\n\n";
-
-    serviceFile << "[Service]\n";
-    serviceFile << "ExecStart=/home/admin1/Стільниця/Coliseum-project/build/start\n";
-    serviceFile << "Restart=always\n";
-    serviceFile << "User=root\n";
-    serviceFile << "WorkingDirectory=/\n\n";
-
-    serviceFile << "[Install]\n";
-    serviceFile << "WantedBy=multi-user.target\n";
-
-    serviceFile.close();
 
     // Оновлення systemd
     int reloadStatus = system("sudo systemctl daemon-reload");
