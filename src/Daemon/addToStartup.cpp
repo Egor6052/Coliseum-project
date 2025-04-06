@@ -24,7 +24,6 @@ void Daemon::addToStartup() {
         return;
     }
 
-    // Записуємо вміст у файл
     serviceFile << "[Unit]\n";
     serviceFile << "Description=SensorDaemon\n";
     serviceFile << "After=network.target\n\n";
@@ -39,16 +38,17 @@ void Daemon::addToStartup() {
     serviceFile << "WantedBy=multi-user.target\n";
 
     serviceFile.close();
-    std::cout << "File created/overwritten: " << servicePath << std::endl;
+    // std::cout << "File created/overwritten: " << servicePath << std::endl;
 
     // Оновлення systemd
     int reloadStatus = system("sudo systemctl daemon-reload");
+    // std::cout << "Daemon reloaded successful!" << std::endl;
+
     if (reloadStatus != 0) {
         std::cerr << "Error: Failed to reload systemd daemon!" << std::endl;
         logError("Error: Failed to reload systemd daemon!");
         return;
     }
-    std::cout << "Daemon reloaded successful!" << std::endl;
 
     // Включення автозапуску
     int enableStatus = system("sudo systemctl enable SensorDaemon.service");

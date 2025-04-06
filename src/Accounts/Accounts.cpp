@@ -44,11 +44,11 @@ void Accounts::setEmail(std::string valueEmail) {
 }
 
 std::string Accounts::getUserName(std::string uid) {
-    
     try {
         mysqlConnect();
 
         std::string query = "SELECT login FROM " + getDBUsersName() + " WHERE uid = '" + uid + "'";
+        std::cout << "Executing query: " << query << std::endl;
         if (mysql_query(conn, query.c_str())) {
             throw std::runtime_error("Failed to execute query: " + std::string(mysql_error(conn)));
             logError("Failed to execute query: " + std::string(mysql_error(conn)));
@@ -62,6 +62,7 @@ std::string Accounts::getUserName(std::string uid) {
 
         MYSQL_ROW row = mysql_fetch_row(res);
         std::string result = (row && row[0]) ? row[0] : "";
+        std::cout << "Fetched username: " << result << std::endl;
 
         setName(result);
 

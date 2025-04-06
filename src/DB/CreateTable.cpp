@@ -21,7 +21,7 @@ void Database::CreateTable() {
             logError("Failed to create " + getDBUsersName() + " table: " + std::string(mysql_error(conn)));
         }
 
-        std::cout << "\033[1m\033[35m⋆⟡₊⊹\033[36mTable " + getDBUsersName() + " created successfully!\033[35m⊹₊⟡⋆\033[0m\n" << std::endl;
+        std::cout << "\033[1m\033[35m⋆⟡₊⊹\033[36mTable " + getDBUsersName() + " created successfully!\033[35m⊹₊⟡⋆\033[0m\n";
 
         // Створення таблиці для показників датчиків
         std::string createSensorDataTableQuery = "CREATE TABLE IF NOT EXISTS " + getDBName() + " ("

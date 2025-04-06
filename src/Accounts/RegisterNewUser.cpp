@@ -39,6 +39,12 @@ void Accounts::registerNewUser(std::string login, std::string password, std::str
             logError("Failed to insert " + userRole + ": " + std::string(mysql_error(conn)));
         }
 
+        // Фіксуємо транзакцію
+        if (mysql_commit(conn)) {
+            throw std::runtime_error("Failed to commit transaction: " + std::string(mysql_error(conn)));
+            logError("Failed to commit transaction: " + std::string(mysql_error(conn)));
+        }
+
         std::cout << userRole << " registered successfully: " 
                 << "login: " << login
                 << ", UID: " << uid 
@@ -50,6 +56,8 @@ void Accounts::registerNewUser(std::string login, std::string password, std::str
         std::string errorMessage = "Error: " + std::string(e.what()) + "\n";
         std::cerr << errorMessage;
         logError(errorMessage);
+        // Якщо сталася помилка, відкатуємо транзакцію
+        mysql_rollback(conn);
         mysqlDisconnection();
     }
 }
