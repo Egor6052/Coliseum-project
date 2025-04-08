@@ -29,10 +29,10 @@ void Daemon::addToStartup() {
     serviceFile << "After=network.target\n\n";
 
     serviceFile << "[Service]\n";
-    serviceFile << "ExecStart=/home/admin1/Стільниця/Coliseum-project/build/start\n";
+    serviceFile << "ExecStart=" + program_path + "\n";
     serviceFile << "Restart=always\n";
-    serviceFile << "User=admin1\n";
-    serviceFile << "WorkingDirectory=/\n\n";
+    serviceFile << "User=root\n";
+    serviceFile << "WorkingDirectory=" + working_directory + "\n\n";
 
     serviceFile << "[Install]\n";
     serviceFile << "WantedBy=multi-user.target\n";

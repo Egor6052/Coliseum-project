@@ -1,21 +1,131 @@
 <h2>Delete Record (Admin Only)</h2>
-<input type="text" id="deleteId" placeholder="Record ID" required>
-<input type="text" id="deleteLogin" placeholder="Admin Login" required>
-<input type="password" id="deletePassword" placeholder="Admin Password" required>
-<button onclick="deleteRecord()">Delete</button>
+
+<!-- Форма для видалення за ID (опціональна) -->
+<div>
+    <input type="text" id="deleteId" placeholder="Record ID" required>
+    <input type="text" id="deleteLogin" placeholder="Admin Login" required>
+    <input type="password" id="deletePassword" placeholder="Admin Password" required>
+    <button onclick="deleteRecord()">Delete by ID</button>
+</div>
+
+<!-- Список записів із кнопками для видалення -->
+<h3>All Records</h3>
+<div id="recordsList" class="response"></div>
 <div id="deleteResponse" class="response"></div>
+
 <script>
     window.onload = function() {
         const user = JSON.parse(localStorage.getItem('user'));
         if (!user || user.role !== 'admin') {
             window.location.href = '/';
+        } else {
+            // Завантажуємо список записів при завантаженні сторінки
+            loadRecords();
         }
     };
 
-    async function deleteRecord() {
-        const id = document.getElementById('deleteId').value;
+    // Функція для завантаження всіх записів
+    async function viewRecords() {
+        const response = await fetch('/delete?fetch=true');
+        const data = await response.json();
+        
+        if (data.status !== "Success") {
+            document.getElementById('recordsResponse').innerText = "Error: Could not fetch records";
+            return;
+        }
+
+        // Парсимо рядок data.data у JSON
+        const records = JSON.parse(data.data);
+
+        // Якщо немає записів за поточний місяць
+        if (records.length === 0) {
+            document.getElementById('recordsResponse').innerText = "No records found for the current month.";
+            return;
+        }
+
+        // Створюємо HTML-таблицю
+        let tableHtml = `
+            <style>
+                .records-table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin-top: 10px;
+                    font-size: 14px;
+                }
+                .records-table th, .records-table td {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    text-align: center;
+                }
+                .records-table th {
+                    background-color: #333;
+                    color: white;
+                }
+                .records-table tr:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+                .records-table tr:hover {
+                    background-color: #ddd;
+                }
+            </style>
+            <table class="records-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Sensor Name</th>
+                        <th>IP Address</th>
+                        <th>Date</th>
+                        <th>Active Power (W)</th>
+                        <th>Reactive Power (VAR)</th>
+                        <th>Voltage (V)</th>
+                        <th>Current (A)</th>
+                    </tr>
+                </thead>
+                <tbody>
+        `;
+
+        // Додаємо рядки до таблиці
+        records.forEach(record => {
+            tableHtml += `
+                <tr>
+                    <td>${record.id}</td>
+                    <td>${record.sensor_name}</td>
+                    <td>${record.ip_address}</td>
+                    <td>${record.date}</td>
+                    <td>${record.active_power.toFixed(2)}</td>
+                    <td>${record.reactive_power.toFixed(2)}</td>
+                    <td>${record.voltage.toFixed(2)}</td>
+                    <td>${record.current.toFixed(2)}</td>
+                </tr>
+            `;
+        });
+
+        tableHtml += `
+                </tbody>
+            </table>
+        `;
+
+        // Вставляємо таблицю у DOM
+        document.getElementById('recordsResponse').innerHTML = tableHtml;
+    }
+
+    // Функція для видалення запису
+    async function deleteRecord(recordId) {
         const login = document.getElementById('deleteLogin').value;
         const password = document.getElementById('deletePassword').value;
+
+        // Якщо recordId не передано (видалення через форму), беремо значення з поля
+        const id = recordId || document.getElementById('deleteId').value;
+
+        if (!id) {
+            document.getElementById('deleteResponse').innerText = "Error: Record ID is required";
+            return;
+        }
+
+        if (!login || !password) {
+            document.getElementById('deleteResponse').innerText = "Error: Admin login and password are required";
+            return;
+        }
 
         const response = await fetch('/delete', {
             method: 'POST',
@@ -23,6 +133,13 @@
             body: JSON.stringify({ id, login, password })
         });
         const data = await response.json();
-        document.getElementById('deleteResponse').innerText = JSON.stringify(data, null, 2);
+
+        if (data.status === "Success") {
+            document.getElementById('deleteResponse').innerText = `Record ${id} deleted successfully`;
+            // Оновлюємо список записів після видалення
+            loadRecords();
+        } else {
+            document.getElementById('deleteResponse').innerText = data.message || "Failed to delete record";
+        }
     }
 </script>
