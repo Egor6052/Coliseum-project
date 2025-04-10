@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/admin1/Стільниця/Coliseum-project/./lib -I/usr/include/mysql
 
-CXX_FLAGS = -O3 -DNDEBUG -Wall -fPIC
+CXX_FLAGS = -Wall -fPIC
 

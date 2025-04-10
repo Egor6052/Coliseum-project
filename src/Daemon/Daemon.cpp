@@ -9,13 +9,12 @@
 
 Daemon::Daemon(){
     this->servicePath = "/etc/systemd/system/SensorDaemon.service";
-    this->configFilePath = absolutePath() + "/conf/configFile.json";
-    this->program_path = absolutePath() + "/build/dump2can";
+    this->configFilePath = absolutePath() + "/config/configFile.conf";
+    this->program_path = absolutePath() + "/build/start";
     this->working_directory = absolutePath();
 }
 
 Daemon::~Daemon(){  }
-
 
 std::string Daemon::absolutePath() {
     char result[PATH_MAX];

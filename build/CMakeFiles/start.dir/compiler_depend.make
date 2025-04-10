@@ -34,9 +34,7 @@ CMakeFiles/start.dir/src/Accounts/Accounts.cpp.o: /home/admin1/Стільниц�
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -254,9 +252,7 @@ CMakeFiles/start.dir/src/Accounts/GenerateUID.cpp.o: /home/admin1/Стільни
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -512,9 +508,7 @@ CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.o: /home/admin1/Стільни
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -871,9 +865,7 @@ CMakeFiles/start.dir/src/Accounts/GetUserData.cpp.o: /home/admin1/Стільни
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -1084,9 +1076,7 @@ CMakeFiles/start.dir/src/Accounts/IsAdministrator.cpp.o: /home/admin1/Стіль
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -1295,9 +1285,7 @@ CMakeFiles/start.dir/src/Accounts/Login.cpp.o: /home/admin1/Стільниця/C
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -1505,9 +1493,7 @@ CMakeFiles/start.dir/src/Accounts/RegisterNewUser.cpp.o: /home/admin1/Стіль
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -1718,9 +1704,7 @@ CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o: /home/admin1/Стільниця/
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -1959,9 +1943,7 @@ CMakeFiles/start.dir/src/DB/CreateTable.cpp.o: /home/admin1/Стільниця/C
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -2182,9 +2164,7 @@ CMakeFiles/start.dir/src/DB/Database.cpp.o: /home/admin1/Стільниця/Coli
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -2544,9 +2524,7 @@ CMakeFiles/start.dir/src/DB/DateTime.cpp.o: /home/admin1/Стільниця/Coli
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -2786,9 +2764,7 @@ CMakeFiles/start.dir/src/DB/DeleteData.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -3159,9 +3135,7 @@ CMakeFiles/start.dir/src/DB/GetAllUsers.cpp.o: /home/admin1/Стільниця/C
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -3532,9 +3506,7 @@ CMakeFiles/start.dir/src/DB/GetData.cpp.o: /home/admin1/Стільниця/Colis
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -3892,9 +3864,7 @@ CMakeFiles/start.dir/src/DB/dataCollector.cpp.o: /home/admin1/Стільниця
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -4077,15 +4047,23 @@ CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/asm/errno.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
+  /usr/include/bits/confname.h \
   /usr/include/bits/cpu-set.h \
   /usr/include/bits/endian.h \
   /usr/include/bits/endianness.h \
+  /usr/include/bits/environments.h \
   /usr/include/bits/errno.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
+  /usr/include/bits/getopt_core.h \
+  /usr/include/bits/getopt_posix.h \
   /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/local_lim.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
+  /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/posix2_lim.h \
+  /usr/include/bits/posix_opt.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -4093,9 +4071,9 @@ CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdio.h \
+  /usr/include/bits/stdint-least.h \
+  /usr/include/bits/stdint-uintn.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -4131,14 +4109,18 @@ CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/uio_lim.h \
+  /usr/include/bits/unistd_ext.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/bits/xopen_lim.h \
   /usr/include/c++/14/backward/binders.h \
   /usr/include/c++/14/bit \
   /usr/include/c++/14/bits/alloc_traits.h \
+  /usr/include/c++/14/bits/allocated_ptr.h \
   /usr/include/c++/14/bits/allocator.h \
   /usr/include/c++/14/bits/basic_ios.h \
   /usr/include/c++/14/bits/basic_ios.tcc \
@@ -4146,6 +4128,7 @@ CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/c++/14/bits/basic_string.tcc \
   /usr/include/c++/14/bits/char_traits.h \
   /usr/include/c++/14/bits/charconv.h \
+  /usr/include/c++/14/bits/chrono.h \
   /usr/include/c++/14/bits/codecvt.h \
   /usr/include/c++/14/bits/concept_check.h \
   /usr/include/c++/14/bits/cpp_type_traits.h \
@@ -4154,6 +4137,10 @@ CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/c++/14/bits/exception.h \
   /usr/include/c++/14/bits/exception_defines.h \
   /usr/include/c++/14/bits/exception_ptr.h \
+  /usr/include/c++/14/bits/fs_dir.h \
+  /usr/include/c++/14/bits/fs_fwd.h \
+  /usr/include/c++/14/bits/fs_ops.h \
+  /usr/include/c++/14/bits/fs_path.h \
   /usr/include/c++/14/bits/fstream.tcc \
   /usr/include/c++/14/bits/functexcept.h \
   /usr/include/c++/14/bits/functional_hash.h \
@@ -4163,8 +4150,11 @@ CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/c++/14/bits/istream.tcc \
   /usr/include/c++/14/bits/locale_classes.h \
   /usr/include/c++/14/bits/locale_classes.tcc \
+  /usr/include/c++/14/bits/locale_conv.h \
   /usr/include/c++/14/bits/locale_facets.h \
   /usr/include/c++/14/bits/locale_facets.tcc \
+  /usr/include/c++/14/bits/locale_facets_nonio.h \
+  /usr/include/c++/14/bits/locale_facets_nonio.tcc \
   /usr/include/c++/14/bits/localefwd.h \
   /usr/include/c++/14/bits/memory_resource.h \
   /usr/include/c++/14/bits/memoryfwd.h \
@@ -4173,12 +4163,17 @@ CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/c++/14/bits/new_allocator.h \
   /usr/include/c++/14/bits/ostream.tcc \
   /usr/include/c++/14/bits/ostream_insert.h \
+  /usr/include/c++/14/bits/parse_numbers.h \
   /usr/include/c++/14/bits/postypes.h \
   /usr/include/c++/14/bits/predefined_ops.h \
   /usr/include/c++/14/bits/ptr_traits.h \
+  /usr/include/c++/14/bits/quoted_string.h \
   /usr/include/c++/14/bits/range_access.h \
   /usr/include/c++/14/bits/refwrap.h \
   /usr/include/c++/14/bits/requires_hosted.h \
+  /usr/include/c++/14/bits/shared_ptr.h \
+  /usr/include/c++/14/bits/shared_ptr_base.h \
+  /usr/include/c++/14/bits/sstream.tcc \
   /usr/include/c++/14/bits/std_abs.h \
   /usr/include/c++/14/bits/stl_algobase.h \
   /usr/include/c++/14/bits/stl_construct.h \
@@ -4191,6 +4186,7 @@ CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/c++/14/bits/streambuf_iterator.h \
   /usr/include/c++/14/bits/string_view.tcc \
   /usr/include/c++/14/bits/stringfwd.h \
+  /usr/include/c++/14/bits/unique_ptr.h \
   /usr/include/c++/14/bits/uses_allocator.h \
   /usr/include/c++/14/bits/uses_allocator_args.h \
   /usr/include/c++/14/bits/utility.h \
@@ -4198,8 +4194,10 @@ CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/c++/14/cctype \
   /usr/include/c++/14/cerrno \
   /usr/include/c++/14/clocale \
+  /usr/include/c++/14/codecvt \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/ctime \
@@ -4208,20 +4206,28 @@ CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/c++/14/debug/assertions.h \
   /usr/include/c++/14/debug/debug.h \
   /usr/include/c++/14/exception \
+  /usr/include/c++/14/ext/aligned_buffer.h \
   /usr/include/c++/14/ext/alloc_traits.h \
   /usr/include/c++/14/ext/atomicity.h \
+  /usr/include/c++/14/ext/concurrence.h \
   /usr/include/c++/14/ext/numeric_traits.h \
   /usr/include/c++/14/ext/string_conversions.h \
   /usr/include/c++/14/ext/type_traits.h \
+  /usr/include/c++/14/filesystem \
   /usr/include/c++/14/fstream \
   /usr/include/c++/14/initializer_list \
+  /usr/include/c++/14/iomanip \
   /usr/include/c++/14/ios \
   /usr/include/c++/14/iosfwd \
   /usr/include/c++/14/iostream \
   /usr/include/c++/14/istream \
+  /usr/include/c++/14/limits \
+  /usr/include/c++/14/locale \
   /usr/include/c++/14/new \
   /usr/include/c++/14/ostream \
   /usr/include/c++/14/pstl/pstl_config.h \
+  /usr/include/c++/14/ratio \
+  /usr/include/c++/14/sstream \
   /usr/include/c++/14/stdexcept \
   /usr/include/c++/14/streambuf \
   /usr/include/c++/14/string \
@@ -4242,7 +4248,9 @@ CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/c++/14/x86_64-redhat-linux/bits/error_constants.h \
   /usr/include/c++/14/x86_64-redhat-linux/bits/gthr-default.h \
   /usr/include/c++/14/x86_64-redhat-linux/bits/gthr.h \
+  /usr/include/c++/14/x86_64-redhat-linux/bits/messages_members.h \
   /usr/include/c++/14/x86_64-redhat-linux/bits/os_defines.h \
+  /usr/include/c++/14/x86_64-redhat-linux/bits/time_members.h \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -4250,11 +4258,16 @@ CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/features.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
+  /usr/include/libintl.h \
+  /usr/include/limits.h \
+  /usr/include/linux/close_range.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/string.h \
@@ -4264,10 +4277,14 @@ CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
   /usr/include/time.h \
+  /usr/include/unistd.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-redhat-linux/14/include/limits.h \
   /usr/lib/gcc/x86_64-redhat-linux/14/include/stdarg.h \
-  /usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h
+  /usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h \
+  /usr/lib/gcc/x86_64-redhat-linux/14/include/stdint.h \
+  /usr/lib/gcc/x86_64-redhat-linux/14/include/syslimits.h
 
 CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/Daemon/addToStartup.cpp \
   /home/admin1/Стільниця/Coliseum-project/src/headers/Daemon.h \
@@ -4305,9 +4322,7 @@ CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o: /home/admin1/Стільни�
   /usr/include/bits/statx-generic.h \
   /usr/include/bits/statx.h \
   /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -4514,9 +4529,7 @@ CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.o: /home/admin1/Стіл
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -4716,9 +4729,7 @@ CMakeFiles/start.dir/src/Logger/DataTime.cpp.o: /home/admin1/Стільниця/
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -4917,15 +4928,23 @@ CMakeFiles/start.dir/src/Logger/Logger.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/asm/errno.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
+  /usr/include/bits/confname.h \
   /usr/include/bits/cpu-set.h \
   /usr/include/bits/endian.h \
   /usr/include/bits/endianness.h \
+  /usr/include/bits/environments.h \
   /usr/include/bits/errno.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
+  /usr/include/bits/getopt_core.h \
+  /usr/include/bits/getopt_posix.h \
   /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/local_lim.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
+  /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/posix2_lim.h \
+  /usr/include/bits/posix_opt.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -4933,9 +4952,9 @@ CMakeFiles/start.dir/src/Logger/Logger.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdio.h \
+  /usr/include/bits/stdint-least.h \
+  /usr/include/bits/stdint-uintn.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -4971,14 +4990,18 @@ CMakeFiles/start.dir/src/Logger/Logger.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/uio_lim.h \
+  /usr/include/bits/unistd_ext.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/bits/xopen_lim.h \
   /usr/include/c++/14/backward/binders.h \
   /usr/include/c++/14/bit \
   /usr/include/c++/14/bits/alloc_traits.h \
+  /usr/include/c++/14/bits/allocated_ptr.h \
   /usr/include/c++/14/bits/allocator.h \
   /usr/include/c++/14/bits/basic_ios.h \
   /usr/include/c++/14/bits/basic_ios.tcc \
@@ -4986,6 +5009,7 @@ CMakeFiles/start.dir/src/Logger/Logger.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/c++/14/bits/basic_string.tcc \
   /usr/include/c++/14/bits/char_traits.h \
   /usr/include/c++/14/bits/charconv.h \
+  /usr/include/c++/14/bits/chrono.h \
   /usr/include/c++/14/bits/codecvt.h \
   /usr/include/c++/14/bits/concept_check.h \
   /usr/include/c++/14/bits/cpp_type_traits.h \
@@ -4994,6 +5018,10 @@ CMakeFiles/start.dir/src/Logger/Logger.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/c++/14/bits/exception.h \
   /usr/include/c++/14/bits/exception_defines.h \
   /usr/include/c++/14/bits/exception_ptr.h \
+  /usr/include/c++/14/bits/fs_dir.h \
+  /usr/include/c++/14/bits/fs_fwd.h \
+  /usr/include/c++/14/bits/fs_ops.h \
+  /usr/include/c++/14/bits/fs_path.h \
   /usr/include/c++/14/bits/fstream.tcc \
   /usr/include/c++/14/bits/functexcept.h \
   /usr/include/c++/14/bits/functional_hash.h \
@@ -5003,8 +5031,11 @@ CMakeFiles/start.dir/src/Logger/Logger.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/c++/14/bits/istream.tcc \
   /usr/include/c++/14/bits/locale_classes.h \
   /usr/include/c++/14/bits/locale_classes.tcc \
+  /usr/include/c++/14/bits/locale_conv.h \
   /usr/include/c++/14/bits/locale_facets.h \
   /usr/include/c++/14/bits/locale_facets.tcc \
+  /usr/include/c++/14/bits/locale_facets_nonio.h \
+  /usr/include/c++/14/bits/locale_facets_nonio.tcc \
   /usr/include/c++/14/bits/localefwd.h \
   /usr/include/c++/14/bits/memory_resource.h \
   /usr/include/c++/14/bits/memoryfwd.h \
@@ -5013,12 +5044,17 @@ CMakeFiles/start.dir/src/Logger/Logger.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/c++/14/bits/new_allocator.h \
   /usr/include/c++/14/bits/ostream.tcc \
   /usr/include/c++/14/bits/ostream_insert.h \
+  /usr/include/c++/14/bits/parse_numbers.h \
   /usr/include/c++/14/bits/postypes.h \
   /usr/include/c++/14/bits/predefined_ops.h \
   /usr/include/c++/14/bits/ptr_traits.h \
+  /usr/include/c++/14/bits/quoted_string.h \
   /usr/include/c++/14/bits/range_access.h \
   /usr/include/c++/14/bits/refwrap.h \
   /usr/include/c++/14/bits/requires_hosted.h \
+  /usr/include/c++/14/bits/shared_ptr.h \
+  /usr/include/c++/14/bits/shared_ptr_base.h \
+  /usr/include/c++/14/bits/sstream.tcc \
   /usr/include/c++/14/bits/std_abs.h \
   /usr/include/c++/14/bits/stl_algobase.h \
   /usr/include/c++/14/bits/stl_construct.h \
@@ -5031,6 +5067,7 @@ CMakeFiles/start.dir/src/Logger/Logger.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/c++/14/bits/streambuf_iterator.h \
   /usr/include/c++/14/bits/string_view.tcc \
   /usr/include/c++/14/bits/stringfwd.h \
+  /usr/include/c++/14/bits/unique_ptr.h \
   /usr/include/c++/14/bits/uses_allocator.h \
   /usr/include/c++/14/bits/uses_allocator_args.h \
   /usr/include/c++/14/bits/utility.h \
@@ -5038,8 +5075,10 @@ CMakeFiles/start.dir/src/Logger/Logger.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/c++/14/cctype \
   /usr/include/c++/14/cerrno \
   /usr/include/c++/14/clocale \
+  /usr/include/c++/14/codecvt \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/ctime \
@@ -5048,20 +5087,28 @@ CMakeFiles/start.dir/src/Logger/Logger.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/c++/14/debug/assertions.h \
   /usr/include/c++/14/debug/debug.h \
   /usr/include/c++/14/exception \
+  /usr/include/c++/14/ext/aligned_buffer.h \
   /usr/include/c++/14/ext/alloc_traits.h \
   /usr/include/c++/14/ext/atomicity.h \
+  /usr/include/c++/14/ext/concurrence.h \
   /usr/include/c++/14/ext/numeric_traits.h \
   /usr/include/c++/14/ext/string_conversions.h \
   /usr/include/c++/14/ext/type_traits.h \
+  /usr/include/c++/14/filesystem \
   /usr/include/c++/14/fstream \
   /usr/include/c++/14/initializer_list \
+  /usr/include/c++/14/iomanip \
   /usr/include/c++/14/ios \
   /usr/include/c++/14/iosfwd \
   /usr/include/c++/14/iostream \
   /usr/include/c++/14/istream \
+  /usr/include/c++/14/limits \
+  /usr/include/c++/14/locale \
   /usr/include/c++/14/new \
   /usr/include/c++/14/ostream \
   /usr/include/c++/14/pstl/pstl_config.h \
+  /usr/include/c++/14/ratio \
+  /usr/include/c++/14/sstream \
   /usr/include/c++/14/stdexcept \
   /usr/include/c++/14/streambuf \
   /usr/include/c++/14/string \
@@ -5082,7 +5129,9 @@ CMakeFiles/start.dir/src/Logger/Logger.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/c++/14/x86_64-redhat-linux/bits/error_constants.h \
   /usr/include/c++/14/x86_64-redhat-linux/bits/gthr-default.h \
   /usr/include/c++/14/x86_64-redhat-linux/bits/gthr.h \
+  /usr/include/c++/14/x86_64-redhat-linux/bits/messages_members.h \
   /usr/include/c++/14/x86_64-redhat-linux/bits/os_defines.h \
+  /usr/include/c++/14/x86_64-redhat-linux/bits/time_members.h \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -5090,11 +5139,16 @@ CMakeFiles/start.dir/src/Logger/Logger.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/features.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
+  /usr/include/libintl.h \
+  /usr/include/limits.h \
+  /usr/include/linux/close_range.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/sys/cdefs.h \
@@ -5102,10 +5156,14 @@ CMakeFiles/start.dir/src/Logger/Logger.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/sys/single_threaded.h \
   /usr/include/sys/types.h \
   /usr/include/time.h \
+  /usr/include/unistd.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-redhat-linux/14/include/limits.h \
   /usr/lib/gcc/x86_64-redhat-linux/14/include/stdarg.h \
-  /usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h
+  /usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h \
+  /usr/lib/gcc/x86_64-redhat-linux/14/include/stdint.h \
+  /usr/lib/gcc/x86_64-redhat-linux/14/include/syslimits.h
 
 CMakeFiles/start.dir/src/Logger/logError.cpp.o: /home/admin1/Стільниця/Coliseum-project/src/Logger/logError.cpp \
   /home/admin1/Стільниця/Coliseum-project/src/headers/Logger.h \
@@ -5131,9 +5189,7 @@ CMakeFiles/start.dir/src/Logger/logError.cpp.o: /home/admin1/Стільниця/
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -5408,9 +5464,7 @@ CMakeFiles/start.dir/src/Server/Configuration.cpp.o: /home/admin1/Стільни
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -5864,9 +5918,7 @@ CMakeFiles/start.dir/src/Server/Server.cpp.o: /home/admin1/Стільниця/Co
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -6321,9 +6373,7 @@ CMakeFiles/start.dir/src/Server/httpServer.cpp.o: /home/admin1/Стільниц�
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -6719,9 +6769,7 @@ CMakeFiles/start.dir/src/User/UserDB.cpp.o: /home/admin1/Стільниця/Coli
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -7088,9 +7136,7 @@ CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o: /home/admin1/Стільн
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -7325,9 +7371,7 @@ CMakeFiles/start.dir/src/dao/entity/Current.cpp.o: /home/admin1/Стільниц
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -7579,9 +7623,7 @@ CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o: /home/admin1/Стільни
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -7833,9 +7875,7 @@ CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o: /home/admin1/Стільн�
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -8076,9 +8116,7 @@ CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o: /home/admin1/Стільн
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -8295,9 +8333,7 @@ CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o: /home/admin1/Стіль
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -8532,9 +8568,7 @@ CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o: /home/admin1/Стільниц
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -8784,9 +8818,7 @@ CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o: /home/admin1/Стільн
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -9080,9 +9112,7 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -9446,11 +9476,9 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 
 /home/admin1/Стільниця/Coliseum-project/src/Server/Server.cpp:
 
-/usr/lib/gcc/x86_64-redhat-linux/14/include/limits.h:
-
-/usr/include/unistd.h:
-
 /usr/include/sys/ucontext.h:
+
+/usr/include/c++/14/bits/stl_iterator_base_funcs.h:
 
 /usr/include/math.h:
 
@@ -9461,6 +9489,10 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 /usr/include/c++/14/cmath:
 
 /usr/include/c++/14/bits/stl_algo.h:
+
+/home/admin1/Стільниця/Coliseum-project/src/dao/entity/IpAddress.cpp:
+
+/usr/include/c++/14/pstl/execution_defs.h:
 
 /usr/include/c++/14/cstdint:
 
@@ -9592,6 +9624,10 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 
 /usr/include/c++/14/debug/assertions.h:
 
+/usr/include/asm-generic/bitsperlong.h:
+
+/usr/include/c++/14/cwctype:
+
 /usr/include/c++/14/cstdio:
 
 /usr/include/c++/14/bits/utility.h:
@@ -9614,13 +9650,15 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 
 /usr/include/bits/types/__sigval_t.h:
 
+/usr/include/bits/environments.h:
+
 /usr/include/bits/types/cookie_io_functions_t.h:
 
 /home/admin1/Стільниця/Coliseum-project/src/Server/Configuration.cpp:
 
-/usr/include/bits/types/__FILE.h:
-
 /usr/include/features.h:
+
+/usr/include/bits/types/__FILE.h:
 
 /usr/include/c++/14/bits/specfun.h:
 
@@ -9637,8 +9675,6 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 /usr/include/nlohmann/detail/meta/is_sax.hpp:
 
 /usr/include/c++/14/bits/cxxabi_init_exception.h:
-
-/usr/include/c++/14/bits/streambuf_iterator.h:
 
 /home/admin1/Стільниця/Coliseum-project/lib/mysql/ma_list.h:
 
@@ -9674,25 +9710,11 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 
 /usr/include/bits/types/time_t.h:
 
-/home/admin1/Стільниця/Coliseum-project/src/dao/entity/IpAddress.cpp:
-
-/usr/include/c++/14/pstl/execution_defs.h:
-
-/usr/include/c++/14/cwctype:
-
-/usr/include/asm-generic/bitsperlong.h:
-
-/usr/include/bits/stdlib-bsearch.h:
-
 /usr/include/bits/types/struct_timeval.h:
 
 /usr/include/c++/14/bits/stl_construct.h:
 
 /home/admin1/Стільниця/Coliseum-project/src/headers/Accounts.h:
-
-/home/admin1/Стільниця/Coliseum-project/lib/mysql/mariadb_stmt.h:
-
-/usr/include/bits/types/timer_t.h:
 
 /usr/include/bits/setjmp.h:
 
@@ -9713,6 +9735,8 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 /usr/include/c++/14/bits/locale_classes.tcc:
 
 /usr/include/libintl.h:
+
+/usr/include/c++/14/bits/streambuf_iterator.h:
 
 /usr/include/bits/libc-header-start.h:
 
@@ -9788,6 +9812,10 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 
 /usr/include/c++/14/bits/stl_multiset.h:
 
+/usr/include/c++/14/algorithm:
+
+/usr/lib/gcc/x86_64-redhat-linux/14/include/stdarg.h:
+
 /usr/include/bits/fp-fast.h:
 
 /usr/include/c++/14/ext/atomicity.h:
@@ -9813,6 +9841,10 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 /usr/include/c++/14/bits/locale_facets.h:
 
 /usr/include/bits/pthreadtypes.h:
+
+/home/admin1/Стільниця/Coliseum-project/lib/mysql/mariadb_stmt.h:
+
+/usr/include/bits/types/timer_t.h:
 
 /usr/include/bits/timex.h:
 
@@ -9871,8 +9903,6 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 /usr/include/bits/stdint-least.h:
 
 /usr/include/c++/14/bits/invoke.h:
-
-/usr/include/bits/environments.h:
 
 /usr/include/c++/14/exception:
 
@@ -10034,6 +10064,10 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 
 /usr/include/signal.h:
 
+/usr/include/assert.h:
+
+/home/admin1/Стільниця/Coliseum-project/lib/mysql/mariadb_version-x86_64.h:
+
 /usr/include/c++/14/x86_64-redhat-linux/bits/gthr-default.h:
 
 /usr/include/c++/14/iostream:
@@ -10052,27 +10086,11 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 
 /home/admin1/Стільниця/Coliseum-project/src/headers/Database.h:
 
-/usr/include/c++/14/bits/stl_iterator_base_funcs.h:
-
-/home/admin1/Стільниця/Coliseum-project/lib/mysql/mariadb_version-x86_64.h:
-
-/usr/include/assert.h:
-
-/usr/include/bits/stdio.h:
-
-/usr/include/nlohmann/detail/json_pointer.hpp:
-
-/usr/include/linux/param.h:
-
 /usr/include/c++/14/bits/stl_iterator_base_types.h:
 
 /usr/include/nlohmann/byte_container_with_subtype.hpp:
 
 /home/admin1/Стільниця/Coliseum-project/src/DB/Database.cpp:
-
-/usr/lib/gcc/x86_64-redhat-linux/14/include/stdarg.h:
-
-/usr/include/c++/14/algorithm:
 
 /usr/include/c++/14/any:
 
@@ -10224,6 +10242,8 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 
 /usr/include/c++/14/ratio:
 
+/usr/lib/gcc/x86_64-redhat-linux/14/include/limits.h:
+
 /usr/include/json/json.h:
 
 /usr/include/bits/signum-generic.h:
@@ -10283,6 +10303,10 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 /usr/include/nlohmann/detail/json_custom_base_class.hpp:
 
 /usr/include/json/writer.h:
+
+/usr/include/nlohmann/detail/json_pointer.hpp:
+
+/usr/include/linux/param.h:
 
 /usr/include/bits/flt-eval-method.h:
 
@@ -10363,6 +10387,14 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 /home/admin1/Стільниця/Coliseum-project/src/DB/DateTime.cpp:
 
 /home/admin1/Стільниця/Coliseum-project/src/DB/GetAllUsers.cpp:
+
+/usr/include/sys/socket.h:
+
+/usr/include/limits.h:
+
+/usr/include/linux/close_range.h:
+
+/usr/include/unistd.h:
 
 /home/admin1/Стільниця/Coliseum-project/src/Daemon/addToStartup.cpp:
 
@@ -10531,12 +10563,6 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Coliseum-pr
 /usr/include/json/json_features.h:
 
 /usr/include/json/version.h:
-
-/usr/include/sys/socket.h:
-
-/usr/include/limits.h:
-
-/usr/include/linux/close_range.h:
 
 /usr/include/netinet/in.h:
 

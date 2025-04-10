@@ -29,10 +29,10 @@ void Daemon::addToStartup() {
     serviceFile << "After=network.target\n\n";
 
     serviceFile << "[Service]\n";
-    serviceFile << "ExecStart=" + program_path + "\n";
+    serviceFile << "ExecStart=" << program_path << "\n";
     serviceFile << "Restart=always\n";
     serviceFile << "User=root\n";
-    serviceFile << "WorkingDirectory=" + working_directory + "\n\n";
+    serviceFile << "WorkingDirectory=" << working_directory << "/build\n\n";
 
     serviceFile << "[Install]\n";
     serviceFile << "WantedBy=multi-user.target\n";

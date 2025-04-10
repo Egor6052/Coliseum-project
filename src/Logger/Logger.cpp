@@ -2,6 +2,10 @@
 #include <fstream>
 #include <string>
 #include <ctime>
+#include <sstream>
+#include <unistd.h>
+#include <limits.h>
+#include <filesystem>
 
 #include "../headers/Logger.h"
 
@@ -11,7 +15,8 @@ bool fileExists(const std::string& filename) {
 }
 
 Logger::Logger() {
-    std::string logFile = "../logs/" + getLoggerDateTime() + ".log";
+
+    std::string logFile = absolutePath() + "/logs/" + getLoggerDateTime() + ".log";
 
     if (fileExists(logFile)) {
         logStream.open(logFile, std::ios::out | std::ios::app);
@@ -33,5 +38,16 @@ Logger::Logger() {
 Logger::~Logger() {
     if (logStream.is_open()) {
         logStream.close();
+    }
+}
+
+std::string Logger::absolutePath() {
+    char result[PATH_MAX];
+    ssize_t count = readlink("/proc/self/exe", result, PATH_MAX);
+    if (count != -1) {
+        auto path = std::filesystem::path(std::string(result, count));
+        return path.parent_path().parent_path().string();
+    } else {
+        return "";
     }
 }

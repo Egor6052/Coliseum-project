@@ -76,6 +76,7 @@ Enable Daemon
 ```sh
 sudo systemctl enable SensorDaemon.service
 ```
+
 Start daemon
 ```sh
 sudo systemctl start SensorDaemon.service

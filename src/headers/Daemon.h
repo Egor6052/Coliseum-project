@@ -6,7 +6,6 @@
 
 class Daemon : public Logger {
     private:
-        // "/etc/systemd/system/SensorDaemon.service"
         std::string configFilePath;
         std::string servicePath;
         std::string program_path;
