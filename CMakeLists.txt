@@ -65,12 +65,12 @@ set(SOURCE_FILES
 
 # Заголовкові файли
 set(HEADER_FILES
-    ./lib/Accounts.h
-    ./lib/Database.h
-    ./lib/Daemon.h
-    ./lib/Server.h
-    ./lib/UserDB.h
-    ./lib/Logger.h
+    ./src/headers/Accounts.h
+    ./src/headers/Database.h
+    ./src/headers/Daemon.h
+    ./src/headers/Server.h
+    ./src/headers/UserDB.h
+    .//src/headers/Logger.h
 )
 
 # Додавання виконуваного файлу

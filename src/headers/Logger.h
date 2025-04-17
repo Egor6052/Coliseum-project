@@ -15,6 +15,8 @@ public:
     Logger();
     ~Logger();
 
+    // TODO rotate log
+
     std::string getLoggerDateTime();
     
     void logError(const std::string& message);

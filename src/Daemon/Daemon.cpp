@@ -16,6 +16,8 @@ Daemon::Daemon(){
 
 Daemon::~Daemon(){  }
 
+// TODO integration with windows
+
 std::string Daemon::absolutePath() {
     char result[PATH_MAX];
     ssize_t count = readlink("/proc/self/exe", result, PATH_MAX);
