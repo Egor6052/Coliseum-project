@@ -3,7 +3,7 @@
 #include <termios.h>
 #include <unistd.h>
 
-#include "../lib/Server.h"
+#include "../../headers/Server.h"
 
 void Server::RS485(){
 // TODO
@@ -12,13 +12,13 @@ void Server::RS485(){
     int serial_port = open(port, O_RDWR | O_NOCTTY);
     if (serial_port < 0) {
         std::cerr << "Помилка відкриття порту!\n";
-        return 1;
+        // return 1;
     }
 
     struct termios tty;
     if (tcgetattr(serial_port, &tty) != 0) {
         std::cerr << "Помилка отримання налаштувань порту!\n";
-        return 1;
+        // return 1;
     }
 
     // Налаштування порту
@@ -38,5 +38,5 @@ void Server::RS485(){
 
     close(serial_port);
     
-    return 0;
+    // return 0;
 }
