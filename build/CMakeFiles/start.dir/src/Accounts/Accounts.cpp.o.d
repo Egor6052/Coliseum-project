@@ -230,7 +230,7 @@ CMakeFiles/start.dir/src/Accounts/Accounts.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/bitset \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__bit_reference \
-  /Users/mac/Desktop/Coliseum-project/src/Accounts/../headers/UserDB.h \
+  /Users/mac/Desktop/Coliseum-project/src/Accounts/../headers/Database.h \
   /Users/mac/Desktop/Coliseum-project/src/Accounts/../headers/../../lib/mysql/mysql.h \
   /Users/mac/Desktop/Coliseum-project/src/Accounts/../headers/../../lib/mysql/mariadb_com.h \
   /Users/mac/Desktop/Coliseum-project/src/Accounts/../headers/../../lib/mysql/mariadb_version.h \

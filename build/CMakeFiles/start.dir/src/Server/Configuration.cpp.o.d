@@ -305,8 +305,6 @@ CMakeFiles/start.dir/src/Server/Configuration.cpp.o: \
   /usr/local/include/json/value.h /usr/local/include/json/writer.h \
   /Users/mac/Desktop/Coliseum-project/src/Server/../headers/Logger.h \
   /Users/mac/Desktop/Coliseum-project/src/Server/../headers/Database.h \
-  /Users/mac/Desktop/Coliseum-project/src/Server/../headers/Accounts.h \
-  /Users/mac/Desktop/Coliseum-project/src/Server/../headers/UserDB.h \
   /Users/mac/Desktop/Coliseum-project/src/Server/../headers/../../lib/mysql/mysql.h \
   /Users/mac/Desktop/Coliseum-project/src/Server/../headers/../../lib/mysql/mariadb_com.h \
   /Users/mac/Desktop/Coliseum-project/src/Server/../headers/../../lib/mysql/mariadb_version.h \

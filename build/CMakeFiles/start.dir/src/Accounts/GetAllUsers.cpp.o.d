@@ -304,9 +304,8 @@ CMakeFiles/start.dir/src/Accounts/GetAllUsers.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/experimental/__config \
   /Users/mac/Desktop/Coliseum-project/lib/json/nlohmann/detail/macro_unscope.hpp \
   /Users/mac/Desktop/Coliseum-project/lib/json/nlohmann/thirdparty/hedley/hedley_undef.hpp \
-  /Users/mac/Desktop/Coliseum-project/src/Accounts/../headers/Database.h \
   /Users/mac/Desktop/Coliseum-project/src/Accounts/../headers/Accounts.h \
-  /Users/mac/Desktop/Coliseum-project/src/Accounts/../headers/UserDB.h \
+  /Users/mac/Desktop/Coliseum-project/src/Accounts/../headers/Database.h \
   /Users/mac/Desktop/Coliseum-project/src/Accounts/../headers/../../lib/mysql/mysql.h \
   /Users/mac/Desktop/Coliseum-project/src/Accounts/../headers/Logger.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/fstream

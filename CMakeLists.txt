@@ -25,7 +25,7 @@ set(SOURCE_FILES
     src/Daemon/removeFromAutostart.cpp
 
     # User
-    src/User/UserDB.cpp
+    # src/User/UserDB.cpp
 
     # Server
     src/Server/Configuration.cpp
@@ -67,7 +67,7 @@ set(HEADER_FILES
     src/headers/Database.h
     src/headers/Daemon.h
     src/headers/Server.h
-    src/headers/UserDB.h
+    # src/headers/UserDB.h
     src/headers/Logger.h
 )
 
@@ -130,7 +130,7 @@ find_library(JSONCPP_LIBRARY
 find_path(JSONCPP_INCLUDE_DIR
     NAMES json/json.h
     PATHS /usr/include /usr/local/include /opt/homebrew/include
-          /usr/include/json /usr/local/include/json /opt/homebrew/include/json
+        /usr/include/json /usr/local/include/json /opt/homebrew/include/json
 )
 
 if (NOT JSONCPP_LIBRARY OR NOT JSONCPP_INCLUDE_DIR)

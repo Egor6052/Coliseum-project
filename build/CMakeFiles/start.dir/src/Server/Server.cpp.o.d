@@ -306,8 +306,6 @@ CMakeFiles/start.dir/src/Server/Server.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/fstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/filesystem \
   /Users/mac/Desktop/Coliseum-project/src/Server/../headers/Database.h \
-  /Users/mac/Desktop/Coliseum-project/src/Server/../headers/Accounts.h \
-  /Users/mac/Desktop/Coliseum-project/src/Server/../headers/UserDB.h \
   /Users/mac/Desktop/Coliseum-project/src/Server/../headers/../../lib/mysql/mysql.h \
   /Users/mac/Desktop/Coliseum-project/src/Server/../headers/../../lib/mysql/mariadb_com.h \
   /Users/mac/Desktop/Coliseum-project/src/Server/../headers/../../lib/mysql/mariadb_version.h \

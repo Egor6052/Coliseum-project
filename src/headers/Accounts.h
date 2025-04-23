@@ -5,13 +5,13 @@
 #include <iostream>
 #include <string.h>
 
-#include "UserDB.h"
-#include "Logger.h"
+#include "Database.h"
+// #include "Logger.h"
 
-class Accounts : public UserDB {
+class Accounts : public Database {
     private:
     std::string Uid;
-    std::string UserName; 
+    std::string UserName;
     std::string UserPassword;
     std::string UserEmail;
 
@@ -22,22 +22,13 @@ class Accounts : public UserDB {
         Accounts();
         ~Accounts();
 
-        // void mysqlConnect();
-        // void mysqlDisconnection(); 
-
         void setName(std::string valueName);
         void setPassword(std::string valuePassword);
         void setEmail(std::string valueEmail);
 
         void registerNewUser(std::string login, std::string password, std::string email, std::string userRole);
-        // void registerAsUser();
-        // void registerAsAdmin();
-
-        // void sendToEmail();
 
         std::string getAllUsersFromDB();
-        // std::string getAllAdminsFromDB();
-
 
         std::string getUID();
         std::string getUserName(std::string uid);

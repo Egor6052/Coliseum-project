@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "../../lib/mysql/mysql.h"
-#include "../headers/Database.h"
+#include "../headers/Accounts.h"
 
 bool Accounts::isAdministrator(std::string login, std::string password) {
     try {

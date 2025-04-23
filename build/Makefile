@@ -705,30 +705,6 @@ src/Server/httpServer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/httpServer.cpp.s
 .PHONY : src/Server/httpServer.cpp.s
 
-src/User/UserDB.o: src/User/UserDB.cpp.o
-.PHONY : src/User/UserDB.o
-
-# target to build an object file
-src/User/UserDB.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/User/UserDB.cpp.o
-.PHONY : src/User/UserDB.cpp.o
-
-src/User/UserDB.i: src/User/UserDB.cpp.i
-.PHONY : src/User/UserDB.i
-
-# target to preprocess a source file
-src/User/UserDB.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/User/UserDB.cpp.i
-.PHONY : src/User/UserDB.cpp.i
-
-src/User/UserDB.s: src/User/UserDB.cpp.s
-.PHONY : src/User/UserDB.s
-
-# target to generate assembly for a file
-src/User/UserDB.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/User/UserDB.cpp.s
-.PHONY : src/User/UserDB.cpp.s
-
 src/dao/entity/ActivePower.o: src/dao/entity/ActivePower.cpp.o
 .PHONY : src/dao/entity/ActivePower.o
 
@@ -1026,9 +1002,6 @@ help:
 	@echo "... src/Server/httpServer.o"
 	@echo "... src/Server/httpServer.i"
 	@echo "... src/Server/httpServer.s"
-	@echo "... src/User/UserDB.o"
-	@echo "... src/User/UserDB.i"
-	@echo "... src/User/UserDB.s"
 	@echo "... src/dao/entity/ActivePower.o"
 	@echo "... src/dao/entity/ActivePower.i"
 	@echo "... src/dao/entity/ActivePower.s"

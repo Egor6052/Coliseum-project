@@ -4,10 +4,12 @@
 
 #include <iostream>
 #include <string.h>
-#include "Accounts.h"
+#include "../../lib/mysql/mysql.h"
+
+// #include "Accounts.h"
 #include "Logger.h"
 
-class Database : public Accounts {
+class Database : public Logger {
     private:
         std::string data;
         std::string ipAddress;
@@ -17,10 +19,32 @@ class Database : public Accounts {
         float activePower;
         float reactivePower;
 
+        std::string name;
+        std::string password;
+        std::string adminPassword;
+        std::string host_name;
+        std::string dbName;
+        std::string dbUsersName;
+
     public:
         Database();
         ~Database();
 
+        // User DB
+        MYSQL* conn;
+        void mysqlConnect();
+        void mysqlDisconnection(MYSQL_RES* res = nullptr);
+        void setAdminPassword(std::string valueAdminPassword);
+
+        std::string getUserDBName();
+        std::string getUserDBPassword();
+        std::string getAdminPassword();
+        
+        std::string getDBName();
+        std::string getDBUsersName();
+        std::string getUser();
+
+        // DB
         std::string getCurrentDateTime();
         std::string getIpAddress();
         std::string getNameSensor();

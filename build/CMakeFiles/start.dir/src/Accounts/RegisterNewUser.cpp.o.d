@@ -237,7 +237,7 @@ CMakeFiles/start.dir/src/Accounts/RegisterNewUser.cpp.o: \
   /Users/mac/Desktop/Coliseum-project/src/Accounts/../../lib/mysql/mariadb_ctype.h \
   /Users/mac/Desktop/Coliseum-project/src/Accounts/../../lib/mysql/mariadb_stmt.h \
   /Users/mac/Desktop/Coliseum-project/src/Accounts/../headers/Accounts.h \
-  /Users/mac/Desktop/Coliseum-project/src/Accounts/../headers/UserDB.h \
+  /Users/mac/Desktop/Coliseum-project/src/Accounts/../headers/Database.h \
   /Users/mac/Desktop/Coliseum-project/src/Accounts/../headers/../../lib/mysql/mysql.h \
   /Users/mac/Desktop/Coliseum-project/src/Accounts/../headers/Logger.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/fstream \
