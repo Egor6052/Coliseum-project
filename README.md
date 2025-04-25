@@ -40,7 +40,7 @@ The distributed data collection system (hereinafter "the System") is designed fo
 http://localhost:8080/
 ```
 
-## Compiling
+## Compiling in the directory ./build
 ---
 Configuration:
 ```sh

@@ -8,6 +8,7 @@
 
 // #include "Accounts.h"
 #include "Logger.h"
+#include <string>
 
 class Database : public Logger {
     private:

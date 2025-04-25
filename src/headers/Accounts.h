@@ -6,7 +6,6 @@
 #include <string.h>
 
 #include "Database.h"
-// #include "Logger.h"
 
 class Accounts : public Database {
     private:

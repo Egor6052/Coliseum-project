@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/mac/Desktop/Coliseum-project/./lib -I/usr/local/opt/mariadb-connector-c/include/mariadb -I/Users/mac/Desktop/Coliseum-project/lib/json -F/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/System/Library/Frameworks
+CXX_INCLUDES = -I/Users/mac/Desktop/Coliseum-project/./lib -I/usr/local/opt/mariadb-connector-c/include/mariadb -I/Users/mac/Desktop/Coliseum-project/lib/json -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
 
 CXX_FLAGS = -std=gnu++17 -Wall -fPIC
 

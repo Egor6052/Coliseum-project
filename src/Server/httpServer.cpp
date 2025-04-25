@@ -152,7 +152,7 @@ void Server::http_start() {
         }
 
         try {
-            registerNewUser(login, password, email, role);
+            account.registerNewUser(login, password, email, role);
             res.set_content("{\"status\":\"User registered successfully\"}", "application/json");
         } catch (const std::exception& e) {
             res.status = 500;
@@ -188,8 +188,8 @@ void Server::http_start() {
         std::string login = jsonData["login"].asString();
         std::string password = jsonData["password"].asString();
 
-        if (Login(login, password)) {
-            bool isAdmin = isAdministrator(login, password);
+        if (account.Login(login, password)) {
+            bool isAdmin = account.isAdministrator(login, password);
             Json::Value response;
             response["status"] = "Login successful";
             response["user"] = login;
@@ -233,7 +233,7 @@ void Server::http_start() {
         std::string login = jsonData["login"].asString();
         std::string password = jsonData["password"].asString();
 
-        if (!isAdministrator(login, password)) {
+        if (!account.isAdministrator(login, password)) {
             res.status = 403;
             res.set_content("{\"error\":\"Access denied. Admin privileges required\"}", "application/json");
             return;
@@ -304,14 +304,14 @@ void Server::http_start() {
             std::string login = req.get_param_value("login");
             std::string password = req.get_param_value("password");
 
-            if (!isAdministrator(login, password)) {
+            if (!account.isAdministrator(login, password)) {
                 res.status = 403;
                 res.set_content("{\"error\":\"Access denied. Admin privileges required\"}", "application/json");
                 return;
             }
 
             try {
-                std::string users = getAllUsersFromDB();
+                std::string users = account.getAllUsersFromDB();
                 Json::Value response;
                 response["status"] = "Success";
                 response["users"] = users;

@@ -47,7 +47,7 @@ void Database::setData(std::string data, std::string ipAddress, std::string name
 }
 
 
-void Database::mysqlConnect() {
+inline void Database::mysqlConnect() {
     conn = mysql_init(nullptr);
     if (!conn) {
         throw std::runtime_error("MySQL initialization failed!");
@@ -60,7 +60,7 @@ void Database::mysqlConnect() {
     }
 }
 
-void Database::mysqlDisconnection(MYSQL_RES* res) {
+inline void Database::mysqlDisconnection(MYSQL_RES* res) {
     if (res) {
         mysql_free_result(res);
     }

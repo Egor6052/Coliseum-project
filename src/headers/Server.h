@@ -10,9 +10,11 @@
 
 #include "Logger.h"
 #include "Database.h"
+#include "Accounts.h"
 
 class Server : public Database {
 private:
+    Accounts account;
     std::string configFilePath;
     int port;
     std::string ip;
