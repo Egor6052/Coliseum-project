@@ -48,11 +48,11 @@ bool Accounts::Login(std::string login, std::string password) {
         std::string userPassword = getUserPassword(storedUid);
         std::string userEmail = getUserEmail(storedUid);
 
-        // Для перевірки виведемо отримані дані (опціонально)
+        // Для перевірки виведемо отримані дані
         std::cout << "Logged in successfully!\n";
         std::cout << "UID: " << storedUid << "\n";
         std::cout << "Username: " << userName << "\n";
-        std::cout << "Password: " << userPassword << "\n";
+        // std::cout << "Password: " << userPassword << "\n";
         std::cout << "Email: " << userEmail << "\n";
 
         mysqlDisconnection(res);

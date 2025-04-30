@@ -3,7 +3,7 @@
 The distributed data collection system (hereinafter "the System") is designed for automated electricity accounting, consumed by enterprise users, with the capability for remote monitoring and data analysis.
 
 ---
-**_list:_**
+**_Content:_**
 - [Distributed Data Collection System](#distributed-data-collection-system)
 - [Features](#features)
   - [System Architecture](#system-architecture)
