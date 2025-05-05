@@ -25,14 +25,15 @@ void handleAuthRequest(const httplib::Request &req, httplib::Response &res, cons
         Accounts account;
         if (account.Login(email, password)) {
             // Формуємо успішну відповідь
+            // TODO
             Json::Value response;
             response["accessToken"] = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiM2ExZjE1ZS05ZDQyLTRjMWEtYTlmMi0wODNhZjEyMmY3MzMiLCJlbWFpbCI6InNlZ29yNjA1MkBnbWFpbC5jb20iLCJ1c2VyTmFtZSI6InNlZ29yIiwicm9sZXMiOiJbXCJ1c2VyXCJdIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
             response["refreshToken"] = "dGhpc2lzYXJlZnJlc2h0b2tlbg==";
-            response["redirectUrl"] = "/"; // Змінено на /
+            response["redirectUrl"] = "/"; // Залишаємо /
             response["user"]["id"] = "b3a1f15e-9d42-4c1a-a9f2-083af122f733";
             response["user"]["email"] = email;
             response["user"]["userName"] = "segor";
-            response["user"]["roles"] = "[\"user\"]";
+            response["user"]["roles"] = "[\"admin\"]";
 
             Json::StreamWriterBuilder writer;
             std::string responseStr = Json::writeString(writer, response);
@@ -92,6 +93,36 @@ void handleRefreshTokenRequest(const httplib::Request &req, httplib::Response &r
         res.status = 400; // Bad Request
         res.set_content(errorResponseStr, "application/json");
     }
+}
+
+// Обробка запиту для виходу
+void handleLogoutRequest(const httplib::Request &req, httplib::Response &res) {
+    std::cout << "Отримано POST-запит до /logout: " << req.body << std::endl;
+
+    // Логіка виходу (наразі просто повертаємо успіх)
+    Json::Value response;
+    response["message"] = "Logout successful";
+
+    Json::StreamWriterBuilder writer;
+    std::string responseStr = Json::writeString(writer, response);
+    std::cout << "Response: " << responseStr << std::endl;
+
+    res.set_content(responseStr, "application/json");
+}
+
+// Обробка запиту для виходу з усіх сесій
+void handleLogoutAllRequest(const httplib::Request &req, httplib::Response &res) {
+    std::cout << "Отримано POST-запит до /logoutall: " << req.body << std::endl;
+
+    // Логіка виходу з усіх сесій (наразі просто повертаємо успіх)
+    Json::Value response;
+    response["message"] = "Logout from all sessions successful";
+
+    Json::StreamWriterBuilder writer;
+    std::string responseStr = Json::writeString(writer, response);
+    std::cout << "Response: " << responseStr << std::endl;
+
+    res.set_content(responseStr, "application/json");
 }
 
 // Обробка всіх клієнтських маршрутів (повернення index.html)
@@ -167,6 +198,12 @@ void Server::http_start() {
 
     // Ендпоінт для оновлення токена (/refreshtoken)
     svr.Post("/refreshtoken", ServerUtils::handleRefreshTokenRequest);
+
+    // Ендпоінт для виходу (/logout)
+    svr.Post("/logout", ServerUtils::handleLogoutRequest);
+
+    // Ендпоінт для виходу з усіх сесій (/logoutall)
+    svr.Post("/logoutall", ServerUtils::handleLogoutAllRequest);
 
     // Обробка всіх клієнтських маршрутів (SPA)
     svr.Get("/client/.*", ServerUtils::handleClientRoutes);
