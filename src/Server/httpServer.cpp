@@ -28,7 +28,7 @@ void handleAuthRequest(const httplib::Request &req, httplib::Response &res, cons
             Json::Value response;
             response["accessToken"] = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiM2ExZjE1ZS05ZDQyLTRjMWEtYTlmMi0wODNhZjEyMmY3MzMiLCJlbWFpbCI6InNlZ29yNjA1MkBnbWFpbC5jb20iLCJ1c2VyTmFtZSI6InNlZ29yIiwicm9sZXMiOiJbXCJ1c2VyXCJdIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
             response["refreshToken"] = "dGhpc2lzYXJlZnJlc2h0b2tlbg==";
-            response["redirectUrl"] = "/main"; // Змінено на /main
+            response["redirectUrl"] = "/"; // Змінено на /
             response["user"]["id"] = "b3a1f15e-9d42-4c1a-a9f2-083af122f733";
             response["user"]["email"] = email;
             response["user"]["userName"] = "segor";
@@ -97,6 +97,12 @@ void handleRefreshTokenRequest(const httplib::Request &req, httplib::Response &r
 // Обробка всіх клієнтських маршрутів (повернення index.html)
 void handleClientRoutes(const httplib::Request &req, httplib::Response &res) {
     std::cout << "Отримано клієнтський запит: " << req.path << std::endl;
+    // Перенаправлення для всіх маршрутів /client/error/*
+    if (req.path.find("/client/error/") == 0) {
+        res.set_header("Location", "/");
+        res.status = 302; // Found
+        return;
+    }
     std::ifstream file("../client/dist/index.html");
     if (file) {
         std::stringstream buffer;
