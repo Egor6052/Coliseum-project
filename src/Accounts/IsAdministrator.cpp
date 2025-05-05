@@ -3,12 +3,12 @@
 #include "../../lib/mysql/mysql.h"
 #include "../headers/Accounts.h"
 
-bool Accounts::isAdministrator(std::string login, std::string password) {
+bool Accounts::isAdministrator(std::string value_uid) {
     try {
         mysqlConnect();
 
         // Запит для перевірки ролі користувача за його логіном і паролем
-        std::string query = "SELECT role FROM " + getDBUsersName() + " WHERE login = '" + login + "' AND password = '" + password + "'";
+        std::string query = "SELECT role FROM " + getDBUsersName() + " WHERE uid = '" + value_uid +"'";
         if (mysql_query(conn, query.c_str())) {
             throw std::runtime_error("Failed to execute query: " + std::string(mysql_error(conn)));
             logError("Failed to execute query: " + std::string(mysql_error(conn)));

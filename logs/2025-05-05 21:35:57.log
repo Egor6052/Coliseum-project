@@ -1,0 +1,4 @@
+Log file created on 2025-05-05 21:35:57
+----------------------------------------
+[2025-05-05 21:35:57] ERROR: Error: Can't connect to local server through socket '/tmp/mysql.sock' (2)
+

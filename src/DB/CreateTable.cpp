@@ -17,6 +17,7 @@ void Database::CreateTable() {
         ");";
 
         if (mysql_query(conn, createUsersTableQuery.c_str())) {
+            std::cout << "Failed to create " + getDBUsersName() + " table: " + std::string(mysql_error(conn)) << std::endl;
             throw std::runtime_error("Failed to create " + getDBUsersName() + " table: " + std::string(mysql_error(conn)));
             logError("Failed to create " + getDBUsersName() + " table: " + std::string(mysql_error(conn)));
         }
@@ -50,4 +51,6 @@ void Database::CreateTable() {
         logError(errorMessage);
         mysqlDisconnection();
     }
+
+    std::cout << "\033[1m\033[35m˚｡⋆\033[36mDatabase created successfully!\033[35m⋆｡˚\033[0m\n" << std::endl;
 }

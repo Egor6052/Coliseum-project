@@ -1,7 +1,7 @@
-// #include "../headers/Accounts.h"
-#include "../headers/Accounts.h"
-#include <string.h>
 #include <iostream>
+#include <string>
+#include "../../lib/mysql/mysql.h"
+#include "../headers/Accounts.h"
 
 Accounts::Accounts() {
     this->Uid = "";
@@ -145,3 +145,77 @@ std::string Accounts::getUserEmail(std::string uid) {
 std::string Accounts::getUID() {
     return Uid;
 }
+
+// bool Accounts::Login(std::string email, std::string password) {
+//     try {
+//         mysqlConnect();
+
+//         // Логування назви таблиці
+//         std::string tableName = getDBUsersName();
+//         std::cout << "Table name: " << tableName << std::endl;
+
+//         // Перевірка, чи існує користувач з таким email
+//         std::string checkQuery = "SELECT uid, login, password, email FROM " + tableName + " WHERE email = '" + email + "'";
+//         std::cout << "Executing query: " << checkQuery << std::endl;
+//         if (mysql_query(conn, checkQuery.c_str())) {
+//             std::string error = "Failed to execute query: " + std::string(mysql_error(conn));
+//             std::cerr << error << std::endl;
+//             logError(error);
+//             throw std::runtime_error(error);
+//         }
+
+//         MYSQL_RES* res = mysql_store_result(conn);
+//         if (!res) {
+//             std::string error = "Failed to store result: " + std::string(mysql_error(conn));
+//             std::cerr << error << std::endl;
+//             logError(error);
+//             throw std::runtime_error(error);
+//         }
+
+//         // Якщо користувача немає в базі
+//         if (mysql_num_rows(res) == 0) {
+//             std::cerr << "User not found for email: " << email << std::endl;
+//             logError("User not found for email: " + email);
+//             mysqlDisconnection(res);
+//             return false;
+//         }
+
+//         // Перевірка пароля та отримання uid
+//         MYSQL_ROW row = mysql_fetch_row(res);
+//         std::string storedUid = row[0];
+//         std::string storedLogin = row[1];
+//         std::string storedPassword = row[2];
+//         std::string storedEmail = row[3];
+
+//         if (storedPassword != password) {
+//             std::cerr << "Incorrect password for email: " << email << std::endl;
+//             logError("Incorrect password for email: " + email);
+//             mysqlDisconnection(res);
+//             return false;
+//         }
+
+//         this->Uid = storedUid;
+
+//         // Успішний логін, викликаємо методи з uid
+//         std::string userName = getUserName(storedUid);
+//         std::string userPassword = getUserPassword(storedUid);
+//         std::string userEmail = getUserEmail(storedUid);
+
+//         // Для перевірки виведемо отримані дані
+//         std::cout << "Logged in successfully!\n";
+//         std::cout << "UID: " << storedUid << "\n";
+//         std::cout << "Username: " << userName << "\n";
+//         std::cout << "Email: " << userEmail << "\n";
+
+//         mysqlDisconnection(res);
+
+//         return true;
+
+//     } catch (const std::exception &e) {
+//         std::string errorMessage = "Error in Login: " + std::string(e.what());
+//         std::cerr << errorMessage << '\n';
+//         logError(errorMessage);
+//         mysqlDisconnection();
+//         return false;
+//     }
+// }

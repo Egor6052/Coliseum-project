@@ -225,6 +225,30 @@ src/Accounts/GetUserData.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GetUserData.cpp.s
 .PHONY : src/Accounts/GetUserData.cpp.s
 
+src/Accounts/GetUserRole.o: src/Accounts/GetUserRole.cpp.o
+.PHONY : src/Accounts/GetUserRole.o
+
+# target to build an object file
+src/Accounts/GetUserRole.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GetUserRole.cpp.o
+.PHONY : src/Accounts/GetUserRole.cpp.o
+
+src/Accounts/GetUserRole.i: src/Accounts/GetUserRole.cpp.i
+.PHONY : src/Accounts/GetUserRole.i
+
+# target to preprocess a source file
+src/Accounts/GetUserRole.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GetUserRole.cpp.i
+.PHONY : src/Accounts/GetUserRole.cpp.i
+
+src/Accounts/GetUserRole.s: src/Accounts/GetUserRole.cpp.s
+.PHONY : src/Accounts/GetUserRole.s
+
+# target to generate assembly for a file
+src/Accounts/GetUserRole.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/GetUserRole.cpp.s
+.PHONY : src/Accounts/GetUserRole.cpp.s
+
 src/Accounts/IsAdministrator.o: src/Accounts/IsAdministrator.cpp.o
 .PHONY : src/Accounts/IsAdministrator.o
 
@@ -705,6 +729,30 @@ src/Server/httpServer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/httpServer.cpp.s
 .PHONY : src/Server/httpServer.cpp.s
 
+src/auth/LoginFromAPI.o: src/auth/LoginFromAPI.cpp.o
+.PHONY : src/auth/LoginFromAPI.o
+
+# target to build an object file
+src/auth/LoginFromAPI.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/auth/LoginFromAPI.cpp.o
+.PHONY : src/auth/LoginFromAPI.cpp.o
+
+src/auth/LoginFromAPI.i: src/auth/LoginFromAPI.cpp.i
+.PHONY : src/auth/LoginFromAPI.i
+
+# target to preprocess a source file
+src/auth/LoginFromAPI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/auth/LoginFromAPI.cpp.i
+.PHONY : src/auth/LoginFromAPI.cpp.i
+
+src/auth/LoginFromAPI.s: src/auth/LoginFromAPI.cpp.s
+.PHONY : src/auth/LoginFromAPI.s
+
+# target to generate assembly for a file
+src/auth/LoginFromAPI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/auth/LoginFromAPI.cpp.s
+.PHONY : src/auth/LoginFromAPI.cpp.s
+
 src/dao/entity/ActivePower.o: src/dao/entity/ActivePower.cpp.o
 .PHONY : src/dao/entity/ActivePower.o
 
@@ -942,6 +990,9 @@ help:
 	@echo "... src/Accounts/GetUserData.o"
 	@echo "... src/Accounts/GetUserData.i"
 	@echo "... src/Accounts/GetUserData.s"
+	@echo "... src/Accounts/GetUserRole.o"
+	@echo "... src/Accounts/GetUserRole.i"
+	@echo "... src/Accounts/GetUserRole.s"
 	@echo "... src/Accounts/IsAdministrator.o"
 	@echo "... src/Accounts/IsAdministrator.i"
 	@echo "... src/Accounts/IsAdministrator.s"
@@ -1002,6 +1053,9 @@ help:
 	@echo "... src/Server/httpServer.o"
 	@echo "... src/Server/httpServer.i"
 	@echo "... src/Server/httpServer.s"
+	@echo "... src/auth/LoginFromAPI.o"
+	@echo "... src/auth/LoginFromAPI.i"
+	@echo "... src/auth/LoginFromAPI.s"
 	@echo "... src/dao/entity/ActivePower.o"
 	@echo "... src/dao/entity/ActivePower.i"
 	@echo "... src/dao/entity/ActivePower.s"

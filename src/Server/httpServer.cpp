@@ -6,368 +6,169 @@
 #include "../../lib/http/httplib.h"
 #include <json/json.h>
 
-// Функція для читання HTML-файлу
-std::string readFile(const std::string& path) {
-    std::ifstream file(path);
-    if (!file) {
-        return "<h2>Error: Template file not found</h2>";
+namespace ServerUtils {
+
+// Обробка JSON-запиту для автентифікації
+void handleAuthRequest(const httplib::Request &req, httplib::Response &res, const std::string &endpoint) {
+    std::cout << "Отримано POST-запит до " << endpoint << ": " << req.body << std::endl;
+    Json::Value json;
+    Json::Reader reader;
+    Json::Value data;
+
+    if (reader.parse(req.body, data)) {
+        std::string email = data["email"].asString();
+        std::string password = data["password"].asString();
+        std::string fingerPrint = data["fingerPrint"].asString();
+        std::cout << "Email: " << email << "\nPassword: " << password << "\nFingerPrint: " << fingerPrint << std::endl;
+
+        // Перевірка логіна та пароля
+        Accounts account;
+        if (account.Login(email, password)) {
+            // Формуємо успішну відповідь
+            Json::Value response;
+            response["accessToken"] = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiM2ExZjE1ZS05ZDQyLTRjMWEtYTlmMi0wODNhZjEyMmY3MzMiLCJlbWFpbCI6InNlZ29yNjA1MkBnbWFpbC5jb20iLCJ1c2VyTmFtZSI6InNlZ29yIiwicm9sZXMiOiJbXCJ1c2VyXCJdIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
+            response["refreshToken"] = "dGhpc2lzYXJlZnJlc2h0b2tlbg==";
+            response["redirectUrl"] = "/main"; // Змінено на /main
+            response["user"]["id"] = "b3a1f15e-9d42-4c1a-a9f2-083af122f733";
+            response["user"]["email"] = email;
+            response["user"]["userName"] = "segor";
+            response["user"]["roles"] = "[\"user\"]";
+
+            Json::StreamWriterBuilder writer;
+            std::string responseStr = Json::writeString(writer, response);
+            std::cout << "Response: " << responseStr << std::endl;
+
+            res.set_header("Authorization", "Bearer " + response["accessToken"].asString());
+            res.set_content(responseStr, "application/json");
+        } else {
+            // Невдала авторизація
+            Json::Value errorResponse;
+            errorResponse["error"] = "Invalid email or password";
+            Json::StreamWriterBuilder writer;
+            std::string errorResponseStr = Json::writeString(writer, errorResponse);
+            std::cout << "Error Response: " << errorResponseStr << std::endl;
+            res.status = 401; // Unauthorized
+            res.set_content(errorResponseStr, "application/json");
+        }
+    } else {
+        Json::Value errorResponse;
+        errorResponse["error"] = "Invalid JSON";
+        Json::StreamWriterBuilder writer;
+        std::string errorResponseStr = Json::writeString(writer, errorResponse);
+        std::cout << "Error Response: " << errorResponseStr << std::endl;
+        res.status = 400; // Bad Request
+        res.set_content(errorResponseStr, "application/json");
     }
-    return std::string((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
 }
 
-// Функція для генерації спільного HTML-заголовка з навігацією
-std::string getCommonHeader() {
-    return R"(
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Server Control Panel</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-        }
-        .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #555;
-        }
-        input, button, select {
-            padding: 8px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        .response {
-            margin-top: 10px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            background-color: #f9f9f9;
-            white-space: pre-wrap;
-        }
-    </style>
-</head>
-<body>
-    <div class="navbar"></div>
-    <div class="container">
-)";
+// Обробка запиту для оновлення токена
+void handleRefreshTokenRequest(const httplib::Request &req, httplib::Response &res) {
+    std::cout << "Отримано POST-запит до /refreshtoken: " << req.body << std::endl;
+    Json::Value json;
+    Json::Reader reader;
+    Json::Value data;
+
+    if (reader.parse(req.body, data)) {
+        std::string fingerPrint = data["fingerPrint"].asString();
+        std::cout << "FingerPrint: " << fingerPrint << std::endl;
+
+        // Формуємо відповідь
+        Json::Value response;
+        response["accessToken"] = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiM2ExZjE1ZS05ZDQyLTRjMWEtYTlmMi0wODNhZjEyMmY3MzMiLCJlbWFpbCI6InNlZ29yNjA1MkBnbWFpbC5jb20iLCJ1c2VyTmFtZSI6InNlZ29yIiwicm9sZXMiOiJbXCJ1c2VyXCJdIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
+        response["refreshToken"] = "dGhpc2lzYXJlZnJlc2h0b2tlbg==";
+
+        Json::StreamWriterBuilder writer;
+        std::string responseStr = Json::writeString(writer, response);
+        std::cout << "Response: " << responseStr << std::endl;
+
+        res.set_header("Authorization", "Bearer " + response["accessToken"].asString());
+        res.set_content(responseStr, "application/json");
+    } else {
+        Json::Value errorResponse;
+        errorResponse["error"] = "Invalid JSON";
+        Json::StreamWriterBuilder writer;
+        std::string errorResponseStr = Json::writeString(writer, errorResponse);
+        std::cout << "Error Response: " << errorResponseStr << std::endl;
+        res.status = 400; // Bad Request
+        res.set_content(errorResponseStr, "application/json");
+    }
 }
 
-// Функція для генерації закриття HTML
-std::string getCommonFooter() {
-    return R"(
-    </div>
-</body>
-</html>
-)";
+// Обробка всіх клієнтських маршрутів (повернення index.html)
+void handleClientRoutes(const httplib::Request &req, httplib::Response &res) {
+    std::cout << "Отримано клієнтський запит: " << req.path << std::endl;
+    std::ifstream file("../client/dist/index.html");
+    if (file) {
+        std::stringstream buffer;
+        buffer << file.rdbuf();
+        res.set_content(buffer.str(), "text/html");
+    } else {
+        res.status = 404;
+        res.set_content("index.html not found", "text/plain");
+    }
 }
+
+// Налаштування CORS
+void setupCORS(httplib::Server &svr) {
+    svr.set_pre_routing_handler([](const httplib::Request &req, httplib::Response &res) {
+        std::cout << "Отримано запит: " << req.method << " " << req.path << std::endl;
+        res.set_header("Access-Control-Allow-Origin", "http://localhost:5173");
+        res.set_header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+        res.set_header("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With");
+        res.set_header("Access-Control-Allow-Credentials", "true");
+
+        if (req.method == "OPTIONS") {
+            res.status = 200;
+            return httplib::Server::HandlerResponse::Handled;
+        }
+        return httplib::Server::HandlerResponse::Unhandled;
+    });
+}
+
+// Налаштування MIME-типів і статичних файлів
+void setupStaticFiles(httplib::Server &svr) {
+    svr.set_mount_point("/client", "../client/dist");
+
+    svr.set_file_extension_and_mimetype_mapping("js", "text/javascript");
+    svr.set_file_extension_and_mimetype_mapping("css", "text/css");
+    svr.set_file_extension_and_mimetype_mapping("html", "text/html");
+    svr.set_file_extension_and_mimetype_mapping("json", "application/json");
+    svr.set_file_extension_and_mimetype_mapping("png", "image/png");
+    svr.set_file_extension_and_mimetype_mapping("jpg", "image/jpeg");
+    svr.set_file_extension_and_mimetype_mapping("svg", "image/svg+xml");
+}
+
+} // namespace ServerUtils
 
 void Server::http_start() {
-    // Ендпоінт для головної сторінки
-    svr.Get("/", [](const httplib::Request& req, httplib::Response& res) {
-        std::string html = getCommonHeader();
-        html += readFile("../templates/index.html");
-        html += getCommonFooter();
-        res.set_content(html, "text/html");
+    httplib::Server svr;
+
+    // Налаштування CORS
+    ServerUtils::setupCORS(svr);
+
+    // Налаштування статичних файлів і MIME-типів
+    ServerUtils::setupStaticFiles(svr);
+
+    // Ендпоінт для входу (/auth/login)
+    svr.Post("/auth/login", [](const httplib::Request &req, httplib::Response &res) {
+        ServerUtils::handleAuthRequest(req, res, "/auth/login");
     });
 
-    // Ендпоінт для команди (існуючий)
-    svr.Post("/command", [this](const httplib::Request& req, httplib::Response& res) {
-        http_server(req, res);
+    // Ендпоінт для входу (/login)
+    svr.Post("/login", [](const httplib::Request &req, httplib::Response &res) {
+        ServerUtils::handleAuthRequest(req, res, "/login");
     });
 
-    // Ендпоінт для реєстрації користувача (GET - сторінка, POST - логіка)
-    svr.Get("/register", [](const httplib::Request& req, httplib::Response& res) {
-        std::string html = getCommonHeader();
-        html += readFile("../templates/register.html");
-        html += getCommonFooter();
-        res.set_content(html, "text/html");
-    });
+    // Ендпоінт для оновлення токена (/refreshtoken)
+    svr.Post("/refreshtoken", ServerUtils::handleRefreshTokenRequest);
 
-    svr.Post("/register", [this](const httplib::Request& req, httplib::Response& res) {
-        if (req.method != "POST") {
-            res.status = 405;
-            res.set_content("{\"error\":\"Method Not Allowed\"}", "application/json");
-            return;
-        }
+    // Обробка всіх клієнтських маршрутів (SPA)
+    svr.Get("/client/.*", ServerUtils::handleClientRoutes);
+    svr.Get("/dashboard", ServerUtils::handleClientRoutes);
+    svr.Get("/main", ServerUtils::handleClientRoutes);
+    svr.Get("/auth", ServerUtils::handleClientRoutes);
+    svr.Get("/", ServerUtils::handleClientRoutes);
 
-        Json::Value jsonData;
-        Json::Reader reader;
-        if (!reader.parse(req.body, jsonData) ||
-            !jsonData.isMember("login") ||
-            !jsonData.isMember("password") ||
-            !jsonData.isMember("email") ||
-            !jsonData.isMember("role")) {
-            res.status = 400;
-            res.set_content("{\"error\":\"Invalid JSON or missing fields (login, password, email, role)\"}", "application/json");
-            return;
-        }
-
-        std::string login = jsonData["login"].asString();
-        std::string password = jsonData["password"].asString();
-        std::string email = jsonData["email"].asString();
-        std::string role = jsonData["role"].asString();
-
-        if (role != "user" && role != "admin") {
-            res.status = 400;
-            res.set_content("{\"error\":\"Invalid role. Must be 'user' or 'admin'\"}", "application/json");
-            return;
-        }
-
-        try {
-            account.registerNewUser(login, password, email, role);
-            res.set_content("{\"status\":\"User registered successfully\"}", "application/json");
-        } catch (const std::exception& e) {
-            res.status = 500;
-            res.set_content("{\"error\":\"" + std::string(e.what()) + "\"}", "application/json");
-        }
-    });
-
-    // Ендпоінт для логіну (GET - сторінка, POST - логіка)
-    svr.Get("/login", [](const httplib::Request& req, httplib::Response& res) {
-        std::string html = getCommonHeader();
-        html += readFile("../templates/login.html");
-        html += getCommonFooter();
-        res.set_content(html, "text/html");
-    });
-
-    svr.Post("/login", [this](const httplib::Request& req, httplib::Response& res) {
-        if (req.method != "POST") {
-            res.status = 405;
-            res.set_content("{\"error\":\"Method Not Allowed\"}", "application/json");
-            return;
-        }
-
-        Json::Value jsonData;
-        Json::Reader reader;
-        if (!reader.parse(req.body, jsonData) ||
-            !jsonData.isMember("login") ||
-            !jsonData.isMember("password")) {
-            res.status = 400;
-            res.set_content("{\"error\":\"Invalid JSON or missing fields (login, password)\"}", "application/json");
-            return;
-        }
-
-        std::string login = jsonData["login"].asString();
-        std::string password = jsonData["password"].asString();
-
-        if (account.Login(login, password)) {
-            bool isAdmin = account.isAdministrator(login, password);
-            Json::Value response;
-            response["status"] = "Login successful";
-            response["user"] = login;
-            response["isAdmin"] = isAdmin;
-
-            Json::FastWriter writer;
-            res.set_content(writer.write(response), "application/json");
-        } else {
-            res.status = 401;
-            res.set_content("{\"error\":\"Login failed. Check your credentials\"}", "application/json");
-        }
-    });
-
-    // Ендпоінт для видалення запису (GET - сторінка, POST - логіка)
-    svr.Get("/delete", [](const httplib::Request& req, httplib::Response& res) {
-        std::string html = getCommonHeader();
-        html += readFile("../templates/delete.html");
-        html += getCommonFooter();
-        res.set_content(html, "text/html");
-    });
-
-    svr.Post("/delete", [this](const httplib::Request& req, httplib::Response& res) {
-        if (req.method != "POST") {
-            res.status = 405;
-            res.set_content("{\"error\":\"Method Not Allowed\"}", "application/json");
-            return;
-        }
-
-        Json::Value jsonData;
-        Json::Reader reader;
-        if (!reader.parse(req.body, jsonData) ||
-            !jsonData.isMember("id") ||
-            !jsonData.isMember("login") ||
-            !jsonData.isMember("password")) {
-            res.status = 400;
-            res.set_content("{\"error\":\"Invalid JSON or missing fields (id, login, password)\"}", "application/json");
-            return;
-        }
-
-        std::string id = jsonData["id"].asString();
-        std::string login = jsonData["login"].asString();
-        std::string password = jsonData["password"].asString();
-
-        if (!account.isAdministrator(login, password)) {
-            res.status = 403;
-            res.set_content("{\"error\":\"Access denied. Admin privileges required\"}", "application/json");
-            return;
-        }
-
-        try {
-            deleteData(id);
-            res.set_content("{\"status\":\"Record deleted successfully\"}", "application/json");
-        } catch (const std::exception& e) {
-            res.status = 500;
-            res.set_content("{\"error\":\"" + std::string(e.what()) + "\"}", "application/json");
-        }
-    });
-
-    // Ендпоінт для перегляду записів (GET - сторінка та логіка)
-    svr.Get("/records", [this](const httplib::Request& req, httplib::Response& res) {
-        if (req.has_param("fetch")) {
-            // Якщо є параметр fetch, повертаємо JSON
-            try {
-                std::string data = getData();
-                Json::Value response;
-                response["status"] = "Success";
-                response["data"] = data;
-
-                Json::FastWriter writer;
-                res.set_content(writer.write(response), "application/json");
-            } catch (const std::exception& e) {
-                res.status = 500;
-                res.set_content("{\"error\":\"" + std::string(e.what()) + "\"}", "application/json");
-            }
-        } else {
-            // Інакше повертаємо HTML-сторінку
-            std::string html = getCommonHeader();
-            html += readFile("../templates/records.html");
-            html += getCommonFooter();
-            res.set_content(html, "text/html");
-        }
-    });
-
-    // Ендпоінт для створення бекапу (GET - сторінка, POST - логіка)
-    svr.Get("/backup", [](const httplib::Request& req, httplib::Response& res) {
-        std::string html = getCommonHeader();
-        html += readFile("../templates/backup.html");
-        html += getCommonFooter();
-        res.set_content(html, "text/html");
-    });
-
-    svr.Post("/backup", [this](const httplib::Request& req, httplib::Response& res) {
-        if (req.method != "POST") {
-            res.status = 405;
-            res.set_content("{\"error\":\"Method Not Allowed\"}", "application/json");
-            return;
-        }
-
-        try {
-            createBackup();
-            res.set_content("{\"status\":\"Backup created successfully\"}", "application/json");
-        } catch (const std::exception& e) {
-            res.status = 500;
-            res.set_content("{\"error\":\"" + std::string(e.what()) + "\"}", "application/json");
-        }
-    });
-
-    // Ендпоінт для перегляду всіх користувачів (GET - сторінка та логіка)
-    svr.Get("/users", [this](const httplib::Request& req, httplib::Response& res) {
-        if (req.has_param("login") && req.has_param("password")) {
-            // Якщо є параметри login і password, повертаємо JSON
-            std::string login = req.get_param_value("login");
-            std::string password = req.get_param_value("password");
-
-            if (!account.isAdministrator(login, password)) {
-                res.status = 403;
-                res.set_content("{\"error\":\"Access denied. Admin privileges required\"}", "application/json");
-                return;
-            }
-
-            try {
-                std::string users = account.getAllUsersFromDB();
-                Json::Value response;
-                response["status"] = "Success";
-                response["users"] = users;
-
-                Json::FastWriter writer;
-                res.set_content(writer.write(response), "application/json");
-            } catch (const std::exception& e) {
-                res.status = 500;
-                res.set_content("{\"error\":\"" + std::string(e.what()) + "\"}", "application/json");
-            }
-        } else {
-            // Інакше повертаємо HTML-сторінку
-            std::string html = getCommonHeader();
-            html += readFile("../templates/users.html");
-            html += getCommonFooter();
-            res.set_content(html, "text/html");
-        }
-    });
-
-    // Запуск сервера в окремому потоці
-    std::thread server_thread([this]() {
-        svr.listen("0.0.0.0", 8080);
-    });
-
-    server_thread.detach();
-}
-
-void Server::http_server(const httplib::Request& req, httplib::Response& res) {
-    if (req.method != "POST") {
-        res.status = 405;
-        res.set_content("{\"error\":\"Method Not Allowed\"}", "application/json");
-        return;
-    }
-
-    Json::Value jsonData;
-    Json::Reader reader;
-    if (!reader.parse(req.body, jsonData) || !jsonData.isMember("command") || !jsonData.isMember("value")) {
-        res.status = 400;
-        res.set_content("{\"error\":\"Invalid JSON or missing fields\"}", "application/json");
-        return;
-    }
-
-    std::string command = jsonData["command"].asString();
-    int value = jsonData["value"].asInt();
-
-    std::cout << getLoggerDateTime() << " | Command: " << command << ", Value: " << value << " | ";
-
-    if (command == "start") {
-        std::cout << "START action executed" << std::endl;
-    } else if (command == "stop") {
-        std::cout << "STOP action executed" << std::endl;
-    } else {
-        res.status = 400;
-        res.set_content("{\"error\":\"Unknown command\"}", "application/json");
-        return;
-    }
-
-    res.set_content("{\"status\":\"OK\"}", "application/json");
+    std::cout << "Сервер запущено на http://localhost:5182\n";
+    svr.listen("0.0.0.0", 5182);
 }

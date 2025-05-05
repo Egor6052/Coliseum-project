@@ -3,12 +3,13 @@
 #include "../../lib/mysql/mysql.h"
 #include "../headers/Accounts.h"
 
-bool Accounts::Login(std::string login, std::string password) {
+
+bool Accounts::Login(std::string email, std::string password) {
     try {
         mysqlConnect();
 
-        // Перевірка, чи існує користувач з таким логіном
-        std::string checkQuery = "SELECT uid, login, password FROM " + getDBUsersName() + " WHERE login = '" + login + "'";
+        // Перевірка, чи існує користувач з таким email
+        std::string checkQuery = "SELECT uid, login, password, email FROM " + getDBUsersName() + " WHERE email = '" + email + "'";
         if (mysql_query(conn, checkQuery.c_str())) {
             throw std::runtime_error("Failed to execute query: " + std::string(mysql_error(conn)));
             logError("Failed to execute query: " + std::string(mysql_error(conn)));
@@ -33,6 +34,7 @@ bool Accounts::Login(std::string login, std::string password) {
         std::string storedUid = row[0];
         std::string storedLogin = row[1];
         std::string storedPassword = row[2];
+        std::string storedEmail = row[3];
 
         if (storedPassword != password) {
             std::cerr << "Incorrect password.\n";
@@ -52,7 +54,6 @@ bool Accounts::Login(std::string login, std::string password) {
         std::cout << "Logged in successfully!\n";
         std::cout << "UID: " << storedUid << "\n";
         std::cout << "Username: " << userName << "\n";
-        // std::cout << "Password: " << userPassword << "\n";
         std::cout << "Email: " << userEmail << "\n";
 
         mysqlDisconnection(res);
