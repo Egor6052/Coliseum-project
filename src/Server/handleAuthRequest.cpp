@@ -35,11 +35,11 @@ void Server::handleAuthRequest(const httplib::Request &req, httplib::Response &r
 
             // response["accessToken"] = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiM2ExZjE1ZS05ZDQyLTRjMWEtYTlmMi0wODNhZjEyMmY3MzMiLCJlbWFpbCI6InNlZ29yNjA1MkBnbWFpbC5jb20iLCJ1c2VyTmFtZSI6InNlZ29yIiwicm9sZXMiOiJbXCJ1c2VyXCJdIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
             // response["refreshToken"] = "dGhpc2lzYXJlZnJlc2h0b2tlbg==";
-            response["redirectUrl"] = "/"; // Залишаємо /
+            response["redirectUrl"] = "/";
             response["user"]["id"] = account.getUID();
             response["user"]["email"] = email;
-            response["user"]["userName"] = account.getUserName(account.getUID()); // "segor";
-            response["user"]["roles"] = account.getUserRole(account.getUID()); // "[\"admin\"]";
+            response["user"]["userName"] = account.getUserName(account.getUID());
+            response["user"]["roles"] = account.getUserRole(account.getUID());
 
             Json::StreamWriterBuilder writer;
             std::string responseStr = Json::writeString(writer, response);

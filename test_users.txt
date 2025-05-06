@@ -1,0 +1,26 @@
+Connecting to the DB:
+mysql -u data_writer -p -h localhost SensorData
+
+
+INSERT INTO users (uid, login, email, password, role) 
+VALUES (
+UUID(),
+'adminSegor',
+'adminSegor@gmail.com',
+'12345678',
+'admin'
+);
+
+
+INSERT INTO users (uid, login, email, password, role) 
+VALUES (
+UUID(),
+'segor',
+'segor@gmail.com',
+'12345678',
+'user'
+);
+
+
+
+

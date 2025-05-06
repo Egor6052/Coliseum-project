@@ -9,7 +9,7 @@ std::string Accounts::generateAccessToken(const std::string &email, const std::s
     // Генерація токена
     auto token = jwt::create()
         .set_issuer("ColiseumProject") // Видавець токена
-        .set_subject(email)           // Email користувача
+        .set_subject(email) // Email користувача
         .set_audience("http://localhost:5182") // Аудиторія
         .set_issued_at(std::chrono::system_clock::now()) // Час створення
         .set_expires_at(std::chrono::system_clock::now() + std::chrono::minutes(15))

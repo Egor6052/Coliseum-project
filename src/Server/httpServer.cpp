@@ -17,54 +17,44 @@ void Server::http_start() {
 
     // Ендпоінт для входу (/auth/login)
     svr.Post("/auth/login", [this](const httplib::Request &req, httplib::Response &res) {
-        handleAuthRequest(req, res, "/auth/login");
+        this->handleAuthRequest(req, res, "/auth/login");
     });
     
     svr.Post("/login", [this](const httplib::Request &req, httplib::Response &res) {
-        handleAuthRequest(req, res, "/login");
+        this->handleAuthRequest(req, res, "/login");
     });
     
     svr.Post("/refreshtoken", [this](const httplib::Request &req, httplib::Response &res) {
-        handleRefreshTokenRequest(req, res);
+        this->handleRefreshTokenRequest(req, res);
     });
     
     svr.Post("/logout", [this](const httplib::Request &req, httplib::Response &res) {
-        handleLogoutRequest(req, res);
+        this->shandleLogoutRequest(req, res);
     });
     
     svr.Post("/logoutall", [this](const httplib::Request &req, httplib::Response &res) {
-        handleLogoutAllRequest(req, res);
+        this->handleLogoutAllRequest(req, res);
     });
     
     svr.Get("/client/.*", [this](const httplib::Request &req, httplib::Response &res) {
-        handleClientRoutes(req, res);
+        this->handleClientRoutes(req, res);
     });
     
     svr.Get("/dashboard", [this](const httplib::Request &req, httplib::Response &res) {
-        handleClientRoutes(req, res);
+        this->handleClientRoutes(req, res);
     });
     
     svr.Get("/main", [this](const httplib::Request &req, httplib::Response &res) {
-        handleClientRoutes(req, res);
+        this->handleClientRoutes(req, res);
     });
     
     svr.Get("/auth", [this](const httplib::Request &req, httplib::Response &res) {
-        handleClientRoutes(req, res);
+        this->handleClientRoutes(req, res);
     });
     
     svr.Get("/", [this](const httplib::Request &req, httplib::Response &res) {
-        handleClientRoutes(req, res);
+        this->handleClientRoutes(req, res);
     });
-    
-    // Ендпоінт для виходу з усіх сесій (/logoutall)
-    svr.Post("/logoutall", handleLogoutAllRequest);
-
-    // Обробка всіх клієнтських маршрутів (SPA)
-    svr.Get("/client/.*", handleClientRoutes);
-    svr.Get("/dashboard", handleClientRoutes);
-    svr.Get("/main", handleClientRoutes);
-    svr.Get("/auth", handleClientRoutes);
-    svr.Get("/", handleClientRoutes);
 
     std::cout << "Сервер запущено на http://localhost:5182\n";
     svr.listen("0.0.0.0", 5182);
