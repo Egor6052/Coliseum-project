@@ -321,6 +321,30 @@ src/Accounts/RegisterNewUser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/RegisterNewUser.cpp.s
 .PHONY : src/Accounts/RegisterNewUser.cpp.s
 
+src/Accounts/generateTokens.o: src/Accounts/generateTokens.cpp.o
+.PHONY : src/Accounts/generateTokens.o
+
+# target to build an object file
+src/Accounts/generateTokens.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/generateTokens.cpp.o
+.PHONY : src/Accounts/generateTokens.cpp.o
+
+src/Accounts/generateTokens.i: src/Accounts/generateTokens.cpp.i
+.PHONY : src/Accounts/generateTokens.i
+
+# target to preprocess a source file
+src/Accounts/generateTokens.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/generateTokens.cpp.i
+.PHONY : src/Accounts/generateTokens.cpp.i
+
+src/Accounts/generateTokens.s: src/Accounts/generateTokens.cpp.s
+.PHONY : src/Accounts/generateTokens.s
+
+# target to generate assembly for a file
+src/Accounts/generateTokens.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Accounts/generateTokens.cpp.s
+.PHONY : src/Accounts/generateTokens.cpp.s
+
 src/DB/CreateBackup.o: src/DB/CreateBackup.cpp.o
 .PHONY : src/DB/CreateBackup.o
 
@@ -681,6 +705,30 @@ src/Server/Configuration.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/Configuration.cpp.s
 .PHONY : src/Server/Configuration.cpp.s
 
+src/Server/Logout.o: src/Server/Logout.cpp.o
+.PHONY : src/Server/Logout.o
+
+# target to build an object file
+src/Server/Logout.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/Logout.cpp.o
+.PHONY : src/Server/Logout.cpp.o
+
+src/Server/Logout.i: src/Server/Logout.cpp.i
+.PHONY : src/Server/Logout.i
+
+# target to preprocess a source file
+src/Server/Logout.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/Logout.cpp.i
+.PHONY : src/Server/Logout.cpp.i
+
+src/Server/Logout.s: src/Server/Logout.cpp.s
+.PHONY : src/Server/Logout.s
+
+# target to generate assembly for a file
+src/Server/Logout.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/Logout.cpp.s
+.PHONY : src/Server/Logout.cpp.s
+
 src/Server/Server.o: src/Server/Server.cpp.o
 .PHONY : src/Server/Server.o
 
@@ -705,6 +753,78 @@ src/Server/Server.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/Server.cpp.s
 .PHONY : src/Server/Server.cpp.s
 
+src/Server/handleAuthRequest.o: src/Server/handleAuthRequest.cpp.o
+.PHONY : src/Server/handleAuthRequest.o
+
+# target to build an object file
+src/Server/handleAuthRequest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/handleAuthRequest.cpp.o
+.PHONY : src/Server/handleAuthRequest.cpp.o
+
+src/Server/handleAuthRequest.i: src/Server/handleAuthRequest.cpp.i
+.PHONY : src/Server/handleAuthRequest.i
+
+# target to preprocess a source file
+src/Server/handleAuthRequest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/handleAuthRequest.cpp.i
+.PHONY : src/Server/handleAuthRequest.cpp.i
+
+src/Server/handleAuthRequest.s: src/Server/handleAuthRequest.cpp.s
+.PHONY : src/Server/handleAuthRequest.s
+
+# target to generate assembly for a file
+src/Server/handleAuthRequest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/handleAuthRequest.cpp.s
+.PHONY : src/Server/handleAuthRequest.cpp.s
+
+src/Server/handleClientRoutes.o: src/Server/handleClientRoutes.cpp.o
+.PHONY : src/Server/handleClientRoutes.o
+
+# target to build an object file
+src/Server/handleClientRoutes.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/handleClientRoutes.cpp.o
+.PHONY : src/Server/handleClientRoutes.cpp.o
+
+src/Server/handleClientRoutes.i: src/Server/handleClientRoutes.cpp.i
+.PHONY : src/Server/handleClientRoutes.i
+
+# target to preprocess a source file
+src/Server/handleClientRoutes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/handleClientRoutes.cpp.i
+.PHONY : src/Server/handleClientRoutes.cpp.i
+
+src/Server/handleClientRoutes.s: src/Server/handleClientRoutes.cpp.s
+.PHONY : src/Server/handleClientRoutes.s
+
+# target to generate assembly for a file
+src/Server/handleClientRoutes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/handleClientRoutes.cpp.s
+.PHONY : src/Server/handleClientRoutes.cpp.s
+
+src/Server/handleRefreshTokenRequest.o: src/Server/handleRefreshTokenRequest.cpp.o
+.PHONY : src/Server/handleRefreshTokenRequest.o
+
+# target to build an object file
+src/Server/handleRefreshTokenRequest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/handleRefreshTokenRequest.cpp.o
+.PHONY : src/Server/handleRefreshTokenRequest.cpp.o
+
+src/Server/handleRefreshTokenRequest.i: src/Server/handleRefreshTokenRequest.cpp.i
+.PHONY : src/Server/handleRefreshTokenRequest.i
+
+# target to preprocess a source file
+src/Server/handleRefreshTokenRequest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/handleRefreshTokenRequest.cpp.i
+.PHONY : src/Server/handleRefreshTokenRequest.cpp.i
+
+src/Server/handleRefreshTokenRequest.s: src/Server/handleRefreshTokenRequest.cpp.s
+.PHONY : src/Server/handleRefreshTokenRequest.s
+
+# target to generate assembly for a file
+src/Server/handleRefreshTokenRequest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/handleRefreshTokenRequest.cpp.s
+.PHONY : src/Server/handleRefreshTokenRequest.cpp.s
+
 src/Server/httpServer.o: src/Server/httpServer.cpp.o
 .PHONY : src/Server/httpServer.o
 
@@ -728,6 +848,54 @@ src/Server/httpServer.s: src/Server/httpServer.cpp.s
 src/Server/httpServer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/httpServer.cpp.s
 .PHONY : src/Server/httpServer.cpp.s
+
+src/Server/setupCORS.o: src/Server/setupCORS.cpp.o
+.PHONY : src/Server/setupCORS.o
+
+# target to build an object file
+src/Server/setupCORS.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/setupCORS.cpp.o
+.PHONY : src/Server/setupCORS.cpp.o
+
+src/Server/setupCORS.i: src/Server/setupCORS.cpp.i
+.PHONY : src/Server/setupCORS.i
+
+# target to preprocess a source file
+src/Server/setupCORS.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/setupCORS.cpp.i
+.PHONY : src/Server/setupCORS.cpp.i
+
+src/Server/setupCORS.s: src/Server/setupCORS.cpp.s
+.PHONY : src/Server/setupCORS.s
+
+# target to generate assembly for a file
+src/Server/setupCORS.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/setupCORS.cpp.s
+.PHONY : src/Server/setupCORS.cpp.s
+
+src/Server/setupStaticFiles.o: src/Server/setupStaticFiles.cpp.o
+.PHONY : src/Server/setupStaticFiles.o
+
+# target to build an object file
+src/Server/setupStaticFiles.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/setupStaticFiles.cpp.o
+.PHONY : src/Server/setupStaticFiles.cpp.o
+
+src/Server/setupStaticFiles.i: src/Server/setupStaticFiles.cpp.i
+.PHONY : src/Server/setupStaticFiles.i
+
+# target to preprocess a source file
+src/Server/setupStaticFiles.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/setupStaticFiles.cpp.i
+.PHONY : src/Server/setupStaticFiles.cpp.i
+
+src/Server/setupStaticFiles.s: src/Server/setupStaticFiles.cpp.s
+.PHONY : src/Server/setupStaticFiles.s
+
+# target to generate assembly for a file
+src/Server/setupStaticFiles.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Server/setupStaticFiles.cpp.s
+.PHONY : src/Server/setupStaticFiles.cpp.s
 
 src/auth/LoginFromAPI.o: src/auth/LoginFromAPI.cpp.o
 .PHONY : src/auth/LoginFromAPI.o
@@ -1002,6 +1170,9 @@ help:
 	@echo "... src/Accounts/RegisterNewUser.o"
 	@echo "... src/Accounts/RegisterNewUser.i"
 	@echo "... src/Accounts/RegisterNewUser.s"
+	@echo "... src/Accounts/generateTokens.o"
+	@echo "... src/Accounts/generateTokens.i"
+	@echo "... src/Accounts/generateTokens.s"
 	@echo "... src/DB/CreateBackup.o"
 	@echo "... src/DB/CreateBackup.i"
 	@echo "... src/DB/CreateBackup.s"
@@ -1047,12 +1218,30 @@ help:
 	@echo "... src/Server/Configuration.o"
 	@echo "... src/Server/Configuration.i"
 	@echo "... src/Server/Configuration.s"
+	@echo "... src/Server/Logout.o"
+	@echo "... src/Server/Logout.i"
+	@echo "... src/Server/Logout.s"
 	@echo "... src/Server/Server.o"
 	@echo "... src/Server/Server.i"
 	@echo "... src/Server/Server.s"
+	@echo "... src/Server/handleAuthRequest.o"
+	@echo "... src/Server/handleAuthRequest.i"
+	@echo "... src/Server/handleAuthRequest.s"
+	@echo "... src/Server/handleClientRoutes.o"
+	@echo "... src/Server/handleClientRoutes.i"
+	@echo "... src/Server/handleClientRoutes.s"
+	@echo "... src/Server/handleRefreshTokenRequest.o"
+	@echo "... src/Server/handleRefreshTokenRequest.i"
+	@echo "... src/Server/handleRefreshTokenRequest.s"
 	@echo "... src/Server/httpServer.o"
 	@echo "... src/Server/httpServer.i"
 	@echo "... src/Server/httpServer.s"
+	@echo "... src/Server/setupCORS.o"
+	@echo "... src/Server/setupCORS.i"
+	@echo "... src/Server/setupCORS.s"
+	@echo "... src/Server/setupStaticFiles.o"
+	@echo "... src/Server/setupStaticFiles.i"
+	@echo "... src/Server/setupStaticFiles.s"
 	@echo "... src/auth/LoginFromAPI.o"
 	@echo "... src/auth/LoginFromAPI.i"
 	@echo "... src/auth/LoginFromAPI.s"

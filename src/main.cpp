@@ -26,6 +26,7 @@ int main() {
             std::this_thread::sleep_for(std::chrono::hours(24));
         }
     });
+    
 
     // Disconnecting the flow
     collectorThread.detach();

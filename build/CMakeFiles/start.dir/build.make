@@ -184,10 +184,24 @@ CMakeFiles/start.dir/src/Accounts/GetUserRole.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Accounts/GetUserRole.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mac/Desktop/Coliseum-project/src/Accounts/GetUserRole.cpp -o CMakeFiles/start.dir/src/Accounts/GetUserRole.cpp.s
 
+CMakeFiles/start.dir/src/Accounts/generateTokens.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Accounts/generateTokens.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Accounts/generateTokens.cpp
+CMakeFiles/start.dir/src/Accounts/generateTokens.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/start.dir/src/Accounts/generateTokens.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Accounts/generateTokens.cpp.o -MF CMakeFiles/start.dir/src/Accounts/generateTokens.cpp.o.d -o CMakeFiles/start.dir/src/Accounts/generateTokens.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Accounts/generateTokens.cpp
+
+CMakeFiles/start.dir/src/Accounts/generateTokens.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Accounts/generateTokens.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mac/Desktop/Coliseum-project/src/Accounts/generateTokens.cpp > CMakeFiles/start.dir/src/Accounts/generateTokens.cpp.i
+
+CMakeFiles/start.dir/src/Accounts/generateTokens.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Accounts/generateTokens.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mac/Desktop/Coliseum-project/src/Accounts/generateTokens.cpp -o CMakeFiles/start.dir/src/Accounts/generateTokens.cpp.s
+
 CMakeFiles/start.dir/src/auth/LoginFromAPI.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/auth/LoginFromAPI.cpp.o: /Users/mac/Desktop/Coliseum-project/src/auth/LoginFromAPI.cpp
 CMakeFiles/start.dir/src/auth/LoginFromAPI.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/start.dir/src/auth/LoginFromAPI.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/start.dir/src/auth/LoginFromAPI.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/auth/LoginFromAPI.cpp.o -MF CMakeFiles/start.dir/src/auth/LoginFromAPI.cpp.o.d -o CMakeFiles/start.dir/src/auth/LoginFromAPI.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/auth/LoginFromAPI.cpp
 
 CMakeFiles/start.dir/src/auth/LoginFromAPI.cpp.i: cmake_force
@@ -201,7 +215,7 @@ CMakeFiles/start.dir/src/auth/LoginFromAPI.cpp.s: cmake_force
 CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Daemon/Daemon.cpp
 CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o -MF CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o.d -o CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Daemon/Daemon.cpp
 
 CMakeFiles/start.dir/src/Daemon/Daemon.cpp.i: cmake_force
@@ -215,7 +229,7 @@ CMakeFiles/start.dir/src/Daemon/Daemon.cpp.s: cmake_force
 CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Daemon/addToStartup.cpp
 CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o -MF CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o.d -o CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Daemon/addToStartup.cpp
 
 CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.i: cmake_force
@@ -229,7 +243,7 @@ CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.s: cmake_force
 CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Daemon/removeFromAutostart.cpp
 CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.o -MF CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.o.d -o CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Daemon/removeFromAutostart.cpp
 
 CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.i: cmake_force
@@ -243,7 +257,7 @@ CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.s: cmake_force
 CMakeFiles/start.dir/src/Server/Configuration.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/Server/Configuration.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Server/Configuration.cpp
 CMakeFiles/start.dir/src/Server/Configuration.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/start.dir/src/Server/Configuration.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/start.dir/src/Server/Configuration.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Server/Configuration.cpp.o -MF CMakeFiles/start.dir/src/Server/Configuration.cpp.o.d -o CMakeFiles/start.dir/src/Server/Configuration.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Server/Configuration.cpp
 
 CMakeFiles/start.dir/src/Server/Configuration.cpp.i: cmake_force
@@ -257,7 +271,7 @@ CMakeFiles/start.dir/src/Server/Configuration.cpp.s: cmake_force
 CMakeFiles/start.dir/src/Server/Server.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/Server/Server.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Server/Server.cpp
 CMakeFiles/start.dir/src/Server/Server.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/start.dir/src/Server/Server.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/start.dir/src/Server/Server.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Server/Server.cpp.o -MF CMakeFiles/start.dir/src/Server/Server.cpp.o.d -o CMakeFiles/start.dir/src/Server/Server.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Server/Server.cpp
 
 CMakeFiles/start.dir/src/Server/Server.cpp.i: cmake_force
@@ -271,7 +285,7 @@ CMakeFiles/start.dir/src/Server/Server.cpp.s: cmake_force
 CMakeFiles/start.dir/src/Server/httpServer.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/Server/httpServer.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Server/httpServer.cpp
 CMakeFiles/start.dir/src/Server/httpServer.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/start.dir/src/Server/httpServer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/start.dir/src/Server/httpServer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Server/httpServer.cpp.o -MF CMakeFiles/start.dir/src/Server/httpServer.cpp.o.d -o CMakeFiles/start.dir/src/Server/httpServer.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Server/httpServer.cpp
 
 CMakeFiles/start.dir/src/Server/httpServer.cpp.i: cmake_force
@@ -282,10 +296,94 @@ CMakeFiles/start.dir/src/Server/httpServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Server/httpServer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mac/Desktop/Coliseum-project/src/Server/httpServer.cpp -o CMakeFiles/start.dir/src/Server/httpServer.cpp.s
 
+CMakeFiles/start.dir/src/Server/handleAuthRequest.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Server/handleAuthRequest.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Server/handleAuthRequest.cpp
+CMakeFiles/start.dir/src/Server/handleAuthRequest.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/start.dir/src/Server/handleAuthRequest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Server/handleAuthRequest.cpp.o -MF CMakeFiles/start.dir/src/Server/handleAuthRequest.cpp.o.d -o CMakeFiles/start.dir/src/Server/handleAuthRequest.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Server/handleAuthRequest.cpp
+
+CMakeFiles/start.dir/src/Server/handleAuthRequest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Server/handleAuthRequest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mac/Desktop/Coliseum-project/src/Server/handleAuthRequest.cpp > CMakeFiles/start.dir/src/Server/handleAuthRequest.cpp.i
+
+CMakeFiles/start.dir/src/Server/handleAuthRequest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Server/handleAuthRequest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mac/Desktop/Coliseum-project/src/Server/handleAuthRequest.cpp -o CMakeFiles/start.dir/src/Server/handleAuthRequest.cpp.s
+
+CMakeFiles/start.dir/src/Server/handleClientRoutes.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Server/handleClientRoutes.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Server/handleClientRoutes.cpp
+CMakeFiles/start.dir/src/Server/handleClientRoutes.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/start.dir/src/Server/handleClientRoutes.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Server/handleClientRoutes.cpp.o -MF CMakeFiles/start.dir/src/Server/handleClientRoutes.cpp.o.d -o CMakeFiles/start.dir/src/Server/handleClientRoutes.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Server/handleClientRoutes.cpp
+
+CMakeFiles/start.dir/src/Server/handleClientRoutes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Server/handleClientRoutes.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mac/Desktop/Coliseum-project/src/Server/handleClientRoutes.cpp > CMakeFiles/start.dir/src/Server/handleClientRoutes.cpp.i
+
+CMakeFiles/start.dir/src/Server/handleClientRoutes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Server/handleClientRoutes.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mac/Desktop/Coliseum-project/src/Server/handleClientRoutes.cpp -o CMakeFiles/start.dir/src/Server/handleClientRoutes.cpp.s
+
+CMakeFiles/start.dir/src/Server/handleRefreshTokenRequest.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Server/handleRefreshTokenRequest.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Server/handleRefreshTokenRequest.cpp
+CMakeFiles/start.dir/src/Server/handleRefreshTokenRequest.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/start.dir/src/Server/handleRefreshTokenRequest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Server/handleRefreshTokenRequest.cpp.o -MF CMakeFiles/start.dir/src/Server/handleRefreshTokenRequest.cpp.o.d -o CMakeFiles/start.dir/src/Server/handleRefreshTokenRequest.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Server/handleRefreshTokenRequest.cpp
+
+CMakeFiles/start.dir/src/Server/handleRefreshTokenRequest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Server/handleRefreshTokenRequest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mac/Desktop/Coliseum-project/src/Server/handleRefreshTokenRequest.cpp > CMakeFiles/start.dir/src/Server/handleRefreshTokenRequest.cpp.i
+
+CMakeFiles/start.dir/src/Server/handleRefreshTokenRequest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Server/handleRefreshTokenRequest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mac/Desktop/Coliseum-project/src/Server/handleRefreshTokenRequest.cpp -o CMakeFiles/start.dir/src/Server/handleRefreshTokenRequest.cpp.s
+
+CMakeFiles/start.dir/src/Server/Logout.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Server/Logout.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Server/Logout.cpp
+CMakeFiles/start.dir/src/Server/Logout.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/start.dir/src/Server/Logout.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Server/Logout.cpp.o -MF CMakeFiles/start.dir/src/Server/Logout.cpp.o.d -o CMakeFiles/start.dir/src/Server/Logout.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Server/Logout.cpp
+
+CMakeFiles/start.dir/src/Server/Logout.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Server/Logout.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mac/Desktop/Coliseum-project/src/Server/Logout.cpp > CMakeFiles/start.dir/src/Server/Logout.cpp.i
+
+CMakeFiles/start.dir/src/Server/Logout.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Server/Logout.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mac/Desktop/Coliseum-project/src/Server/Logout.cpp -o CMakeFiles/start.dir/src/Server/Logout.cpp.s
+
+CMakeFiles/start.dir/src/Server/setupCORS.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Server/setupCORS.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Server/setupCORS.cpp
+CMakeFiles/start.dir/src/Server/setupCORS.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/start.dir/src/Server/setupCORS.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Server/setupCORS.cpp.o -MF CMakeFiles/start.dir/src/Server/setupCORS.cpp.o.d -o CMakeFiles/start.dir/src/Server/setupCORS.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Server/setupCORS.cpp
+
+CMakeFiles/start.dir/src/Server/setupCORS.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Server/setupCORS.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mac/Desktop/Coliseum-project/src/Server/setupCORS.cpp > CMakeFiles/start.dir/src/Server/setupCORS.cpp.i
+
+CMakeFiles/start.dir/src/Server/setupCORS.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Server/setupCORS.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mac/Desktop/Coliseum-project/src/Server/setupCORS.cpp -o CMakeFiles/start.dir/src/Server/setupCORS.cpp.s
+
+CMakeFiles/start.dir/src/Server/setupStaticFiles.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Server/setupStaticFiles.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Server/setupStaticFiles.cpp
+CMakeFiles/start.dir/src/Server/setupStaticFiles.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/start.dir/src/Server/setupStaticFiles.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Server/setupStaticFiles.cpp.o -MF CMakeFiles/start.dir/src/Server/setupStaticFiles.cpp.o.d -o CMakeFiles/start.dir/src/Server/setupStaticFiles.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Server/setupStaticFiles.cpp
+
+CMakeFiles/start.dir/src/Server/setupStaticFiles.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Server/setupStaticFiles.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mac/Desktop/Coliseum-project/src/Server/setupStaticFiles.cpp > CMakeFiles/start.dir/src/Server/setupStaticFiles.cpp.i
+
+CMakeFiles/start.dir/src/Server/setupStaticFiles.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Server/setupStaticFiles.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mac/Desktop/Coliseum-project/src/Server/setupStaticFiles.cpp -o CMakeFiles/start.dir/src/Server/setupStaticFiles.cpp.s
+
 CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o: /Users/mac/Desktop/Coliseum-project/src/DB/CreateBackup.cpp
 CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o -MF CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o.d -o CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/DB/CreateBackup.cpp
 
 CMakeFiles/start.dir/src/DB/CreateBackup.cpp.i: cmake_force
@@ -299,7 +397,7 @@ CMakeFiles/start.dir/src/DB/CreateBackup.cpp.s: cmake_force
 CMakeFiles/start.dir/src/DB/CreateTable.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/DB/CreateTable.cpp.o: /Users/mac/Desktop/Coliseum-project/src/DB/CreateTable.cpp
 CMakeFiles/start.dir/src/DB/CreateTable.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/start.dir/src/DB/CreateTable.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/start.dir/src/DB/CreateTable.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DB/CreateTable.cpp.o -MF CMakeFiles/start.dir/src/DB/CreateTable.cpp.o.d -o CMakeFiles/start.dir/src/DB/CreateTable.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/DB/CreateTable.cpp
 
 CMakeFiles/start.dir/src/DB/CreateTable.cpp.i: cmake_force
@@ -313,7 +411,7 @@ CMakeFiles/start.dir/src/DB/CreateTable.cpp.s: cmake_force
 CMakeFiles/start.dir/src/DB/Database.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/DB/Database.cpp.o: /Users/mac/Desktop/Coliseum-project/src/DB/Database.cpp
 CMakeFiles/start.dir/src/DB/Database.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/start.dir/src/DB/Database.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/start.dir/src/DB/Database.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DB/Database.cpp.o -MF CMakeFiles/start.dir/src/DB/Database.cpp.o.d -o CMakeFiles/start.dir/src/DB/Database.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/DB/Database.cpp
 
 CMakeFiles/start.dir/src/DB/Database.cpp.i: cmake_force
@@ -327,7 +425,7 @@ CMakeFiles/start.dir/src/DB/Database.cpp.s: cmake_force
 CMakeFiles/start.dir/src/DB/dataCollector.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/DB/dataCollector.cpp.o: /Users/mac/Desktop/Coliseum-project/src/DB/dataCollector.cpp
 CMakeFiles/start.dir/src/DB/dataCollector.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/start.dir/src/DB/dataCollector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/start.dir/src/DB/dataCollector.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DB/dataCollector.cpp.o -MF CMakeFiles/start.dir/src/DB/dataCollector.cpp.o.d -o CMakeFiles/start.dir/src/DB/dataCollector.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/DB/dataCollector.cpp
 
 CMakeFiles/start.dir/src/DB/dataCollector.cpp.i: cmake_force
@@ -341,7 +439,7 @@ CMakeFiles/start.dir/src/DB/dataCollector.cpp.s: cmake_force
 CMakeFiles/start.dir/src/DB/DateTime.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/DB/DateTime.cpp.o: /Users/mac/Desktop/Coliseum-project/src/DB/DateTime.cpp
 CMakeFiles/start.dir/src/DB/DateTime.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/start.dir/src/DB/DateTime.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/start.dir/src/DB/DateTime.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DB/DateTime.cpp.o -MF CMakeFiles/start.dir/src/DB/DateTime.cpp.o.d -o CMakeFiles/start.dir/src/DB/DateTime.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/DB/DateTime.cpp
 
 CMakeFiles/start.dir/src/DB/DateTime.cpp.i: cmake_force
@@ -355,7 +453,7 @@ CMakeFiles/start.dir/src/DB/DateTime.cpp.s: cmake_force
 CMakeFiles/start.dir/src/DB/DeleteData.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/DB/DeleteData.cpp.o: /Users/mac/Desktop/Coliseum-project/src/DB/DeleteData.cpp
 CMakeFiles/start.dir/src/DB/DeleteData.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/start.dir/src/DB/DeleteData.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/start.dir/src/DB/DeleteData.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DB/DeleteData.cpp.o -MF CMakeFiles/start.dir/src/DB/DeleteData.cpp.o.d -o CMakeFiles/start.dir/src/DB/DeleteData.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/DB/DeleteData.cpp
 
 CMakeFiles/start.dir/src/DB/DeleteData.cpp.i: cmake_force
@@ -369,7 +467,7 @@ CMakeFiles/start.dir/src/DB/DeleteData.cpp.s: cmake_force
 CMakeFiles/start.dir/src/DB/GetAllUsers.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/DB/GetAllUsers.cpp.o: /Users/mac/Desktop/Coliseum-project/src/DB/GetAllUsers.cpp
 CMakeFiles/start.dir/src/DB/GetAllUsers.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/start.dir/src/DB/GetAllUsers.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/start.dir/src/DB/GetAllUsers.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DB/GetAllUsers.cpp.o -MF CMakeFiles/start.dir/src/DB/GetAllUsers.cpp.o.d -o CMakeFiles/start.dir/src/DB/GetAllUsers.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/DB/GetAllUsers.cpp
 
 CMakeFiles/start.dir/src/DB/GetAllUsers.cpp.i: cmake_force
@@ -383,7 +481,7 @@ CMakeFiles/start.dir/src/DB/GetAllUsers.cpp.s: cmake_force
 CMakeFiles/start.dir/src/DB/GetData.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/DB/GetData.cpp.o: /Users/mac/Desktop/Coliseum-project/src/DB/GetData.cpp
 CMakeFiles/start.dir/src/DB/GetData.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/start.dir/src/DB/GetData.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/start.dir/src/DB/GetData.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DB/GetData.cpp.o -MF CMakeFiles/start.dir/src/DB/GetData.cpp.o.d -o CMakeFiles/start.dir/src/DB/GetData.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/DB/GetData.cpp
 
 CMakeFiles/start.dir/src/DB/GetData.cpp.i: cmake_force
@@ -397,7 +495,7 @@ CMakeFiles/start.dir/src/DB/GetData.cpp.s: cmake_force
 CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o: /Users/mac/Desktop/Coliseum-project/src/dao/entity/ActivePower.cpp
 CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/dao/entity/ActivePower.cpp
 
 CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.i: cmake_force
@@ -411,7 +509,7 @@ CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.s: cmake_force
 CMakeFiles/start.dir/src/dao/entity/Current.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/dao/entity/Current.cpp.o: /Users/mac/Desktop/Coliseum-project/src/dao/entity/Current.cpp
 CMakeFiles/start.dir/src/dao/entity/Current.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/start.dir/src/dao/entity/Current.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/start.dir/src/dao/entity/Current.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/Current.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/Current.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/Current.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/dao/entity/Current.cpp
 
 CMakeFiles/start.dir/src/dao/entity/Current.cpp.i: cmake_force
@@ -425,7 +523,7 @@ CMakeFiles/start.dir/src/dao/entity/Current.cpp.s: cmake_force
 CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o: /Users/mac/Desktop/Coliseum-project/src/dao/entity/IpAddress.cpp
 CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/dao/entity/IpAddress.cpp
 
 CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.i: cmake_force
@@ -439,7 +537,7 @@ CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.s: cmake_force
 CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o: /Users/mac/Desktop/Coliseum-project/src/dao/entity/NameSensor.cpp
 CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/dao/entity/NameSensor.cpp
 
 CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.i: cmake_force
@@ -453,7 +551,7 @@ CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.s: cmake_force
 CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o: /Users/mac/Desktop/Coliseum-project/src/dao/entity/PowerFactor.cpp
 CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/dao/entity/PowerFactor.cpp
 
 CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.i: cmake_force
@@ -467,7 +565,7 @@ CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.s: cmake_force
 CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o: /Users/mac/Desktop/Coliseum-project/src/dao/entity/ReactivePower.cpp
 CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/dao/entity/ReactivePower.cpp
 
 CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.i: cmake_force
@@ -481,7 +579,7 @@ CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.s: cmake_force
 CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o: /Users/mac/Desktop/Coliseum-project/src/dao/entity/Voltage.cpp
 CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/dao/entity/Voltage.cpp
 
 CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.i: cmake_force
@@ -495,7 +593,7 @@ CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.s: cmake_force
 CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o: /Users/mac/Desktop/Coliseum-project/src/dao/entity/roundNumber.cpp
 CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o -MF CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o.d -o CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/dao/entity/roundNumber.cpp
 
 CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.i: cmake_force
@@ -509,7 +607,7 @@ CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.s: cmake_force
 CMakeFiles/start.dir/src/Logger/DataTime.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/Logger/DataTime.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Logger/DataTime.cpp
 CMakeFiles/start.dir/src/Logger/DataTime.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/start.dir/src/Logger/DataTime.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/start.dir/src/Logger/DataTime.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Logger/DataTime.cpp.o -MF CMakeFiles/start.dir/src/Logger/DataTime.cpp.o.d -o CMakeFiles/start.dir/src/Logger/DataTime.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Logger/DataTime.cpp
 
 CMakeFiles/start.dir/src/Logger/DataTime.cpp.i: cmake_force
@@ -523,7 +621,7 @@ CMakeFiles/start.dir/src/Logger/DataTime.cpp.s: cmake_force
 CMakeFiles/start.dir/src/Logger/logError.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/Logger/logError.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Logger/logError.cpp
 CMakeFiles/start.dir/src/Logger/logError.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/start.dir/src/Logger/logError.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/start.dir/src/Logger/logError.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Logger/logError.cpp.o -MF CMakeFiles/start.dir/src/Logger/logError.cpp.o.d -o CMakeFiles/start.dir/src/Logger/logError.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Logger/logError.cpp
 
 CMakeFiles/start.dir/src/Logger/logError.cpp.i: cmake_force
@@ -537,7 +635,7 @@ CMakeFiles/start.dir/src/Logger/logError.cpp.s: cmake_force
 CMakeFiles/start.dir/src/Logger/Logger.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/Logger/Logger.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Logger/Logger.cpp
 CMakeFiles/start.dir/src/Logger/Logger.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/start.dir/src/Logger/Logger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/start.dir/src/Logger/Logger.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Logger/Logger.cpp.o -MF CMakeFiles/start.dir/src/Logger/Logger.cpp.o.d -o CMakeFiles/start.dir/src/Logger/Logger.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Logger/Logger.cpp
 
 CMakeFiles/start.dir/src/Logger/Logger.cpp.i: cmake_force
@@ -551,7 +649,7 @@ CMakeFiles/start.dir/src/Logger/Logger.cpp.s: cmake_force
 CMakeFiles/start.dir/src/main.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/main.cpp.o: /Users/mac/Desktop/Coliseum-project/src/main.cpp
 CMakeFiles/start.dir/src/main.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/start.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/start.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/main.cpp.o -MF CMakeFiles/start.dir/src/main.cpp.o.d -o CMakeFiles/start.dir/src/main.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/main.cpp
 
 CMakeFiles/start.dir/src/main.cpp.i: cmake_force
@@ -572,6 +670,7 @@ start_OBJECTS = \
 "CMakeFiles/start.dir/src/Accounts/Login.cpp.o" \
 "CMakeFiles/start.dir/src/Accounts/GetUserData.cpp.o" \
 "CMakeFiles/start.dir/src/Accounts/GetUserRole.cpp.o" \
+"CMakeFiles/start.dir/src/Accounts/generateTokens.cpp.o" \
 "CMakeFiles/start.dir/src/auth/LoginFromAPI.cpp.o" \
 "CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o" \
 "CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o" \
@@ -579,6 +678,12 @@ start_OBJECTS = \
 "CMakeFiles/start.dir/src/Server/Configuration.cpp.o" \
 "CMakeFiles/start.dir/src/Server/Server.cpp.o" \
 "CMakeFiles/start.dir/src/Server/httpServer.cpp.o" \
+"CMakeFiles/start.dir/src/Server/handleAuthRequest.cpp.o" \
+"CMakeFiles/start.dir/src/Server/handleClientRoutes.cpp.o" \
+"CMakeFiles/start.dir/src/Server/handleRefreshTokenRequest.cpp.o" \
+"CMakeFiles/start.dir/src/Server/Logout.cpp.o" \
+"CMakeFiles/start.dir/src/Server/setupCORS.cpp.o" \
+"CMakeFiles/start.dir/src/Server/setupStaticFiles.cpp.o" \
 "CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o" \
 "CMakeFiles/start.dir/src/DB/CreateTable.cpp.o" \
 "CMakeFiles/start.dir/src/DB/Database.cpp.o" \
@@ -611,6 +716,7 @@ start: CMakeFiles/start.dir/src/Accounts/IsAdministrator.cpp.o
 start: CMakeFiles/start.dir/src/Accounts/Login.cpp.o
 start: CMakeFiles/start.dir/src/Accounts/GetUserData.cpp.o
 start: CMakeFiles/start.dir/src/Accounts/GetUserRole.cpp.o
+start: CMakeFiles/start.dir/src/Accounts/generateTokens.cpp.o
 start: CMakeFiles/start.dir/src/auth/LoginFromAPI.cpp.o
 start: CMakeFiles/start.dir/src/Daemon/Daemon.cpp.o
 start: CMakeFiles/start.dir/src/Daemon/addToStartup.cpp.o
@@ -618,6 +724,12 @@ start: CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.o
 start: CMakeFiles/start.dir/src/Server/Configuration.cpp.o
 start: CMakeFiles/start.dir/src/Server/Server.cpp.o
 start: CMakeFiles/start.dir/src/Server/httpServer.cpp.o
+start: CMakeFiles/start.dir/src/Server/handleAuthRequest.cpp.o
+start: CMakeFiles/start.dir/src/Server/handleClientRoutes.cpp.o
+start: CMakeFiles/start.dir/src/Server/handleRefreshTokenRequest.cpp.o
+start: CMakeFiles/start.dir/src/Server/Logout.cpp.o
+start: CMakeFiles/start.dir/src/Server/setupCORS.cpp.o
+start: CMakeFiles/start.dir/src/Server/setupStaticFiles.cpp.o
 start: CMakeFiles/start.dir/src/DB/CreateBackup.cpp.o
 start: CMakeFiles/start.dir/src/DB/CreateTable.cpp.o
 start: CMakeFiles/start.dir/src/DB/Database.cpp.o
@@ -639,10 +751,12 @@ start: CMakeFiles/start.dir/src/Logger/logError.cpp.o
 start: CMakeFiles/start.dir/src/Logger/Logger.cpp.o
 start: CMakeFiles/start.dir/src/main.cpp.o
 start: CMakeFiles/start.dir/build.make
+start: /usr/local/Cellar/openssl@3/3.4.1/lib/libssl.dylib
+start: /usr/local/Cellar/openssl@3/3.4.1/lib/libcrypto.dylib
 start: /usr/local/opt/mariadb-connector-c/lib/libmariadb.dylib
 start: /usr/local/lib/libjsoncpp.dylib
 start: CMakeFiles/start.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Linking CXX executable start"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Linking CXX executable start"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/start.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

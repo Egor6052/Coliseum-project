@@ -9,11 +9,7 @@ message(STATUS "Compile with static library? ${USE_STATIC}")
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# ============ CPR (lib/cpr) ============
-# set(CPR_USE_SYSTEM_CURL OFF)
-# add_subdirectory(lib/cpr)
-
-# ============ Шлях до вихідних файлів ============
+# ============ Source Files ============
 set(SOURCE_FILES
     # Accounts
     src/Accounts/GenerateUID.cpp
@@ -24,6 +20,7 @@ set(SOURCE_FILES
     src/Accounts/Login.cpp
     src/Accounts/GetUserData.cpp
     src/Accounts/GetUserRole.cpp
+    src/Accounts/generateTokens.cpp
 
     # Auth
     src/auth/LoginFromAPI.cpp
@@ -37,6 +34,12 @@ set(SOURCE_FILES
     src/Server/Configuration.cpp
     src/Server/Server.cpp
     src/Server/httpServer.cpp
+    src/Server/handleAuthRequest.cpp
+    src/Server/handleClientRoutes.cpp
+    src/Server/handleRefreshTokenRequest.cpp
+    src/Server/Logout.cpp
+    src/Server/setupCORS.cpp
+    src/Server/setupStaticFiles.cpp
 
     # Database
     src/DB/CreateBackup.cpp
@@ -68,37 +71,35 @@ set(SOURCE_FILES
 )
 
 add_executable(start ${SOURCE_FILES})
-# target_link_libraries(start PRIVATE cpr::cpr)
 
-# ============ Заголовкові файли (директорія) ============
+# ============ Include Directories ============
 target_include_directories(start PRIVATE
+    ./lib/jwt-cpp/include
     ./lib
     src/headers
+    lib/json
 )
 
-# ============ Компілятор =============
+# ============ Compiler Options ============
 target_compile_features(start PRIVATE cxx_std_17)
 target_compile_options(start PRIVATE -Wall -fPIC)
 
-# ============ CPR ============
-# target_link_libraries(start PRIVATE cpr::cpr)
+# ============ OpenSSL ============
+find_package(OpenSSL REQUIRED)
+target_link_libraries(start PRIVATE OpenSSL::SSL OpenSSL::Crypto)
 
 # ============ MariaDB ============
 if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
     message(STATUS "Detected macOS, using Homebrew paths for MariaDB")
     set(MARIADB_ROOT "/usr/local/opt/mariadb-connector-c")
-
     find_library(MARIADB_LIBRARY mariadb HINTS "${MARIADB_ROOT}/lib")
     find_path(MARIADB_INCLUDE_DIR mysql.h HINTS "${MARIADB_ROOT}/include/mariadb")
-
 else()
     message(STATUS "Detected Linux or other system, using standard paths for MariaDB")
-
     find_library(MARIADB_LIBRARY
         NAMES mariadb mariadbclient
         PATHS /usr/lib /usr/lib64 /usr/local/lib /usr/local/lib64
     )
-
     find_path(MARIADB_INCLUDE_DIR
         NAMES mysql.h
         PATHS /usr/include /usr/include/mysql /usr/local/include /usr/local/include/mysql
@@ -130,9 +131,6 @@ else()
     target_include_directories(start PRIVATE ${JSONCPP_INCLUDE_DIR})
     target_link_libraries(start PRIVATE ${JSONCPP_LIBRARY})
 endif()
-
-# ============ nlohmann/json (header-only) ============
-target_include_directories(start PRIVATE lib/json)
 
 # ============ OS-specific libraries ============
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux")

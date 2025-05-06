@@ -34,8 +34,11 @@ class Accounts : public Database {
         std::string getUserPassword(std::string uid);
         std::string getUserEmail(std::string uid);
         std::string getUserRole(std::string uid);
-
         std::string getUserData();
+
+        std::string generateAccessToken(const std::string &email, const std::string &secretKey);
+        std::string generateRefreshToken(const std::string &email, const std::string &secretKey);
+        
         bool Login(std::string login, std::string password);
         void handleLoginFromAPI();
         void refreshAccessToken(const std::string& refreshToken);
