@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string.h>
 #include <cmath>
-#include "../../headers/Database.h"
+#include "../headers/DataCollector.h"
 
-float Database::getReactivePower() {
+float DataCollector::getReactivePower() {
 
     // Обчислення φ із коефіцієнта потужності (φ = arccos(cos(φ)))
     float phi = std::acos(getPowerFactor());

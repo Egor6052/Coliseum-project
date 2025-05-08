@@ -12,13 +12,13 @@
 
 class Database : public Logger {
     private:
-        std::string data;
-        std::string ipAddress;
-        std::string nameSensor;
-        float current;
-        float voltage;
-        float activePower;
-        float reactivePower;
+        // std::string data;
+        // std::string ipAddress;
+        // std::string nameSensor;
+        // float current;
+        // float voltage;
+        // float activePower;
+        // float reactivePower;
 
         std::string name;
         std::string password;
@@ -47,18 +47,18 @@ class Database : public Logger {
 
         // DB
         std::string getCurrentDateTime();
-        std::string getIpAddress();
-        std::string getNameSensor();
-        float getCurrent();
-        float getVoltage();
-        float getActivePower();
-        float getPowerFactor();
-        float getReactivePower();
+        // std::string getIpAddress();
+        // std::string getNameSensor();
+        // float getCurrent();
+        // float getVoltage();
+        // float getActivePower();
+        // float getPowerFactor();
+        // float getReactivePower();
 
-        float roundNumber(float valueNumber);
+        // float roundNumber(float valueNumber);
 
         void CreateTable();
-        void dataCollector();
+        // void dataCollector();
         void setData(std::string data, std::string ipAddress, std::string nameSensor, float current, float voltage, float activePower, float reactivePower);
 
         void deleteData(std::string valueID);

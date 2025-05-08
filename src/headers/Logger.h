@@ -10,12 +10,11 @@ private:
     std::ofstream logStream;
     std::string absolutePath();
 
-
 public:
     Logger();
     ~Logger();
 
-    // TODO rotate log
+    // TODO тут ще буде видалення логів через деякий час
 
     std::string getLoggerDateTime();
     

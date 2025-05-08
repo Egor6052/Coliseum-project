@@ -1,9 +1,9 @@
 #include <iostream>
 #include <cmath>
 
-#include "../../headers/Database.h"
+#include "../headers/DataCollector.h"
 
-float Database::roundNumber(float valueNumber) {
+float DataCollector::roundNumber(float valueNumber) {
     float rounded = std::round(valueNumber * 1000.0f) / 1000.0f;
     return rounded;
 }

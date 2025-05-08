@@ -3,7 +3,6 @@
 #include <unistd.h>
 #include <limits.h>
 
-
 #if defined(__APPLE__)
 #include <mach-o/dyld.h>
 #endif
@@ -12,7 +11,7 @@
 
 Daemon::Daemon(){
     this->servicePath = "/etc/systemd/system/SensorDaemon.service";
-    this->configFilePath = absolutePath() + "/config/configFile.conf";
+    // this->configFilePath = absolutePath() + "/config/configFile.conf";
     this->program_path = absolutePath() + "/build/start";
     this->working_directory = absolutePath();
 }

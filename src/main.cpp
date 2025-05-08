@@ -5,11 +5,14 @@
 #include "./headers/Daemon.h"
 #include "./headers/Accounts.h"
 
+#include "./headers/DataCollector.h"
+
 int main() {
     Server server;
     Daemon daemon;
     Accounts account;
     Database db;
+    DataCollector dataCollector;
 
     std::cout << "\033[1m\033[35m˚｡⋆\033[36mWelcome to the Server!\033[35m⋆｡˚\033[0m\n" << std::endl;
     db.setAdminPassword("MySqlStrongPassword123!");
@@ -20,9 +23,9 @@ int main() {
 
 
     // Run it in a separate thread with periodicity
-    std::thread collectorThread([&server]() {
+    std::thread collectorThread([&dataCollector]() {
         while (true) {
-            server.dataCollector();
+            dataCollector.dataCollector();
             std::this_thread::sleep_for(std::chrono::hours(24));
         }
     });

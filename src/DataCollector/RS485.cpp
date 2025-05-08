@@ -3,10 +3,10 @@
 #include <termios.h>
 #include <unistd.h>
 
-#include "../../headers/Server.h"
+#include "../headers/DataCollector.h"
 
-void Server::RS485(){
-// TODO
+void DataCollector::RS485(){
+    // TODO
     const char* port = "/dev/ttyUSB0";
 
     int serial_port = open(port, O_RDWR | O_NOCTTY);

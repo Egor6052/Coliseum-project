@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string.h>
 #include <cmath>
-#include "../../headers/Database.h"
+#include "../headers/DataCollector.h"
 
-float Database::getActivePower() {
+float DataCollector::getActivePower() {
 
     // P = V * I * cos(φ)
     // getPowerFactor() - Коефіцієнт потужності (cos(φ))

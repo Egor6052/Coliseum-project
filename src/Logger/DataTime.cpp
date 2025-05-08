@@ -1,9 +1,9 @@
-#include "../headers/Logger.h"
-
 #include <chrono>
 #include <ctime>
 #include <iomanip>
 #include <sstream>
+
+#include "../headers/Logger.h"
 
 std::string Logger::getLoggerDateTime() {
     std::time_t now = std::time(nullptr);

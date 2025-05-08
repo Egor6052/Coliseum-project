@@ -609,6 +609,270 @@ src/Daemon/removeFromAutostart.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Daemon/removeFromAutostart.cpp.s
 .PHONY : src/Daemon/removeFromAutostart.cpp.s
 
+src/DataCollector/ActivePower.o: src/DataCollector/ActivePower.cpp.o
+.PHONY : src/DataCollector/ActivePower.o
+
+# target to build an object file
+src/DataCollector/ActivePower.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/ActivePower.cpp.o
+.PHONY : src/DataCollector/ActivePower.cpp.o
+
+src/DataCollector/ActivePower.i: src/DataCollector/ActivePower.cpp.i
+.PHONY : src/DataCollector/ActivePower.i
+
+# target to preprocess a source file
+src/DataCollector/ActivePower.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/ActivePower.cpp.i
+.PHONY : src/DataCollector/ActivePower.cpp.i
+
+src/DataCollector/ActivePower.s: src/DataCollector/ActivePower.cpp.s
+.PHONY : src/DataCollector/ActivePower.s
+
+# target to generate assembly for a file
+src/DataCollector/ActivePower.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/ActivePower.cpp.s
+.PHONY : src/DataCollector/ActivePower.cpp.s
+
+src/DataCollector/Current.o: src/DataCollector/Current.cpp.o
+.PHONY : src/DataCollector/Current.o
+
+# target to build an object file
+src/DataCollector/Current.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/Current.cpp.o
+.PHONY : src/DataCollector/Current.cpp.o
+
+src/DataCollector/Current.i: src/DataCollector/Current.cpp.i
+.PHONY : src/DataCollector/Current.i
+
+# target to preprocess a source file
+src/DataCollector/Current.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/Current.cpp.i
+.PHONY : src/DataCollector/Current.cpp.i
+
+src/DataCollector/Current.s: src/DataCollector/Current.cpp.s
+.PHONY : src/DataCollector/Current.s
+
+# target to generate assembly for a file
+src/DataCollector/Current.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/Current.cpp.s
+.PHONY : src/DataCollector/Current.cpp.s
+
+src/DataCollector/DataCollector.o: src/DataCollector/DataCollector.cpp.o
+.PHONY : src/DataCollector/DataCollector.o
+
+# target to build an object file
+src/DataCollector/DataCollector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/DataCollector.cpp.o
+.PHONY : src/DataCollector/DataCollector.cpp.o
+
+src/DataCollector/DataCollector.i: src/DataCollector/DataCollector.cpp.i
+.PHONY : src/DataCollector/DataCollector.i
+
+# target to preprocess a source file
+src/DataCollector/DataCollector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/DataCollector.cpp.i
+.PHONY : src/DataCollector/DataCollector.cpp.i
+
+src/DataCollector/DataCollector.s: src/DataCollector/DataCollector.cpp.s
+.PHONY : src/DataCollector/DataCollector.s
+
+# target to generate assembly for a file
+src/DataCollector/DataCollector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/DataCollector.cpp.s
+.PHONY : src/DataCollector/DataCollector.cpp.s
+
+src/DataCollector/DateTime.o: src/DataCollector/DateTime.cpp.o
+.PHONY : src/DataCollector/DateTime.o
+
+# target to build an object file
+src/DataCollector/DateTime.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/DateTime.cpp.o
+.PHONY : src/DataCollector/DateTime.cpp.o
+
+src/DataCollector/DateTime.i: src/DataCollector/DateTime.cpp.i
+.PHONY : src/DataCollector/DateTime.i
+
+# target to preprocess a source file
+src/DataCollector/DateTime.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/DateTime.cpp.i
+.PHONY : src/DataCollector/DateTime.cpp.i
+
+src/DataCollector/DateTime.s: src/DataCollector/DateTime.cpp.s
+.PHONY : src/DataCollector/DateTime.s
+
+# target to generate assembly for a file
+src/DataCollector/DateTime.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/DateTime.cpp.s
+.PHONY : src/DataCollector/DateTime.cpp.s
+
+src/DataCollector/IpAddress.o: src/DataCollector/IpAddress.cpp.o
+.PHONY : src/DataCollector/IpAddress.o
+
+# target to build an object file
+src/DataCollector/IpAddress.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/IpAddress.cpp.o
+.PHONY : src/DataCollector/IpAddress.cpp.o
+
+src/DataCollector/IpAddress.i: src/DataCollector/IpAddress.cpp.i
+.PHONY : src/DataCollector/IpAddress.i
+
+# target to preprocess a source file
+src/DataCollector/IpAddress.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/IpAddress.cpp.i
+.PHONY : src/DataCollector/IpAddress.cpp.i
+
+src/DataCollector/IpAddress.s: src/DataCollector/IpAddress.cpp.s
+.PHONY : src/DataCollector/IpAddress.s
+
+# target to generate assembly for a file
+src/DataCollector/IpAddress.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/IpAddress.cpp.s
+.PHONY : src/DataCollector/IpAddress.cpp.s
+
+src/DataCollector/NameSensor.o: src/DataCollector/NameSensor.cpp.o
+.PHONY : src/DataCollector/NameSensor.o
+
+# target to build an object file
+src/DataCollector/NameSensor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/NameSensor.cpp.o
+.PHONY : src/DataCollector/NameSensor.cpp.o
+
+src/DataCollector/NameSensor.i: src/DataCollector/NameSensor.cpp.i
+.PHONY : src/DataCollector/NameSensor.i
+
+# target to preprocess a source file
+src/DataCollector/NameSensor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/NameSensor.cpp.i
+.PHONY : src/DataCollector/NameSensor.cpp.i
+
+src/DataCollector/NameSensor.s: src/DataCollector/NameSensor.cpp.s
+.PHONY : src/DataCollector/NameSensor.s
+
+# target to generate assembly for a file
+src/DataCollector/NameSensor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/NameSensor.cpp.s
+.PHONY : src/DataCollector/NameSensor.cpp.s
+
+src/DataCollector/PowerFactor.o: src/DataCollector/PowerFactor.cpp.o
+.PHONY : src/DataCollector/PowerFactor.o
+
+# target to build an object file
+src/DataCollector/PowerFactor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.o
+.PHONY : src/DataCollector/PowerFactor.cpp.o
+
+src/DataCollector/PowerFactor.i: src/DataCollector/PowerFactor.cpp.i
+.PHONY : src/DataCollector/PowerFactor.i
+
+# target to preprocess a source file
+src/DataCollector/PowerFactor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.i
+.PHONY : src/DataCollector/PowerFactor.cpp.i
+
+src/DataCollector/PowerFactor.s: src/DataCollector/PowerFactor.cpp.s
+.PHONY : src/DataCollector/PowerFactor.s
+
+# target to generate assembly for a file
+src/DataCollector/PowerFactor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.s
+.PHONY : src/DataCollector/PowerFactor.cpp.s
+
+src/DataCollector/RS485.o: src/DataCollector/RS485.cpp.o
+.PHONY : src/DataCollector/RS485.o
+
+# target to build an object file
+src/DataCollector/RS485.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/RS485.cpp.o
+.PHONY : src/DataCollector/RS485.cpp.o
+
+src/DataCollector/RS485.i: src/DataCollector/RS485.cpp.i
+.PHONY : src/DataCollector/RS485.i
+
+# target to preprocess a source file
+src/DataCollector/RS485.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/RS485.cpp.i
+.PHONY : src/DataCollector/RS485.cpp.i
+
+src/DataCollector/RS485.s: src/DataCollector/RS485.cpp.s
+.PHONY : src/DataCollector/RS485.s
+
+# target to generate assembly for a file
+src/DataCollector/RS485.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/RS485.cpp.s
+.PHONY : src/DataCollector/RS485.cpp.s
+
+src/DataCollector/ReactivePower.o: src/DataCollector/ReactivePower.cpp.o
+.PHONY : src/DataCollector/ReactivePower.o
+
+# target to build an object file
+src/DataCollector/ReactivePower.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/ReactivePower.cpp.o
+.PHONY : src/DataCollector/ReactivePower.cpp.o
+
+src/DataCollector/ReactivePower.i: src/DataCollector/ReactivePower.cpp.i
+.PHONY : src/DataCollector/ReactivePower.i
+
+# target to preprocess a source file
+src/DataCollector/ReactivePower.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/ReactivePower.cpp.i
+.PHONY : src/DataCollector/ReactivePower.cpp.i
+
+src/DataCollector/ReactivePower.s: src/DataCollector/ReactivePower.cpp.s
+.PHONY : src/DataCollector/ReactivePower.s
+
+# target to generate assembly for a file
+src/DataCollector/ReactivePower.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/ReactivePower.cpp.s
+.PHONY : src/DataCollector/ReactivePower.cpp.s
+
+src/DataCollector/Voltage.o: src/DataCollector/Voltage.cpp.o
+.PHONY : src/DataCollector/Voltage.o
+
+# target to build an object file
+src/DataCollector/Voltage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/Voltage.cpp.o
+.PHONY : src/DataCollector/Voltage.cpp.o
+
+src/DataCollector/Voltage.i: src/DataCollector/Voltage.cpp.i
+.PHONY : src/DataCollector/Voltage.i
+
+# target to preprocess a source file
+src/DataCollector/Voltage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/Voltage.cpp.i
+.PHONY : src/DataCollector/Voltage.cpp.i
+
+src/DataCollector/Voltage.s: src/DataCollector/Voltage.cpp.s
+.PHONY : src/DataCollector/Voltage.s
+
+# target to generate assembly for a file
+src/DataCollector/Voltage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/Voltage.cpp.s
+.PHONY : src/DataCollector/Voltage.cpp.s
+
+src/DataCollector/roundNumber.o: src/DataCollector/roundNumber.cpp.o
+.PHONY : src/DataCollector/roundNumber.o
+
+# target to build an object file
+src/DataCollector/roundNumber.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/roundNumber.cpp.o
+.PHONY : src/DataCollector/roundNumber.cpp.o
+
+src/DataCollector/roundNumber.i: src/DataCollector/roundNumber.cpp.i
+.PHONY : src/DataCollector/roundNumber.i
+
+# target to preprocess a source file
+src/DataCollector/roundNumber.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/roundNumber.cpp.i
+.PHONY : src/DataCollector/roundNumber.cpp.i
+
+src/DataCollector/roundNumber.s: src/DataCollector/roundNumber.cpp.s
+.PHONY : src/DataCollector/roundNumber.s
+
+# target to generate assembly for a file
+src/DataCollector/roundNumber.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/roundNumber.cpp.s
+.PHONY : src/DataCollector/roundNumber.cpp.s
+
 src/Logger/DataTime.o: src/Logger/DataTime.cpp.o
 .PHONY : src/Logger/DataTime.o
 
@@ -921,198 +1185,6 @@ src/auth/LoginFromAPI.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/auth/LoginFromAPI.cpp.s
 .PHONY : src/auth/LoginFromAPI.cpp.s
 
-src/dao/entity/ActivePower.o: src/dao/entity/ActivePower.cpp.o
-.PHONY : src/dao/entity/ActivePower.o
-
-# target to build an object file
-src/dao/entity/ActivePower.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.o
-.PHONY : src/dao/entity/ActivePower.cpp.o
-
-src/dao/entity/ActivePower.i: src/dao/entity/ActivePower.cpp.i
-.PHONY : src/dao/entity/ActivePower.i
-
-# target to preprocess a source file
-src/dao/entity/ActivePower.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.i
-.PHONY : src/dao/entity/ActivePower.cpp.i
-
-src/dao/entity/ActivePower.s: src/dao/entity/ActivePower.cpp.s
-.PHONY : src/dao/entity/ActivePower.s
-
-# target to generate assembly for a file
-src/dao/entity/ActivePower.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/ActivePower.cpp.s
-.PHONY : src/dao/entity/ActivePower.cpp.s
-
-src/dao/entity/Current.o: src/dao/entity/Current.cpp.o
-.PHONY : src/dao/entity/Current.o
-
-# target to build an object file
-src/dao/entity/Current.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/Current.cpp.o
-.PHONY : src/dao/entity/Current.cpp.o
-
-src/dao/entity/Current.i: src/dao/entity/Current.cpp.i
-.PHONY : src/dao/entity/Current.i
-
-# target to preprocess a source file
-src/dao/entity/Current.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/Current.cpp.i
-.PHONY : src/dao/entity/Current.cpp.i
-
-src/dao/entity/Current.s: src/dao/entity/Current.cpp.s
-.PHONY : src/dao/entity/Current.s
-
-# target to generate assembly for a file
-src/dao/entity/Current.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/Current.cpp.s
-.PHONY : src/dao/entity/Current.cpp.s
-
-src/dao/entity/IpAddress.o: src/dao/entity/IpAddress.cpp.o
-.PHONY : src/dao/entity/IpAddress.o
-
-# target to build an object file
-src/dao/entity/IpAddress.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.o
-.PHONY : src/dao/entity/IpAddress.cpp.o
-
-src/dao/entity/IpAddress.i: src/dao/entity/IpAddress.cpp.i
-.PHONY : src/dao/entity/IpAddress.i
-
-# target to preprocess a source file
-src/dao/entity/IpAddress.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.i
-.PHONY : src/dao/entity/IpAddress.cpp.i
-
-src/dao/entity/IpAddress.s: src/dao/entity/IpAddress.cpp.s
-.PHONY : src/dao/entity/IpAddress.s
-
-# target to generate assembly for a file
-src/dao/entity/IpAddress.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/IpAddress.cpp.s
-.PHONY : src/dao/entity/IpAddress.cpp.s
-
-src/dao/entity/NameSensor.o: src/dao/entity/NameSensor.cpp.o
-.PHONY : src/dao/entity/NameSensor.o
-
-# target to build an object file
-src/dao/entity/NameSensor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.o
-.PHONY : src/dao/entity/NameSensor.cpp.o
-
-src/dao/entity/NameSensor.i: src/dao/entity/NameSensor.cpp.i
-.PHONY : src/dao/entity/NameSensor.i
-
-# target to preprocess a source file
-src/dao/entity/NameSensor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.i
-.PHONY : src/dao/entity/NameSensor.cpp.i
-
-src/dao/entity/NameSensor.s: src/dao/entity/NameSensor.cpp.s
-.PHONY : src/dao/entity/NameSensor.s
-
-# target to generate assembly for a file
-src/dao/entity/NameSensor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/NameSensor.cpp.s
-.PHONY : src/dao/entity/NameSensor.cpp.s
-
-src/dao/entity/PowerFactor.o: src/dao/entity/PowerFactor.cpp.o
-.PHONY : src/dao/entity/PowerFactor.o
-
-# target to build an object file
-src/dao/entity/PowerFactor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.o
-.PHONY : src/dao/entity/PowerFactor.cpp.o
-
-src/dao/entity/PowerFactor.i: src/dao/entity/PowerFactor.cpp.i
-.PHONY : src/dao/entity/PowerFactor.i
-
-# target to preprocess a source file
-src/dao/entity/PowerFactor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.i
-.PHONY : src/dao/entity/PowerFactor.cpp.i
-
-src/dao/entity/PowerFactor.s: src/dao/entity/PowerFactor.cpp.s
-.PHONY : src/dao/entity/PowerFactor.s
-
-# target to generate assembly for a file
-src/dao/entity/PowerFactor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/PowerFactor.cpp.s
-.PHONY : src/dao/entity/PowerFactor.cpp.s
-
-src/dao/entity/ReactivePower.o: src/dao/entity/ReactivePower.cpp.o
-.PHONY : src/dao/entity/ReactivePower.o
-
-# target to build an object file
-src/dao/entity/ReactivePower.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.o
-.PHONY : src/dao/entity/ReactivePower.cpp.o
-
-src/dao/entity/ReactivePower.i: src/dao/entity/ReactivePower.cpp.i
-.PHONY : src/dao/entity/ReactivePower.i
-
-# target to preprocess a source file
-src/dao/entity/ReactivePower.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.i
-.PHONY : src/dao/entity/ReactivePower.cpp.i
-
-src/dao/entity/ReactivePower.s: src/dao/entity/ReactivePower.cpp.s
-.PHONY : src/dao/entity/ReactivePower.s
-
-# target to generate assembly for a file
-src/dao/entity/ReactivePower.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/ReactivePower.cpp.s
-.PHONY : src/dao/entity/ReactivePower.cpp.s
-
-src/dao/entity/Voltage.o: src/dao/entity/Voltage.cpp.o
-.PHONY : src/dao/entity/Voltage.o
-
-# target to build an object file
-src/dao/entity/Voltage.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.o
-.PHONY : src/dao/entity/Voltage.cpp.o
-
-src/dao/entity/Voltage.i: src/dao/entity/Voltage.cpp.i
-.PHONY : src/dao/entity/Voltage.i
-
-# target to preprocess a source file
-src/dao/entity/Voltage.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.i
-.PHONY : src/dao/entity/Voltage.cpp.i
-
-src/dao/entity/Voltage.s: src/dao/entity/Voltage.cpp.s
-.PHONY : src/dao/entity/Voltage.s
-
-# target to generate assembly for a file
-src/dao/entity/Voltage.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/Voltage.cpp.s
-.PHONY : src/dao/entity/Voltage.cpp.s
-
-src/dao/entity/roundNumber.o: src/dao/entity/roundNumber.cpp.o
-.PHONY : src/dao/entity/roundNumber.o
-
-# target to build an object file
-src/dao/entity/roundNumber.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.o
-.PHONY : src/dao/entity/roundNumber.cpp.o
-
-src/dao/entity/roundNumber.i: src/dao/entity/roundNumber.cpp.i
-.PHONY : src/dao/entity/roundNumber.i
-
-# target to preprocess a source file
-src/dao/entity/roundNumber.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.i
-.PHONY : src/dao/entity/roundNumber.cpp.i
-
-src/dao/entity/roundNumber.s: src/dao/entity/roundNumber.cpp.s
-.PHONY : src/dao/entity/roundNumber.s
-
-# target to generate assembly for a file
-src/dao/entity/roundNumber.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/dao/entity/roundNumber.cpp.s
-.PHONY : src/dao/entity/roundNumber.cpp.s
-
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -1206,6 +1278,39 @@ help:
 	@echo "... src/Daemon/removeFromAutostart.o"
 	@echo "... src/Daemon/removeFromAutostart.i"
 	@echo "... src/Daemon/removeFromAutostart.s"
+	@echo "... src/DataCollector/ActivePower.o"
+	@echo "... src/DataCollector/ActivePower.i"
+	@echo "... src/DataCollector/ActivePower.s"
+	@echo "... src/DataCollector/Current.o"
+	@echo "... src/DataCollector/Current.i"
+	@echo "... src/DataCollector/Current.s"
+	@echo "... src/DataCollector/DataCollector.o"
+	@echo "... src/DataCollector/DataCollector.i"
+	@echo "... src/DataCollector/DataCollector.s"
+	@echo "... src/DataCollector/DateTime.o"
+	@echo "... src/DataCollector/DateTime.i"
+	@echo "... src/DataCollector/DateTime.s"
+	@echo "... src/DataCollector/IpAddress.o"
+	@echo "... src/DataCollector/IpAddress.i"
+	@echo "... src/DataCollector/IpAddress.s"
+	@echo "... src/DataCollector/NameSensor.o"
+	@echo "... src/DataCollector/NameSensor.i"
+	@echo "... src/DataCollector/NameSensor.s"
+	@echo "... src/DataCollector/PowerFactor.o"
+	@echo "... src/DataCollector/PowerFactor.i"
+	@echo "... src/DataCollector/PowerFactor.s"
+	@echo "... src/DataCollector/RS485.o"
+	@echo "... src/DataCollector/RS485.i"
+	@echo "... src/DataCollector/RS485.s"
+	@echo "... src/DataCollector/ReactivePower.o"
+	@echo "... src/DataCollector/ReactivePower.i"
+	@echo "... src/DataCollector/ReactivePower.s"
+	@echo "... src/DataCollector/Voltage.o"
+	@echo "... src/DataCollector/Voltage.i"
+	@echo "... src/DataCollector/Voltage.s"
+	@echo "... src/DataCollector/roundNumber.o"
+	@echo "... src/DataCollector/roundNumber.i"
+	@echo "... src/DataCollector/roundNumber.s"
 	@echo "... src/Logger/DataTime.o"
 	@echo "... src/Logger/DataTime.i"
 	@echo "... src/Logger/DataTime.s"
@@ -1245,30 +1350,6 @@ help:
 	@echo "... src/auth/LoginFromAPI.o"
 	@echo "... src/auth/LoginFromAPI.i"
 	@echo "... src/auth/LoginFromAPI.s"
-	@echo "... src/dao/entity/ActivePower.o"
-	@echo "... src/dao/entity/ActivePower.i"
-	@echo "... src/dao/entity/ActivePower.s"
-	@echo "... src/dao/entity/Current.o"
-	@echo "... src/dao/entity/Current.i"
-	@echo "... src/dao/entity/Current.s"
-	@echo "... src/dao/entity/IpAddress.o"
-	@echo "... src/dao/entity/IpAddress.i"
-	@echo "... src/dao/entity/IpAddress.s"
-	@echo "... src/dao/entity/NameSensor.o"
-	@echo "... src/dao/entity/NameSensor.i"
-	@echo "... src/dao/entity/NameSensor.s"
-	@echo "... src/dao/entity/PowerFactor.o"
-	@echo "... src/dao/entity/PowerFactor.i"
-	@echo "... src/dao/entity/PowerFactor.s"
-	@echo "... src/dao/entity/ReactivePower.o"
-	@echo "... src/dao/entity/ReactivePower.i"
-	@echo "... src/dao/entity/ReactivePower.s"
-	@echo "... src/dao/entity/Voltage.o"
-	@echo "... src/dao/entity/Voltage.i"
-	@echo "... src/dao/entity/Voltage.s"
-	@echo "... src/dao/entity/roundNumber.o"
-	@echo "... src/dao/entity/roundNumber.i"
-	@echo "... src/dao/entity/roundNumber.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

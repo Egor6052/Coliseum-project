@@ -6,7 +6,7 @@
 
 class Daemon : public Logger {
     private:
-        std::string configFilePath;
+        // std::string configFilePath;
         std::string servicePath;
         std::string program_path;
         std::string working_directory;

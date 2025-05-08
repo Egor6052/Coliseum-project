@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string.h>
 #include <random>
-#include "../../headers/Database.h"
+#include "../headers/DataCollector.h"
 
-float Database::getCurrent(){
+float DataCollector::getCurrent(){
     std::random_device rd;
     std::mt19937 generator(rd());
     std::uniform_real_distribution<float> distribution(0.0f, 50.0f);

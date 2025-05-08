@@ -51,15 +51,18 @@ set(SOURCE_FILES
     src/DB/GetAllUsers.cpp
     src/DB/GetData.cpp
 
-    # Entity
-    src/dao/entity/ActivePower.cpp
-    src/dao/entity/Current.cpp
-    src/dao/entity/IpAddress.cpp
-    src/dao/entity/NameSensor.cpp
-    src/dao/entity/PowerFactor.cpp
-    src/dao/entity/ReactivePower.cpp
-    src/dao/entity/Voltage.cpp
-    src/dao/entity/roundNumber.cpp
+    # DataCollector
+    src/DataCollector/ActivePower.cpp
+    src/DataCollector/Current.cpp
+    src/DataCollector/DataCollector.cpp
+    src/DataCollector/DateTime.cpp
+    src/DataCollector/IpAddress.cpp
+    src/DataCollector/NameSensor.cpp
+    src/DataCollector/PowerFactor.cpp
+    src/DataCollector/ReactivePower.cpp
+    src/DataCollector/Voltage.cpp
+    src/DataCollector/roundNumber.cpp
+    src/DataCollector/RS485.cpp
 
     # Logger
     src/Logger/DataTime.cpp

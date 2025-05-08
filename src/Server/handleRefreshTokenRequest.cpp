@@ -3,7 +3,7 @@
 #include <thread>
 #include <fstream>
 #include "../headers/Server.h"
-#include "../headers/Accounts.h"
+// #include "../headers/Accounts.h"
 #include "../../lib/http/httplib.h"
 #include <json/json.h>
 
@@ -30,8 +30,8 @@ void Server::handleRefreshTokenRequest(const httplib::Request &req, httplib::Res
 
         // Формуємо відповідь
         Json::Value response;
-        response["accessToken"] = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiM2ExZjE1ZS05ZDQyLTRjMWEtYTlmMi0wODNhZjEyMmY3MzMiLCJlbWFpbCI6InNlZ29yNjA1MkBnbWFpbC5jb20iLCJ1c2VyTmFtZSI6InNlZ29yIiwicm9sZXMiOiJbXCJ1c2VyXCJdIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
-        response["refreshToken"] = "dGhpc2lzYXJlZnJlc2h0b2tlbg==";
+        response["accessToken"] =  getKeyAccess(); //"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiM2ExZjE1ZS05ZDQyLTRjMWEtYTlmMi0wODNhZjEyMmY3MzMiLCJlbWFpbCI6InNlZ29yNjA1MkBnbWFpbC5jb20iLCJ1c2VyTmFtZSI6InNlZ29yIiwicm9sZXMiOiJbXCJ1c2VyXCJdIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
+        response["refreshToken"] = getKeyRefresh(); //"dGhpc2lzYXJlZnJlc2h0b2tlbg==";
 
         Json::StreamWriterBuilder writer;
         std::string responseStr = Json::writeString(writer, response);

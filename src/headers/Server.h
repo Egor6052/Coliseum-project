@@ -42,7 +42,7 @@ public:
     // std::string getCommonFooter();
     // std::string readFile(const std::string& path);
     void http_start();
-    void http_server(const httplib::Request& req, httplib::Response& res);
+    // void http_server(const httplib::Request& req, httplib::Response& res);
     
     void handleAuthRequest(const httplib::Request &req, httplib::Response &res, const std::string &endpoint);
     void setupStaticFiles(httplib::Server &svr);
@@ -53,11 +53,8 @@ public:
     void handleLogoutAllRequest(const httplib::Request &req, httplib::Response &res);
     void handleRefreshTokenRequest(const httplib::Request &req, httplib::Response &res);
 
-
-
     void sendToEmail(const std::string& recipient, const std::string& filename);
-    void RS485();
-    // void start();
+    
 
 };
 

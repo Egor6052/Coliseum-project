@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string.h>
 #include <random>
-#include "../../headers/Database.h"
+#include "../headers/DataCollector.h"
 
 
-std::string Database::getNameSensor(){
+std::string DataCollector::getNameSensor(){
     std::random_device rd;
     std::mt19937 generator(rd());
     std::uniform_int_distribution<int> distribution(1, 3);
