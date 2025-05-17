@@ -5,6 +5,33 @@
 #include "../headers/Accounts.h"
 #include "../../lib/http/httplib.h"
 #include <json/json.h>
+class Permission {
+    private:
+        int id;
+        std::string name;
+    
+    public:
+        Permission(int id, std::string name) : id(id), name(name) {}
+        
+        int getId() const { return id; }
+        std::string getName() const { return name; }
+    };
+    
+    class Role {
+    private:
+        int id;
+        std::string name;
+        std::vector<Permission> permissions;
+    
+    public:
+        Role(int id, std::string name, std::vector<Permission> permissions) 
+            : id(id), name(name), permissions(permissions) {}
+        
+        int getId() const { return id; }
+        std::string getName() const { return name; }
+        std::vector<Permission> getPermissions() const { return permissions; }
+    };
+
 
 // Обробка JSON-запиту для автентифікації
 void Server::handleAuthRequest(const httplib::Request &req, httplib::Response &res, const std::string &endpoint) {
@@ -24,39 +51,105 @@ void Server::handleAuthRequest(const httplib::Request &req, httplib::Response &r
         if (account.Login(email, password)) {
             // Формуємо успішну відповідь
             Json::Value response;
+            
             // Зберігаємо токени в БД
             std::string accessToken = account.generateAccessToken(email, getKeyAccess());
             std::string refreshToken = account.generateRefreshToken(email, getKeyRefresh());
+            
             // Метод для збереження токенів в БД
             // account.storeTokens(email, accessToken, refreshToken);
-
+            
             response["accessToken"] = accessToken;
             response["refreshToken"] = refreshToken;
-
-            // response["accessToken"] = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiM2ExZjE1ZS05ZDQyLTRjMWEtYTlmMi0wODNhZjEyMmY3MzMiLCJlbWFpbCI6InNlZ29yNjA1MkBnbWFpbC5jb20iLCJ1c2VyTmFtZSI6InNlZ29yIiwicm9sZXMiOiJbXCJ1c2VyXCJdIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
-            // response["refreshToken"] = "dGhpc2lzYXJlZnJlc2h0b2tlbg==";
-            response["redirectUrl"] = "/";
+            
+            // Дані користувача
             response["user"]["id"] = account.getUID();
-            response["user"]["email"] = email;
             response["user"]["userName"] = account.getUserName(account.getUID());
-            response["user"]["roles"] = account.getUserRole(account.getUID());
-
+            response["user"]["email"] = email;
+            
+            // Створюємо масив ролей замість рядка
+            Json::Value rolesArray(Json::arrayValue);
+            
+            // Припустимо, у нас є рядок з ролями, який ми розбиваємо і формуємо масив
+            std::string rolesString = account.getUserRole(account.getUID());
+            
+            // Видаляємо символи '[', ']' та подвійні кавички з рядка ролей
+            rolesString.erase(std::remove(rolesString.begin(), rolesString.end(), '['), rolesString.end());
+            rolesString.erase(std::remove(rolesString.begin(), rolesString.end(), ']'), rolesString.end());
+            rolesString.erase(std::remove(rolesString.begin(), rolesString.end(), '"'), rolesString.end());
+            
+            // Розбиваємо рядок на окремі ролі за комою
+            std::vector<std::string> roleNames;
+            std::stringstream ss(rolesString);
+            std::string roleName;
+            while (std::getline(ss, roleName, ',')) {
+              // Видаляємо зайві пробіли
+                roleName.erase(0, roleName.find_first_not_of(" \t\n\r\f\v"));
+                roleName.erase(roleName.find_last_not_of(" \t\n\r\f\v") + 1);
+                
+                if (!roleName.empty()) {
+                    roleNames.push_back(roleName);
+                }
+            }
+            
+            // Створюємо об'єкти ролей та додаємо їх у масив
+            int roleId = 1;
+            for (const auto& roleName : roleNames) {
+            Json::Value roleObj;
+            roleObj["Id"] = roleId++;
+            roleObj["Name"] = roleName;
+            
+            // Створюємо масив дозволів для кожної ролі
+            Json::Value permissionsArray(Json::arrayValue);
+            
+            // Для прикладу додаємо деякі дозволи залежно від ролі
+            if (roleName == "user") {
+                Json::Value readPermission;
+                readPermission["Id"] = 1;
+                readPermission["Name"] = "read";
+                permissionsArray.append(readPermission);
+                
+                Json::Value writePermission;
+                writePermission["Id"] = 2;
+                writePermission["Name"] = "write";
+                permissionsArray.append(writePermission);
+            } 
+            else if (roleName == "admin") {
+                Json::Value readPermission;
+                readPermission["Id"] = 1;
+                readPermission["Name"] = "read";
+                permissionsArray.append(readPermission);
+                
+                Json::Value writePermission;
+                writePermission["Id"] = 2;
+                writePermission["Name"] = "write";
+                permissionsArray.append(writePermission);
+                
+                Json::Value deletePermission;
+                deletePermission["Id"] = 3;
+                deletePermission["Name"] = "delete";
+                permissionsArray.append(deletePermission);
+                
+                Json::Value adminPermission;
+                adminPermission["Id"] = 4;
+                adminPermission["Name"] = "admin";
+                permissionsArray.append(adminPermission);
+                }
+                
+                roleObj["Permissions"] = permissionsArray;
+                rolesArray.append(roleObj);
+            }
+            
+            response["user"]["roles"] = rolesArray;
+            
             Json::StreamWriterBuilder writer;
             std::string responseStr = Json::writeString(writer, response);
+            
             std::cout << "Response: " << responseStr << std::endl;
-
             res.set_header("Authorization", "Bearer " + response["accessToken"].asString());
             res.set_content(responseStr, "application/json");
-        } else {
-            // Невдала авторизація
-            Json::Value errorResponse;
-            errorResponse["error"] = "Invalid email or password";
-            Json::StreamWriterBuilder writer;
-            std::string errorResponseStr = Json::writeString(writer, errorResponse);
-            std::cout << "Error Response: " << errorResponseStr << std::endl;
-            res.status = 401; // Unauthorized
-            res.set_content(errorResponseStr, "application/json");
         }
+
     } else {
         Json::Value errorResponse;
         errorResponse["error"] = "Invalid JSON";
@@ -67,3 +160,5 @@ void Server::handleAuthRequest(const httplib::Request &req, httplib::Response &r
         res.set_content(errorResponseStr, "application/json");
     }
 }
+
+

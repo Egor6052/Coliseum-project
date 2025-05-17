@@ -40,11 +40,6 @@ class Accounts : public Database {
         std::string generateRefreshToken(const std::string &email, const std::string &secretKey);
         
         bool Login(std::string login, std::string password);
-        // void handleLoginFromAPI();
-        // void refreshAccessToken(const std::string& refreshToken);
-        // void renameData(const std::string& name, const std::string& idEditNameDialog);
-        // void exportExcelData(const std::string& periodDate);
-        // void exportCSVData(const std::string& periodDate);
         bool isAdministrator(std::string value_uid);
         
 };

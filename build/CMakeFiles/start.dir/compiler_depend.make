@@ -37389,6 +37389,7 @@ CMakeFiles/start.dir/src/main.cpp.o: /Users/mac/Desktop/Coliseum-project/src/mai
   /Users/mac/Desktop/Coliseum-project/lib/mysql/mysql.h \
   /Users/mac/Desktop/Coliseum-project/src/headers/Accounts.h \
   /Users/mac/Desktop/Coliseum-project/src/headers/Daemon.h \
+  /Users/mac/Desktop/Coliseum-project/src/headers/DataCollector.h \
   /Users/mac/Desktop/Coliseum-project/src/headers/Database.h \
   /Users/mac/Desktop/Coliseum-project/src/headers/Logger.h \
   /Users/mac/Desktop/Coliseum-project/src/headers/Server.h \

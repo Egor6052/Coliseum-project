@@ -22,7 +22,6 @@ class DataCollector : public Logger {
         // Data
         float roundNumber(float valueNumber);
 
-        // std::string getData();
         std::string getIpAddress();
         std::string getNameSensor();
 
