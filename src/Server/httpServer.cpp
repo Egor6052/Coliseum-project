@@ -2,7 +2,6 @@
 #include <thread>
 #include <fstream>
 #include "../headers/Server.h"
-// #include "../headers/Accounts.h"
 #include "../../lib/http/httplib.h"
 #include <json/json.h>
 
@@ -56,6 +55,6 @@ void Server::http_start() {
         this->handleClientRoutes(req, res);
     });
 
-    std::cout << "Сервер запущено на http://localhost:5182\n";
+    std::cout << "Сервер запущено на http://localhost:5182/client\n";
     svr.listen("0.0.0.0", 5182);
 }

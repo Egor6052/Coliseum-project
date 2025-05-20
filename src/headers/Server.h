@@ -36,14 +36,8 @@ public:
     std::string getKeyAccess();
     std::string getKeyRefresh();
 
-
-    // http
-    // std::string getCommonHeader();
-    // std::string getCommonFooter();
-    // std::string readFile(const std::string& path);
     void http_start();
-    // void http_server(const httplib::Request& req, httplib::Response& res);
-    
+
     void handleAuthRequest(const httplib::Request &req, httplib::Response &res, const std::string &endpoint);
     void setupStaticFiles(httplib::Server &svr);
     void createCSV(const std::string& filename);

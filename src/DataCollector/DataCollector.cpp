@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string.h>
+#include <nlohmann/json.hpp>
+
 #include "../headers/DataCollector.h"
 
 DataCollector::DataCollector() {
@@ -10,7 +12,6 @@ DataCollector::DataCollector() {
     this->voltage = 0.0f;
     this->activePower = 0.0f;
     this->reactivePower = 0.0f;
-
 }
 
 DataCollector::~DataCollector() {  }
@@ -26,7 +27,7 @@ void DataCollector::setData(std::string data, std::string ipAddress, std::string
     this->reactivePower = reactivePower;
 }
 
-void DataCollector::dataCollector(){
+void DataCollector::dataCollector() {
     std::string data = getDateTime();
     std::string ipAddress = getIpAddress();
     std::string nameSensor = getNameSensor();
@@ -36,6 +37,19 @@ void DataCollector::dataCollector(){
     float reactivePower = roundNumber(getReactivePower());
 
     setData(data, ipAddress, nameSensor, current, voltage, activePower, reactivePower);
+
+    // Формування об'єкта JSON
+    nlohmann::json jsonData = {
+        {"data", data},
+        {"ipAddress", ipAddress},
+        {"nameSensor", nameSensor},
+        {"current", current},
+        {"voltage", voltage},
+        {"activePower", activePower},
+        {"reactivePower", reactivePower}
+    };
+
+    std::cout << "Data: " << jsonData.dump() << std::endl;
 }
 
 void DataCollector::processData() {

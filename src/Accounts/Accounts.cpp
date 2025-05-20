@@ -4,10 +4,10 @@
 #include "../headers/Accounts.h"
 
 Accounts::Accounts() {
-    this->Uid = "";
-    this->UserName = "";
-    this->UserPassword = "";
-    this->UserEmail = "";
+    // this->Uid = "";
+    // this->UserName = "";
+    // this->UserPassword = "";
+    // this->UserEmail = "";
 }
 
 Accounts::~Accounts() {
@@ -17,31 +17,36 @@ bool Accounts::isNotEmpty(const std::string& str) {
     return !str.empty();
 }
 
-void Accounts::setName(std::string valueName) {
-    if (isNotEmpty(valueName)) {
-        this->UserName = valueName;
-    } else {
-        std::cerr << "Error: User name cannot be empty!" << std::endl;
-        logError("Error: User name cannot be empty!");
-    }
-}
+// void Accounts::setName(std::string valueName) {
+//     if (isNotEmpty(valueName)) {
+//         this->UserName = valueName;
+//     } else {
+//         std::cerr << "Error: User name cannot be empty!" << std::endl;
+//         logError("Error: User name cannot be empty!");
+//     }
+// }
 
-void Accounts::setPassword(std::string valuePassword) {
-    if (isNotEmpty(valuePassword)) {
-        this->UserPassword = valuePassword;
-    } else {
-        std::cerr << "Error: Password cannot be empty!" << std::endl;
-        logError("Error: Password cannot be empty!");
-    }
-}
+// void Accounts::setPassword(std::string valuePassword) {
+//     if (isNotEmpty(valuePassword)) {
+//         this->UserPassword = valuePassword;
+//     } else {
+//         std::cerr << "Error: Password cannot be empty!" << std::endl;
+//         logError("Error: Password cannot be empty!");
+//     }
+// }
 
-void Accounts::setEmail(std::string valueEmail) {
-    if (isNotEmpty(valueEmail)) {
-        this->UserEmail = valueEmail;
-    } else {
-        std::cerr << "Error: Email cannot be empty!" << std::endl;
-        logError("Error: Email cannot be empty!");
-    }
+// void Accounts::setEmail(std::string valueEmail) {
+//     if (isNotEmpty(valueEmail)) {
+//         this->UserEmail = valueEmail;
+//     } else {
+//         std::cerr << "Error: Email cannot be empty!" << std::endl;
+//         logError("Error: Email cannot be empty!");
+//     }
+// }
+
+// TODO return uid from logined user
+std::string Accounts::getUID() {
+    return Uid;
 }
 
 std::string Accounts::getUserName(std::string uid) {
@@ -65,7 +70,7 @@ std::string Accounts::getUserName(std::string uid) {
         std::string result = (row && row[0]) ? row[0] : "";
         std::cout << "Fetched username: " << result << std::endl;
 
-        setName(result);
+        // setName(result);
 
         mysqlDisconnection(res);
         return result;
@@ -77,6 +82,7 @@ std::string Accounts::getUserName(std::string uid) {
         return "";
     }
 }
+
 
 std::string Accounts::getUserPassword(std::string uid) {
     try {
@@ -97,7 +103,7 @@ std::string Accounts::getUserPassword(std::string uid) {
         MYSQL_ROW row = mysql_fetch_row(res);
         std::string result = (row && row[0]) ? row[0] : "";
 
-        setPassword(result);
+        // setPassword(result);
 
         mysqlDisconnection(res);
         return result;
@@ -129,7 +135,7 @@ std::string Accounts::getUserEmail(std::string uid) {
         MYSQL_ROW row = mysql_fetch_row(res);
         std::string result = (row && row[0]) ? row[0] : "";
 
-        setEmail(result);
+        // setEmail(result);
 
         mysqlDisconnection(res);
         return result;
@@ -140,8 +146,4 @@ std::string Accounts::getUserEmail(std::string uid) {
         mysqlDisconnection(nullptr);
         return "";
     }
-}
-
-std::string Accounts::getUID() {
-    return Uid;
 }

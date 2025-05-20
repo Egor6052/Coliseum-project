@@ -3,7 +3,6 @@
 #include "../../lib/mysql/mysql.h"
 #include "../headers/Accounts.h"
 
-
 std::string Accounts::getUserRole(std::string uid){
     try {
         mysqlConnect();
