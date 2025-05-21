@@ -1,42 +1,60 @@
 #include <iostream>
-#include <fcntl.h>
-#include <termios.h>
-#include <unistd.h>
-
+#include <iomanip>
+#include <sstream>
+#include <modbus/modbus.h>
 #include "../headers/DataCollector.h"
 
-void DataCollector::RS485(){
-    // TODO
-    const char* port = "/dev/ttyUSB0";
+// Функція для відправлення запиту і отримання даних через RS485
+std::string DataCollector::RS485(int sensorAddress, int registerAddress, float& result) {
+    // modbus_t* ctx = nullptr;
+    // const char* port = "/dev/ttyUSB0";
+    // std::stringstream ss;
 
-    int serial_port = open(port, O_RDWR | O_NOCTTY);
-    if (serial_port < 0) {
-        std::cerr << "Помилка відкриття порту!\n";
-        // return 1;
-    }
+    // // Створюємо контекст для Modbus RTU
+    // ctx = modbus_new_rtu(port, 9600, 'N', 8, 1);
+    // if (ctx == nullptr) {
+    //     std::cerr << "Помилка створення контексту Modbus!\n";
+    //     return "Error: Failed to create Modbus context";
+    // }
 
-    struct termios tty;
-    if (tcgetattr(serial_port, &tty) != 0) {
-        std::cerr << "Помилка отримання налаштувань порту!\n";
-        // return 1;
-    }
+    // // Встановлюємо адресу датчика
+    // if (modbus_set_slave(ctx, sensorAddress) < 0) {
+    //     std::cerr << "Помилка встановлення адреси датчика!\n";
+    //     modbus_free(ctx);
+    //     return "Error: Failed to set slave address";
+    // }
 
-    // Налаштування порту
-    cfsetispeed(&tty, B9600);
-    cfsetospeed(&tty, B9600);
-    tty.c_cflag = CS8 | CLOCAL | CREAD;
+    // // Підключаємося до порту
+    // if (modbus_connect(ctx) < 0) {
+    //     std::cerr << "Помилка підключення до порту!\n";
+    //     modbus_free(ctx);
+    //     return "Error: Failed to connect to port";
+    // }
 
-    tcsetattr(serial_port, TCSANOW, &tty);
+    // // Читання регістрів (2 регістри для float)
+    // uint16_t registers[2];
+    // int rc = modbus_read_registers(ctx, registerAddress, 2, registers);
+    // if (rc != 2) {
+    //     std::cerr << "Помилка читання регістрів!\n";
+    //     modbus_free(ctx);
+    //     return "Error: Failed to read registers";
+    // }
 
-    // Читання даних
-    char buffer[256];
-    int n = read(serial_port, buffer, sizeof(buffer) - 1);
-    if (n > 0) {
-        buffer[n] = '\0';
-        std::cout << "Отримано: " << buffer << std::endl;
-    }
+    // // Конвертація регістрів у float
+    // uint32_t raw_value = (registers[0] << 16) | registers[1];
+    // memcpy(&result, &raw_value, sizeof(float));
 
-    close(serial_port);
-    
-    // return 0;
+    // // Формуємо рядок відповіді (шістнадцяткове представлення регістрів)
+    // ss << std::hex << std::setfill('0');
+    // for (int i = 0; i < 2; ++i) {
+    //     ss << std::setw(4) << registers[i];
+    //     if (i < 1) ss << " ";
+    // }
+
+    // // Закриваємо з’єднання
+    // modbus_close(ctx);
+    // modbus_free(ctx);
+
+    // return ss.str();
+    return "Error: RS485 function is not implemented";
 }

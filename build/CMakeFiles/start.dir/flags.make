@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/mac/Desktop/Coliseum-project/./lib/jwt-cpp/include -I/Users/mac/Desktop/Coliseum-project/./lib -I/Users/mac/Desktop/Coliseum-project/src/headers -I/Users/mac/Desktop/Coliseum-project/lib/json -I/usr/local/opt/mariadb-connector-c/include/mariadb -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /usr/local/Cellar/openssl@3/3.4.1/include
+CXX_INCLUDES = -I/Users/mac/Desktop/Coliseum-project/./lib/jwt-cpp/include -I/Users/mac/Desktop/Coliseum-project/./lib -I/Users/mac/Desktop/Coliseum-project/src/headers -I/Users/mac/Desktop/Coliseum-project/lib/json -I/usr/local/Cellar/mariadb-connector-c/3.4.5/include/mariadb -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /usr/local/Cellar/openssl@3/3.5.0/include
 
 CXX_FLAGS = -std=gnu++17 -Wall -fPIC
 

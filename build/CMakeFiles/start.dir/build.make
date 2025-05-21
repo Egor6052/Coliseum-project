@@ -576,24 +576,10 @@ CMakeFiles/start.dir/src/DataCollector/NameSensor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/DataCollector/NameSensor.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mac/Desktop/Coliseum-project/src/DataCollector/NameSensor.cpp -o CMakeFiles/start.dir/src/DataCollector/NameSensor.cpp.s
 
-CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.o: /Users/mac/Desktop/Coliseum-project/src/DataCollector/PowerFactor.cpp
-CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.o -MF CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.o.d -o CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/DataCollector/PowerFactor.cpp
-
-CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mac/Desktop/Coliseum-project/src/DataCollector/PowerFactor.cpp > CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.i
-
-CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mac/Desktop/Coliseum-project/src/DataCollector/PowerFactor.cpp -o CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.s
-
 CMakeFiles/start.dir/src/DataCollector/ReactivePower.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/DataCollector/ReactivePower.cpp.o: /Users/mac/Desktop/Coliseum-project/src/DataCollector/ReactivePower.cpp
 CMakeFiles/start.dir/src/DataCollector/ReactivePower.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/start.dir/src/DataCollector/ReactivePower.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/start.dir/src/DataCollector/ReactivePower.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DataCollector/ReactivePower.cpp.o -MF CMakeFiles/start.dir/src/DataCollector/ReactivePower.cpp.o.d -o CMakeFiles/start.dir/src/DataCollector/ReactivePower.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/DataCollector/ReactivePower.cpp
 
 CMakeFiles/start.dir/src/DataCollector/ReactivePower.cpp.i: cmake_force
@@ -607,7 +593,7 @@ CMakeFiles/start.dir/src/DataCollector/ReactivePower.cpp.s: cmake_force
 CMakeFiles/start.dir/src/DataCollector/Voltage.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/DataCollector/Voltage.cpp.o: /Users/mac/Desktop/Coliseum-project/src/DataCollector/Voltage.cpp
 CMakeFiles/start.dir/src/DataCollector/Voltage.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/start.dir/src/DataCollector/Voltage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/start.dir/src/DataCollector/Voltage.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DataCollector/Voltage.cpp.o -MF CMakeFiles/start.dir/src/DataCollector/Voltage.cpp.o.d -o CMakeFiles/start.dir/src/DataCollector/Voltage.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/DataCollector/Voltage.cpp
 
 CMakeFiles/start.dir/src/DataCollector/Voltage.cpp.i: cmake_force
@@ -621,7 +607,7 @@ CMakeFiles/start.dir/src/DataCollector/Voltage.cpp.s: cmake_force
 CMakeFiles/start.dir/src/DataCollector/roundNumber.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/DataCollector/roundNumber.cpp.o: /Users/mac/Desktop/Coliseum-project/src/DataCollector/roundNumber.cpp
 CMakeFiles/start.dir/src/DataCollector/roundNumber.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/start.dir/src/DataCollector/roundNumber.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/start.dir/src/DataCollector/roundNumber.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DataCollector/roundNumber.cpp.o -MF CMakeFiles/start.dir/src/DataCollector/roundNumber.cpp.o.d -o CMakeFiles/start.dir/src/DataCollector/roundNumber.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/DataCollector/roundNumber.cpp
 
 CMakeFiles/start.dir/src/DataCollector/roundNumber.cpp.i: cmake_force
@@ -635,7 +621,7 @@ CMakeFiles/start.dir/src/DataCollector/roundNumber.cpp.s: cmake_force
 CMakeFiles/start.dir/src/DataCollector/RS485.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/DataCollector/RS485.cpp.o: /Users/mac/Desktop/Coliseum-project/src/DataCollector/RS485.cpp
 CMakeFiles/start.dir/src/DataCollector/RS485.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/start.dir/src/DataCollector/RS485.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/start.dir/src/DataCollector/RS485.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/DataCollector/RS485.cpp.o -MF CMakeFiles/start.dir/src/DataCollector/RS485.cpp.o.d -o CMakeFiles/start.dir/src/DataCollector/RS485.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/DataCollector/RS485.cpp
 
 CMakeFiles/start.dir/src/DataCollector/RS485.cpp.i: cmake_force
@@ -649,7 +635,7 @@ CMakeFiles/start.dir/src/DataCollector/RS485.cpp.s: cmake_force
 CMakeFiles/start.dir/src/Logger/DataTime.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/Logger/DataTime.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Logger/DataTime.cpp
 CMakeFiles/start.dir/src/Logger/DataTime.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/start.dir/src/Logger/DataTime.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/start.dir/src/Logger/DataTime.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Logger/DataTime.cpp.o -MF CMakeFiles/start.dir/src/Logger/DataTime.cpp.o.d -o CMakeFiles/start.dir/src/Logger/DataTime.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Logger/DataTime.cpp
 
 CMakeFiles/start.dir/src/Logger/DataTime.cpp.i: cmake_force
@@ -663,7 +649,7 @@ CMakeFiles/start.dir/src/Logger/DataTime.cpp.s: cmake_force
 CMakeFiles/start.dir/src/Logger/logError.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/Logger/logError.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Logger/logError.cpp
 CMakeFiles/start.dir/src/Logger/logError.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/start.dir/src/Logger/logError.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/start.dir/src/Logger/logError.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Logger/logError.cpp.o -MF CMakeFiles/start.dir/src/Logger/logError.cpp.o.d -o CMakeFiles/start.dir/src/Logger/logError.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Logger/logError.cpp
 
 CMakeFiles/start.dir/src/Logger/logError.cpp.i: cmake_force
@@ -677,7 +663,7 @@ CMakeFiles/start.dir/src/Logger/logError.cpp.s: cmake_force
 CMakeFiles/start.dir/src/Logger/Logger.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/Logger/Logger.cpp.o: /Users/mac/Desktop/Coliseum-project/src/Logger/Logger.cpp
 CMakeFiles/start.dir/src/Logger/Logger.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/start.dir/src/Logger/Logger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/start.dir/src/Logger/Logger.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Logger/Logger.cpp.o -MF CMakeFiles/start.dir/src/Logger/Logger.cpp.o.d -o CMakeFiles/start.dir/src/Logger/Logger.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/Logger/Logger.cpp
 
 CMakeFiles/start.dir/src/Logger/Logger.cpp.i: cmake_force
@@ -691,7 +677,7 @@ CMakeFiles/start.dir/src/Logger/Logger.cpp.s: cmake_force
 CMakeFiles/start.dir/src/main.cpp.o: CMakeFiles/start.dir/flags.make
 CMakeFiles/start.dir/src/main.cpp.o: /Users/mac/Desktop/Coliseum-project/src/main.cpp
 CMakeFiles/start.dir/src/main.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/start.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/start.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/main.cpp.o -MF CMakeFiles/start.dir/src/main.cpp.o.d -o CMakeFiles/start.dir/src/main.cpp.o -c /Users/mac/Desktop/Coliseum-project/src/main.cpp
 
 CMakeFiles/start.dir/src/main.cpp.i: cmake_force
@@ -740,7 +726,6 @@ start_OBJECTS = \
 "CMakeFiles/start.dir/src/DataCollector/DateTime.cpp.o" \
 "CMakeFiles/start.dir/src/DataCollector/IpAddress.cpp.o" \
 "CMakeFiles/start.dir/src/DataCollector/NameSensor.cpp.o" \
-"CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.o" \
 "CMakeFiles/start.dir/src/DataCollector/ReactivePower.cpp.o" \
 "CMakeFiles/start.dir/src/DataCollector/Voltage.cpp.o" \
 "CMakeFiles/start.dir/src/DataCollector/roundNumber.cpp.o" \
@@ -789,7 +774,6 @@ start: CMakeFiles/start.dir/src/DataCollector/DataCollector.cpp.o
 start: CMakeFiles/start.dir/src/DataCollector/DateTime.cpp.o
 start: CMakeFiles/start.dir/src/DataCollector/IpAddress.cpp.o
 start: CMakeFiles/start.dir/src/DataCollector/NameSensor.cpp.o
-start: CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.o
 start: CMakeFiles/start.dir/src/DataCollector/ReactivePower.cpp.o
 start: CMakeFiles/start.dir/src/DataCollector/Voltage.cpp.o
 start: CMakeFiles/start.dir/src/DataCollector/roundNumber.cpp.o
@@ -799,12 +783,13 @@ start: CMakeFiles/start.dir/src/Logger/logError.cpp.o
 start: CMakeFiles/start.dir/src/Logger/Logger.cpp.o
 start: CMakeFiles/start.dir/src/main.cpp.o
 start: CMakeFiles/start.dir/build.make
-start: /usr/local/Cellar/openssl@3/3.4.1/lib/libssl.dylib
-start: /usr/local/Cellar/openssl@3/3.4.1/lib/libcrypto.dylib
-start: /usr/local/opt/mariadb-connector-c/lib/libmariadb.dylib
+start: /usr/local/Cellar/openssl@3/3.5.0/lib/libssl.dylib
+start: /usr/local/Cellar/openssl@3/3.5.0/lib/libcrypto.dylib
+start: /usr/local/Cellar/mariadb-connector-c/3.4.5/lib/libmariadbclient.a
+start: /usr/local/Cellar/zlib/1.3.1/lib/libz.dylib
 start: /usr/local/lib/libjsoncpp.dylib
 start: CMakeFiles/start.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Linking CXX executable start"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Linking CXX executable start"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/start.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

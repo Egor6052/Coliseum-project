@@ -753,30 +753,6 @@ src/DataCollector/NameSensor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/NameSensor.cpp.s
 .PHONY : src/DataCollector/NameSensor.cpp.s
 
-src/DataCollector/PowerFactor.o: src/DataCollector/PowerFactor.cpp.o
-.PHONY : src/DataCollector/PowerFactor.o
-
-# target to build an object file
-src/DataCollector/PowerFactor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.o
-.PHONY : src/DataCollector/PowerFactor.cpp.o
-
-src/DataCollector/PowerFactor.i: src/DataCollector/PowerFactor.cpp.i
-.PHONY : src/DataCollector/PowerFactor.i
-
-# target to preprocess a source file
-src/DataCollector/PowerFactor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.i
-.PHONY : src/DataCollector/PowerFactor.cpp.i
-
-src/DataCollector/PowerFactor.s: src/DataCollector/PowerFactor.cpp.s
-.PHONY : src/DataCollector/PowerFactor.s
-
-# target to generate assembly for a file
-src/DataCollector/PowerFactor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.s
-.PHONY : src/DataCollector/PowerFactor.cpp.s
-
 src/DataCollector/RS485.o: src/DataCollector/RS485.cpp.o
 .PHONY : src/DataCollector/RS485.o
 
@@ -1296,9 +1272,6 @@ help:
 	@echo "... src/DataCollector/NameSensor.o"
 	@echo "... src/DataCollector/NameSensor.i"
 	@echo "... src/DataCollector/NameSensor.s"
-	@echo "... src/DataCollector/PowerFactor.o"
-	@echo "... src/DataCollector/PowerFactor.i"
-	@echo "... src/DataCollector/PowerFactor.s"
 	@echo "... src/DataCollector/RS485.o"
 	@echo "... src/DataCollector/RS485.i"
 	@echo "... src/DataCollector/RS485.s"

@@ -51,8 +51,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/start.dir/src/DataCollector/IpAddress.cpp.o.d"
   "CMakeFiles/start.dir/src/DataCollector/NameSensor.cpp.o"
   "CMakeFiles/start.dir/src/DataCollector/NameSensor.cpp.o.d"
-  "CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.o"
-  "CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.o.d"
   "CMakeFiles/start.dir/src/DataCollector/RS485.cpp.o"
   "CMakeFiles/start.dir/src/DataCollector/RS485.cpp.o.d"
   "CMakeFiles/start.dir/src/DataCollector/ReactivePower.cpp.o"

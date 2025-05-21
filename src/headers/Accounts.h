@@ -29,7 +29,7 @@ class Accounts : public Database {
 
         std::string getAllUsersFromDB();
 
-        std::string getUID();
+        std::string getUID(std::string email);
         std::string getUserName(std::string uid);
         std::string getUserPassword(std::string uid);
         std::string getUserEmail(std::string uid);

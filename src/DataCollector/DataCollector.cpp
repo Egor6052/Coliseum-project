@@ -4,60 +4,23 @@
 
 #include "../headers/DataCollector.h"
 
-DataCollector::DataCollector() {
-    this->data = "";
-    this->ipAddress = "";
-    this->nameSensor = "";
-    this->current = 0.0f;
-    this->voltage = 0.0f;
-    this->activePower = 0.0f;
-    this->reactivePower = 0.0f;
-}
+DataCollector::DataCollector() {   }
 
-DataCollector::~DataCollector() {  }
+DataCollector::~DataCollector() {   }
 
-
-void DataCollector::setData(std::string data, std::string ipAddress, std::string nameSensor, float current, float voltage, float activePower, float reactivePower){
-    this->data = data;
-    this->ipAddress = ipAddress;
-    this->nameSensor = nameSensor;
-    this->current = current;
-    this->voltage = voltage;
-    this->activePower = activePower;
-    this->reactivePower = reactivePower;
-}
-
-void DataCollector::dataCollector() {
-    std::string data = getDateTime();
-    std::string ipAddress = getIpAddress();
-    std::string nameSensor = getNameSensor();
-    float current = roundNumber(getCurrent());
-    float voltage = roundNumber(getVoltage());
-    float activePower = roundNumber(getActivePower());
-    float reactivePower = roundNumber(getReactivePower());
-
-    setData(data, ipAddress, nameSensor, current, voltage, activePower, reactivePower);
+std::string DataCollector::dataCollector() {
 
     // Формування об'єкта JSON
     nlohmann::json jsonData = {
-        {"data", data},
-        {"ipAddress", ipAddress},
-        {"nameSensor", nameSensor},
-        {"current", current},
-        {"voltage", voltage},
-        {"activePower", activePower},
-        {"reactivePower", reactivePower}
+        {"data", getDateTime()},
+        {"ipAddress", getIpAddress()},
+        {"nameSensor", getNameSensor()},
+        {"current", roundNumber(getCurrent())},
+        {"voltage", roundNumber(getVoltage())},
+        {"activePower", roundNumber(getActivePower())},
+        {"reactivePower", roundNumber(getReactivePower())}
     };
 
     std::cout << "Data: " << jsonData.dump() << std::endl;
-}
-
-void DataCollector::processData() {
-    // TODO
-    std::cout << "Processing data..." << std::endl;
-}
-
-void DataCollector::sendDataToServer() {
-    // TODO
-    std::cout << "Sending data to server..." << std::endl;
+    return jsonData.dump();
 }

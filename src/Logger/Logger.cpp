@@ -15,9 +15,7 @@ bool fileExists(const std::string& filename) {
 }
 
 Logger::Logger() {
-
     std::string logFile = absolutePath() + "../logs/" + getLoggerDateTime() + ".log";
-
     if (fileExists(logFile)) {
         logStream.open(logFile, std::ios::out | std::ios::app);
     } else {

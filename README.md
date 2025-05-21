@@ -153,3 +153,16 @@ if **apt**
 ```sh
 sudo apt install mysql-server
 ```
+
+**libmodbus** — this is a cross-platform library for working with the Modbus protocol (RTU і TCP), for RS485
+```sh
+sudo apt-get install libmodbus-dev
+```
+
+for MacOS
+```sh
+brew install libmodbus
+brew install mariadb-connector-c
+brew install jsoncpp
+brew install openssl
+```

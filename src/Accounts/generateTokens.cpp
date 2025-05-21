@@ -1,5 +1,6 @@
 #include "../headers/Accounts.h"
 #include <jwt-cpp/jwt.h>
+// #include "lib/jwt-cpp/include/jwt-cpp/jwt.h"
 #include <chrono>
 
 std::string Accounts::generateAccessToken(const std::string &email, const std::string &secretKey) {

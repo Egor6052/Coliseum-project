@@ -58,7 +58,6 @@ set(SOURCE_FILES
     src/DataCollector/DateTime.cpp
     src/DataCollector/IpAddress.cpp
     src/DataCollector/NameSensor.cpp
-    src/DataCollector/PowerFactor.cpp
     src/DataCollector/ReactivePower.cpp
     src/DataCollector/Voltage.cpp
     src/DataCollector/roundNumber.cpp
@@ -91,30 +90,36 @@ target_compile_options(start PRIVATE -Wall -fPIC)
 find_package(OpenSSL REQUIRED)
 target_link_libraries(start PRIVATE OpenSSL::SSL OpenSSL::Crypto)
 
-# ============ MariaDB ============
-if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
-    message(STATUS "Detected macOS, using Homebrew paths for MariaDB")
-    set(MARIADB_ROOT "/usr/local/opt/mariadb-connector-c")
-    find_library(MARIADB_LIBRARY mariadb HINTS "${MARIADB_ROOT}/lib")
-    find_path(MARIADB_INCLUDE_DIR mysql.h HINTS "${MARIADB_ROOT}/include/mariadb")
-else()
-    message(STATUS "Detected Linux or other system, using standard paths for MariaDB")
-    find_library(MARIADB_LIBRARY
-        NAMES mariadb mariadbclient
-        PATHS /usr/lib /usr/lib64 /usr/local/lib /usr/local/lib64
-    )
-    find_path(MARIADB_INCLUDE_DIR
-        NAMES mysql.h
-        PATHS /usr/include /usr/include/mysql /usr/local/include /usr/local/include/mysql
-    )
-endif()
-
+# ============ MariaDB (Homebrew) ============
+find_library(MARIADB_LIBRARY
+    NAMES mariadbclient mariadb libmariadb
+    PATHS /usr/local/Cellar/mariadb-connector-c/3.4.5/lib
+    NO_DEFAULT_PATH
+)
+find_path(MARIADB_INCLUDE_DIR
+    NAMES mysql.h
+    PATHS /usr/local/Cellar/mariadb-connector-c/3.4.5/include/mariadb
+    NO_DEFAULT_PATH
+)
 if (NOT MARIADB_LIBRARY OR NOT MARIADB_INCLUDE_DIR)
-    message(FATAL_ERROR "MariaDB library or headers not found. Please install MariaDB development package.")
+    message(FATAL_ERROR "MariaDB library or headers not found in /usr/local/Cellar/mariadb-connector-c/3.4.5. Please ensure MariaDB Connector/C is installed (e.g., `brew install mariadb-connector-c` on macOS).")
 endif()
-
+message(STATUS "MariaDB found: ${MARIADB_LIBRARY}, ${MARIADB_INCLUDE_DIR}")
 target_include_directories(start PRIVATE ${MARIADB_INCLUDE_DIR})
 target_link_libraries(start PRIVATE ${MARIADB_LIBRARY})
+
+# ============ zlib (Homebrew) ============
+find_library(ZLIB_LIBRARY
+    NAMES z libz
+    PATHS /usr/local/Cellar/zlib/1.3.1/lib /usr/local/lib
+    NO_DEFAULT_PATH
+)
+if (NOT ZLIB_LIBRARY)
+    message(FATAL_ERROR "zlib library not found in /usr/local/Cellar/zlib/1.3.1/lib or /usr/local/lib. Please ensure zlib is installed (e.g., `brew install zlib` on macOS).")
+endif()
+message(STATUS "zlib found: ${ZLIB_LIBRARY}")
+target_link_libraries(start PRIVATE ${ZLIB_LIBRARY})
+
 
 # ============ jsoncpp ============
 find_library(JSONCPP_LIBRARY

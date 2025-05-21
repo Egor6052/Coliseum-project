@@ -34,7 +34,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/mac/Desktop/Coliseum-project/src/DataCollector/DateTime.cpp" "CMakeFiles/start.dir/src/DataCollector/DateTime.cpp.o" "gcc" "CMakeFiles/start.dir/src/DataCollector/DateTime.cpp.o.d"
   "/Users/mac/Desktop/Coliseum-project/src/DataCollector/IpAddress.cpp" "CMakeFiles/start.dir/src/DataCollector/IpAddress.cpp.o" "gcc" "CMakeFiles/start.dir/src/DataCollector/IpAddress.cpp.o.d"
   "/Users/mac/Desktop/Coliseum-project/src/DataCollector/NameSensor.cpp" "CMakeFiles/start.dir/src/DataCollector/NameSensor.cpp.o" "gcc" "CMakeFiles/start.dir/src/DataCollector/NameSensor.cpp.o.d"
-  "/Users/mac/Desktop/Coliseum-project/src/DataCollector/PowerFactor.cpp" "CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.o" "gcc" "CMakeFiles/start.dir/src/DataCollector/PowerFactor.cpp.o.d"
   "/Users/mac/Desktop/Coliseum-project/src/DataCollector/RS485.cpp" "CMakeFiles/start.dir/src/DataCollector/RS485.cpp.o" "gcc" "CMakeFiles/start.dir/src/DataCollector/RS485.cpp.o.d"
   "/Users/mac/Desktop/Coliseum-project/src/DataCollector/ReactivePower.cpp" "CMakeFiles/start.dir/src/DataCollector/ReactivePower.cpp.o" "gcc" "CMakeFiles/start.dir/src/DataCollector/ReactivePower.cpp.o.d"
   "/Users/mac/Desktop/Coliseum-project/src/DataCollector/Voltage.cpp" "CMakeFiles/start.dir/src/DataCollector/Voltage.cpp.o" "gcc" "CMakeFiles/start.dir/src/DataCollector/Voltage.cpp.o.d"
