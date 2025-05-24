@@ -4,7 +4,7 @@
 #include "../headers/Server.h"
 // #include "../headers/Accounts.h"
 #include "../../lib/http/httplib.h"
-#include <json/json.h>
+#include <nlohmann/json.hpp>
 
 // Налаштування MIME-типів і статичних файлів
 void Server::setupStaticFiles(httplib::Server &svr) {

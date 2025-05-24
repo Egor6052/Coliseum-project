@@ -2,45 +2,25 @@
 #include <string>
 #include "../../lib/mysql/mysql.h"
 #include "../headers/Accounts.h"
+#include <nlohmann/json.hpp>
 
 bool Accounts::isAdministrator(std::string value_uid) {
     try {
-        mysqlConnect();
+        std::string userDataJson = getUserData(value_uid);
+        nlohmann::json userData = nlohmann::json::parse(userDataJson);
 
-        // Запит для перевірки ролі користувача за його логіном і паролем
-        std::string query = "SELECT role FROM " + getDBUsersName() + " WHERE uid = '" + value_uid +"'";
-        if (mysql_query(conn, query.c_str())) {
-            throw std::runtime_error("Failed to execute query: " + std::string(mysql_error(conn)));
-            logError("Failed to execute query: " + std::string(mysql_error(conn)));
-        }   
-
-        // Обробка результату запиту
-        MYSQL_RES* res = mysql_store_result(conn);
-        if (!res) {
-            throw std::runtime_error("Failed to store result: " + std::string(mysql_error(conn)));
-            logError("Failed to store result: " + std::string(mysql_error(conn)));
+        if (userData.contains("error")) {
+            std::cerr << "Error in user data: " << userData["error"] << std::endl;
+            logError("Error in user data: " + userData["error"].get<std::string>());
+            return false;
         }
 
-        MYSQL_ROW row;
-        bool isAdmin = false;
+        std::string user_role = userData.contains("role") ? userData["role"].get<std::string>() : "";
+        return user_role == "administrator";
 
-        // Перевірка на роль адміністратора
-        if ((row = mysql_fetch_row(res))) {
-            std::string role = row[0];
-            if (role == "admin") {
-                isAdmin = true;
-            }
-        }
-
-        mysqlDisconnection(res);
-
-        return isAdmin;
-
-    } catch (const std::exception &e) {
-        std::string errorMessage = "Error: " + std::string(e.what()) + "\n";
-        std::cerr << errorMessage;
-        logError(errorMessage);
-        mysqlDisconnection();
+    } catch (const std::exception& e) {
+        std::cerr << "Error parsing user data: " << e.what() << std::endl;
+        logError("Error parsing user data: " + std::string(e.what()));
         return false;
     }
 }

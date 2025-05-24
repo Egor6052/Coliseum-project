@@ -3,13 +3,13 @@
 #include <thread>
 #include <fstream>
 #include "../headers/Server.h"
-// #include "../headers/Accounts.h"
 #include "../../lib/http/httplib.h"
-#include <json/json.h>
+#include <nlohmann/json.hpp>
 
 // Обробка всіх клієнтських маршрутів (повернення index.html)
 void Server::handleClientRoutes(const httplib::Request &req, httplib::Response &res) {
-    std::cout << "Отримано клієнтський запит: " << req.path << std::endl;
+    std::cout << "Customer request received: " << req.path << std::endl;
+
     // Перенаправлення для всіх маршрутів /client/error/*
     if (req.path.find("/client/error/") == 0) {
         res.set_header("Location", "/");

@@ -19,7 +19,10 @@ set(SOURCE_FILES
     src/Accounts/IsAdministrator.cpp
     src/Accounts/Login.cpp
     src/Accounts/GetUserData.cpp
+    src/Accounts/getUserEmail.cpp
+    src/Accounts/getUserName.cpp
     src/Accounts/GetUserRole.cpp
+    src/Accounts/getUserPassword.cpp
     src/Accounts/generateTokens.cpp
 
     # Auth
@@ -45,7 +48,6 @@ set(SOURCE_FILES
     src/DB/CreateBackup.cpp
     src/DB/CreateTable.cpp
     src/DB/Database.cpp
-    src/DB/dataCollector.cpp
     src/DB/DateTime.cpp
     src/DB/DeleteData.cpp
     src/DB/GetAllUsers.cpp
@@ -90,62 +92,112 @@ target_compile_options(start PRIVATE -Wall -fPIC)
 find_package(OpenSSL REQUIRED)
 target_link_libraries(start PRIVATE OpenSSL::SSL OpenSSL::Crypto)
 
-# ============ MariaDB (Homebrew) ============
-find_library(MARIADB_LIBRARY
-    NAMES mariadbclient mariadb libmariadb
-    PATHS /usr/local/Cellar/mariadb-connector-c/3.4.5/lib
-    NO_DEFAULT_PATH
-)
-find_path(MARIADB_INCLUDE_DIR
-    NAMES mysql.h
-    PATHS /usr/local/Cellar/mariadb-connector-c/3.4.5/include/mariadb
-    NO_DEFAULT_PATH
-)
-if (NOT MARIADB_LIBRARY OR NOT MARIADB_INCLUDE_DIR)
-    message(FATAL_ERROR "MariaDB library or headers not found in /usr/local/Cellar/mariadb-connector-c/3.4.5. Please ensure MariaDB Connector/C is installed (e.g., `brew install mariadb-connector-c` on macOS).")
+# ============ MariaDB ============
+find_package(PkgConfig)
+if (PKG_CONFIG_FOUND)
+    pkg_check_modules(MARIADB QUIET libmariadb)
 endif()
-message(STATUS "MariaDB found: ${MARIADB_LIBRARY}, ${MARIADB_INCLUDE_DIR}")
-target_include_directories(start PRIVATE ${MARIADB_INCLUDE_DIR})
-target_link_libraries(start PRIVATE ${MARIADB_LIBRARY})
 
-# ============ zlib (Homebrew) ============
-find_library(ZLIB_LIBRARY
-    NAMES z libz
-    PATHS /usr/local/Cellar/zlib/1.3.1/lib /usr/local/lib
-    NO_DEFAULT_PATH
-)
-if (NOT ZLIB_LIBRARY)
-    message(FATAL_ERROR "zlib library not found in /usr/local/Cellar/zlib/1.3.1/lib or /usr/local/lib. Please ensure zlib is installed (e.g., `brew install zlib` on macOS).")
-endif()
-message(STATUS "zlib found: ${ZLIB_LIBRARY}")
-target_link_libraries(start PRIVATE ${ZLIB_LIBRARY})
-
-
-# ============ jsoncpp ============
-find_library(JSONCPP_LIBRARY
-    NAMES jsoncpp
-    PATHS /usr/lib /usr/local/lib /opt/homebrew/lib
-)
-
-find_path(JSONCPP_INCLUDE_DIR
-    NAMES json/json.h
-    PATHS /usr/include /usr/local/include /opt/homebrew/include
-        /usr/include/json /usr/local/include/json /opt/homebrew/include/json
-)
-
-if (NOT JSONCPP_LIBRARY OR NOT JSONCPP_INCLUDE_DIR)
-    message(WARNING "jsoncpp library or headers not found. Will try to proceed anyway.")
+if (MARIADB_FOUND)
+    message(STATUS "MariaDB found via pkg-config: ${MARIADB_LIBRARIES}")
+    target_include_directories(start PRIVATE ${MARIADB_INCLUDE_DIRS})
+    target_link_libraries(start PRIVATE ${MARIADB_LIBRARIES})
 else()
-    target_include_directories(start PRIVATE ${JSONCPP_INCLUDE_DIR})
-    target_link_libraries(start PRIVATE ${JSONCPP_LIBRARY})
+    find_library(MARIADB_LIBRARY
+        NAMES mariadbclient mariadb libmariadb
+        PATHS
+            /usr/lib
+            /usr/lib64
+            /usr/local/lib
+            /opt/homebrew/lib
+            /usr/local/Cellar/mariadb-connector-c/*/lib
+    )
+    find_path(MARIADB_INCLUDE_DIR
+        NAMES mysql.h
+        PATHS
+            /usr/include
+            /usr/include/mariadb
+            /usr/local/include
+            /usr/local/include/mariadb
+            /opt/homebrew/include
+            /opt/homebrew/include/mariadb
+            /usr/local/Cellar/mariadb-connector-c/*/include
+    )
+
+    if (NOT MARIADB_LIBRARY OR NOT MARIADB_INCLUDE_DIR)
+        message(FATAL_ERROR "MariaDB library or headers not found. Please ensure MariaDB Connector/C is installed (e.g., `sudo apt-get install libmariadb-dev` on Ubuntu or `brew install mariadb-connector-c` on macOS).")
+    endif()
+    message(STATUS "MariaDB found: ${MARIADB_LIBRARY}, ${MARIADB_INCLUDE_DIR}")
+    target_include_directories(start PRIVATE ${MARIADB_INCLUDE_DIR})
+    target_link_libraries(start PRIVATE ${MARIADB_LIBRARY})
 endif()
+
+# ============ zlib ============
+find_package(ZLIB REQUIRED)
+if (ZLIB_FOUND)
+    message(STATUS "zlib found: ${ZLIB_LIBRARIES}")
+    target_include_directories(start PRIVATE ${ZLIB_INCLUDE_DIRS})
+    target_link_libraries(start PRIVATE ${ZLIB_LIBRARIES})
+else()
+    message(FATAL_ERROR "zlib library not found. Please ensure zlib is installed (e.g., `sudo apt-get install zlib1g-dev` on Ubuntu or `brew install zlib` on macOS).")
+endif()
+
+# ============ nlohmann/json ============
+find_path(NLOHMANN_JSON_INCLUDE_DIR
+    NAMES nlohmann/json.hpp
+    PATHS
+        ${CMAKE_SOURCE_DIR}/lib/json
+    NO_DEFAULT_PATH
+)
+
+if (NOT NLOHMANN_JSON_INCLUDE_DIR)
+    message(FATAL_ERROR "nlohmann/json headers not found in ${CMAKE_SOURCE_DIR}/lib/json. Please ensure nlohmann/json.hpp is placed in lib/json/nlohmann/.")
+endif()
+message(STATUS "nlohmann/json found: ${NLOHMANN_JSON_INCLUDE_DIR}")
+target_include_directories(start PRIVATE ${NLOHMANN_JSON_INCLUDE_DIR})
+
+
+# ============ libmodbus ============
+find_package(PkgConfig)
+if (PKG_CONFIG_FOUND)
+    pkg_check_modules(LIBMODBUS QUIET libmodbus)
+endif()
+
+if (LIBMODBUS_FOUND)
+    message(STATUS "libmodbus found via pkg-config: ${LIBMODBUS_LIBRARIES}")
+    target_include_directories(start PRIVATE ${LIBMODBUS_INCLUDE_DIRS})
+    target_link_libraries(start PRIVATE ${LIBMODBUS_LIBRARIES})
+else()
+    find_library(LIBMODBUS_LIBRARY
+        NAMES modbus libmodbus
+        PATHS
+            /usr/lib
+            /usr/lib64
+            /usr/local/lib
+            /opt/homebrew/lib
+            /usr/local/Cellar/libmodbus/*/lib
+    )
+    find_path(LIBMODBUS_INCLUDE_DIR
+        NAMES modbus/modbus.h
+        PATHS
+            /usr/include
+            /usr/local/include
+            /opt/homebrew/include
+            /usr/local/Cellar/libmodbus/*/include
+    )
+
+    if (NOT LIBMODBUS_LIBRARY OR NOT LIBMODBUS_INCLUDE_DIR)
+        message(FATAL_ERROR "libmodbus library or headers not found. Please ensure libmodbus is installed (e.g., `sudo apt-get install libmodbus-dev` on Ubuntu or `brew install libmodbus` on macOS).")
+    endif()
+    message(STATUS "libmodbus found: ${LIBMODBUS_LIBRARY}, ${LIBMODBUS_INCLUDE_DIR}")
+    target_include_directories(start PRIVATE ${LIBMODBUS_INCLUDE_DIR})
+    target_link_libraries(start PRIVATE ${LIBMODBUS_LIBRARY})
+endif()
+
 
 # ============ OS-specific libraries ============
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
     target_link_libraries(start PRIVATE
-        z
-        ssl
-        crypto
         dl
         pthread
     )

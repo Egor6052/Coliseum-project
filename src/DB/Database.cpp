@@ -6,7 +6,7 @@
 
 Database::Database() {
     this->name = "data_writer";
-    this->password = "MySqlStrongPassword123!";
+    this->password = "MySqlStrongPassword123";
     this->dbName = "SensorData";
     this->dbUsersName = "users";
     this->host_name = "localhost";

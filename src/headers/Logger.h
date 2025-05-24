@@ -14,6 +14,7 @@ public:
     Logger();
     ~Logger();
 
+    
     // TODO тут ще буде видалення логів через деякий час
 
     std::string getLoggerDateTime();

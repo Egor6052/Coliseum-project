@@ -35,7 +35,6 @@ int main() {
     collectorThread.detach();
 
     // The main thread is just waiting.
-    // std::cout << "Server is running in \033[1m\033[33mhttp://localhost:8080/\033[0m. Use HTTP endpoints to interact. Press Ctrl+C to exit." << std::endl;
     while (true) {
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }

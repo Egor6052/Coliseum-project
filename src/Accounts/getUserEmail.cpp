@@ -1,10 +1,10 @@
+#include "../headers/Accounts.h"
 #include <iostream>
 #include <string>
-#include "../../lib/mysql/mysql.h"
-#include "../headers/Accounts.h"
+#include <sstream>
 #include <nlohmann/json.hpp>
 
-std::string Accounts::getUserRole(const std::string& uid) {
+std::string Accounts::getUserEmail(const std::string& uid) {
     try {
         std::string userDataJson = getUserData(uid);
         nlohmann::json userData = nlohmann::json::parse(userDataJson);
@@ -15,7 +15,7 @@ std::string Accounts::getUserRole(const std::string& uid) {
             return "";
         }
 
-        return userData.contains("role") ? userData["role"].get<std::string>() : "";
+        return userData.value("email", "");
     } catch (const std::exception& e) {
         std::cerr << "Error parsing user data: " << e.what() << std::endl;
         logError("Error parsing user data: " + std::string(e.what()));

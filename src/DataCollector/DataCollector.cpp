@@ -4,12 +4,11 @@
 
 #include "../headers/DataCollector.h"
 
-DataCollector::DataCollector() {   }
+DataCollector::DataCollector() { dataCollector(); }
 
 DataCollector::~DataCollector() {   }
 
 std::string DataCollector::dataCollector() {
-
     // Формування об'єкта JSON
     nlohmann::json jsonData = {
         {"data", getDateTime()},

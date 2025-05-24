@@ -4,7 +4,7 @@
 #include "../headers/Accounts.h"
 
 
-bool Accounts::Login(std::string email, std::string password) {
+bool Accounts::Login(const std::string& email, const std::string& password) {
     try {
         mysqlConnect();
 

@@ -20,6 +20,15 @@ class Accounts : public Database {
     public:
         Accounts();
         ~Accounts();
+        bool Login(const std::string& email, const std::string& password);
+        std::string generateAccessToken(const std::string& email, const std::string& key, const std::string& fingerPrint = "");
+        std::string generateRefreshToken(const std::string& email, const std::string& key, const std::string& fingerPrint = "");
+        std::string getUserData(const std::string& uid);
+        std::string getUserRole(const std::string& uid);
+        std::string getUserName(const std::string& uid);
+        std::string getUserPassword(const std::string& uid);
+        std::string getUserEmail(const std::string& uid);
+        std::string getUID(std::string email);
 
         // void setName(std::string valueName);
         // void setPassword(std::string valuePassword);
@@ -27,19 +36,8 @@ class Accounts : public Database {
 
         void registerNewUser(std::string login, std::string password, std::string email, std::string userRole);
 
-        std::string getAllUsersFromDB();
+        std::string getAllUsersFromDB();        
 
-        std::string getUID(std::string email);
-        std::string getUserName(std::string uid);
-        std::string getUserPassword(std::string uid);
-        std::string getUserEmail(std::string uid);
-        std::string getUserRole(std::string uid);
-        std::string getUserData(std::string uid);
-
-        std::string generateAccessToken(const std::string &email, const std::string &secretKey);
-        std::string generateRefreshToken(const std::string &email, const std::string &secretKey);
-        
-        bool Login(std::string login, std::string password);
         bool isAdministrator(std::string value_uid);
 
 };

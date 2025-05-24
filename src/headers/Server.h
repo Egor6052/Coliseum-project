@@ -6,7 +6,7 @@
 #include <string.h>
 #include <thread>
 #include "../../lib/http/httplib.h"
-#include <json/json.h>
+#include <nlohmann/json.hpp>
 
 #include "Logger.h"
 #include "Database.h"

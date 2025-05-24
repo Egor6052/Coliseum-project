@@ -1,9 +1,8 @@
+#include "../headers/Accounts.h"
 #include <iostream>
 #include <string>
 #include "../../lib/mysql/mysql.h"
-
 #include <nlohmann/json.hpp>
-#include "../headers/Accounts.h"
 
 
 std::string Accounts::getAllUsersFromDB()

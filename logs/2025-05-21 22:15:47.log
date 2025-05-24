@@ -1,0 +1,34 @@
+[2025-05-21 22:15:47] ERROR: Failed to obtain active power: Error: RS485 function is not implemented
+[2025-05-21 22:15:47] ERROR: Failed to obtain reactive power: Error: RS485 function is not implemented
+[2025-05-21 22:15:47] ERROR: Could not open /etc/systemd/system/SensorDaemon.service for writing.
+
+
+Appending to log file on 2025-05-21 22:25:52
+----------------------------------------
+[2025-05-21 22:25:52] ERROR: Failed to obtain active power: Error: RS485 function is not implemented
+[2025-05-21 22:25:52] ERROR: Failed to obtain reactive power: Error: RS485 function is not implemented
+
+Appending to log file on 2025-05-21 22:25:52
+----------------------------------------
+[2025-05-21 22:25:52] ERROR: Could not open /etc/systemd/system/SensorDaemon.service for writing.
+
+
+Appending to log file on 2025-05-21 22:26:01
+----------------------------------------
+[2025-05-21 22:26:01] ERROR: Failed to obtain active power: Error: RS485 function is not implemented
+[2025-05-21 22:26:01] ERROR: Failed to obtain reactive power: Error: RS485 function is not implemented
+
+Appending to log file on 2025-05-21 22:26:01
+----------------------------------------
+[2025-05-21 22:26:01] ERROR: Could not open /etc/systemd/system/SensorDaemon.service for writing.
+
+
+Appending to log file on 2025-05-21 22:26:13
+----------------------------------------
+[2025-05-21 22:26:13] ERROR: Failed to obtain active power: Error: RS485 function is not implemented
+[2025-05-21 22:26:13] ERROR: Failed to obtain reactive power: Error: RS485 function is not implemented
+
+Appending to log file on 2025-05-21 22:26:13
+----------------------------------------
+[2025-05-21 22:26:13] ERROR: Could not open /etc/systemd/system/SensorDaemon.service for writing.
+
