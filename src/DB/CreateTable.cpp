@@ -3,9 +3,15 @@
 #include "../../lib/mysql/mysql.h"
 #include "../headers/Database.h"
 
+
 void Database::CreateTable() {
     try {
         mysqlConnect();
+
+        std::string useDBQuery = "USE " + getDBName() + ";";
+        if (mysql_query(conn, useDBQuery.c_str())) {
+            throw std::runtime_error("Failed to switch to database: " + std::string(mysql_error(conn)));
+        }
 
         // Створення таблиці для користувачів
         std::string createUsersTableQuery = "CREATE TABLE IF NOT EXISTS " + getDBUsersName() + " ("
@@ -25,7 +31,7 @@ void Database::CreateTable() {
         std::cout << "\033[1m\033[35m⋆⟡₊⊹\033[36mTable " + getDBUsersName() + " created successfully!\033[35m⊹₊⟡⋆\033[0m\n";
 
         // Створення таблиці для даних з датчиків
-        std::string createSensorDataTableQuery = "CREATE TABLE IF NOT EXISTS " + getDBName() + " ("
+        std::string createSensorDataTableQuery = "CREATE TABLE IF NOT EXISTS " + getTableName() + " ("
             "id INT AUTO_INCREMENT PRIMARY KEY, "
             "date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, "
             "ip_address VARCHAR(255) NOT NULL, "
@@ -37,11 +43,11 @@ void Database::CreateTable() {
         ");";
 
         if (mysql_query(conn, createSensorDataTableQuery.c_str())) {
-            throw std::runtime_error("Failed to create " + getDBName() + " table: " + std::string(mysql_error(conn)));
-            logError("Failed to create " + getDBName() + " table: " + std::string(mysql_error(conn)));
+            throw std::runtime_error("Failed to create " + getTableName() + " table: " + std::string(mysql_error(conn)));
+            logError("Failed to create " + getTableName() + " table: " + std::string(mysql_error(conn)));
         }
 
-        std::cout << "\033[1m\033[35m⋆⟡₊⊹\033[36mTable " + getDBName() + " created successfully!\033[35m⊹₊⟡⋆\033[0m\n" << std::endl;
+        std::cout << "\033[1m\033[35m⋆⟡₊⊹\033[36mTable " + getTableName() + " created successfully!\033[35m⊹₊⟡⋆\033[0m\n" << std::endl;
 
         mysqlDisconnection();
 

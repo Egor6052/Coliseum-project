@@ -10,6 +10,10 @@ std::string Accounts::getAllUsersFromDB()
     try
     {
         mysqlConnect();
+        std::string useDBQuery = "USE " + getDBName() + ";";
+        if (mysql_query(conn, useDBQuery.c_str())) {
+            throw std::runtime_error("Failed to switch to database: " + std::string(mysql_error(conn)));
+        }
 
         // Запит для отримання всіх користувачів
         std::string query = "SELECT uid, login, email, role FROM " + getDBUsersName();

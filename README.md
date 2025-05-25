@@ -14,6 +14,8 @@ The distributed data collection system (hereinafter "the System") is designed fo
 - [For develoders](#for-develoders)
 - [Ho to push](#ho-to-push)
 - [Libraries and extensions](#libraries-and-extensions)
+- [Create user for System](#create-user-for-system)
+- [Add users to DB](#add-users-to-db)
 ---
 
 ## Features
@@ -37,7 +39,7 @@ The distributed data collection system (hereinafter "the System") is designed fo
 ## API
 ---
 ```sh
-http://localhost:8080/
+http://192.168.0.112:5173/client
 ```
 
 ## Compiling in the directory ./build
@@ -119,17 +121,6 @@ Folder "temp": files need distribution
 
 2) find //TODO for find what to do 
 
-## Ho to push
---- 
-
-1) git checkout -b NEW_BRANCH_NAME
-2) git add .
-3) git commit -am "COMMENT FOR COMMIT"
-4) git push origin NEW_BRANCH_NAME 
-
-**Update your project localy**
-1) git pull origin NewSite
-
 
 ## Libraries and extensions
 ---
@@ -159,10 +150,104 @@ sudo apt install mysql-server
 sudo apt-get install libmodbus-dev
 ```
 
-for MacOS
+**for MacOS**
 ```sh
 brew install libmodbus
 brew install mariadb-connector-c
 brew install jsoncpp
 brew install openssl
+```
+
+## Create User for System
+Enter to DB as root
+```sh
+sudo mariadb
+```
+Create new user and grant all privileges to him:
+```sh
+CREATE USER 'data_writer'@'%' IDENTIFIED BY 'MySqlStrongPassword123';
+GRANT ALL PRIVILEGES ON *.* TO 'data_writer'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+EXIT;
+```
+
+You can also create a tables for data and users!
+Log in to MySQL/MariaDB as a new user:
+
+```sh
+mysql -u data_writer -p
+```
+Enter the password:
+```sh
+MySqlStrongPassword123
+```
+
+Tables can only be created inside a database. 
+Create DB firstly:
+```sh
+CREATE DATABASE IF NOT EXISTS sensor_data;
+USE sensor_data;
+```
+
+Create table for users in DB:
+```sh
+CREATE TABLE IF NOT EXISTS users_data_table (
+    uid VARCHAR(255) PRIMARY KEY,
+    login VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255),
+    role ENUM('user', 'admin') NOT NULL DEFAULT 'user'
+);
+```
+Audit:
+```sh
+SHOW TABLES;
+SELECT * FROM users_data_table;
+```
+
+Create table SensorData table in DB:
+```sh
+CREATE TABLE IF NOT EXISTS sensor_data_table (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    ip_address VARCHAR(255) NOT NULL,
+    sensor_name VARCHAR(255) NOT NULL,
+    current FLOAT NOT NULL,
+    voltage FLOAT NOT NULL,
+    active_power FLOAT NOT NULL,
+    reactive_power FLOAT NOT NULL
+);
+```
+
+Audit:
+```sh
+SHOW TABLES;
+SELECT * FROM sensor_data_table;
+```
+
+
+Restart DB:
+```sh
+sudo systemctl restart mariadb
+```
+
+## Add users to DB
+
+Example of insertion:
+```sh
+INSERT INTO users_data_table (uid, login, password, email, role)
+VALUES 
+('u1', 'NameUser1', '12345678', 'user1@gmail.com', 'admin'),
+('u2', 'NameUser2', '12345678', 'user2@example.com', 'user');
+```
+
+Delete user from DB:
+where u1 - UID user, which you wont to delete.
+```sh
+DELETE FROM users_data_table WHERE uid = 'u1';
+```
+
+Delete table:
+```sh
+DROP TABLE table_name;
 ```

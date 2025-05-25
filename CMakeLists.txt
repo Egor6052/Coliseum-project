@@ -46,6 +46,7 @@ set(SOURCE_FILES
 
     # Database
     src/DB/CreateBackup.cpp
+    src/DB/createDB.cpp
     src/DB/CreateTable.cpp
     src/DB/Database.cpp
     src/DB/DateTime.cpp
@@ -110,8 +111,9 @@ else()
             /usr/lib64
             /usr/local/lib
             /opt/homebrew/lib
-            /usr/local/Cellar/mariadb-connector-c/*/lib
+            /usr/local/opt/mariadb-connector-c/lib
     )
+    
     find_path(MARIADB_INCLUDE_DIR
         NAMES mysql.h
         PATHS
@@ -121,7 +123,7 @@ else()
             /usr/local/include/mariadb
             /opt/homebrew/include
             /opt/homebrew/include/mariadb
-            /usr/local/Cellar/mariadb-connector-c/*/include
+            /usr/local/opt/mariadb-connector-c/include/mariadb
     )
 
     if (NOT MARIADB_LIBRARY OR NOT MARIADB_INCLUDE_DIR)

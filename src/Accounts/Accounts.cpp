@@ -7,14 +7,15 @@ Accounts::Accounts() { }
 
 Accounts::~Accounts() { }
 
-bool Accounts::isNotEmpty(const std::string& str) {
-    return !str.empty();
-}
 
 std::string Accounts::getUID(std::string email) {
     try {
         mysqlConnect();
-
+        std::string useDBQuery = "USE " + getDBName() + ";";
+        if (mysql_query(conn, useDBQuery.c_str())) {
+            throw std::runtime_error("Failed to switch to database: " + std::string(mysql_error(conn)));
+        }
+        
         std::string query = "SELECT uid FROM " + getDBUsersName() + " WHERE login = '" + email + "'";
         std::cout << "Executing query: " << query << std::endl;
         if (mysql_query(conn, query.c_str())) {

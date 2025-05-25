@@ -16,6 +16,7 @@ int main() {
 
     std::cout << "\033[1m\033[35m˚｡⋆\033[36mWelcome to the Server!\033[35m⋆｡˚\033[0m\n" << std::endl;
     db.setAdminPassword("MySqlStrongPassword123!");
+    db.createDB();
     db.CreateTable();
     daemon.addToStartup();
     server.http_start();

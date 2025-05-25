@@ -1,0 +1,10 @@
+
+Appending to log file on 2025-05-24 18:50:22
+----------------------------------------
+[2025-05-24 18:50:23] ERROR: Error: Access denied for user 'data_writer'@'localhost' (using password: YES)
+
+
+Appending to log file on 2025-05-24 18:50:22
+----------------------------------------
+[2025-05-24 18:50:23] ERROR: Could not open /etc/systemd/system/SensorDaemon.service for writing.
+

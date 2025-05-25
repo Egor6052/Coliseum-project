@@ -20,11 +20,15 @@ CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//No help, variable specified on the command line.
-CMAKE_BUILD_TYPE:STRING=Debug
+//Choose the type of build, options are: None Debug Release RelWithDebInfo
+// MinSizeRel ...
+CMAKE_BUILD_TYPE:STRING=
 
-//No help, variable specified on the command line.
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/clang++
+//Enable/Disable color output during build.
+CMAKE_COLOR_MAKEFILE:BOOL=ON
+
+//CXX compiler
+CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -41,8 +45,8 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//No help, variable specified on the command line.
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/clang
+//C compiler
+CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -77,11 +81,8 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//Enable/Disable output of build database during the build.
-CMAKE_EXPORT_BUILD_DATABASE:BOOL=
-
-//No help, variable specified on the command line.
-CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE
+//Enable/Disable output of compile commands during generation.
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 
 //Value Computed by CMake.
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/Users/mac/Desktop/Coliseum-project/build/CMakeFiles/pkgRedirects
@@ -95,8 +96,8 @@ CMAKE_INSTALL_PREFIX:PATH=/usr/local
 //Path to a program.
 CMAKE_LINKER:FILEPATH=/usr/bin/ld
 
-//Program used to build from build.ninja files.
-CMAKE_MAKE_PROGRAM:FILEPATH=/usr/local/bin/ninja
+//Path to a program.
+CMAKE_MAKE_PROGRAM:FILEPATH=/usr/local/bin/gmake
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -222,10 +223,13 @@ HTTP_Server_IS_TOP_LEVEL:STATIC=ON
 HTTP_Server_SOURCE_DIR:STATIC=/Users/mac/Desktop/Coliseum-project
 
 //Path to a file.
-MARIADB_INCLUDE_DIR:PATH=MARIADB_INCLUDE_DIR-NOTFOUND
+MARIADB_INCLUDE_DIR:PATH=/usr/local/opt/mariadb-connector-c/include/mariadb
 
 //Path to a library.
-MARIADB_LIBRARY:FILEPATH=/usr/local/Cellar/mariadb-connector-c/3.4.5/lib/libmariadbclient.a
+MARIADB_LIBRARY:FILEPATH=/usr/local/opt/mariadb-connector-c/lib/libmariadbclient.a
+
+//Path to a file.
+NLOHMANN_JSON_INCLUDE_DIR:PATH=/Users/mac/Desktop/Coliseum-project/lib/json
 
 //Path to a library.
 OPENSSL_CRYPTO_LIBRARY:FILEPATH=/usr/local/Cellar/openssl@3/3.5.0/lib/libcrypto.dylib
@@ -242,8 +246,23 @@ PKG_CONFIG_ARGN:STRING=
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/local/bin/pkg-config
 
+//Path to a library.
+SECURITY_FRAMEWORK:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework
+
 //Use static library
 USE_STATIC:BOOL=ON
+
+//Path to a file.
+ZLIB_INCLUDE_DIR:PATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
+
+//Path to a library.
+ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+ZLIB_LIBRARY_RELEASE:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libz.tbd
+
+//Path to a library.
+pkgcfg_lib_LIBMODBUS_modbus:FILEPATH=/usr/local/Cellar/libmodbus/3.1.11/lib/libmodbus.dylib
 
 //Path to a library.
 pkgcfg_lib__OPENSSL_crypto:FILEPATH=/usr/local/Cellar/openssl@3/3.5.0/lib/libcrypto.dylib
@@ -268,6 +287,8 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=4
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=0
 //Patch version of cmake used to create the current loaded cache
 CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
+//ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
+CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=/usr/local/bin/cmake
 //Path to cpack program executable.
@@ -314,12 +335,12 @@ CMAKE_EXE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_EXE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_EXPORT_BUILD_DATABASE
-CMAKE_EXPORT_BUILD_DATABASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_EXPORT_COMPILE_COMMANDS
+CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
-CMAKE_GENERATOR:INTERNAL=Ninja
+CMAKE_GENERATOR:INTERNAL=Unix Makefiles
 //Generator instance identifier.
 CMAKE_GENERATOR_INSTANCE:INTERNAL=
 //Name of generator platform.
@@ -399,6 +420,43 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/usr/local/Cellar/openssl@3/3.5.0/lib/libcrypto.dylib][/usr/local/Cellar/openssl@3/3.5.0/include][ ][v3.5.0()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/local/bin/pkg-config][v2.4.3()]
+//Details about finding ZLIB
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libz.tbd][/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include][ ][v1.2.12()]
+LIBMODBUS_CFLAGS:INTERNAL=-I/usr/local/Cellar/libmodbus/3.1.11/include/modbus
+LIBMODBUS_CFLAGS_I:INTERNAL=
+LIBMODBUS_CFLAGS_OTHER:INTERNAL=
+LIBMODBUS_FOUND:INTERNAL=1
+LIBMODBUS_INCLUDEDIR:INTERNAL=/usr/local/Cellar/libmodbus/3.1.11/include
+LIBMODBUS_INCLUDE_DIRS:INTERNAL=/usr/local/Cellar/libmodbus/3.1.11/include/modbus
+LIBMODBUS_LDFLAGS:INTERNAL=-L/usr/local/Cellar/libmodbus/3.1.11/lib;-lmodbus
+LIBMODBUS_LDFLAGS_OTHER:INTERNAL=
+LIBMODBUS_LIBDIR:INTERNAL=/usr/local/Cellar/libmodbus/3.1.11/lib
+LIBMODBUS_LIBRARIES:INTERNAL=modbus
+LIBMODBUS_LIBRARY_DIRS:INTERNAL=/usr/local/Cellar/libmodbus/3.1.11/lib
+LIBMODBUS_LIBS:INTERNAL=
+LIBMODBUS_LIBS_L:INTERNAL=
+LIBMODBUS_LIBS_OTHER:INTERNAL=
+LIBMODBUS_LIBS_PATHS:INTERNAL=
+LIBMODBUS_MODULE_NAME:INTERNAL=libmodbus
+LIBMODBUS_PREFIX:INTERNAL=/usr/local/Cellar/libmodbus/3.1.11
+LIBMODBUS_STATIC_CFLAGS:INTERNAL=-I/usr/local/Cellar/libmodbus/3.1.11/include/modbus
+LIBMODBUS_STATIC_CFLAGS_I:INTERNAL=
+LIBMODBUS_STATIC_CFLAGS_OTHER:INTERNAL=
+LIBMODBUS_STATIC_INCLUDE_DIRS:INTERNAL=/usr/local/Cellar/libmodbus/3.1.11/include/modbus
+LIBMODBUS_STATIC_LDFLAGS:INTERNAL=-L/usr/local/Cellar/libmodbus/3.1.11/lib;-lmodbus
+LIBMODBUS_STATIC_LDFLAGS_OTHER:INTERNAL=
+LIBMODBUS_STATIC_LIBDIR:INTERNAL=
+LIBMODBUS_STATIC_LIBRARIES:INTERNAL=modbus
+LIBMODBUS_STATIC_LIBRARY_DIRS:INTERNAL=/usr/local/Cellar/libmodbus/3.1.11/lib
+LIBMODBUS_STATIC_LIBS:INTERNAL=
+LIBMODBUS_STATIC_LIBS_L:INTERNAL=
+LIBMODBUS_STATIC_LIBS_OTHER:INTERNAL=
+LIBMODBUS_STATIC_LIBS_PATHS:INTERNAL=
+LIBMODBUS_VERSION:INTERNAL=3.1.11
+LIBMODBUS_libmodbus_INCLUDEDIR:INTERNAL=
+LIBMODBUS_libmodbus_LIBDIR:INTERNAL=
+LIBMODBUS_libmodbus_PREFIX:INTERNAL=
+LIBMODBUS_libmodbus_VERSION:INTERNAL=
 MARIADB_CFLAGS:INTERNAL=
 MARIADB_CFLAGS_I:INTERNAL=
 MARIADB_CFLAGS_OTHER:INTERNAL=
@@ -434,6 +492,12 @@ OPENSSL_SSL_LIBRARY-ADVANCED:INTERNAL=1
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_INCLUDE_DIR
+ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_DEBUG
+ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
+ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 _OPENSSL_CFLAGS:INTERNAL=-I/usr/local/Cellar/openssl@3/3.5.0/include
 _OPENSSL_CFLAGS_I:INTERNAL=
 _OPENSSL_CFLAGS_OTHER:INTERNAL=
@@ -469,12 +533,16 @@ _OPENSSL_openssl_INCLUDEDIR:INTERNAL=
 _OPENSSL_openssl_LIBDIR:INTERNAL=
 _OPENSSL_openssl_PREFIX:INTERNAL=
 _OPENSSL_openssl_VERSION:INTERNAL=
+__pkg_config_arguments_LIBMODBUS:INTERNAL=QUIET;libmodbus
 __pkg_config_arguments__OPENSSL:INTERNAL=QUIET;openssl
+__pkg_config_checked_LIBMODBUS:INTERNAL=1
 __pkg_config_checked_MARIADB:INTERNAL=1
 __pkg_config_checked__OPENSSL:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_LIBMODBUS_modbus
+pkgcfg_lib_LIBMODBUS_modbus-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib__OPENSSL_crypto
 pkgcfg_lib__OPENSSL_crypto-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib__OPENSSL_ssl
 pkgcfg_lib__OPENSSL_ssl-ADVANCED:INTERNAL=1
-prefix_result:INTERNAL=/usr/local/Cellar/openssl@3/3.5.0/lib
+prefix_result:INTERNAL=/usr/local/Cellar/libmodbus/3.1.11/lib
 

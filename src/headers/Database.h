@@ -15,7 +15,8 @@ class Database : public Logger {
         std::string adminPassword;
         std::string host_name;
         std::string dbName;
-        std::string dbUsersName;
+        std::string db_Data_Table;
+        std::string db_Users_Table;
 
     public:
         Database();
@@ -27,11 +28,14 @@ class Database : public Logger {
         void mysqlDisconnection(MYSQL_RES* res = nullptr);
         void setAdminPassword(std::string valueAdminPassword);
 
+        void createDB();
+
         std::string getUserDBName();
         std::string getUserDBPassword();
         std::string getAdminPassword();
         
         std::string getDBName();
+        std::string getTableName();
         std::string getDBUsersName();
         std::string getUser();
 

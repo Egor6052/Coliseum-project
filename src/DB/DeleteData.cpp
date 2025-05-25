@@ -8,7 +8,12 @@ void Database::deleteData(std::string valueID) {
     try {
         mysqlConnect();
 
-        std::string query = "DELETE FROM " + getDBName() + " WHERE id = " + valueID + ";";
+        std::string useDBQuery = "USE " + getDBName() + ";";
+        if (mysql_query(conn, useDBQuery.c_str())) {
+            throw std::runtime_error("Failed to switch to database: " + std::string(mysql_error(conn)));
+        }
+
+        std::string query = "DELETE FROM " + getTableName() + " WHERE id = " + valueID + ";";
         if (mysql_query(conn, query.c_str())) {
             throw std::runtime_error(mysql_error(conn));
             logError(mysql_error(conn));

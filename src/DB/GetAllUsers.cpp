@@ -8,7 +8,12 @@ std::string Database::getAllUsers() {
     try {
         mysqlConnect();
 
-        std::string query = "SELECT id, date, ip_address, sensor_name, current, voltage, active_power, reactive_power FROM " + getDBName() + " ORDER BY id DESC;";
+        std::string useDBQuery = "USE " + getDBName() + ";";
+        if (mysql_query(conn, useDBQuery.c_str())) {
+            throw std::runtime_error("Failed to switch to database: " + std::string(mysql_error(conn)));
+        }
+
+        std::string query = "SELECT id, date, ip_address, sensor_name, current, voltage, active_power, reactive_power FROM " + getTableName() + " ORDER BY id DESC;";
         if (mysql_query(conn, query.c_str())) {
             throw std::runtime_error(mysql_error(conn));
             logError(mysql_error(conn));

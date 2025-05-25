@@ -12,7 +12,12 @@ void Database::createBackup() {
     try {
         mysqlConnect();
 
-        std::string query = "SELECT id, date, ip_address, sensor_name, current, voltage, active_power, reactive_power FROM " + getDBName() + " ORDER BY id ASC;";
+        std::string useDBQuery = "USE " + getDBName() + ";";
+        if (mysql_query(conn, useDBQuery.c_str())) {
+            throw std::runtime_error("Failed to switch to database: " + std::string(mysql_error(conn)));
+        }
+
+        std::string query = "SELECT id, date, ip_address, sensor_name, current, voltage, active_power, reactive_power FROM " + getTableName() + " ORDER BY id ASC;";
         if (mysql_query(conn, query.c_str())) {
             throw std::runtime_error("SELECT query failed");
             logError("SELECT query failed");

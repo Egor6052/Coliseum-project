@@ -6,6 +6,10 @@
 std::string Accounts::getUserData(const std::string& uid) {
     try {
         mysqlConnect();
+        std::string useDBQuery = "USE " + getDBName() + ";";
+        if (mysql_query(conn, useDBQuery.c_str())) {
+            throw std::runtime_error("Failed to switch to database: " + std::string(mysql_error(conn)));
+        }
 
         // Запит для отримання даних користувача
         std::string query = "SELECT uid, name, email, role FROM " + getDBUsersName() + " WHERE uid = '" + uid + "'";

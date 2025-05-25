@@ -7,8 +7,9 @@
 Database::Database() {
     this->name = "data_writer";
     this->password = "MySqlStrongPassword123";
-    this->dbName = "SensorData";
-    this->dbUsersName = "users";
+    this->dbName = "sensor_data";
+    this->db_Data_Table = "sensor_data_table";
+    this->db_Users_Table = "users_data_table";
     this->host_name = "localhost";
     this->conn = nullptr;
 }
@@ -22,8 +23,11 @@ Database::~Database() {
 void Database::setData(std::string data, std::string ipAddress, std::string nameSensor, float current, float voltage, float activePower, float reactivePower) {
     try {
         mysqlConnect();
-
-        std::string query = "INSERT INTO " + getDBName() + " (date, ip_address, sensor_name, current, voltage, active_power, reactive_power) VALUES ('" +
+        std::string useDBQuery = "USE " + getDBName() + ";";
+        if (mysql_query(conn, useDBQuery.c_str())) {
+            throw std::runtime_error("Failed to switch to database: " + std::string(mysql_error(conn)));
+        }
+        std::string query = "INSERT INTO " + getTableName() + " (date, ip_address, sensor_name, current, voltage, active_power, reactive_power) VALUES ('" +
                             data + "', '" + ipAddress + "', '" + nameSensor + "', " + 
                             std::to_string(current) + ", " + 
                             std::to_string(voltage) + ", " + 
@@ -88,8 +92,12 @@ std::string Database::getDBName(){
     return this->dbName;
 }
 
+std::string Database::getTableName() {
+    return this->db_Data_Table;
+}
+
 std::string Database::getDBUsersName(){
-    return this->dbUsersName;
+    return this->db_Users_Table;
 }
 
 std::string Database::getUserDBName(){

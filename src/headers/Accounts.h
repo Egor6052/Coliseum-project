@@ -10,9 +10,6 @@
 class Accounts : public Database {
     private:
     std::string Uid;
-    // std::string UserName;
-    // std::string UserPassword;
-    // std::string UserEmail;
 
     bool isNotEmpty(const std::string& str);
     std::string generateUID();
@@ -29,10 +26,6 @@ class Accounts : public Database {
         std::string getUserPassword(const std::string& uid);
         std::string getUserEmail(const std::string& uid);
         std::string getUID(std::string email);
-
-        // void setName(std::string valueName);
-        // void setPassword(std::string valuePassword);
-        // void setEmail(std::string valueEmail);
 
         void registerNewUser(std::string login, std::string password, std::string email, std::string userRole);
 
