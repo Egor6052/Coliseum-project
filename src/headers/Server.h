@@ -22,7 +22,7 @@ private:
     std::string keyAccess;
     std::string keyRefresh;
 
-    std::string host_name;
+    // std::string host_name;
     httplib::Server svr;
     std::map<std::string, std::string> configValues;
 

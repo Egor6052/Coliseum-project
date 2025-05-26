@@ -1,0 +1,33 @@
+
+Appending to log file on 2025-05-26 13:44:57
+----------------------------------------
+[2025-05-26 13:44:58] ERROR: Exception in createDB: Access denied for user 'data_writer'@'localhost' (using password: YES)
+[2025-05-26 13:44:58] ERROR: Error: Access denied for user 'data_writer'@'localhost' (using password: YES)
+
+
+Appending to log file on 2025-05-26 13:44:57
+----------------------------------------
+[2025-05-26 13:44:58] ERROR: Could not open /etc/systemd/system/SensorDaemon.service for writing.
+
+
+Appending to log file on 2025-05-26 13:45:31
+----------------------------------------
+[2025-05-26 13:45:31] ERROR: Exception in createDB: Access denied for user 'data_writer'@'localhost' (using password: YES)
+[2025-05-26 13:45:31] ERROR: Error: Access denied for user 'data_writer'@'localhost' (using password: YES)
+
+
+Appending to log file on 2025-05-26 13:45:31
+----------------------------------------
+[2025-05-26 13:45:31] ERROR: Could not open /etc/systemd/system/SensorDaemon.service for writing.
+
+
+Appending to log file on 2025-05-26 13:45:50
+----------------------------------------
+[2025-05-26 13:45:50] ERROR: Exception in createDB: Access denied for user 'data_writer'@'localhost' (using password: YES)
+[2025-05-26 13:45:50] ERROR: Error: Access denied for user 'data_writer'@'localhost' (using password: YES)
+
+
+Appending to log file on 2025-05-26 13:45:50
+----------------------------------------
+[2025-05-26 13:45:50] ERROR: Could not open /etc/systemd/system/SensorDaemon.service for writing.
+

@@ -68,7 +68,7 @@ void Server::ConfigFields() {
     }
 
     std::map<std::string, std::string*> dumpMap = {
-        {"host_name", &host_name}
+        {"ip", &ip}
     };
 
     for (const auto& [key, variable] : dumpMap) {

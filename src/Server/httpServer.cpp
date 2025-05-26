@@ -51,6 +51,7 @@ void Server::http_start() {
         this->handleClientRoutes(req, res);
     });
 
-    std::cout << "Сервер запущено на http://" << host_name << ":" << port << "/client\n";
+    std::cout << "Сервер запущено на http://" << ip << ":" << port << "/client\n";
     svr.listen(ip.c_str(), port);
+    // svr.listen(INADDR_ANY, port);
 }
