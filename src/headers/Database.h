@@ -27,13 +27,10 @@ class Database : public Logger {
         void mysqlConnect();
         void mysqlDisconnection(MYSQL_RES* res = nullptr);
         void setAdminPassword(std::string valueAdminPassword);
-
         void createDB();
-
         std::string getUserDBName();
         std::string getUserDBPassword();
         std::string getAdminPassword();
-        
         std::string getDBName();
         std::string getTableName();
         std::string getDBUsersName();
@@ -41,10 +38,8 @@ class Database : public Logger {
 
         // DB
         std::string getCurrentDateTime();
-
         void CreateTable();
         void setData(std::string data, std::string ipAddress, std::string nameSensor, float current, float voltage, float activePower, float reactivePower);
-
         void deleteData(std::string valueID);
         void createBackup();
         std::string getData();

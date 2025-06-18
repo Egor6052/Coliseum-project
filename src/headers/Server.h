@@ -22,7 +22,6 @@ private:
     std::string keyAccess;
     std::string keyRefresh;
 
-    // std::string host_name;
     httplib::Server svr;
     std::map<std::string, std::string> configValues;
 
@@ -40,14 +39,16 @@ public:
 
     void handleAuthRequest(const httplib::Request &req, httplib::Response &res, const std::string &endpoint);
     void setupStaticFiles(httplib::Server &svr);
-    void createCSV(const std::string& filename);
+    void startStaticServer();
+    void startApiServer();
+    // void createCSV(const std::string& filename);
     void setupCORS(httplib::Server &svr);
     void handleClientRoutes(const httplib::Request &req, httplib::Response &res);
-    void shandleLogoutRequest(const httplib::Request &req, httplib::Response &res);
+    void handleLogoutRequest(const httplib::Request &req, httplib::Response &res);
     void handleLogoutAllRequest(const httplib::Request &req, httplib::Response &res);
     void handleRefreshTokenRequest(const httplib::Request &req, httplib::Response &res);
 
-    void sendToEmail(const std::string& recipient, const std::string& filename);
+    // void sendToEmail(const std::string& recipient, const std::string& filename);
     
 
 };

@@ -7,7 +7,7 @@
 #include <nlohmann/json.hpp>
 
 // Обробка запиту для виходу
-void Server::shandleLogoutRequest(const httplib::Request &req, httplib::Response &res) {
+void Server::handleLogoutRequest(const httplib::Request &req, httplib::Response &res) {
     std::cout << "Отримано POST-запит до /logout: " << req.body << std::endl;
 
     // Логіка виходу (наразі просто повертаємо успіх)

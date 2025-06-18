@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string.h>
 #include "Logger.h"
+#include <nlohmann/json.hpp>
 
 class DataCollector : public Logger {
     private:
@@ -10,10 +11,11 @@ class DataCollector : public Logger {
         ~DataCollector();
 
         // Protocol
-        std::string RS485(int sensorAddress, int registerAddress, float& result);
+        std::string RS485();
         uint16_t calculateCRC(unsigned char* data, int length);
 
         // Data
+        json getDataFromPacket();
         float roundNumber(float valueNumber);
 
         std::string getIpAddress();

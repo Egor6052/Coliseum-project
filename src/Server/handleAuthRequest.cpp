@@ -6,6 +6,8 @@
 #include "../../lib/http/httplib.h"
 #include <nlohmann/json.hpp>
 
+// Автентифікація в системі
+
 void Server::handleAuthRequest(const httplib::Request &req, httplib::Response &res, const std::string &endpoint) {
     std::cout << "Отримано POST-запит до /login: " << req.body << std::endl;
 
@@ -85,6 +87,7 @@ void Server::handleAuthRequest(const httplib::Request &req, httplib::Response &r
         res.set_header("Content-Type", "application/json");
         res.status = 200;
         res.set_content(responseStr, "application/json");
+
     } catch (const std::exception& e) {
         nlohmann::json errorResponse;
         errorResponse["error"] = std::string("Server error: ") + e.what();
